@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://dedi4ls7wc7wj"]
+
+[ext_resource type="Script" path="res://start_menu.gd" id="1_bfu2g"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_p80bp"]
+[ext_resource type="Texture2D" uid="uid://bhrmespvri2mm" path="res://art/main_button.png" id="3_sry30"]
+[ext_resource type="StyleBox" uid="uid://dkc478lp014b5" path="res://art/main_button.tres" id="3_t6b62"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_erc2c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u5w5r"]
+texture = ExtResource("3_sry30")
+modulate_color = Color(1, 0.8, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlgjx"]
+texture = ExtResource("3_sry30")
+modulate_color = Color(1, 0.8, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khcp6"]
+texture = ExtResource("3_sry30")
+modulate_color = Color(1, 0.8, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3gfd"]
+texture = ExtResource("3_sry30")
+modulate_color = Color(1, 0.8, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xoiwp"]
+texture = ExtResource("3_sry30")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7dqy"]
+texture = ExtResource("3_sry30")
+modulate_color = Color(1, 0.8, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykh6y"]
+texture = ExtResource("3_sry30")
+modulate_color = Color(1, 0.8, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jte70"]
+texture = ExtResource("3_sry30")
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfu2g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 2560.0
+offset_bottom = 1312.0
+texture = SubResource("CanvasTexture_erc2c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.5
+offset_top = -214.5
+offset_right = 194.5
+offset_bottom = 214.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_p80bp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("3_t6b62")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u5w5r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qlgjx")
+theme_override_styles/normal = ExtResource("3_t6b62")
+text = "START"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_p80bp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("3_t6b62")
+theme_override_styles/hover = SubResource("StyleBoxTexture_khcp6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g3gfd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xoiwp")
+text = "OPTIONS"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_p80bp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("3_t6b62")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u7dqy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ykh6y")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jte70")
+text = "CREDITS"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
