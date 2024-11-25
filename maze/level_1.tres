@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://c77pf4yc3wglp"]
+
+[ext_resource type="Texture2D" uid="uid://lt41bdx5kwgn" path="res://art/wall.png" id="1_p1ro7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_casje"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs6fi"]
+texture = ExtResource("1_p1ro7")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_casje")
+sources/0 = SubResource("TileSetAtlasSource_gs6fi")
