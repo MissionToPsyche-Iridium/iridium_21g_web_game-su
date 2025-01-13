@@ -1,0 +1,7 @@
+res://maze/maze.tscn
+res://maze/collectible/exit_button.tres
+res://maze/player/player.tscn
+res://maze/collectible/collectible.tscn
+res://maze/collectible/pop_up.tscn
+res://maze/win_area.tscn
+res://start_menu/start_menu.tscn

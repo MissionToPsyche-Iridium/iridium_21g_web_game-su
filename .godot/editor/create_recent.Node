@@ -1,0 +1,11 @@
+TextureRect
+Label
+CollisionShape2D
+Area2D
+Button
+ColorRect
+HBoxContainer
+TileMap
+AnimatedSprite2D
+AnimatableBody2D
+Sprite2D

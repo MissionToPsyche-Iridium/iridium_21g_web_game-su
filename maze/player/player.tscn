@@ -1,0 +1,108 @@
+[gd_scene load_steps=16 format=3 uid="uid://djdusma0xk4g5"]
+
+[ext_resource type="Script" path="res://maze/player/player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://7eynrffn3t1e" path="res://maze/player/down_still.PNG" id="3_aeioq"]
+[ext_resource type="Texture2D" uid="uid://c8hhf17vilakw" path="res://maze/player/down_walk1.PNG" id="4_78sv2"]
+[ext_resource type="Texture2D" uid="uid://ld3dtwicvaas" path="res://maze/player/down_walk2.PNG" id="5_6e5ew"]
+[ext_resource type="Texture2D" uid="uid://b3obi7eqpl044" path="res://maze/player/left_still.PNG" id="6_1gpq5"]
+[ext_resource type="Texture2D" uid="uid://pg4vm5vdcwdr" path="res://maze/player/left_walk1.PNG" id="7_k4425"]
+[ext_resource type="Texture2D" uid="uid://dy1o6t6rybt73" path="res://maze/player/left_walk2.PNG" id="8_hpqyo"]
+[ext_resource type="Texture2D" uid="uid://8yrvo3c8pr33" path="res://maze/player/right_still.PNG" id="9_xuuwt"]
+[ext_resource type="Texture2D" uid="uid://bhcripwfhlk35" path="res://maze/player/right_walk1.PNG" id="10_7pasm"]
+[ext_resource type="Texture2D" uid="uid://b7qsbwebbbyxf" path="res://maze/player/right_walk2.PNG" id="11_ws7pn"]
+[ext_resource type="Texture2D" uid="uid://bj156g2rus8rg" path="res://maze/player/up_still.PNG" id="12_xrxad"]
+[ext_resource type="Texture2D" uid="uid://bb0f4xrgn0b7w" path="res://maze/player/up_walk1.PNG" id="13_sc0yl"]
+[ext_resource type="Texture2D" uid="uid://dkv8fx8lwx3b" path="res://maze/player/up_walk2.PNG" id="14_hw1ob"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbc5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_aeioq")
+}],
+"loop": true,
+"name": &"down_still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_78sv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6e5ew")
+}],
+"loop": true,
+"name": &"down_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1gpq5")
+}],
+"loop": true,
+"name": &"left_still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k4425")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hpqyo")
+}],
+"loop": true,
+"name": &"left_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_xuuwt")
+}],
+"loop": true,
+"name": &"right_still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7pasm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ws7pn")
+}],
+"loop": true,
+"name": &"right_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_xrxad")
+}],
+"loop": true,
+"name": &"up_still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sc0yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hw1ob")
+}],
+"loop": true,
+"name": &"up_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(24, 41)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.009, 0.009)
+sprite_frames = SubResource("SpriteFrames_gbc5h")
+animation = &"right_still"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")

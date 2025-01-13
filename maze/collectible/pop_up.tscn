@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://biam20w3im8om"]
+
+[ext_resource type="Script" path="res://maze/collectible/pop_up.gd" id="1_s7084"]
+[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://fonts/dogicapixelbold.ttf" id="2_unero"]
+[ext_resource type="StyleBox" uid="uid://bncu0hko0xb1k" path="res://maze/collectible/exit_button.tres" id="3_e1qfm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn7sa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.486275, 0.486275, 0.486275, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bag5y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.303233, 0.303233, 0.303233, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvkxb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.486275, 0.486275, 0.486275, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="PopUp" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7084")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1091.0
+offset_top = -590.0
+offset_right = 1091.0
+offset_bottom = 591.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 935.0
+offset_top = -575.0
+offset_right = 1076.0
+offset_bottom = -436.0
+theme_override_colors/font_hover_color = Color(0.301961, 0.301961, 0.301961, 1)
+theme_override_colors/font_pressed_color = Color(0.486275, 0.486275, 0.486275, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_unero")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxFlat_nn7sa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bag5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bvkxb")
+theme_override_styles/normal = ExtResource("3_e1qfm")
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
