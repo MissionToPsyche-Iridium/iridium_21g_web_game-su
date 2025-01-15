@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://quaxv3d7v3vo"]
+
+[ext_resource type="Script" path="res://maze/collectible/collectible.gd" id="1_au68m"]
+[ext_resource type="Texture2D" uid="uid://db67mklkki6i3" path="res://maze/collectible/art/IMG_1399.PNG" id="1_fbdpr"]
+[ext_resource type="Texture2D" uid="uid://dwm3abk37we47" path="res://maze/collectible/art/IMG_1400.PNG" id="2_1undi"]
+[ext_resource type="Texture2D" uid="uid://b2s12mwapsv28" path="res://maze/collectible/art/IMG_1401.PNG" id="3_fussn"]
+[ext_resource type="Texture2D" uid="uid://qptdal2fnyj3" path="res://maze/collectible/art/IMG_1402.PNG" id="4_qny7q"]
+[ext_resource type="Texture2D" uid="uid://dwtw25jlva0yi" path="res://maze/collectible/art/IMG_1403.PNG" id="5_s2f86"]
+[ext_resource type="Texture2D" uid="uid://cs8iyrvjdmyql" path="res://maze/collectible/art/IMG_1404.PNG" id="6_57tlx"]
+[ext_resource type="Texture2D" uid="uid://r3ljlqkiomna" path="res://maze/collectible/art/IMG_1405.PNG" id="7_5cyhv"]
+[ext_resource type="Texture2D" uid="uid://n3cs540rh7wq" path="res://maze/collectible/art/IMG_1406.PNG" id="8_qvqs0"]
+[ext_resource type="Texture2D" uid="uid://vxp806g5hx5i" path="res://maze/collectible/art/IMG_1407.PNG" id="9_sbke3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8eqrq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fbdpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1undi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fussn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qny7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s2f86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_57tlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5cyhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvqs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sbke3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sbke3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qvqs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5cyhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_57tlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s2f86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qny7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fussn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1undi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fbdpr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wj7s"]
+radius = 12.0
+
+[node name="Collectible" type="Area2D"]
+script = ExtResource("1_au68m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.01, 0.01)
+sprite_frames = SubResource("SpriteFrames_8eqrq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7wj7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="hit" from="." to="." method="_on_hit"]

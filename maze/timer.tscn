@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3hmpdwpgbs7i"]
+
+[ext_resource type="Script" path="res://maze/timer.gd" id="1_kpuka"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_ogbay"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgob5"]
+bg_color = Color(0.34902, 0.14902, 0.317647, 1)
+
+[node name="Timer" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1225.0
+offset_top = -790.0
+offset_right = 1225.0
+offset_bottom = 790.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bgob5")
+script = ExtResource("1_kpuka")
+
+[node name="Minutes" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 544.0
+offset_right = 1336.0
+offset_bottom = 1069.0
+theme_override_fonts/font = ExtResource("1_ogbay")
+theme_override_font_sizes/font_size = 600
+text = "00:"
+
+[node name="Seconds" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1336.0
+offset_top = 544.0
+offset_right = 2386.0
+offset_bottom = 1069.0
+theme_override_fonts/font = ExtResource("1_ogbay")
+theme_override_font_sizes/font_size = 600
+text = "00"
