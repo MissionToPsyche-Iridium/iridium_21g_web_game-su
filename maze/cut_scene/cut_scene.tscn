@@ -13,7 +13,7 @@ corner_radius_bottom_left = 25
 position = Vector2(1203, 535)
 script = ExtResource("1_4eqq2")
 
-[node name="Label" type="Label" parent="."]
+[node name="Message" type="Label" parent="."]
 offset_left = -962.0
 offset_top = -305.0
 offset_right = 993.0
@@ -29,7 +29,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Button2" type="Button" parent="."]
+[node name="ContinueButton" type="Button" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -43,4 +43,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ljcfu")
 text = "PLAY"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
