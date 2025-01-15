@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd57lhkatsjw0"]
+
+[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://fonts/dogicapixelbold.ttf" id="1_aj6ph"]
+[ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_slp2n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5t2ww"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_slp2n")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -133.5
+offset_right = 236.0
+offset_bottom = 133.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_aj6ph")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_5t2ww")
+text = "PLAY"
+
+[node name="Disclaimer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1147.0
+offset_top = -251.0
+offset_right = 1147.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "This work was created in partial fulfillment of Seattle University Capstone Course “CPSC 4870″. The work is a result of the Psyche Student Collaborations component of NASA’s Psyche Mission (https://psyche.asu.edu). “Psyche: A Journey to a Metal World” [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
