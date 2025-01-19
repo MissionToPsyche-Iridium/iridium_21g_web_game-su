@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0u77fgeccqyi"]
+
+[ext_resource type="Texture2D" uid="uid://dckefq5niyy78" path="res://psychescan/assets/asteroid1.png" id="2_ly7mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6q4w"]
+size = Vector2(768, 672)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
+size = Vector2(142, 359)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxjic"]
+size = Vector2(160, 160.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(384, 336)
+shape = SubResource("RectangleShape2D_v6q4w")
+
+[node name="TextureShape" type="Polygon2D" parent="."]
+position = Vector2(69.8182, 0)
+scale = Vector2(1.09091, 1.05)
+color = Color(0.196078, 0.0352941, 1, 1)
+texture = ExtResource("2_ly7mt")
+texture_offset = Vector2(425, 175)
+texture_scale = Vector2(0.8, 0.8)
+polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
+
+[node name="hitbox" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="hitboxColl" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(647, 352)
+shape = SubResource("RectangleShape2D_y3eek")
+
+[node name="hitbox2" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="hitbox2Coll" type="CollisionShape2D" parent="hitbox2"]
+position = Vector2(128, 335.75)
+shape = SubResource("RectangleShape2D_sxjic")

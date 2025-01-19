@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dq62abyfwocnx"]
+
+[node name="Label" type="Label"]
+anchors_preset = -1
+anchor_right = 0.222
+anchor_bottom = 0.198
+offset_right = 0.255997
+offset_bottom = 95.696
+text = "Asteroid fully scanned!
+
+
+
+
+
+
+
+Data acquired:
+composition of asteroid
+telemetry data
+sciencey words"
+horizontal_alignment = 1

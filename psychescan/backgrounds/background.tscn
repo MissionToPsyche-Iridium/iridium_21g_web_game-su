@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgtepn6enoocu"]
+
+[ext_resource type="Texture2D" uid="uid://dy573w6yqfpqg" path="res://psychescan/assets/initial background.svg" id="1_i7ul4"]
+[ext_resource type="Script" path="res://psychescan/scripts/SceneTransition1.gd" id="2_c15xl"]
+[ext_resource type="PackedScene" uid="uid://qv53jnwdlp6n" path="res://psychescan/sprites/correct.tscn" id="2_x1gnh"]
+[ext_resource type="PackedScene" uid="uid://rkniskrqmb35" path="res://psychescan/sprites/incorrect.tscn" id="3_1ra4o"]
+[ext_resource type="PackedScene" uid="uid://bi87b1jlyy8cf" path="res://psychescan/texts/scannertext1.tscn" id="4_2e1mo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc7cd"]
+size = Vector2(32, 32)
+
+[node name="background" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="main" type="Polygon2D" parent="."]
+scale = Vector2(1.08571, 1.0625)
+texture = ExtResource("1_i7ul4")
+texture_offset = Vector2(0, 120)
+polygon = PackedVector2Array(0, 0, 0, 0, 1120, 0, 1120, 512, 0, 512)
+
+[node name="bottom" type="Polygon2D" parent="."]
+scale = Vector2(1.05556, 1)
+color = Color(0.601462, 0.581037, 0.520151, 1)
+polygon = PackedVector2Array(0, 544, 0, 672, 1152, 672, 1152, 544)
+
+[node name="Correct" parent="." instance=ExtResource("2_x1gnh")]
+position = Vector2(672, 96)
+
+[node name="Incorrect" parent="." instance=ExtResource("3_1ra4o")]
+position = Vector2(672, 320)
+
+[node name="hitbox1" type="Area2D" parent="."]
+position = Vector2(304, 271)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_c15xl")
+
+[node name="reticleHitbox" type="CollisionShape2D" parent="hitbox1"]
+position = Vector2(16, 1)
+shape = SubResource("RectangleShape2D_yc7cd")
+
+[node name="scannertext1" parent="." instance=ExtResource("4_2e1mo")]
+offset_left = 864.0
+offset_top = 64.0
+offset_right = 1121.0
+offset_bottom = 399.0
+
+[connection signal="body_entered" from="hitbox1" to="hitbox1" method="_on_area2d_body_entered"]
+[connection signal="body_exited" from="hitbox1" to="hitbox1" method="_on_area2d_body_exited"]

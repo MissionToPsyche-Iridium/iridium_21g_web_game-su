@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://svwaclav8uph"]
+
+[ext_resource type="Texture2D" uid="uid://b3skav8xyvohp" path="res://psychescan/assets/youWin.png" id="1_7bdx2"]
+
+[node name="VictoryMessage" type="CharacterBody2D"]
+
+[node name="TextureShape" type="Polygon2D" parent="."]
+position = Vector2(69.8182, 0)
+scale = Vector2(1.09091, 1.05)
+texture = ExtResource("1_7bdx2")
+texture_offset = Vector2(120, -30)
+texture_scale = Vector2(2, 2)
+polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)

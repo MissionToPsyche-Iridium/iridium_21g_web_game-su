@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://icn4cxvh50yi"]
+
+[node name="Label" type="Label"]
+anchors_preset = -1
+anchor_right = 0.222
+anchor_bottom = 0.198
+offset_right = 0.255997
+offset_bottom = 95.696
+text = "Objective: Scan the asteroid in 3
+places
+
+
+
+
+
+
+
+Current Instrument: 
+The Sonic Screwdriver
+The Sonic Screwdriver works
+on everything but wood"
+horizontal_alignment = 1
