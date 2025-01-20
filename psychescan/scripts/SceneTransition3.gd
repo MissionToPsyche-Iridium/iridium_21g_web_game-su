@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var new_scene_path: String = "res://psychescan/levels/victory_scene.tscn" # change to correct thing
+@export var new_scene_path: String = "res://psychescan/levels/victory_scene.tscn"
 # Tracks the player object currently in the area
 var is_overlap = false
 var player_node: CharacterBody2D = null
@@ -9,7 +9,7 @@ var valid_scan_count: int = 0
 var scanned_boxes := []  # List to keep track of scanned boxes
 var correctNode
 var incorrectNode
-var is_scene_change_pending = false  # Tracks whether the scene change is pending
+var is_scene_change_pending = false
 
 func _ready():
 	monitoring = true
@@ -18,8 +18,9 @@ func _ready():
 	correctNode.visible = false
 	incorrectNode.visible = false
 
+# Signals for collision detection required for switching scenes at the proper events
 func _on_area2d_body_entered(body):
-	if body is CharacterBody2D: # Optional: Use groups for organization
+	if body is CharacterBody2D:
 		player_node = body
 		overlapping_box = find_collision_box(body)
 		if overlapping_box:
@@ -38,18 +39,18 @@ func _process(delta):
 	if is_overlap and Input.is_action_just_pressed("ui_accept"):
 		if overlapping_box and not has_been_scanned(overlapping_box):
 			print("Input accepted")
-			scanned_boxes.append(overlapping_box)
+			scanned_boxes.append(overlapping_box) # Scanned boxes are added to list so player cannot use them again
 			valid_scan_count += 1
 			is_overlap = false
 			show_correct_only()
 			
-			if valid_scan_count == 3:
+			if valid_scan_count == 3: # When player has scanned all target areas
 				print("all boxes successsfully scanned. Transitioning...")
 				is_scene_change_pending = true
 				show_correct_indicator()
-				#change_scene()
 			else:
 				print("Already scanned")
+				show_incorrect_indicator()
 	elif not is_overlap and Input.is_action_just_pressed("ui_accept"):
 		print("target misaligned")
 		show_incorrect_indicator()
@@ -61,14 +62,13 @@ func change_scene():
 		print("Error: no scene path specified")
 		return
 		
-	var result = get_tree().change_scene_to_file(new_scene_path) # change to correct thing
+	var result = get_tree().change_scene_to_file(new_scene_path)
 	if result == OK:
 		print("Transition success")
 	else:
 		print("Transition failure")
-		
 
-
+# Tracks the target area that the player is currently overlapping when multiple targets are present		
 func find_collision_box(player: CharacterBody2D) -> CollisionShape2D:
 	for child in player.get_children():
 		if child is CollisionShape2D and not has_been_scanned(child):
@@ -78,23 +78,24 @@ func find_collision_box(player: CharacterBody2D) -> CollisionShape2D:
 func has_been_scanned(box: CollisionShape2D) -> bool:
 	return box in scanned_boxes
 
+# Displays an indicator for 2 seconds for a correct or incorrect scan
 func show_correct_indicator():
 	correctNode.visible = true
-	await(get_tree().create_timer(2.0).timeout)  # Wait for 2 seconds
+	await(get_tree().create_timer(2.0).timeout)
 	correctNode.visible = false
 	print("Hiding Correct indicator")
 	if is_scene_change_pending:
 		change_scene()
 
+# Display correct indicator without changing scene
 func show_correct_only():
 	correctNode.visible = true
-	await(get_tree().create_timer(2.0).timeout)  # Wait for 2 seconds
+	await(get_tree().create_timer(2.0).timeout)
 	correctNode.visible = false
 	print("Hiding Correct indicator")
 
-# Show incorrect indicator for a specified duration
 func show_incorrect_indicator():
 	incorrectNode.visible = true
-	await(get_tree().create_timer(2.0).timeout)  # Wait for 2 seconds
+	await(get_tree().create_timer(2.0).timeout) 
 	incorrectNode.visible = false
 	print("Hiding Incorrect indicator")
