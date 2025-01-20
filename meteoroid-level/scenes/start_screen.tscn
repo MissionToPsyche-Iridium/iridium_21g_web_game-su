@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnhjs60ggrf82"]
+
+[ext_resource type="Script" path="res://scripts/start_button.gd" id="1_nmrum"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Message" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4357.5
+offset_top = -271.5
+offset_right = 4357.5
+offset_bottom = 271.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Oh no! Space debris has appeared and is heading towards the shuttle! 
+Plan your moves to avoid the debris. 
+Be careful, the debris will move as the shuttle moves. 
+Reach the highlighted tile to stay on course to Psyche. 
+You must reach the tile with only 10 moves to save fuel. 
+Good luck!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButton" type="Button" parent="Message"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.846
+anchor_right = 0.5
+anchor_bottom = 0.876
+offset_left = -99.5
+offset_top = -12.378
+offset_right = 99.5
+offset_bottom = 67.332
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "START"
+script = ExtResource("1_nmrum")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]
