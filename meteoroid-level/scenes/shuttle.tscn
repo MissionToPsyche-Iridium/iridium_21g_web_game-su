@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmvpevcgrtlss"]
+
+[ext_resource type="Texture2D" uid="uid://n7bd0u1p2ktn" path="res://assets/RocketsPack_beemaxstudio/rocket1.png" id="1_hl851"]
+[ext_resource type="Script" path="res://scripts/shuttle.gd" id="1_r5ds6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22t74"]
+atlas = ExtResource("1_hl851")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kixk8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22t74")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gxfc"]
+radius = 9.0
+height = 38.0
+
+[node name="Shuttle" type="CharacterBody2D"]
+visibility_layer = 2
+collision_layer = 2
+script = ExtResource("1_r5ds6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_kixk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0gxfc")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(34, 0)
