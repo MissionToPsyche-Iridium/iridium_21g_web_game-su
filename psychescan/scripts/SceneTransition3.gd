@@ -48,9 +48,9 @@ func _process(delta):
 				print("all boxes successsfully scanned. Transitioning...")
 				is_scene_change_pending = true
 				show_correct_indicator()
-			else:
-				print("Already scanned")
-				show_incorrect_indicator()
+		elif overlapping_box and has_been_scanned(overlapping_box):
+			print("Already scanned")
+			show_incorrect_indicator()
 	elif not is_overlap and Input.is_action_just_pressed("ui_accept"):
 		print("target misaligned")
 		show_incorrect_indicator()
