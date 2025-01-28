@@ -39,3 +39,5 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "Continue"
 script = ExtResource("1_gg3bs")
+
+[connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_pressed"]

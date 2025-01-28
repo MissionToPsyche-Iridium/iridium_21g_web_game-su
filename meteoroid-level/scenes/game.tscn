@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=4 uid="uid://cpb4weio1jo3a"]
+[gd_scene load_steps=15 format=4 uid="uid://cpb4weio1jo3a"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_kw4xb"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://scenes/shuttle.tscn" id="1_n7cj7"]
-[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://assets/Free_Rythm_Arrow_Pack/arrows_nightblue/Space Background.png" id="2_4n7g2"]
+[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://assets/Space Background.png" id="2_4n7g2"]
 [ext_resource type="Texture2D" uid="uid://dt3kj47nwnoai" path="res://assets/Space Background (1).png" id="3_c4pd1"]
 [ext_resource type="PackedScene" uid="uid://cuojpnqpbf5v4" path="res://scenes/meteoroid.tscn" id="3_w1fyl"]
 [ext_resource type="Texture2D" uid="uid://b01tgtgcpx4i5" path="res://assets/space bg border.png" id="4_84adg"]
 [ext_resource type="Texture2D" uid="uid://b2m71v06nq1lu" path="res://assets/Space Background yellow.png" id="5_5554i"]
 [ext_resource type="PackedScene" uid="uid://dms0njr5j00xv" path="res://scenes/input_container.tscn" id="6_3d22b"]
+[ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://scenes/path.tscn" id="9_vra0d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56rg5"]
 texture = ExtResource("2_4n7g2")
@@ -107,6 +108,8 @@ text = "Arrows for direction
 Backspace/ESC to undo
 Enter to confirm"
 autowrap_mode = 2
+
+[node name="Path" parent="." instance=ExtResource("9_vra0d")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Label/Timer" to="." method="_on_timer_timeout"]

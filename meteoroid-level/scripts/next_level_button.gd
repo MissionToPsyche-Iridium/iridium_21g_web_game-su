@@ -1,5 +1,4 @@
 extends Button
 
 func _on_pressed() -> void:
-	# get_tree().call_deferred("change_scene_to_file", "res://scenes/game.tscn") # replace with next level
-	pass
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/game.tscn") # replace with next level
