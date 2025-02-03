@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3ui6eld4jwbg"]
+
+[ext_resource type="Script" path="res://instructions/instructions.gd" id="1_sqetm"]
+[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://fonts/dogicapixelbold.ttf" id="3_lw17n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7clb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjjjx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b6llb"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqetm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -768.0
+offset_top = -308.0
+offset_right = 776.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 49
+theme_override_fonts/normal_font = ExtResource("3_lw17n")
+theme_override_font_sizes/normal_font_size = 45
+bbcode_enabled = true
+text = "Use the arrow keys to move the character around. Look for hints to answer the questions of the person in each room. Answer the question to progress."
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 728.0
+offset_right = 1107.0
+offset_bottom = 856.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lw17n")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_r7clb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bjjjx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b6llb")
+text = "Okay!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
