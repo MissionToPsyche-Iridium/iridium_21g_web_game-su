@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgtepn6enoocu" path="res://psychescan/backgrounds/background.tscn" id="1_7la60"]
 [ext_resource type="PackedScene" uid="uid://fdj4n1xw0w83" path="res://psychescan/sprites/asteroid1.tscn" id="1_a4ck4"]
-[ext_resource type="Shader" path="res://psychescan/addons/GodotRetro/GodotRetro/Screen Shaders/Glitch.gdshader" id="2_b60o3"]
+[ext_resource type="Shader" path="res://psychescan/addons/Glitch.gdshader" id="2_b60o3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_awr2u"]
 shader = ExtResource("2_b60o3")

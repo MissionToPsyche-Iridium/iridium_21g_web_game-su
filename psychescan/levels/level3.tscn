@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d2k4nx07esqql" path="res://psychescan/sprites/asteroid3.tscn" id="1_2ljbq"]
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="2_si8wj"]
 [ext_resource type="PackedScene" uid="uid://cosc37m3bowe8" path="res://psychescan/backgrounds/background3.tscn" id="3_5tj0h"]
-[ext_resource type="Shader" path="res://psychescan/addons/GodotRetro/GodotRetro/Screen Shaders/Glitch.gdshader" id="3_laull"]
+[ext_resource type="Shader" path="res://psychescan/addons/Glitch.gdshader" id="3_laull"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qlbpp"]
 shader = ExtResource("3_laull")

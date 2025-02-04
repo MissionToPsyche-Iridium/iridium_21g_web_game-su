@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://daq27vcb07gww"]
+[gd_scene load_steps=5 format=3 uid="uid://daq27vcb07gww"]
 
 [ext_resource type="PackedScene" uid="uid://svwaclav8uph" path="res://psychescan/sprites/victory_message.tscn" id="1_p3kmo"]
 [ext_resource type="PackedScene" uid="uid://qhel7w7se32c" path="res://psychescan/backgrounds/vic_background.tscn" id="2_igxqu"]
+[ext_resource type="Shader" path="res://psychescan/addons/Glitch.gdshader" id="3_mobxu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0fjw"]
+shader = ExtResource("3_mobxu")
+shader_parameter/_ScanLineJitter = 0.313
+shader_parameter/_VerticalJump = 0.004
+shader_parameter/_HorizontalShake = 0.001
+shader_parameter/_ColorDrift = 0.0
 
 [node name="level" type="Node2D"]
 scale = Vector2(1.268, 1.268)
@@ -16,3 +24,10 @@ scale = Vector2(1.268, 1.268)
 
 [node name="background" parent="." instance=ExtResource("2_igxqu")]
 scale = Vector2(1.268, 1.268)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_g0fjw")
+position = Vector2(-22.5801, 1.53964)
+scale = Vector2(1.32824, 1.27187)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 285.632, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)

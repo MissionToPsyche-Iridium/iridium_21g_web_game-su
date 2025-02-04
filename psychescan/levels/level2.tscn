@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c0u77fgeccqyi" path="res://psychescan/sprites/asteroid2.tscn" id="1_u5qw6"]
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="2_gr8ka"]
-[ext_resource type="Shader" path="res://psychescan/addons/GodotRetro/GodotRetro/Screen Shaders/Glitch.gdshader" id="3_7dqm1"]
+[ext_resource type="Shader" path="res://psychescan/addons/Glitch.gdshader" id="3_7dqm1"]
 [ext_resource type="PackedScene" uid="uid://b5x1ucl4jwbq4" path="res://psychescan/backgrounds/background2.tscn" id="3_s4o1n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rlnsd"]
