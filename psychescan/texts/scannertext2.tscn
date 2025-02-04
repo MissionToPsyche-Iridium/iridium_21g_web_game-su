@@ -2,16 +2,13 @@
 
 [node name="Label" type="Label"]
 anchors_preset = -1
-anchor_right = 0.222
+anchor_right = 0.129
 anchor_bottom = 0.198
-offset_right = 0.255997
-offset_bottom = 95.696
-text = "Objective: Scan the asteroid in 2
-places
-
-
-
-
+offset_right = 0.319977
+offset_bottom = 74.16
+text = "Objective:
+Scan the asteroid in
+2 places
 
 
 

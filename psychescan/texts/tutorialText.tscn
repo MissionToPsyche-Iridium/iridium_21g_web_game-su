@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://db3wqf71m7ltl"]
+
+[node name="Label" type="Label"]
+anchors_preset = -1
+anchor_right = 0.133
+anchor_bottom = 0.198
+offset_right = 1.64
+offset_bottom = 74.16
+text = "You've reached
+the Psyche asteroid!
+Objectives will be
+displayed here.
+
+Use the arrow keys/WASD
+to move the camera.
+Press Enter/Spacebar 
+to scan the asteroid.
+(Press Enter/Space
+to continue)"
+horizontal_alignment = 1

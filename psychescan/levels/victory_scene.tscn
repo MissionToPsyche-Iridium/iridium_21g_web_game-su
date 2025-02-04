@@ -1,19 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://daq27vcb07gww"]
+[gd_scene load_steps=3 format=3 uid="uid://daq27vcb07gww"]
 
 [ext_resource type="PackedScene" uid="uid://svwaclav8uph" path="res://psychescan/sprites/victory_message.tscn" id="1_p3kmo"]
-[ext_resource type="PackedScene" uid="uid://jqgswpjodlsr" path="res://psychescan/backgrounds/vic_background.tscn" id="2_bbjdi"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7bw3"]
-size = Vector2(20, 1162)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u57ik"]
-size = Vector2(1354, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3htlh"]
-size = Vector2(20, 1162)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgvac"]
-size = Vector2(1354, 20)
+[ext_resource type="PackedScene" uid="uid://qhel7w7se32c" path="res://psychescan/backgrounds/vic_background.tscn" id="2_igxqu"]
 
 [node name="level" type="Node2D"]
 scale = Vector2(1.268, 1.268)
@@ -26,37 +14,5 @@ polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 [node name="VictoryMessage" parent="." instance=ExtResource("1_p3kmo")]
 scale = Vector2(1.268, 1.268)
 
-[node name="background" parent="." instance=ExtResource("2_bbjdi")]
+[node name="background" parent="." instance=ExtResource("2_igxqu")]
 scale = Vector2(1.268, 1.268)
-
-[node name="CameraBounds1" type="StaticBody2D" parent="."]
-scale = Vector2(1.268, 1.268)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBounds1"]
-position = Vector2(-352, 283)
-scale = Vector2(1.268, 1.268)
-shape = SubResource("RectangleShape2D_o7bw3")
-
-[node name="CameraBounds2" type="StaticBody2D" parent="."]
-scale = Vector2(1.268, 1.268)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CameraBounds2"]
-position = Vector2(315, -288)
-scale = Vector2(1.268, 1.268)
-shape = SubResource("RectangleShape2D_u57ik")
-
-[node name="CameraBounds3" type="StaticBody2D" parent="."]
-scale = Vector2(1.268, 1.268)
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="CameraBounds3"]
-position = Vector2(992, 293)
-scale = Vector2(1.268, 1.268)
-shape = SubResource("RectangleShape2D_3htlh")
-
-[node name="CameraBounds4" type="StaticBody2D" parent="."]
-scale = Vector2(1.268, 1.268)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="CameraBounds4"]
-position = Vector2(325, 864)
-scale = Vector2(1.268, 1.268)
-shape = SubResource("RectangleShape2D_jgvac")

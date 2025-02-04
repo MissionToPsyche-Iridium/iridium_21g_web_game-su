@@ -1,8 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcqh1k32covhr"]
+[gd_scene load_steps=10 format=3 uid="uid://bcqh1k32covhr"]
 
 [ext_resource type="PackedScene" uid="uid://d2k4nx07esqql" path="res://psychescan/sprites/asteroid3.tscn" id="1_2ljbq"]
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="2_si8wj"]
-[ext_resource type="PackedScene" uid="uid://bpxxps558q28k" path="res://psychescan/backgrounds/background3.tscn" id="3_c67ki"]
+[ext_resource type="PackedScene" uid="uid://cosc37m3bowe8" path="res://psychescan/backgrounds/background3.tscn" id="3_5tj0h"]
+[ext_resource type="Shader" path="res://psychescan/addons/GodotRetro/GodotRetro/Screen Shaders/Glitch.gdshader" id="3_laull"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qlbpp"]
+shader = ExtResource("3_laull")
+shader_parameter/_ScanLineJitter = 0.407
+shader_parameter/_VerticalJump = 0.004
+shader_parameter/_HorizontalShake = 0.001
+shader_parameter/_ColorDrift = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7bw3"]
 size = Vector2(20, 1162)
@@ -25,10 +33,17 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_2ljbq")]
-scale = Vector2(1.268, 1.268)
+scale = Vector2(0.9, 0.9)
 script = ExtResource("2_si8wj")
 
-[node name="background" parent="." instance=ExtResource("3_c67ki")]
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_qlbpp")
+position = Vector2(-65.1022, -33.9694)
+scale = Vector2(1.40068, 1.34663)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)
+
+[node name="background" parent="." instance=ExtResource("3_5tj0h")]
 scale = Vector2(1.268, 1.268)
 
 [node name="CameraBounds1" type="StaticBody2D" parent="."]

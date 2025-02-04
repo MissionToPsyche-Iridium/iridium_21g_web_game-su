@@ -2,21 +2,19 @@
 
 [node name="Label" type="Label"]
 anchors_preset = -1
-anchor_right = 0.222
+anchor_right = 0.133
 anchor_bottom = 0.198
-offset_right = 1.256
-offset_bottom = 95.696
-text = "Objective: Do something cool like
+offset_right = 1.64
+offset_bottom = 74.16
+text = "Objective: 
+Do something cool like
 scan the asteroid
-
-
-
-
 
 
 
 Current Instrument: 
 Thingamabob
-The thingamabob does things 
+The thingamabob 
+does things 
 and stuff"
 horizontal_alignment = 1

@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://fdj4n1xw0w83"]
 
-[ext_resource type="Texture2D" uid="uid://dckefq5niyy78" path="res://psychescan/assets/asteroid1.png" id="1_2jqrm"]
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="1_863pb"]
+[ext_resource type="Texture2D" uid="uid://clufwj1x38o5p" path="res://psychescan/assets/psyche1.png" id="2_c3rjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mg10v"]
-size = Vector2(768, 672)
+size = Vector2(640, 672)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
 size = Vector2(128, 112)
@@ -17,12 +17,12 @@ position = Vector2(384, 336)
 shape = SubResource("RectangleShape2D_mg10v")
 
 [node name="TextureShape" type="Polygon2D" parent="."]
-position = Vector2(69.8182, 0)
-scale = Vector2(1.09091, 1.05)
-texture = ExtResource("1_2jqrm")
-texture_offset = Vector2(100, -50)
+position = Vector2(122.182, 0)
+scale = Vector2(0.909091, 0.95)
+texture = ExtResource("2_c3rjc")
+texture_offset = Vector2(60, -15)
 texture_scale = Vector2(1.5, 1.5)
-polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
+polygon = PackedVector2Array(288, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
 color = Color(0, 0, 0, 1)
@@ -33,5 +33,5 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="hitboxColl" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(384, 320)
+position = Vector2(288, 352)
 shape = SubResource("RectangleShape2D_y3eek")

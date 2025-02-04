@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2k4nx07esqql"]
 
-[ext_resource type="Texture2D" uid="uid://dckefq5niyy78" path="res://psychescan/assets/asteroid1.png" id="2_1khda"]
+[ext_resource type="Texture2D" uid="uid://0kkxc62c12mj" path="res://psychescan/assets/psyche3.png" id="1_5ybe2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6q4w"]
-size = Vector2(832, 736)
+size = Vector2(896, 800)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
 size = Vector2(48, 62)
@@ -16,16 +16,16 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(416, 368)
+position = Vector2(448, 400)
 shape = SubResource("RectangleShape2D_v6q4w")
 
 [node name="TextureShape" type="Polygon2D" parent="."]
-position = Vector2(75.6363, 0)
-scale = Vector2(1.18182, 1.15)
+position = Vector2(81.4544, 0)
+scale = Vector2(1.27273, 1.25)
 color = Color(1, 0.0666667, 0.0470588, 1)
-texture = ExtResource("2_1khda")
-texture_offset = Vector2(570, 280)
-texture_scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_5ybe2")
+texture_offset = Vector2(65, -5)
+texture_scale = Vector2(1.45, 1.45)
 polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
 
 [node name="hitbox" type="CharacterBody2D" parent="."]
@@ -33,7 +33,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(592, 290)
+position = Vector2(704, 192)
 shape = SubResource("RectangleShape2D_y3eek")
 
 [node name="hitbox2" type="CharacterBody2D" parent="."]
@@ -41,7 +41,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox2"]
-position = Vector2(160, 367)
+position = Vector2(256, 128)
 shape = SubResource("RectangleShape2D_y3eek")
 
 [node name="hitbox3" type="CharacterBody2D" parent="."]
@@ -49,5 +49,5 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox3"]
-position = Vector2(464, 576)
+position = Vector2(416, 608)
 shape = SubResource("RectangleShape2D_ykous")
