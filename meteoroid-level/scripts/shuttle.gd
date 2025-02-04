@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 signal meteoroid_movement # signal for meteoroids when the shuttle moves
 
-const MOVE = 2 # number of tiles to move
-const MAX_MOVES = 10
+const MOVE = 1 # number of tiles to move
+var MAX_MOVES = 20
 var tile_size = 128
 var animation_speed = 1
 var moving = false
@@ -16,9 +16,9 @@ var inputs = {"ui_right": Vector2.RIGHT, # directional inputs using arrow keys
 "ui_up": Vector2.UP,
 "ui_down": Vector2.DOWN}
 
-@onready var game: Node2D = $".."
 @onready var input_container: HBoxContainer = $"../CanvasLayer/InputContainer"
 @onready var path: Line2D = $"../Path"
+@onready var level_3: Node2D = $".."
 
 
 var input_array = [] # array to store inputs
@@ -75,6 +75,21 @@ func remove_input() -> void:
 
 func win_condition() -> void:
 	if position == target_tile:
-		game.win_screen()
+		var current_level = get_tree().get_current_scene()
+		current_level.win_screen()
 	else:
-		get_tree().call_deferred("change_scene_to_file", "res://scenes/game.tscn")
+		get_tree().call_deferred("reload_current_scene")
+
+
+func level_1_changes() -> void:
+	MAX_MOVES = 10
+	target_tile = (Vector2(4, -1) * tile_size) + (Vector2.ONE * tile_size/2)
+
+
+func level_2_changes() -> void:
+	MAX_MOVES = 15
+	target_tile = (Vector2(6, -1) * tile_size) + (Vector2.ONE * tile_size/2)
+	
+func level_3_changes() -> void:
+	MAX_MOVES = 20
+	target_tile = (Vector2(8, -1) * tile_size) + (Vector2.ONE * tile_size/2)

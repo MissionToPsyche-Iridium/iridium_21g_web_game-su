@@ -1,6 +1,6 @@
 extends Line2D
 
-const MOVE = 2 # number of tiles to move
+const MOVE = 1 # number of tiles to move
 
 var tile_size = 128
 var starting_tile = (Vector2(0, -1) * tile_size) + Vector2.ONE * tile_size/2 # centers line
