@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbme8b1kbq7b2"]
+
+[ext_resource type="Texture2D" uid="uid://bp8bhomrcmw25" path="res://icon.svg" id="1_ej4po"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5rjaa"]
+radius = 62.9682
+
+[node name="mars" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_ej4po")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5rjaa")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dff6oavf6byca"]
+
+[ext_resource type="Script" path="res://goal.gd" id="1_74ib7"]
+[ext_resource type="Texture2D" uid="uid://bp8bhomrcmw25" path="res://icon.svg" id="1_phh8h"]
+
+[sub_resource type="GDScript" id="GDScript_w3axx"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7oiu"]
+radius = 8.0399
+
+[node name="goal" type="StaticBody2D"]
+script = ExtResource("1_74ib7")
+
+[node name="detectarea" type="Area2D" parent="."]
+script = SubResource("GDScript_w3axx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectarea"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_v7oiu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_phh8h")
+
+[connection signal="area_entered" from="detectarea" to="." method="_on_detectarea_area_entered"]
