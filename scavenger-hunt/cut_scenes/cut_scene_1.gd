@@ -30,5 +30,5 @@ func _physics_process(delta: float) -> void:
 func cutscene_end():
 	is_followingpath = false
 	is_startcutscene = false
-	get_tree().change_scene_to_file("res://room2/room2.tscn")
-		
+	get_tree().change_scene_to_file("res://scavenger-hunt/room2/room2.tscn")
+	

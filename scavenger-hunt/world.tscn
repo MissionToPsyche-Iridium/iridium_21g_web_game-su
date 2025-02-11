@@ -1,0 +1,359 @@
+[gd_scene load_steps=27 format=3 uid="uid://csj85o6s1ep81"]
+
+[ext_resource type="Script" path="res://scavenger-hunt/world.gd" id="1_jxgm3"]
+[ext_resource type="PackedScene" uid="uid://17wx3jdqs3le" path="res://scavenger-hunt/room1/room1.tscn" id="1_u157h"]
+[ext_resource type="PackedScene" uid="uid://2qdm2buwfiyl" path="res://scavenger-hunt/room2/room2.tscn" id="3_yrd6d"]
+[ext_resource type="Texture2D" uid="uid://baukst30o0gdr" path="res://scavenger-hunt/doors/glass-1.png" id="4_ancd8"]
+[ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/player/player.tscn" id="4_w582j"]
+[ext_resource type="Texture2D" uid="uid://bfbnetsrvlncu" path="res://scavenger-hunt/doors/glass-2.png" id="5_ihh3w"]
+[ext_resource type="Texture2D" uid="uid://byurm7cfayj6o" path="res://scavenger-hunt/doors/glass-3.png" id="6_4gv6q"]
+[ext_resource type="Texture2D" uid="uid://cnoxxuqqopu7f" path="res://scavenger-hunt/doors/glass-4.png" id="7_r3m0y"]
+[ext_resource type="Texture2D" uid="uid://bo0jb4gjmqs8m" path="res://scavenger-hunt/doors/glass-5.png" id="8_ivcbf"]
+[ext_resource type="Texture2D" uid="uid://bc6lhqu00q461" path="res://scavenger-hunt/doors/door-5.png" id="10_u4qi8"]
+[ext_resource type="Texture2D" uid="uid://oba7i50ix60l" path="res://scavenger-hunt/doors/door-4.png" id="11_i7h2n"]
+[ext_resource type="Texture2D" uid="uid://bog8l48ifm1u" path="res://scavenger-hunt/doors/door-3.png" id="12_65obh"]
+[ext_resource type="Texture2D" uid="uid://cjwsbgm1ub6pn" path="res://scavenger-hunt/doors/door-2.png" id="13_lwkhj"]
+[ext_resource type="Texture2D" uid="uid://5vm72rklulkq" path="res://scavenger-hunt/doors/door-1.png" id="14_b2v1r"]
+
+[sub_resource type="Curve2D" id="Curve2D_uv60c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 31.6514, 0, 0, 0, 0, 0, 10.0918, 0, 0, 0, 0, 0, -21.5596)
+}
+point_count = 3
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ta1d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ancd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihh3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4gv6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r3m0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ivcbf")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ivcbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r3m0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4gv6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihh3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ancd8")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_27mid"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 190.006, 0.085144, 0, 0, 0, 0, 190.006, -246)
+}
+point_count = 3
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_knhi5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_u4qi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i7h2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_65obh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lwkhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b2v1r")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_b2v1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lwkhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_65obh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i7h2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u4qi8")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qchfk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ivcbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r3m0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4gv6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihh3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ancd8")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ancd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihh3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4gv6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r3m0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ivcbf")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_3vq65"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.266083, -44.3921, 0, 0, 0, 0, 231, -44)
+}
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_pvs4e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room2Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hgyf6"]
+resource_name = "room1_cover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room1Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_unc06"]
+resource_name = "room1_cover_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room1Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gwb5y"]
+resource_name = "room2_cover_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room2Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ug8fn"]
+resource_name = "room2_cover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room2Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j0nex"]
+_data = {
+"RESET": SubResource("Animation_pvs4e"),
+"room1_cover": SubResource("Animation_hgyf6"),
+"room1_cover_fade": SubResource("Animation_unc06"),
+"room2_cover": SubResource("Animation_ug8fn"),
+"room2_cover_fade": SubResource("Animation_gwb5y")
+}
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_jxgm3")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -30.0
+offset_right = 2032.0
+offset_bottom = 1405.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 1)
+
+[node name="Room2" parent="." instance=ExtResource("3_yrd6d")]
+position = Vector2(0, -1)
+
+[node name="Room2Camera" type="Camera2D" parent="."]
+position = Vector2(1431, 439)
+zoom = Vector2(2.1, 2.1)
+
+[node name="Room1" parent="." instance=ExtResource("1_u157h")]
+
+[node name="EnterRoom1" type="Path2D" parent="."]
+position = Vector2(933, 1068)
+scale = Vector2(2.18, 2.18)
+curve = SubResource("Curve2D_uv60c")
+metadata/_edit_group_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnterRoom1"]
+position = Vector2(0, 31.6514)
+rotation = -1.5708
+loop = false
+
+[node name="Player" parent="EnterRoom1/PathFollow2D" instance=ExtResource("4_w582j")]
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+
+[node name="FrontDoor" type="AnimatedSprite2D" parent="."]
+position = Vector2(936, 1124)
+scale = Vector2(0.888889, 0.995935)
+sprite_frames = SubResource("SpriteFrames_3ta1d")
+animation = &"open"
+
+[node name="Room1Camera" type="Camera2D" parent="."]
+position = Vector2(937, 825)
+zoom = Vector2(2, 2)
+
+[node name="LeaveRoom1" type="Path2D" parent="."]
+position = Vector2(936, 738)
+scale = Vector2(1.03681, 1)
+curve = SubResource("Curve2D_27mid")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="LeaveRoom1"]
+rotation = 0.000448112
+rotates = false
+loop = false
+
+[node name="Player" parent="LeaveRoom1/PathFollow2D" instance=ExtResource("4_w582j")]
+position = Vector2(-1.52588e-05, 3.8147e-06)
+scale = Vector2(2.5, 2.5)
+
+[node name="Room1Door" type="AnimatedSprite2D" parent="."]
+position = Vector2(1128, 609)
+sprite_frames = SubResource("SpriteFrames_knhi5")
+animation = &"open"
+
+[node name="Room2Door" type="AnimatedSprite2D" parent="."]
+position = Vector2(1298, 418)
+sprite_frames = SubResource("SpriteFrames_qchfk")
+animation = &"close"
+
+[node name="EnterRoom2" type="Path2D" parent="."]
+position = Vector2(1133, 492)
+curve = SubResource("Curve2D_3vq65")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnterRoom2"]
+rotation = 0.000448112
+rotates = false
+loop = false
+
+[node name="Player" parent="EnterRoom2/PathFollow2D" instance=ExtResource("4_w582j")]
+position = Vector2(-1.52662e-05, 0)
+scale = Vector2(2.5, 2.5)
+
+[node name="Room2Cover" type="ColorRect" parent="."]
+visible = false
+offset_left = 973.0
+offset_top = 181.0
+offset_right = 1889.0
+offset_bottom = 697.0
+color = Color(0, 0, 0, 1)
+
+[node name="Room1Cover" type="ColorRect" parent="."]
+offset_left = 456.0
+offset_top = 518.0
+offset_right = 1420.0
+offset_bottom = 1096.0
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j0nex")
+}
+
+[connection signal="end_room1" from="Room1" to="." method="_on_end_room_1"]

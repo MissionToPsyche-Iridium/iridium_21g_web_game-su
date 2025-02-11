@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 const WALK_FORCE = 1200
-const WALK_MAX_SPEED = 400
+const WALK_MAX_SPEED = 200
 const STOP_FORCE = 2600
 
 var direction
-var movable = true
+var movable = false
 var facing = false
 
 signal interact

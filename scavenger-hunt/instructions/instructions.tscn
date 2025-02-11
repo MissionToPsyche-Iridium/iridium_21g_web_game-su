@@ -1,13 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3ui6eld4jwbg"]
 
-[ext_resource type="Script" path="res://instructions/instructions.gd" id="1_sqetm"]
-[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://fonts/dogicapixelbold.ttf" id="3_lw17n"]
+[ext_resource type="Script" path="res://scavenger-hunt/instructions/instructions.gd" id="1_sqetm"]
+[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://scavenger-hunt/fonts/dogicapixelbold.ttf" id="3_lw17n"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7clb"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xse23"]
+bg_color = Color(0.892756, 0.892756, 0.892756, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjjjx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj7r5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b6llb"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrvss"]
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -43,17 +44,20 @@ shortcut_keys_enabled = false
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 844.0
-offset_top = 728.0
-offset_right = 1107.0
-offset_bottom = 856.0
+offset_left = 800.0
+offset_top = 736.0
+offset_right = 1132.0
+offset_bottom = 864.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_lw17n")
 theme_override_font_sizes/font_size = 60
-theme_override_styles/hover = SubResource("StyleBoxFlat_r7clb")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_bjjjx")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_b6llb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xse23")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pj7r5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vrvss")
 text = "Okay!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
