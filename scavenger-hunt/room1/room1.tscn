@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://17wx3jdqs3le"]
+[gd_scene load_steps=45 format=4 uid="uid://17wx3jdqs3le"]
 
 [ext_resource type="Texture2D" uid="uid://cxyhm0m1gvi36" path="res://scavenger-hunt/floors/floor-1.png" id="1_a5wg4"]
 [ext_resource type="Script" path="res://scavenger-hunt/room1/room_1.gd" id="1_j7enj"]
@@ -18,14 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://m3bqm0526r8v" path="res://scavenger-hunt/room1/chair.png" id="15_wkn5t"]
 [ext_resource type="Texture2D" uid="uid://dqrr4jtwlt867" path="res://scavenger-hunt/room1/table.png" id="16_4cwij"]
 [ext_resource type="Texture2D" uid="uid://bc6lhqu00q461" path="res://scavenger-hunt/doors/door-5.png" id="16_302dd"]
-[ext_resource type="Texture2D" uid="uid://c7ycv757l8qm8" path="res://scavenger-hunt/room1/picture_words.png" id="16_ufj6d"]
+[ext_resource type="Texture2D" uid="uid://ch8w5ckys1ayl" path="res://scavenger-hunt/room1/picture.png" id="16_y0xd7"]
 [ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/pop_up/question.tscn" id="18_mxad4"]
-[ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/description.tscn" id="20_yqpkd"]
+[ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/pop_up/description.tscn" id="20_yqpkd"]
 [ext_resource type="Texture2D" uid="uid://bo0jb4gjmqs8m" path="res://scavenger-hunt/doors/glass-5.png" id="22_3uegg"]
-[ext_resource type="Texture2D" uid="uid://baukst30o0gdr" path="res://scavenger-hunt/doors/glass-1.png" id="22_vkf4k"]
-[ext_resource type="Texture2D" uid="uid://bfbnetsrvlncu" path="res://scavenger-hunt/doors/glass-2.png" id="23_kvdgu"]
-[ext_resource type="Texture2D" uid="uid://byurm7cfayj6o" path="res://scavenger-hunt/doors/glass-3.png" id="24_dei01"]
-[ext_resource type="Texture2D" uid="uid://cnoxxuqqopu7f" path="res://scavenger-hunt/doors/glass-4.png" id="25_2iv74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yu88q"]
 texture = ExtResource("1_a5wg4")
@@ -230,7 +226,7 @@ sources/0 = SubResource("TileSetAtlasSource_2p86d")
 sources/1 = SubResource("TileSetAtlasSource_fveqc")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uqma"]
-radius = 20.0008
+radius = 19.0008
 height = 58.0012
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koiod"]
@@ -286,89 +282,10 @@ size = Vector2(27, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfwip"]
 size = Vector2(60, 60)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lsqmk"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_uuhpe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("22_vkf4k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_kvdgu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_dei01")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_2iv74")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_3uegg")
-}],
-"loop": false,
-"name": &"close",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("22_3uegg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_2iv74")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_dei01")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_kvdgu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_vkf4k")
-}],
-"loop": false,
-"name": &"open",
-"speed": 5.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04qg3"]
 size = Vector2(53.875, 20)
 
-[sub_resource type="Animation" id="Animation_607rc"]
-resource_name = "cover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cover:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_uj738"]
-resource_name = "cover_fade"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cover:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_f2xrr"]
-_data = {
-"cover": SubResource("Animation_607rc"),
-"cover_fade": SubResource("Animation_uj738")
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lsqmk"]
 
 [node name="Room1" type="Node2D"]
 script = ExtResource("1_j7enj")
@@ -378,7 +295,7 @@ tile_map_data = PackedByteArray("AAANAA4AAgAAAAAAAAANAA8AAgAAAAEAAAANABAAAgAAAAE
 tile_set = SubResource("TileSet_0wprq")
 
 [node name="Walls" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAOAA0AAQABAAEAAAAPAA0AAQABAAEAAAAQAA0AAQABAAEAAAARAA0AAQABAAEAAAASAA0AAQABAAEAAAATAA0AAQABAAEAAAAUAA0AAQABAAEAAAAVAA0AAQABAAEAAAAWAA0AAQABAAEAAAAYAA0AAQABAAEAAAAZAA0AAQAIAAEAAAANAA0AAQAIAAEAAAAOAAwAAQABAAAAAAAPAAwAAQABAAAAAAAQAAwAAQABAAAAAAARAAwAAQABAAAAAAASAAwAAQABAAAAAAATAAwAAQABAAAAAAAUAAwAAQABAAAAAAAVAAwAAQABAAAAAAAWAAwAAQABAAAAAAAYAAwAAQABAAAAAAAZAAwAAQABAAAAAAANAAwAAQABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAOAA0AAQABAAEAAAAPAA0AAQABAAEAAAAQAA0AAQABAAEAAAARAA0AAQABAAEAAAASAA0AAQABAAEAAAATAA0AAQABAAEAAAAUAA0AAQABAAEAAAAVAA0AAQABAAEAAAAWAA0AAQACAAEAAAAZAA0AAQAIAAEAAAANAA0AAQAIAAEAAAAOAAwAAQABAAAAAAAPAAwAAQABAAAAAAAQAAwAAQABAAAAAAARAAwAAQABAAAAAAASAAwAAQABAAAAAAATAAwAAQABAAAAAAAUAAwAAQABAAAAAAAVAAwAAQABAAAAAAAWAAwAAQACAAAAAAAYAAwAAQAAAAAAAAAZAAwAAQABAAAAAAANAAwAAQABAAAAAAAYAA0AAQAAAAEAAAA=")
 tile_set = SubResource("TileSet_lr774")
 
 [node name="Border" type="TileMapLayer" parent="."]
@@ -392,7 +309,7 @@ metadata/_edit_group_ = true
 
 [node name="ReceptionistSprite" type="Sprite2D" parent="Receptionist"]
 position = Vector2(-0.000793457, -10.0006)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2.4, 2.4)
 texture = ExtResource("4_noe72")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Receptionist"]
@@ -500,15 +417,15 @@ collision_layer = 4
 position = Vector2(0, 8.75)
 shape = SubResource("RectangleShape2D_fxsrr")
 
-[node name="Door" type="StaticBody2D" parent="."]
+[node name="LeaveDoor" type="StaticBody2D" parent="."]
 position = Vector2(1128, 609)
 collision_mask = 2
 metadata/_edit_group_ = true
 
-[node name="DoorSprite" type="AnimatedSprite2D" parent="Door"]
+[node name="DoorSprite" type="AnimatedSprite2D" parent="LeaveDoor"]
 sprite_frames = SubResource("SpriteFrames_lddvi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeaveDoor"]
 shape = SubResource("RectangleShape2D_rxhcq")
 
 [node name="NotebookArea" type="Area2D" parent="."]
@@ -526,21 +443,32 @@ position = Vector2(-50, -89)
 shape = SubResource("RectangleShape2D_afgvc")
 
 [node name="PictureArea" type="Area2D" parent="."]
-position = Vector2(771, 633)
+position = Vector2(771, 630)
 collision_layer = 4
 collision_mask = 2
+metadata/_edit_group_ = true
 
 [node name="PictureSprite" type="Sprite2D" parent="PictureArea"]
-texture = ExtResource("16_ufj6d")
+texture = ExtResource("16_y0xd7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PictureArea"]
 position = Vector2(0, -6.10352e-05)
 shape = SubResource("RectangleShape2D_gfwip")
 
+[node name="EnterDoor" type="StaticBody2D" parent="."]
+position = Vector2(936, 1124)
+scale = Vector2(0.888889, 0.995935)
+collision_mask = 2
+
+[node name="FrontDoorSprite" type="Sprite2D" parent="EnterDoor"]
+texture = ExtResource("22_3uegg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnterDoor"]
+position = Vector2(0.0625, -52.2123)
+shape = SubResource("RectangleShape2D_04qg3")
+
 [node name="Player" parent="." instance=ExtResource("14_wv7gx")]
-position = Vector2(935, 1021)
-scale = Vector2(2.5, 2.5)
-metadata/_edit_group_ = true
+position = Vector2(934, 1021)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(5, 5)
@@ -638,35 +566,10 @@ offset_top = 908.0
 offset_right = 1187.0
 offset_bottom = 999.0
 
-[node name="FrontDoor" type="StaticBody2D" parent="."]
-position = Vector2(936, 1124)
-scale = Vector2(0.888889, 0.995935)
-collision_mask = 2
-
-[node name="FrontDoorSprite" type="AnimatedSprite2D" parent="FrontDoor"]
-sprite_frames = SubResource("SpriteFrames_uuhpe")
-animation = &"open"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontDoor"]
-position = Vector2(0.0625, -52.2123)
-shape = SubResource("RectangleShape2D_04qg3")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_f2xrr")
-}
-
-[node name="Cover" type="ColorRect" parent="."]
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0)
-
 [connection signal="popup_close" from="." to="Player" method="_on_room_1_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_1_popup_open"]
 [connection signal="body_entered" from="QuestionArea" to="." method="_on_reception_question_body_entered"]
 [connection signal="body_exited" from="QuestionArea" to="." method="_on_reception_question_body_exited"]
-[connection signal="area_entered" from="NotebookArea" to="." method="_on_notebook_area_entered"]
 [connection signal="interact" from="Player" to="." method="_on_player_interact"]
 [connection signal="no_interact" from="Player" to="." method="_on_player_no_interact"]
 [connection signal="option1" from="Question" to="." method="_on_question_option_1"]

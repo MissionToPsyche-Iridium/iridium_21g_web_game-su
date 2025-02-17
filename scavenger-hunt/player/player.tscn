@@ -161,7 +161,7 @@ animations = [{
 radius = 8.0
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(2.18, 2.18)
+scale = Vector2(2.4, 2.4)
 collision_layer = 2
 script = ExtResource("1_ma31h")
 

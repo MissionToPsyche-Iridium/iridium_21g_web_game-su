@@ -12,17 +12,16 @@ signal interact
 signal no_interact
 
 func _ready() -> void:
-	$PlayerSprite.play("idle_up")
-	$RayCast2D.target_position = Vector2(0, -20)
+	pass
 
 func _physics_process(delta):
 	if movable:
 		# Horizontal movement code. First, get the player's input.
 		var walk_x = WALK_FORCE * (Input.get_axis(&"ui_left", &"ui_right"))
-		if Input.is_action_just_pressed("ui_left"):
+		if Input.is_action_pressed("ui_left"):
 			direction = "left"
 			$RayCast2D.target_position = Vector2(-20, 0)
-		if Input.is_action_just_pressed("ui_right"):
+		if Input.is_action_pressed("ui_right"):
 			direction = "right"
 			$RayCast2D.target_position = Vector2(20, 0)
 		# Slow down the player if they're not trying to move.
@@ -44,10 +43,10 @@ func _physics_process(delta):
 
 		# Vertical movement code. First, get the player's input.
 		var walk_y = WALK_FORCE * (Input.get_axis(&"ui_up", &"ui_down"))
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_pressed("ui_up"):
 			direction = "up"
 			$RayCast2D.target_position = Vector2(0, -20)
-		if Input.is_action_just_pressed("ui_down"):
+		if Input.is_action_pressed("ui_down"):
 			direction = "down"
 			$RayCast2D.target_position = Vector2(0, 20)
 		# Slow down the player if they're not trying to move.
@@ -82,7 +81,6 @@ func _physics_process(delta):
 
 func _on_room_1_popup_close() -> void:
 	movable = true
-
 
 func _on_room_1_popup_open() -> void:
 	movable = false
