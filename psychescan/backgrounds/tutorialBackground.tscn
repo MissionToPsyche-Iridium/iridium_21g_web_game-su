@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c641vkv3xk5kr"]
+[gd_scene load_steps=8 format=3 uid="uid://c641vkv3xk5kr"]
 
 [ext_resource type="Texture2D" uid="uid://cq1eswyyttofu" path="res://psychescan/assets/consoleBackground.png" id="1_vdehd"]
 [ext_resource type="Script" path="res://psychescan/scripts/Tutorial_To_Next_Level.gd" id="2_fy18e"]
 [ext_resource type="PackedScene" uid="uid://db3wqf71m7ltl" path="res://psychescan/texts/tutorialText.tscn" id="2_hkxe4"]
 [ext_resource type="Texture2D" uid="uid://letgubvalxhy" path="res://psychescan/assets/squareReticle.png" id="3_fba8r"]
 [ext_resource type="AudioStream" uid="uid://cly07w2aa5yrj" path="res://psychescan/assets/correct.wav" id="5_15ndt"]
+[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="6_4qhsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc7cd"]
 size = Vector2(32, 32)
@@ -45,6 +46,12 @@ offset_bottom = 386.0
 [node name="CorrectSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_15ndt")
 bus = &"CorrectSound"
+
+[node name="CRTHumBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_4qhsd")
+volume_db = -4.0
+autoplay = true
+parameters/looping = false
 
 [connection signal="body_entered" from="hitbox1" to="hitbox1" method="_on_area2d_body_entered"]
 [connection signal="body_exited" from="hitbox1" to="hitbox1" method="_on_area2d_body_exited"]

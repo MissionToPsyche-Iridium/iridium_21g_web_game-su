@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://qhel7w7se32c"]
+[gd_scene load_steps=7 format=3 uid="uid://qhel7w7se32c"]
 
 [ext_resource type="Texture2D" uid="uid://cq1eswyyttofu" path="res://psychescan/assets/consoleBackground.png" id="1_xn5xa"]
 [ext_resource type="PackedScene" uid="uid://svwaclav8uph" path="res://psychescan/sprites/victory_message.tscn" id="1_yqwwf"]
 [ext_resource type="Script" path="res://psychescan/scripts/To_Next_Level.gd" id="4_y01lp"]
 [ext_resource type="PackedScene" uid="uid://dq62abyfwocnx" path="res://psychescan/texts/victory_text.tscn" id="5_lyrys"]
+[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="5_v4dcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc7cd"]
 size = Vector2(32, 32)
@@ -37,6 +38,12 @@ offset_left = 602.0
 offset_top = 102.0
 offset_right = 786.0
 offset_bottom = 359.0
+
+[node name="CRTHumBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v4dcy")
+volume_db = -4.0
+autoplay = true
+parameters/looping = false
 
 [connection signal="body_entered" from="hitbox1" to="hitbox1" method="_on_area2d_body_entered"]
 [connection signal="body_exited" from="hitbox1" to="hitbox1" method="_on_area2d_body_exited"]
