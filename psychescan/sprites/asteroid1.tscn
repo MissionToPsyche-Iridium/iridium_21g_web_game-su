@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://fdj4n1xw0w83"]
+[gd_scene load_steps=6 format=3 uid="uid://fdj4n1xw0w83"]
 
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="1_863pb"]
 [ext_resource type="Texture2D" uid="uid://clufwj1x38o5p" path="res://psychescan/assets/psyche1.png" id="2_c3rjc"]
+[ext_resource type="PackedScene" uid="uid://dipu66gwaj7se" path="res://psychescan/sprites/sparkle.tscn" id="3_ws2bb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mg10v"]
 size = Vector2(640, 672)
@@ -28,10 +29,15 @@ polygon = PackedVector2Array(288, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 6
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 608, 768, 608, 768, 672, 0, 672)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="hitbox" type="CharacterBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
-[node name="hitboxColl" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="hitboxColl" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(288, 352)
 shape = SubResource("RectangleShape2D_y3eek")
+
+[node name="AnimatedSprite2D" parent="hitbox" instance=ExtResource("3_ws2bb")]
+position = Vector2(288, 352)
+frame = 10
+frame_progress = 0.0183787

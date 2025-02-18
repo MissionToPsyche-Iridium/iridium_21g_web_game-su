@@ -10,6 +10,8 @@ var scanned_boxes := []  # List to keep track of scanned boxes
 var correctNode
 var incorrectNode
 var is_scene_change_pending = false
+var correctSound
+var incorrectSound
 
 func _ready():
 	monitoring = true
@@ -17,6 +19,8 @@ func _ready():
 	incorrectNode = get_parent().get_node("Incorrect")
 	correctNode.visible = false
 	incorrectNode.visible = false
+	correctSound = get_parent().get_node("CorrectSound")
+	incorrectSound = get_parent().get_node("IncorrectSound")
 
 # Signals for collision detection required for switching scenes at the proper events
 func _on_area2d_body_entered(body):
@@ -43,26 +47,33 @@ func _process(delta):
 			valid_scan_count += 1
 			is_overlap = false
 			show_correct_only()
+			correctSound.play()
+			await correctSound.finished
 			
 			if valid_scan_count == 3: # When player has scanned all target areas
 				print("all boxes successsfully scanned. Transitioning...")
-				is_scene_change_pending = true
 				show_correct_indicator()
+				is_scene_change_pending = true
 		elif overlapping_box and has_been_scanned(overlapping_box):
 			print("Already scanned")
 			show_incorrect_indicator()
+			incorrectSound.play()
+			await incorrectSound.finished
 	elif not is_overlap and Input.is_action_just_pressed("ui_accept"):
 		print("target misaligned")
 		show_incorrect_indicator()
+		incorrectSound.play()
+		await incorrectSound.finished
 
 func change_scene():
+	var tree = get_tree()
 	print("Transition from: " + get_tree().current_scene.name)
 
 	if new_scene_path.length() == 0:
 		print("Error: no scene path specified")
 		return
 		
-	var result = get_tree().change_scene_to_file(new_scene_path)
+	var result = tree.change_scene_to_file(new_scene_path)
 	if result == OK:
 		print("Transition success")
 	else:

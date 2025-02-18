@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://donyf1gwwur7d"]
+[gd_scene load_steps=9 format=3 uid="uid://donyf1gwwur7d"]
 
 [ext_resource type="PackedScene" uid="uid://c0u77fgeccqyi" path="res://psychescan/sprites/asteroid2.tscn" id="1_u5qw6"]
-[ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="2_gr8ka"]
 [ext_resource type="Shader" path="res://psychescan/addons/Glitch.gdshader" id="3_7dqm1"]
 [ext_resource type="PackedScene" uid="uid://b5x1ucl4jwbq4" path="res://psychescan/backgrounds/background2.tscn" id="3_s4o1n"]
 
@@ -34,7 +33,6 @@ polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_u5qw6")]
 scale = Vector2(0.9, 0.9)
-script = ExtResource("2_gr8ka")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 material = SubResource("ShaderMaterial_rlnsd")
@@ -43,7 +41,7 @@ scale = Vector2(1.40068, 1.34663)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)
 
-[node name="background2" parent="." instance=ExtResource("3_s4o1n")]
+[node name="background" parent="." instance=ExtResource("3_s4o1n")]
 scale = Vector2(1.268, 1.268)
 
 [node name="CameraBounds1" type="StaticBody2D" parent="."]
