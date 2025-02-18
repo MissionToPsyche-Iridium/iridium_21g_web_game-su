@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c673pjq14icgy"
-path="res://.godot/imported/2021-05-09-104143-Zeichnung 10.png.png-6b9601844fac6735b8506e7e48726849.ctex"
+path="res://.godot/imported/2021-05-09-104143-Zeichnung 10.png.png-ad8f1559eabbf8f7cdd8f3e7a6f94536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Free_Rythm_Arrow_Pack/arrows_rainbow/2021-05-09-104143-Zeichnung 10.png.png"
-dest_files=["res://.godot/imported/2021-05-09-104143-Zeichnung 10.png.png-6b9601844fac6735b8506e7e48726849.ctex"]
+source_file="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_rainbow/2021-05-09-104143-Zeichnung 10.png.png"
+dest_files=["res://.godot/imported/2021-05-09-104143-Zeichnung 10.png.png-ad8f1559eabbf8f7cdd8f3e7a6f94536.ctex"]
 
 [params]
 

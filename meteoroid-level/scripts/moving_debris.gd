@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func move() -> void:
 	var tween = create_tween() # animate the movement
-	tween.tween_property(self, "position", position + (Vector2.LEFT * tile_size * MOVE), 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "position", position + (Vector2.LEFT * tile_size * MOVE), 1.0/animation_speed)
 	moving = true
 	await tween.finished
 	moving = false

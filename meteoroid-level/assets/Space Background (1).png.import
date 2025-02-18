@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt3kj47nwnoai"
-path="res://.godot/imported/Space Background (1).png-275062e784458de6a4970f6b8192f246.ctex"
+path="res://.godot/imported/Space Background (1).png-b0f50f8f74be28c102f1fa56b33123cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Space Background (1).png"
-dest_files=["res://.godot/imported/Space Background (1).png-275062e784458de6a4970f6b8192f246.ctex"]
+source_file="res://meteoroid-level/assets/Space Background (1).png"
+dest_files=["res://.godot/imported/Space Background (1).png-b0f50f8f74be28c102f1fa56b33123cc.ctex"]
 
 [params]
 

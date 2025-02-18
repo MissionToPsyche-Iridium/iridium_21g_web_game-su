@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-@onready var ArrowClass = preload("res://scenes/input_arrows.tscn")
+@onready var ArrowClass = preload("res://meteoroid-level/scenes/input_arrows.tscn")
 
 var input = {"ui_right": "Right", # directional inputs using arrow keys
 "ui_left": "Left",
@@ -9,7 +9,6 @@ var input = {"ui_right": "Right", # directional inputs using arrow keys
 
 
 func create_arrow(dir: String):
-	# for input in shuttle.input_array:
 	var arrow = ArrowClass.instantiate()
 	var animation = arrow.get_node("AnimatedSprite2D")
 	animation.play(input[dir])

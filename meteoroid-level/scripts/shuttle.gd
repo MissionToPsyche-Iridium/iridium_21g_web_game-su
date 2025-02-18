@@ -18,7 +18,7 @@ var inputs = {"ui_right": Vector2.RIGHT, # directional inputs using arrow keys
 
 @onready var input_container: HBoxContainer = $"../CanvasLayer/InputContainer"
 @onready var path: Line2D = $"../Path"
-@onready var level_3: Node2D = $".."
+@onready var movement_sound: AudioStreamPlayer2D = $MovementSound
 
 
 var input_array = [] # array to store inputs
@@ -45,17 +45,25 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		remove_input()
 	if event.is_action_pressed("ui_accept"): # if user presses enter to finalize inputs
+		if input_array.is_empty():
+			return
 		move()
 
 func move():
+	var last_dir = input_array.front()
+	moving = true;
 	for dir in input_array:
 		call_meteoroids_move() # signals to meteoroids
 		
+		movement_sound.play()
+		
 		var tween = create_tween()
-		tween.tween_property(self, "position", position + inputs[dir] * tile_size * MOVE, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
-		moving = true
+		if last_dir == dir:
+			tween.tween_property(self, "position", position + inputs[dir] * tile_size * MOVE, 1.0/animation_speed)
+		else:
+			tween.tween_property(self, "position", position + inputs[dir] * tile_size * MOVE, 1.0/animation_speed).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_SINE)
 		await tween.finished
-		moving = false
+		last_dir = dir
 	input_array.clear()
 	win_condition()
 
@@ -74,11 +82,11 @@ func remove_input() -> void:
 	path.remove_last_point()
 
 func win_condition() -> void:
+	var current_level = get_tree().get_current_scene()
 	if position == target_tile:
-		var current_level = get_tree().get_current_scene()
 		current_level.win_screen()
 	else:
-		get_tree().call_deferred("reload_current_scene")
+		current_level.lose_screen()
 
 
 func level_1_changes() -> void:

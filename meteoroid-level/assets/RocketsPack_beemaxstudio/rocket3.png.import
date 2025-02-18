@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f164ynmmnsvx"
-path="res://.godot/imported/rocket3.png-4ba845ca7c3b0dbfa870248e82cb2d84.ctex"
+path="res://.godot/imported/rocket3.png-4e2ed9a547128858963b7bf2e0d6f4bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/RocketsPack_beemaxstudio/rocket3.png"
-dest_files=["res://.godot/imported/rocket3.png-4ba845ca7c3b0dbfa870248e82cb2d84.ctex"]
+source_file="res://meteoroid-level/assets/RocketsPack_beemaxstudio/rocket3.png"
+dest_files=["res://.godot/imported/rocket3.png-4e2ed9a547128858963b7bf2e0d6f4bb.ctex"]
 
 [params]
 

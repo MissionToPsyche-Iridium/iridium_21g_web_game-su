@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clnsls1drtvix"
-path="res://.godot/imported/destroyed asteriod 1.png-21301093568899b97ba0d09056012903.ctex"
+path="res://.godot/imported/destroyed asteriod 1.png-453d2b06e2be9043a5121abcc4f80279.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/10 asteriod sprite pack/destroyed asteriod 1.png"
-dest_files=["res://.godot/imported/destroyed asteriod 1.png-21301093568899b97ba0d09056012903.ctex"]
+source_file="res://meteoroid-level/assets/10 asteriod sprite pack/destroyed asteriod 1.png"
+dest_files=["res://.godot/imported/destroyed asteriod 1.png-453d2b06e2be9043a5121abcc4f80279.ctex"]
 
 [params]
 

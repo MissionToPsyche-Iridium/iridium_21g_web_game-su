@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2eioo1ehuni8"
-path="res://.godot/imported/small asteriod 2.png-bbbd86a270011d2afd65eac7225db048.ctex"
+path="res://.godot/imported/small asteriod 2.png-d1ffbe422011a318843983fc01cbdec6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/10 asteriod sprite pack/small asteriod 2.png"
-dest_files=["res://.godot/imported/small asteriod 2.png-bbbd86a270011d2afd65eac7225db048.ctex"]
+source_file="res://meteoroid-level/assets/10 asteriod sprite pack/small asteriod 2.png"
+dest_files=["res://.godot/imported/small asteriod 2.png-d1ffbe422011a318843983fc01cbdec6.ctex"]
 
 [params]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmvpevcgrtlss"]
+[gd_scene load_steps=7 format=3 uid="uid://dmvpevcgrtlss"]
 
-[ext_resource type="Texture2D" uid="uid://n7bd0u1p2ktn" path="res://assets/RocketsPack_beemaxstudio/rocket1.png" id="1_hl851"]
-[ext_resource type="Script" path="res://scripts/shuttle.gd" id="1_r5ds6"]
+[ext_resource type="Texture2D" uid="uid://n7bd0u1p2ktn" path="res://meteoroid-level/assets/RocketsPack_beemaxstudio/rocket1.png" id="1_hl851"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/shuttle.gd" id="1_r5ds6"]
+[ext_resource type="AudioStream" uid="uid://b6up86dahe50n" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Pickup.wav" id="3_lkg7h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22t74"]
 atlas = ExtResource("1_hl851")
@@ -35,3 +36,6 @@ sprite_frames = SubResource("SpriteFrames_kixk8")
 position = Vector2(4, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_0gxfc")
+
+[node name="MovementSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lkg7h")

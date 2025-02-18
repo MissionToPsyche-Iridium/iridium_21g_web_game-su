@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://nmp7i8bxi64h"]
 
-[ext_resource type="Script" path="res://scripts/next_level_button.gd" id="1_gg3bs"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/next_level_button.gd" id="1_wada7"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -23,7 +23,7 @@ offset_right = 769.0
 offset_bottom = -177.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
-text = "Educational facts about maneuvers, object tracking, plotting course"
+text = "The Psyche spacecraft travels through space using solar-electric propulsion. Changes in movements are slow. When obstacles like space debris are detected, scientists must calculate course corrections to avoid the obstacles in the best way to save fuel."
 autowrap_mode = 2
 
 [node name="NextLevelButton" type="Button" parent="."]
@@ -37,7 +37,7 @@ offset_right = 137.0
 offset_bottom = 244.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
-text = "Continue"
-script = ExtResource("1_gg3bs")
+text = "END SIMULATION"
+script = ExtResource("1_wada7")
 
 [connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bkkgy715tf84w"]
 
-[ext_resource type="Script" path="res://scripts/level_2_start.gd" id="1_8sqoe"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/level_2_start.gd" id="1_jxdim"]
 
 [node name="Level 2 Screen" type="Control"]
 layout_mode = 3
@@ -24,8 +24,12 @@ offset_bottom = 271.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
-text = "This debris is moving towards the shuttle. 
-Keep track of their movement! To save fuel, you only have 15 moves."
+text = "Loading Course Simulation...
+
+Settings: 
+Moving debris
+Limited to 15 maneuvers
+"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -43,7 +47,7 @@ offset_bottom = 67.332
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 64
-text = "Continue"
-script = ExtResource("1_8sqoe")
+text = "READY"
+script = ExtResource("1_jxdim")
 
 [connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]

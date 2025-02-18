@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bsr82lokxlfhg"]
 
-[ext_resource type="Script" path="res://scripts/level_3_start.gd" id="1_hwnnf"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/level_3_start.gd" id="1_dui04"]
 
 [node name="Level 3 Screen" type="Control"]
 layout_mode = 3
@@ -24,8 +24,12 @@ offset_bottom = 271.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
-text = "This debris is both moving and stationary. 
-Plot your course around the debris! To save fuel, you only have 20 moves."
+text = "Loading Course Simulation...
+
+Settings: 
+Non-moving debris
+Moving debris
+Limited to 20 maneuvers"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -43,7 +47,7 @@ offset_bottom = 67.332
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 64
-text = "Continue"
-script = ExtResource("1_hwnnf")
+text = "READY"
+script = ExtResource("1_dui04")
 
 [connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]

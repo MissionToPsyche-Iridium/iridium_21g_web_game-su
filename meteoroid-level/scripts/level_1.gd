@@ -1,23 +1,39 @@
 extends Node2D
 
-@onready var label: Label = $Label
-@onready var timer: Timer = $Label/Timer
+@onready var timer: Timer = $Timer
 @onready var shuttle: CharacterBody2D = $Shuttle
+@onready var color_rect: ColorRect = $ColorRect
+@onready var win_sound: AudioStreamPlayer2D = $WinSound
+@onready var lose_sound: AudioStreamPlayer2D = $LoseSound
 
 
 func win_screen():
 	timer.start()
-	label.show()
+	win_sound.play()
+	var tween = create_tween()
+	tween.tween_property(color_rect, "color", Color8(0, 255, 0, 100), 2.0)
+	await tween.finished
 
 
 func load_next_screen():
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/level_2_screen.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://meteoroid-level/scenes/level_2_screen.tscn")
 
 
 func _on_ready() -> void:
-	label.hide()
+	color_rect.color = Color8(0, 255, 0, 0)
 	shuttle.level_1_changes()
+	
 
 
 func _on_timer_timeout() -> void:
 	load_next_screen()
+
+func lose_screen() -> void:
+	lose_sound.play()
+	color_rect.color = Color8(255, 0, 0, 0)
+	
+	var tween = create_tween()
+	tween.tween_property(color_rect, "color", Color8(255, 0, 0, 100), 2.0)
+	await tween.finished
+	
+	get_tree().call_deferred("reload_current_scene")

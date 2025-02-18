@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bsd8tu0gnjycp"]
 
-[ext_resource type="Script" path="res://scripts/path.gd" id="1_1ggfn"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/path.gd" id="1_1ggfn"]
 
 [node name="Path" type="Line2D"]
 top_level = true
-default_color = Color(0.781745, 0.370842, 0.0538453, 1)
+default_color = Color(0.352941, 0.152941, 0.321569, 1)
 script = ExtResource("1_1ggfn")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

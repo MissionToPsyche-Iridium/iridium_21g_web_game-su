@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://v3uha6yq4pj7"]
 
-[ext_resource type="Texture2D" uid="uid://jwc1m32j8qph" path="res://assets/10 asteriod sprite pack/small asteriod 3.png" id="1_l17e1"]
-[ext_resource type="PackedScene" uid="uid://ckqhj1j1mjc3v" path="res://scenes/killzone.tscn" id="2_3puy5"]
+[ext_resource type="Texture2D" uid="uid://jwc1m32j8qph" path="res://meteoroid-level/assets/10 asteriod sprite pack/small asteriod 3.png" id="1_l17e1"]
+[ext_resource type="PackedScene" uid="uid://ckqhj1j1mjc3v" path="res://meteoroid-level/scenes/killzone.tscn" id="2_3puy5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r2wlc"]
 animations = [{

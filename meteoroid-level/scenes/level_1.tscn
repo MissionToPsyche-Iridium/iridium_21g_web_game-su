@@ -1,14 +1,16 @@
-[gd_scene load_steps=15 format=4 uid="uid://douckpnydifwo"]
+[gd_scene load_steps=17 format=4 uid="uid://douckpnydifwo"]
 
-[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_llpvr"]
-[ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://scenes/shuttle.tscn" id="1_uvlf3"]
-[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://assets/Space Background.png" id="2_plt0e"]
-[ext_resource type="Texture2D" uid="uid://dt3kj47nwnoai" path="res://assets/Space Background (1).png" id="3_8nca6"]
-[ext_resource type="Texture2D" uid="uid://b2m71v06nq1lu" path="res://assets/Space Background yellow.png" id="4_myhc6"]
-[ext_resource type="Texture2D" uid="uid://b01tgtgcpx4i5" path="res://assets/space bg border.png" id="5_e8fcd"]
-[ext_resource type="PackedScene" uid="uid://dms0njr5j00xv" path="res://scenes/input_container.tscn" id="6_ce8l1"]
-[ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://scenes/path.tscn" id="7_kfep3"]
-[ext_resource type="PackedScene" uid="uid://v3uha6yq4pj7" path="res://scenes/non_moving_debris.tscn" id="9_ceabf"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/level_1.gd" id="1_llpvr"]
+[ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="1_uvlf3"]
+[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Space Background.png" id="2_plt0e"]
+[ext_resource type="Texture2D" uid="uid://dt3kj47nwnoai" path="res://meteoroid-level/assets/Space Background (1).png" id="3_8nca6"]
+[ext_resource type="Texture2D" uid="uid://b2m71v06nq1lu" path="res://meteoroid-level/assets/Space Background yellow.png" id="4_myhc6"]
+[ext_resource type="Texture2D" uid="uid://b01tgtgcpx4i5" path="res://meteoroid-level/assets/space bg border.png" id="5_e8fcd"]
+[ext_resource type="PackedScene" uid="uid://dms0njr5j00xv" path="res://meteoroid-level/scenes/input_container.tscn" id="6_ce8l1"]
+[ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://meteoroid-level/scenes/path.tscn" id="7_kfep3"]
+[ext_resource type="PackedScene" uid="uid://v3uha6yq4pj7" path="res://meteoroid-level/scenes/non_moving_debris.tscn" id="9_ceabf"]
+[ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="10_npqwt"]
+[ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="11_rmbhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_os7xk"]
 texture = ExtResource("2_plt0e")
@@ -76,19 +78,6 @@ Backspace/ESC to undo
 Enter to confirm"
 autowrap_mode = 2
 
-[node name="Path" parent="." instance=ExtResource("7_kfep3")]
-
-[node name="Label" type="Label" parent="."]
-offset_right = 96.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 64
-text = "You won"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Timer" type="Timer" parent="Label"]
-wait_time = 2.0
-
 [node name="Debris" type="Node" parent="."]
 
 [node name="Non-moving Debris" parent="Debris" instance=ExtResource("9_ceabf")]
@@ -112,5 +101,26 @@ position = Vector2(120, 136)
 [node name="Non-moving Debris7" parent="Debris" instance=ExtResource("9_ceabf")]
 position = Vector2(248, -120)
 
+[node name="Path" parent="." instance=ExtResource("7_kfep3")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+visibility_layer = 2
+z_index = 1
+offset_left = -2046.0
+offset_top = -1276.0
+offset_right = 2041.0
+offset_bottom = 1416.0
+color = Color(0, 1, 0, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="LoseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_npqwt")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_rmbhd")
+
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="timeout" from="Label/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

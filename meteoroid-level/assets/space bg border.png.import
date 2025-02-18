@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b01tgtgcpx4i5"
-path="res://.godot/imported/space bg border.png-9aa47ec46a3f636cfac40eb163d54d82.ctex"
+path="res://.godot/imported/space bg border.png-c27bea21f944f1be5ff20e878bbf503c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/space bg border.png"
-dest_files=["res://.godot/imported/space bg border.png-9aa47ec46a3f636cfac40eb163d54d82.ctex"]
+source_file="res://meteoroid-level/assets/space bg border.png"
+dest_files=["res://.godot/imported/space bg border.png-c27bea21f944f1be5ff20e878bbf503c.ctex"]
 
 [params]
 

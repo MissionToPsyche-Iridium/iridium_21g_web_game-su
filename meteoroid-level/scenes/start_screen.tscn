@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bnhjs60ggrf82"]
 
-[ext_resource type="Script" path="res://scripts/start_button.gd" id="1_nmrum"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/start_button.gd" id="1_so6fb"]
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
@@ -26,10 +26,8 @@ offset_bottom = 271.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
-text = "Oh no! Space debris has appeared and is heading towards the shuttle! 
-Plan your moves to avoid the debris. 
-Reach the highlighted tile to stay on course to Psyche. 
-Good luck!"
+text = "Welcome to the Psyche Course Correction Simulation!
+This software will allow you to test spacecraft maneuvers to avoid obstacles on the course to the asteroid."
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -47,7 +45,7 @@ offset_bottom = 67.332
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 64
-text = "START"
-script = ExtResource("1_nmrum")
+text = "START SIMULATION"
+script = ExtResource("1_so6fb")
 
 [connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]

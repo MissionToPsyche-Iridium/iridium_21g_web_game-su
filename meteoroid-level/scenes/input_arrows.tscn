@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbdmjnaubg7rx"]
 
-[ext_resource type="Texture2D" uid="uid://kasif2ih61nh" path="res://assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png" id="1_gxne2"]
+[ext_resource type="Texture2D" uid="uid://kasif2ih61nh" path="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png" id="1_6poy5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_humfp"]
-atlas = ExtResource("1_gxne2")
+atlas = ExtResource("1_6poy5")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0d35"]
-atlas = ExtResource("1_gxne2")
+atlas = ExtResource("1_6poy5")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nmq04"]
-atlas = ExtResource("1_gxne2")
+atlas = ExtResource("1_6poy5")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhoyx"]
-atlas = ExtResource("1_gxne2")
+atlas = ExtResource("1_6poy5")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_35bx5"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj2mc7kb0e0tx"
-path="res://.godot/imported/Space Background.png-26858f256417ac2bcf9fc1a7baf32fde.ctex"
+path="res://.godot/imported/Space Background.png-8765785a5bfa037a2da54105ab3c88d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Free_Rythm_Arrow_Pack/arrows_nightblue/Space Background.png"
-dest_files=["res://.godot/imported/Space Background.png-26858f256417ac2bcf9fc1a7baf32fde.ctex"]
+source_file="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_nightblue/Space Background.png"
+dest_files=["res://.godot/imported/Space Background.png-8765785a5bfa037a2da54105ab3c88d9.ctex"]
 
 [params]
 

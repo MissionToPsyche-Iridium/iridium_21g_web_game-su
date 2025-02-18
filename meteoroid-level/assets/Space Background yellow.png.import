@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2m71v06nq1lu"
-path="res://.godot/imported/Space Background yellow.png-6fd71c66ce937624cfb6ee26f6af94ea.ctex"
+path="res://.godot/imported/Space Background yellow.png-14bf524faa3b5d2bc1c5a0ee655322ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Space Background yellow.png"
-dest_files=["res://.godot/imported/Space Background yellow.png-6fd71c66ce937624cfb6ee26f6af94ea.ctex"]
+source_file="res://meteoroid-level/assets/Space Background yellow.png"
+dest_files=["res://.godot/imported/Space Background yellow.png-14bf524faa3b5d2bc1c5a0ee655322ce.ctex"]
 
 [params]
 

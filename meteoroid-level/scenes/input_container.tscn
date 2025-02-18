@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dms0njr5j00xv"]
 
-[ext_resource type="Script" path="res://scripts/input_container.gd" id="1_431mj"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/input_container.gd" id="1_431mj"]
 
 [node name="InputContainer" type="HBoxContainer"]
 offset_top = 2.0
