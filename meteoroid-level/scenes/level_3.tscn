@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cpb4weio1jo3a"]
+[gd_scene load_steps=19 format=4 uid="uid://cpb4weio1jo3a"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_3.gd" id="1_sjbbj"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_g3yd7"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://meteoroid-level/scenes/path.tscn" id="9_xg24a"]
 [ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="11_wph22"]
 [ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="12_fb8d6"]
+[ext_resource type="PackedScene" uid="uid://dgtepn6enoocu" path="res://psychescan/backgrounds/background.tscn" id="13_dylux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbg0t"]
 texture = ExtResource("3_16efd")
@@ -50,6 +51,7 @@ z_index = 1
 position = Vector2(-618, -60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 zoom = Vector2(0.75, 0.75)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -184,6 +186,14 @@ position = Vector2(765, 520)
 
 [node name="Non-moving Debris12" parent="Debris" instance=ExtResource("8_8knv3")]
 position = Vector2(-2, -256)
+
+[node name="background" parent="." instance=ExtResource("13_dylux")]
+position = Vector2(-789, -1082)
+scale = Vector2(3.5, 3.5)
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(875, -42)
+zoom = Vector2(0.7, 0.7)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

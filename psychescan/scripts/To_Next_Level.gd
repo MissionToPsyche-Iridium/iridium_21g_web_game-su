@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var new_scene_path: String = "res://victory_scene.tscn" # CHANGE TO NEXT LEVEL NAME HERE
+@export var new_scene_path: String = "res://Finished Screen/Scene.tscn" # CHANGE TO NEXT LEVEL NAME HERE
 
 func _ready():
 	monitoring = true

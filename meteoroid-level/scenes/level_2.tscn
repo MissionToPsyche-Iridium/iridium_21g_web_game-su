@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://btjcs37klw37w"]
+[gd_scene load_steps=18 format=4 uid="uid://btjcs37klw37w"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_2.gd" id="1_oy24c"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_eccv8"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cuojpnqpbf5v4" path="res://meteoroid-level/scenes/moving_debris.tscn" id="9_pgvm1"]
 [ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="10_p085w"]
 [ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="11_3hp1t"]
+[ext_resource type="PackedScene" uid="uid://dgtepn6enoocu" path="res://psychescan/backgrounds/background.tscn" id="12_5nep4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwbgg"]
 texture = ExtResource("3_qkw35")
@@ -49,6 +50,7 @@ z_index = 1
 position = Vector2(-618, -60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 zoom = Vector2(0.75, 0.75)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -133,6 +135,13 @@ stream = ExtResource("10_p085w")
 
 [node name="WinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_3hp1t")
+
+[node name="background" parent="." instance=ExtResource("12_5nep4")]
+position = Vector2(-502, -784)
+scale = Vector2(2.5, 2.5)
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(716, -73)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
