@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://coulvjbctvgt"]
 
-[ext_resource type="Texture2D" uid="uid://bleqvy00ws76l" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_8r5k4"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://scavenger-hunt/fonts/dogicapixel.ttf" id="2_ytocu"]
+[ext_resource type="Texture2D" uid="uid://bwphty5il3oys" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_8r5k4"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_ytocu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pif3s"]
 

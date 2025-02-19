@@ -533,7 +533,7 @@ func enterroom4_end():
 	await get_tree().create_timer(1.0).timeout
 	
 	#TODO: CHANGE THIS HERE
-	get_tree().change_scene("res://path_to_your_scene.tscn")
+	get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
 
 #End of Room4
 

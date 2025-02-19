@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://crxhvmr5p37e5"]
 
-[ext_resource type="Texture2D" uid="uid://dbyaj5nsegnkb" path="res://icon.svg" id="1_03ltk"]
-[ext_resource type="Script" path="res://space_ship.gd" id="1_omm6k"]
+[ext_resource type="Texture2D" uid="uid://dbyaj5nsegnkb" path="res://marsslingshot2.0/icon.svg" id="1_03ltk"]
+[ext_resource type="Script" path="res://marsslingshot2.0/space_ship.gd" id="1_omm6k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1qdcw"]
 

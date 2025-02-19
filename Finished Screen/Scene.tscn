@@ -1,20 +1,81 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmvmiwx70f2yw"]
+[gd_scene load_steps=8 format=3 uid="uid://cmvmiwx70f2yw"]
 
-[ext_resource type="Script" path="res://scene.gd" id="1_gset1"]
-[ext_resource type="Texture2D" uid="uid://ri1m1xodfi5r" path="res://istockphoto-1368151405-612x612.jpg" id="1_px01g"]
-[ext_resource type="Texture2D" uid="uid://dmhlf7k2f77j" path="res://cover-12280-1623743075.jpg" id="2_ldr7v"]
-[ext_resource type="FontFile" uid="uid://dllorq6tyrkfd" path="res://BrettleySignatureRegular-RpEMo.ttf" id="3_cbhba"]
+[ext_resource type="Script" path="res://Finished Screen/scene.gd" id="1_gset1"]
+[ext_resource type="Texture2D" uid="uid://bsbhmdfweh4gd" path="res://Finished Screen/istockphoto-1368151405-612x612.jpg" id="1_px01g"]
+[ext_resource type="Texture2D" uid="uid://bs4ccry6bv003" path="res://Finished Screen/cover-12280-1623743075.jpg" id="2_ldr7v"]
+[ext_resource type="FontFile" uid="uid://bgise5ysuqast" path="res://Finished Screen/BrettleySignatureRegular-RpEMo.ttf" id="3_cbhba"]
+
+[sub_resource type="Animation" id="Animation_e0yih"]
+resource_name = "Leave Screen"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PageContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.03333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2000, -2000), Vector2(3000, -3000), Vector2(4000, -4000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PageContainer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.03333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.816814, -2.28638, -3.59189]
+}
+
+[sub_resource type="Animation" id="Animation_cpqkd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PageContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 2000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PageContainer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g46m6"]
+_data = {
+"Leave Screen": SubResource("Animation_e0yih"),
+"RESET": SubResource("Animation_cpqkd")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_gset1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-12, -105)
-scale = Vector2(10.1905, 11.3196)
+position = Vector2(-76.1428, -152.5)
+scale = Vector2(16.1935, 17.9877)
 texture = ExtResource("1_px01g")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.2, 0.2)
+zoom = Vector2(0.4, 0.4)
 
 [node name="PageContainer" type="Node2D" parent="."]
 position = Vector2(0, 2000)
@@ -60,7 +121,7 @@ offset_right = 535.0
 offset_bottom = 1746.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
-text = "ABDCE"
+text = "Grace"
 
 [node name="Label4" type="Label" parent="PageContainer/Control"]
 texture_filter = 1
@@ -72,7 +133,7 @@ offset_bottom = 1749.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_cbhba")
 theme_override_font_sizes/font_size = 70
-text = "Abcd"
+text = "Grace"
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -84,4 +145,9 @@ offset_right = 1597.0
 offset_bottom = 1747.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
-text = "ABDCE"
+text = "3/18/25"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_g46m6")
+}
