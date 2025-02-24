@@ -5,8 +5,8 @@
 [node name="VictoryMessage" type="CharacterBody2D"]
 
 [node name="TextureShape" type="Polygon2D" parent="."]
-position = Vector2(69.8182, 0)
-scale = Vector2(1.09091, 1.05)
+position = Vector2(96, 0)
+scale = Vector2(1.5, 1.43437)
 texture = ExtResource("1_7bdx2")
 texture_offset = Vector2(65, -30)
 texture_scale = Vector2(2.3, 2.3)

@@ -12,32 +12,33 @@ shader_parameter/_HorizontalShake = 0.001
 shader_parameter/_ColorDrift = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7bw3"]
-size = Vector2(20, 1162)
+size = Vector2(20, 1255.93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u57ik"]
 size = Vector2(1354, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3htlh"]
-size = Vector2(20, 1162)
+size = Vector2(20, 1255.93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgvac"]
-size = Vector2(1354, 20)
+size = Vector2(1508.89, 20)
 
 [node name="level" type="Node2D"]
 scale = Vector2(1.268, 1.268)
 
 [node name="black background" type="Polygon2D" parent="."]
-scale = Vector2(1.268, 1.268)
+scale = Vector2(2.31974, 2.12525)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_u5qw6")]
+position = Vector2(277.603, 201.893)
 scale = Vector2(0.9, 0.9)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 material = SubResource("ShaderMaterial_rlnsd")
-position = Vector2(-65.1022, -33.9694)
-scale = Vector2(1.40068, 1.34663)
+position = Vector2(-281.664, -78.1866)
+scale = Vector2(2.84442, 2.34292)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)
 
@@ -48,7 +49,7 @@ scale = Vector2(1.268, 1.268)
 scale = Vector2(1.268, 1.268)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBounds1"]
-position = Vector2(-352, 283)
+position = Vector2(-358.248, 497.412)
 scale = Vector2(1.268, 1.268)
 shape = SubResource("RectangleShape2D_o7bw3")
 
@@ -56,7 +57,7 @@ shape = SubResource("RectangleShape2D_o7bw3")
 scale = Vector2(1.268, 1.268)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CameraBounds2"]
-position = Vector2(315, -288)
+position = Vector2(517.47, -278.637)
 scale = Vector2(1.268, 1.268)
 shape = SubResource("RectangleShape2D_u57ik")
 
@@ -64,7 +65,7 @@ shape = SubResource("RectangleShape2D_u57ik")
 scale = Vector2(1.268, 1.268)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CameraBounds3"]
-position = Vector2(992, 293)
+position = Vector2(1552.41, 497.412)
 scale = Vector2(1.268, 1.268)
 shape = SubResource("RectangleShape2D_3htlh")
 
@@ -72,6 +73,6 @@ shape = SubResource("RectangleShape2D_3htlh")
 scale = Vector2(1.268, 1.268)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CameraBounds4"]
-position = Vector2(325, 864)
+position = Vector2(615.673, 1273.77)
 scale = Vector2(1.268, 1.268)
 shape = SubResource("RectangleShape2D_jgvac")

@@ -15,7 +15,7 @@ shader_parameter/_ColorDrift = 0.0
 scale = Vector2(1.268, 1.268)
 
 [node name="black background" type="Polygon2D" parent="."]
-scale = Vector2(1.268, 1.268)
+scale = Vector2(2.31974, 2.12525)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 
@@ -27,7 +27,7 @@ scale = Vector2(1.268, 1.268)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 material = SubResource("ShaderMaterial_g0fjw")
-position = Vector2(-22.5801, 1.53964)
-scale = Vector2(1.32824, 1.27187)
+position = Vector2(-239.142, -46.3898)
+scale = Vector2(2.77198, 2.27598)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 285.632, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)

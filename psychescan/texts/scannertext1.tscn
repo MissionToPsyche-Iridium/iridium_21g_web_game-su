@@ -1,35 +1,32 @@
 [gd_scene load_steps=2 format=3 uid="uid://bi87b1jlyy8cf"]
 
-[ext_resource type="Script" path="res://psychescan/scripts/scannertext_1.gd" id="1_uwdj6"]
+[ext_resource type="FontFile" uid="uid://qch05issch7d" path="res://psychescan/fonts/dogicapixel.ttf" id="1_q7pyf"]
 
 [node name="Label" type="Label"]
 anchors_preset = -1
 anchor_right = 0.133
 anchor_bottom = 0.198
-offset_right = 1.64
-offset_bottom = 74.16
+offset_right = 32.64
+offset_bottom = 123.16
+theme_override_fonts/font = ExtResource("1_q7pyf")
 text = "Objective: 
-Do something cool like
-scan the asteroid
+Do something cool like scan the asteroid
 
 
 
-"
-horizontal_alignment = 1
-script = ExtResource("1_uwdj6")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -127.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Current Instrument: 
+
+
+
+
+
+
+
+
+
+Current Instrument: 
 Thingamabob
 The thingamabob 
 does things 
 and stuff"
-horizontal_alignment = 1
+autowrap_mode = 3

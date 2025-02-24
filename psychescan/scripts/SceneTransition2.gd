@@ -12,6 +12,8 @@ var incorrectNode
 var is_scene_change_pending = false 
 var correctSound
 var incorrectSound
+@onready var label
+var textDone = false
 
 func _ready():
 	monitoring = true
@@ -21,6 +23,7 @@ func _ready():
 	incorrectNode.visible = false
 	correctSound = get_parent().get_node("CorrectSound")
 	incorrectSound = get_parent().get_node("IncorrectSound")
+	label = get_parent().get_node("Label")
 
 # Signals for collision detection required for switching scenes at the proper events
 func _on_area2d_body_entered(body):
@@ -39,7 +42,13 @@ func _on_area2d_body_exited(body):
 		overlapping_box = null
 		print("Player exited area")
 
-func _process(delta):
+func _process(delta: float) -> void:
+	if !textDone:
+		if label.get_visible_ratio() < 1:
+			label.set_visible_ratio(label.get_visible_ratio()+(.5*delta))
+		else:
+			textDone = true
+				
 	if is_overlap and Input.is_action_just_pressed("ui_accept"):
 		if overlapping_box and not has_been_scanned(overlapping_box):
 			print("Input accepted")
@@ -111,6 +120,6 @@ func show_correct_only():
 
 func show_incorrect_indicator():
 	incorrectNode.visible = true
-	await(get_tree().create_timer(2.0).timeout)  
+	await(get_tree().create_timer(1.25).timeout)  
 	incorrectNode.visible = false
 	print("Hiding Incorrect indicator")

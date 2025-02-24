@@ -5,13 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://dipu66gwaj7se" path="res://psychescan/sprites/sparkle.tscn" id="2_fsjjn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6q4w"]
-size = Vector2(896, 800)
+size = Vector2(1376, 1344)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
-size = Vector2(48, 62)
+size = Vector2(128, 95.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykous"]
-size = Vector2(96, 64)
+size = Vector2(96, 96)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 0
@@ -19,16 +19,16 @@ collision_mask = 0
 script = ExtResource("1_y564n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(448, 400)
+position = Vector2(688, 672)
 shape = SubResource("RectangleShape2D_v6q4w")
 
 [node name="TextureShape" type="Polygon2D" parent="."]
-position = Vector2(81.4544, 0)
-scale = Vector2(1.27273, 1.25)
+position = Vector2(125.772, 0)
+scale = Vector2(1.96286, 2.1)
 color = Color(1, 0.956863, 0.407843, 1)
 texture = ExtResource("2_6emri")
-texture_offset = Vector2(65, -5)
-texture_scale = Vector2(1.45, 1.45)
+texture_offset = Vector2(64, 2)
+texture_scale = Vector2(1.45, 1.43)
 polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
 
 [node name="hitbox" type="CharacterBody2D" parent="."]
@@ -36,30 +36,31 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(704, 192)
+position = Vector2(1184, 864)
 shape = SubResource("RectangleShape2D_y3eek")
 
 [node name="AnimatedSprite2D" parent="hitbox" instance=ExtResource("2_fsjjn")]
-position = Vector2(704, 192)
+position = Vector2(1184, 864)
+scale = Vector2(0.673685, 0.864864)
 
 [node name="hitbox2" type="CharacterBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox2"]
-position = Vector2(256, 128)
+position = Vector2(512, 160.5)
 shape = SubResource("RectangleShape2D_y3eek")
 
 [node name="AnimatedSprite2D" parent="hitbox2" instance=ExtResource("2_fsjjn")]
-position = Vector2(256, 128)
+position = Vector2(512, 160)
 
 [node name="hitbox3" type="CharacterBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox3"]
-position = Vector2(416, 608)
+position = Vector2(96, 544)
 shape = SubResource("RectangleShape2D_ykous")
 
 [node name="AnimatedSprite2D" parent="hitbox3" instance=ExtResource("2_fsjjn")]
-position = Vector2(416, 608)
+position = Vector2(96, 544)

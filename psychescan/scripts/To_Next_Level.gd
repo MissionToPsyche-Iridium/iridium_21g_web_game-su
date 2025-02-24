@@ -1,25 +1,19 @@
 extends Area2D
 
-@export var new_scene_path: String = "res://Finished Screen/Scene.tscn" # CHANGE TO NEXT LEVEL NAME HERE
+@export var new_scene_path: String = "res://victory_scene.tscn" # CHANGE TO NEXT LEVEL NAME HERE
+@onready var label
+var textDone = false
 
 func _ready():
 	monitoring = true
+	label = get_parent().get_node("Label")
 
-func _process(delta):
+func _process(delta: float) -> void:
+	if !textDone:
+		if label.get_visible_ratio() < 1:
+			label.set_visible_ratio(label.get_visible_ratio()+(.5*delta))
+		else:
+			textDone = true
+
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene_to_file(new_scene_path)
-
-"""
-func change_scene():
-	print("Transition from: " + get_tree().current_scene.name)
-
-	if new_scene_path.length() == 0:
-		print("Error: no scene path specified")
-		return
-		
-	var result = get_tree().change_scene_to_file(new_scene_path)
-	if result == OK:
-		print("Transition success")
-	else:
-		print("Transition failure")
-"""
