@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bkqef5inybfnp"]
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://scavenger-hunt/fonts/dogicapixel.ttf" id="1_mnwm3"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://escape_room/fonts/dogicapixel.ttf" id="1_mnwm3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
 bg_color = Color(0.12549, 0.12549, 0.12549, 1)
