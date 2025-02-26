@@ -129,3 +129,4 @@ void fragment() {
 	float n = 2.0 * get_noise(pixel_coords) - 1.0;
 	COLOR = texture(TEXTURE, UV) + n * u_amount;
 }
+'''
