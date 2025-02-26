@@ -65,8 +65,6 @@ func _process(delta: float) -> void:
 				is_scene_change_pending = true
 				show_correct_indicator() 
 			
-
-
 		elif overlapping_box and has_been_scanned(overlapping_box):
 			print("Already scanned")
 			show_incorrect_indicator()
