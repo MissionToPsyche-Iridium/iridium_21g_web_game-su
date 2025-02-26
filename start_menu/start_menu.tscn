@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bkqef5inybfnp"]
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://escape_room/fonts/dogicapixel.ttf" id="1_mnwm3"]
-[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://escape_room/fonts/dogicapixelbold.ttf" id="2_65haw"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_mnwm3"]
+[ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://fonts/dogicapixelbold.ttf" id="2_65haw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
 bg_color = Color(0.12549, 0.12549, 0.12549, 1)
@@ -76,13 +76,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 618.0
-offset_top = 715.0
-offset_right = 1254.0
-offset_bottom = 872.0
+offset_left = 620.0
+offset_top = 657.0
+offset_right = 1256.0
+offset_bottom = 814.0
 theme_override_fonts/font = ExtResource("2_65haw")
 theme_override_font_sizes/font_size = 48
-text = "SUPER PSYCHE'D"
+text = "SUPER PSYCHED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 1
@@ -121,6 +123,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w2qn2")
 text = "CREDITS"
 
 [node name="ButtonCover" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -153,6 +156,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Cover" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 offset_right = 2232.0
 offset_bottom = 1402.0
