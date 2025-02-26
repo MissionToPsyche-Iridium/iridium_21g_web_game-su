@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0u77fgeccqyi"]
+
+[ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="1_fcdd2"]
+[ext_resource type="Texture2D" uid="uid://bv5nb5qo7314f" path="res://psychescan/assets/psyche2.png" id="1_t3x8u"]
+[ext_resource type="PackedScene" uid="uid://dipu66gwaj7se" path="res://psychescan/sprites/sparkle.tscn" id="2_xxapa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6q4w"]
+size = Vector2(1120, 1088)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
+size = Vector2(142, 124.584)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxjic"]
+size = Vector2(160, 160.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_fcdd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(560, 544)
+shape = SubResource("RectangleShape2D_v6q4w")
+
+[node name="TextureShape" type="Polygon2D" parent="."]
+position = Vector2(101.488, 0)
+scale = Vector2(1.59143, 1.7)
+color = Color(0.196078, 0.0352941, 1, 1)
+texture = ExtResource("1_t3x8u")
+texture_offset = Vector2(64, 2)
+texture_scale = Vector2(1.45, 1.43)
+polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
+
+[node name="hitbox" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="hitboxColl" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(704, 224)
+shape = SubResource("RectangleShape2D_y3eek")
+
+[node name="AnimatedSprite2D" parent="hitbox" instance=ExtResource("2_xxapa")]
+position = Vector2(704, 224)
+
+[node name="hitbox2" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="hitbox2Coll" type="CollisionShape2D" parent="hitbox2"]
+position = Vector2(116, 622)
+shape = SubResource("RectangleShape2D_sxjic")
+
+[node name="AnimatedSprite2D" parent="hitbox2" instance=ExtResource("2_xxapa")]
+position = Vector2(115, 621)
