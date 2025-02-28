@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b18d830urpadj"]
+[gd_scene load_steps=28 format=4 uid="uid://b18d830urpadj"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/room3/room_3.gd" id="1_bybdk"]
 [ext_resource type="Texture2D" uid="uid://ec5yrxvdkst1" path="res://scavenger-hunt/floors/floor-2.png" id="3_vka00"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/pop_up/question.tscn" id="9_aovdl"]
 [ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://scavenger-hunt/fonts/dogicapixel.ttf" id="10_d4hnv"]
 [ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/player/player.tscn" id="10_iyeug"]
+[ext_resource type="Texture2D" uid="uid://bvjndqjvmvaqf" path="res://scavenger-hunt/room3/sign-small.png" id="13_t2qiv"]
+[ext_resource type="Texture2D" uid="uid://cky46h45faea3" path="res://scavenger-hunt/room3/sign-large.png" id="14_hmt7t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kpdnq"]
 texture = ExtResource("3_xoxfm")
@@ -212,6 +214,9 @@ size = Vector2(48, 124)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_531ls"]
 size = Vector2(42.5, 65)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17klc"]
+size = Vector2(42, 42)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fils2"]
 
 [node name="Room3" type="Node2D"]
@@ -263,6 +268,17 @@ texture = ExtResource("9_1v31f")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SecurityGuard"]
 shape = SubResource("RectangleShape2D_531ls")
 
+[node name="Sign" type="StaticBody2D" parent="."]
+position = Vector2(2220, 489)
+collision_layer = 4
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Sign"]
+texture = ExtResource("13_t2qiv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
+shape = SubResource("RectangleShape2D_17klc")
+
 [node name="Player" parent="." instance=ExtResource("10_iyeug")]
 position = Vector2(2134, 590)
 metadata/_edit_group_ = true
@@ -295,6 +311,12 @@ offset_left = 2141.0
 offset_top = 505.0
 offset_right = 2371.0
 offset_bottom = 595.0
+
+[node name="SignPopUp" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2233.5, 535.5)
+scale = Vector2(0.209636, 0.209636)
+texture = ExtResource("14_hmt7t")
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_3_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_3_popup_open"]

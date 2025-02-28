@@ -34,6 +34,13 @@ func _process(delta: float) -> void:
 				$Question/PanelContainer/Validation.hide()
 				$Question.hide()
 				popup_close.emit()
+		if (collidingNode == $Sign):
+			if Input.is_action_just_pressed("interact"):
+				$SignPopUp.show()
+				popup_open.emit()
+			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
+				$SignPopUp.hide()
+				popup_close.emit()
 
 func _on_question_option_1() -> void:
 	$Question/PanelContainer/Validation/Message.text = "Sorry, that is incorrect. \nA defibrillator is a machine that gives a small electric shock to the heart to help it beat normally again. \nTry looking for more hints!"

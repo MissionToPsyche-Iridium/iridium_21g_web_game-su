@@ -843,6 +843,8 @@ offset_bottom = 1109.0
 scale = Vector2(0.05, 0.05)
 text = "."
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="win" from="Room1" to="." method="_on_room_1_win"]
 [connection signal="win" from="Room2" to="." method="_on_room_2_win"]
 [connection signal="win" from="Room3" to="." method="_on_room_3_win"]

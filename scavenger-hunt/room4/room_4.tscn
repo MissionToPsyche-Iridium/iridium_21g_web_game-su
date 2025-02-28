@@ -235,27 +235,30 @@ tile_map_data = PackedByteArray("AAAoAAoAAAAHAAEAAAApAAoAAAAHAAEAAAAqAAoAAAAHAAE
 tile_set = SubResource("TileSet_k8l6h")
 
 [node name="Desk" type="Sprite2D" parent="."]
-position = Vector2(2256.98, 208.063)
-scale = Vector2(0.722, 0.722)
+position = Vector2(2256.98, 226.063)
 texture = ExtResource("8_l6o8q")
 
 [node name="Computer" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2256.98, 208.063)
 scale = Vector2(0.722, 0.722)
 texture = ExtResource("9_nc1s3")
 
 [node name="Screens" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2256.98, 208.063)
 scale = Vector2(0.722, 0.722)
 texture = ExtResource("10_poc25")
 
 [node name="Lights" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(2256.98, 208.063)
 scale = Vector2(0.722, 0.722)
 sprite_frames = SubResource("SpriteFrames_urory")
-frame_progress = 0.283705
+frame_progress = 0.811312
 
 [node name="Controls" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2256.98, 208.063)
 scale = Vector2(0.722, 0.722)
 texture = ExtResource("14_rsd64")

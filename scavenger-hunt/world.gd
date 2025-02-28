@@ -37,13 +37,10 @@ var is_enterroom4c = false
 var is_followingpath = false
 
 func _ready() -> void:
-	#var center_x = Viewport.get_visible_rect().size.x / 2
-	#var center_y = Viewport.get_visible_rect().size.y / 2
-	#get_node("PopupWindow").set_position(Vector2(center_x, center_y))
-	
 	#Room1
 	$Room1Cover.color = Color(0,0,0,255)
 	$Room1Cover.show()
+	$Room1/Room1Camera.enabled = true
 	$Room1/Player/Camera2D.enabled = false
 	$Room1/Player.movable = false
 	$Room1/Player.hide()
@@ -254,6 +251,7 @@ func _on_room_1_win() -> void:
 	$Room1/LeaveRoom1.show()
 	$Room1/LeaveRoom1Door.show()
 	$Room1/LeaveRoom1/PathFollow2D/Player.show()
+	$Room1/LeaveRoom1/PathFollow2D/Player/PlayerSprite.play("idle_up")
 	
 	await get_tree().create_timer(1.0).timeout
 	animation.play("room1_cover_fade")
@@ -537,7 +535,6 @@ func enterroom4_end():
 	
 	#TODO: CHANGE THIS HERE
 	get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
-
 #End of Room4
 
 
