@@ -12,8 +12,15 @@
 physics_interpolation_mode = 2
 script = ExtResource("1_mbqyp")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -358.0
+offset_top = -276.0
+offset_right = 1403.0
+offset_bottom = 1034.0
+color = Color(0.172833, 0.172833, 0.172833, 1)
+
 [node name="gameArea" parent="." instance=ExtResource("1_pshhq")]
-position = Vector2(580, 321)
+position = Vector2(533, 386)
 gravity_space_override = 0
 
 [node name="mars" parent="." instance=ExtResource("2_edj3g")]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_2.gd" id="1_oy24c"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_eccv8"]
-[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_nightblue/Space Background.png" id="3_qkw35"]
+[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Space Background.png" id="3_qkw35"]
 [ext_resource type="Texture2D" uid="uid://dt3kj47nwnoai" path="res://meteoroid-level/assets/Space Background (1).png" id="4_tsrrx"]
 [ext_resource type="Texture2D" uid="uid://b2m71v06nq1lu" path="res://meteoroid-level/assets/Space Background yellow.png" id="5_0bpl6"]
 [ext_resource type="Texture2D" uid="uid://b01tgtgcpx4i5" path="res://meteoroid-level/assets/space bg border.png" id="6_eg8m7"]
@@ -126,7 +126,7 @@ visibility_layer = 2
 z_index = 1
 offset_left = -2046.0
 offset_top = -1276.0
-offset_right = 2041.0
+offset_right = 2560.0
 offset_bottom = 1416.0
 color = Color(0, 1, 0, 0)
 
