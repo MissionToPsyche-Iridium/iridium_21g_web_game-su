@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkqef5inybfnp"]
+[gd_scene load_steps=15 format=3 uid="uid://bkqef5inybfnp"]
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
 [ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://scavenger-hunt/fonts/dogicapixel.ttf" id="1_mnwm3"]
 [ext_resource type="FontFile" uid="uid://dwjftoa7547xl" path="res://scavenger-hunt/fonts/dogicapixelbold.ttf" id="2_65haw"]
-[ext_resource type="Texture2D" uid="uid://ds2tdjdf1griq" path="res://icon.png" id="4_3wnvb"]
+[ext_resource type="Texture2D" uid="uid://brr0rhsld6otp" path="res://icon.png" id="4_3wnvb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
 bg_color = Color(0.12549, 0.12549, 0.12549, 1)
@@ -17,6 +17,15 @@ border_width_bottom = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2qn2"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spiwr"]
+bg_color = Color(0.144063, 0.144063, 0.144062, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7unw"]
+bg_color = Color(0.162066, 0.162066, 0.162065, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agq83"]
+bg_color = Color(0.221302, 0.221302, 0.221302, 1)
 
 [sub_resource type="Animation" id="Animation_hy8bh"]
 resource_name = "cover"
@@ -48,8 +57,24 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_0w0uo"]
+resource_name = "continue_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueCover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iqgaj"]
 _data = {
+"continue_fade": SubResource("Animation_0w0uo"),
 "cover": SubResource("Animation_hy8bh"),
 "cover_fade": SubResource("Animation_epmn3")
 }
@@ -85,36 +110,17 @@ theme_override_fonts/font = ExtResource("2_65haw")
 theme_override_font_sizes/font_size = 48
 text = "SUPER PSYCHED"
 
-[node name="Psyche" type="LinkButton" parent="."]
-layout_mode = 0
-offset_left = 1128.0
-offset_top = 1073.0
-offset_right = 1410.0
-offset_bottom = 1087.0
-theme_override_fonts/font = ExtResource("1_mnwm3")
-theme_override_font_sizes/font_size = 16
-text = "More Info About Psyche"
-underline = 1
-uri = "https://psyche.asu.edu/"
-
-[node name="Feedback" type="LinkButton" parent="."]
-layout_mode = 0
-offset_left = 464.0
-offset_top = 1072.0
-offset_right = 638.0
-offset_bottom = 1095.0
-theme_override_fonts/font = ExtResource("1_mnwm3")
-theme_override_font_sizes/font_size = 16
-text = "Beta Feedback"
-underline = 1
-uri = "https://forms.gle/CVefoRPJw8GWnZz3A"
-
 [node name="Start" type="Button" parent="."]
-layout_mode = 0
-offset_left = 834.0
-offset_top = 825.0
-offset_right = 1040.0
-offset_bottom = 910.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.426042
+anchor_top = 0.723148
+anchor_right = 0.552604
+anchor_bottom = 0.805556
+offset_left = -1.0
+offset_top = 21.9999
+offset_right = -1.0
+offset_bottom = 21.9999
 theme_override_fonts/font = ExtResource("1_mnwm3")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxFlat_pi4qy")
@@ -123,11 +129,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w2qn2")
 text = "START"
 
 [node name="Credits" type="Button" parent="."]
-layout_mode = 0
-offset_left = 852.0
-offset_top = 934.0
-offset_right = 1023.0
-offset_bottom = 970.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.444792
+anchor_top = 0.830556
+anchor_right = 0.529688
+anchor_bottom = 0.875926
+offset_left = 1.00006
+offset_top = 23.0001
+offset_right = 1.0
+offset_bottom = 23.0001
 theme_override_fonts/font = ExtResource("1_mnwm3")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxFlat_pi4qy")
@@ -136,7 +147,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w2qn2")
 text = "CREDITS"
 
 [node name="ButtonCover" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -152,12 +162,11 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Disclaimer" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 553.0
-offset_top = 589.0
+offset_top = 570.0
 offset_right = 1327.0
-offset_bottom = 1050.0
+offset_bottom = 1031.0
 theme_override_constants/line_spacing = 13
 theme_override_fonts/font = ExtResource("1_mnwm3")
 theme_override_font_sizes/font_size = 15
@@ -168,8 +177,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Icon" type="Sprite2D" parent="."]
-visible = false
+[node name="Continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 1021.0
+offset_right = 1000.0
+offset_bottom = 1051.0
+theme_override_fonts/font = ExtResource("1_mnwm3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxFlat_spiwr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b7unw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_agq83")
+text = "CONTINUE"
+
+[node name="ContinueCover" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 1012.0
+offset_right = 1011.0
+offset_bottom = 1061.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(937, 825)
 scale = Vector2(0.177181, 0.177181)
 texture = ExtResource("4_3wnvb")
@@ -192,6 +221,6 @@ libraries = {
 "": SubResource("AnimationLibrary_iqgaj")
 }
 
-[connection signal="pressed" from="Feedback" to="." method="_on_feedback_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
