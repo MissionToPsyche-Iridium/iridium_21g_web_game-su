@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var new_scene_path: String = "res://FinishedScreen/Scene.tscn" # CHANGE TO NEXT LEVEL NAME HERE
+@export var new_scene_path: String = "res://Finished Screen/Scene.tscn" # CHANGE TO NEXT LEVEL NAME HERE
 @onready var label
 var textDone = false
 
