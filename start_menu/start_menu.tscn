@@ -1456,16 +1456,11 @@ theme_override_font_sizes/font_size = 48
 text = "SUPER PSYCHED"
 
 [node name="Start" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.426042
-anchor_top = 0.723148
-anchor_right = 0.552604
-anchor_bottom = 0.805556
-offset_left = -1.0
-offset_top = 21.9999
-offset_right = -1.0
-offset_bottom = 21.9999
+layout_mode = 0
+offset_left = 832.0
+offset_top = 826.0
+offset_right = 1041.0
+offset_bottom = 903.0
 theme_override_fonts/font = SubResource("FontFile_487em")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxFlat_pi4qy")
@@ -1475,15 +1470,10 @@ text = "START"
 
 [node name="Credits" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.444792
-anchor_top = 0.830556
-anchor_right = 0.529688
-anchor_bottom = 0.875926
-offset_left = 1.00006
-offset_top = 23.0001
-offset_right = 1.0
-offset_bottom = 23.0001
+offset_left = 859.0
+offset_top = 921.0
+offset_right = 1017.0
+offset_bottom = 966.0
 theme_override_fonts/font = SubResource("FontFile_487em")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxFlat_pi4qy")
@@ -1491,17 +1481,42 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_yr5en")
 theme_override_styles/normal = SubResource("StyleBoxFlat_w2qn2")
 text = "CREDITS"
 
+[node name="Feedback" type="LinkButton" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 1090.0
+offset_right = 658.0
+offset_bottom = 1104.0
+theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_font_sizes/font_size = 16
+text = "Beta Feedback"
+underline = 1
+uri = "https://forms.gle/vsdAFKFHvP2Yd4rZ9"
+
+[node name="LinkButton" type="LinkButton" parent="."]
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 1090.0
+offset_right = 1394.0
+offset_bottom = 1104.0
+theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_font_sizes/font_size = 16
+text = "More Info About Psyche"
+underline = 1
+uri = "https://psyche.asu.edu/"
+
 [node name="ButtonCover" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1323.0
-offset_top = -883.0
-offset_right = 1323.0
-offset_bottom = 883.0
+offset_left = -1249.0
+offset_top = -414.5
+offset_right = 429.0
+offset_bottom = 367.5
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -1559,7 +1574,7 @@ color = Color(0, 0, 0, 0)
 
 [node name="WorldCamera" type="Camera2D" parent="."]
 position = Vector2(937, 825)
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
