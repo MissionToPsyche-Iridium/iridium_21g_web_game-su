@@ -5,7 +5,15 @@ extends Control
 func _ready() -> void:
 	$Cover.show()
 	$ButtonCover.show()
+	$Disclaimer.hide()
+	$Icon.show()
+	#$AnimationPlayer.play("cover_fade")
+	await get_tree().create_timer(2.0).timeout      # wait 8 seconds to let cover cover disclaimer
+	$AnimationPlayer.play("cover")
+	await get_tree().create_timer(1.0).timeout 
+	$Icon.hide()
 	$Disclaimer.show()
+	await get_tree().create_timer(1.0).timeout 
 	$AnimationPlayer.play("cover_fade")
 	await get_tree().create_timer(8.2).timeout      # wait 8 seconds to let cover cover disclaimer
 	$AnimationPlayer.play("cover")
@@ -31,3 +39,7 @@ func _on_credits_pressed() -> void:
 	await get_tree().create_timer(1.1).timeout
 	$Cover.color = Color(0,0,0,255)
 	get_tree().change_scene_to_file("res://Credits scene/credits.tscn")
+
+
+func _on_feedback_pressed() -> void:
+	pass # Replace with function body.
