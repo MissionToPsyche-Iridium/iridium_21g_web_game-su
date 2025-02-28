@@ -1,4 +1,4 @@
-# Super Psyche-d
+# Super Psyched
 
 This work was created in partial fulfillment of Seattle University Capstone Course “CPSC 4870″. 
 The work is a result of the Psyche Student Collaborations component of NASA’s Psyche Mission 
