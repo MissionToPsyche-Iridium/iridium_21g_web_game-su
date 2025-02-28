@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_1.gd" id="1_llpvr"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="1_uvlf3"]
-[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Space Background.png" id="2_plt0e"]
+[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_nightblue/Space Background.png" id="2_plt0e"]
 [ext_resource type="Texture2D" uid="uid://dt3kj47nwnoai" path="res://meteoroid-level/assets/Space Background (1).png" id="3_8nca6"]
 [ext_resource type="Texture2D" uid="uid://b2m71v06nq1lu" path="res://meteoroid-level/assets/Space Background yellow.png" id="4_myhc6"]
 [ext_resource type="Texture2D" uid="uid://b01tgtgcpx4i5" path="res://meteoroid-level/assets/space bg border.png" id="5_e8fcd"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://v3uha6yq4pj7" path="res://meteoroid-level/scenes/non_moving_debris.tscn" id="9_ceabf"]
 [ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="10_npqwt"]
 [ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="11_rmbhd"]
-[ext_resource type="PackedScene" uid="uid://dgtepn6enoocu" path="res://psychescan/backgrounds/background.tscn" id="12_3olih"]
+[ext_resource type="Texture2D" uid="uid://d1tlbsejlug7c" path="res://consoleBackgroundLarge.png" id="12_8mj8v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_os7xk"]
 texture = ExtResource("2_plt0e")
@@ -70,11 +70,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ControlsMessage" type="Label" parent="."]
 top_level = true
-offset_left = -920.0
-offset_top = -504.0
-offset_right = -202.0
-offset_bottom = -234.0
-theme_override_font_sizes/font_size = 64
+offset_left = 1269.0
+offset_top = -643.0
+offset_right = 1987.0
+offset_bottom = -373.0
+theme_override_font_sizes/font_size = 44
 text = "Arrows for direction
 Backspace/ESC to undo
 Enter to confirm"
@@ -106,6 +106,7 @@ position = Vector2(248, -120)
 [node name="Path" parent="." instance=ExtResource("7_kfep3")]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 top_level = true
 visibility_layer = 2
 z_index = 1
@@ -124,9 +125,9 @@ stream = ExtResource("10_npqwt")
 [node name="WinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_rmbhd")
 
-[node name="background" parent="." instance=ExtResource("12_3olih")]
-position = Vector2(-579, -747)
-scale = Vector2(2.5, 2.5)
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+position = Vector2(730, 15)
+texture = ExtResource("12_8mj8v")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 position = Vector2(639, -36)

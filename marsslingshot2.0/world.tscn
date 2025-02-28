@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://marsslingshot2.0/timer.tscn" id="3_4fqr7"]
 [ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshot2.0/space_ship.tscn" id="4_1bufg"]
 [ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://marsslingshot2.0/checkpoint.tscn" id="6_l5o4u"]
-[ext_resource type="PackedScene" uid="uid://dgtepn6enoocu" path="res://psychescan/backgrounds/background.tscn" id="7_mhxmt"]
+[ext_resource type="Texture2D" uid="uid://d1tlbsejlug7c" path="res://consoleBackgroundLarge.png" id="7_vxhq2"]
 
 [node name="World" type="Node2D"]
 physics_interpolation_mode = 2
@@ -28,12 +28,12 @@ motion_mode = 1
 [node name="checkpoint" parent="." instance=ExtResource("6_l5o4u")]
 position = Vector2(1037, 96)
 
-[node name="background" parent="." instance=ExtResource("7_mhxmt")]
-position = Vector2(-347, -360)
-scale = Vector2(2.5, 2.5)
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+position = Vector2(968, 487)
+texture = ExtResource("7_vxhq2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(871, 351)
+position = Vector2(873, 419)
 
 [connection signal="body_exited" from="gameArea" to="." method="_on_game_area_body_exited"]
 [connection signal="child_entered_tree" from="checkpoint" to="." method="_on_checkpoint_child_entered_tree"]

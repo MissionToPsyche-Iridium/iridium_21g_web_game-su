@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_3.gd" id="1_sjbbj"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_g3yd7"]
-[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Space Background.png" id="3_16efd"]
+[ext_resource type="Texture2D" uid="uid://cj2mc7kb0e0tx" path="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_nightblue/Space Background.png" id="3_16efd"]
 [ext_resource type="Texture2D" uid="uid://dt3kj47nwnoai" path="res://meteoroid-level/assets/Space Background (1).png" id="4_5wvnw"]
 [ext_resource type="Texture2D" uid="uid://b2m71v06nq1lu" path="res://meteoroid-level/assets/Space Background yellow.png" id="5_kwn5p"]
 [ext_resource type="Texture2D" uid="uid://b01tgtgcpx4i5" path="res://meteoroid-level/assets/space bg border.png" id="6_ojk86"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://meteoroid-level/scenes/path.tscn" id="9_xg24a"]
 [ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="11_wph22"]
 [ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="12_fb8d6"]
-[ext_resource type="PackedScene" uid="uid://dgtepn6enoocu" path="res://psychescan/backgrounds/background.tscn" id="13_dylux"]
+[ext_resource type="Texture2D" uid="uid://d1tlbsejlug7c" path="res://consoleBackgroundLarge.png" id="13_t7t6d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbg0t"]
 texture = ExtResource("3_16efd")
@@ -70,11 +70,11 @@ grow_vertical = 0
 
 [node name="ControlsMessage" type="Label" parent="."]
 top_level = true
-offset_left = -920.0
-offset_top = -504.0
-offset_right = -202.0
-offset_bottom = -234.0
-theme_override_font_sizes/font_size = 64
+offset_left = 1547.0
+offset_top = -621.0
+offset_right = 2265.0
+offset_bottom = -351.0
+theme_override_font_sizes/font_size = 44
 text = "Arrows for direction
 Backspace/ESC to undo
 Enter to confirm"
@@ -187,13 +187,12 @@ position = Vector2(765, 520)
 [node name="Non-moving Debris12" parent="Debris" instance=ExtResource("8_8knv3")]
 position = Vector2(-2, -256)
 
-[node name="background" parent="." instance=ExtResource("13_dylux")]
-position = Vector2(-789, -1082)
-scale = Vector2(3.5, 3.5)
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+position = Vector2(1009, 50)
+texture = ExtResource("13_t7t6d")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(875, -42)
-zoom = Vector2(0.7, 0.7)
+position = Vector2(911, -24)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

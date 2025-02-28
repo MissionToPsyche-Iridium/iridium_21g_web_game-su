@@ -36,4 +36,4 @@ vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(967, 544)
-zoom = Vector2(1.1, 1.1)
+zoom = Vector2(1.5, 1.5)
