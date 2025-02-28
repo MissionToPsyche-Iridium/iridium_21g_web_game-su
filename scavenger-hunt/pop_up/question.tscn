@@ -1,0 +1,187 @@
+[gd_scene load_steps=16 format=3 uid="uid://wnattyfpcri1"]
+
+[ext_resource type="Texture2D" uid="uid://bleqvy00ws76l" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_cosv8"]
+[ext_resource type="Script" path="res://scavenger-hunt/pop_up/pop_up.gd" id="2_8eaip"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://scavenger-hunt/fonts/dogicapixel.ttf" id="3_swmth"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1fxl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guwo0"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c45x"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni15k"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6fhm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa8g4"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx1av"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xql8m"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwa0g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0ibv"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8dvy"]
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_471oy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="Question" type="TextureRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -20.0
+offset_right = 179.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cosv8")
+script = ExtResource("2_8eaip")
+metadata/_edit_group_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 223.0
+offset_bottom = 84.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u1fxl")
+
+[node name="Question" type="VBoxContainer" parent="PanelContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+
+[node name="Question" type="RichTextLabel" parent="PanelContainer/Question"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 3
+theme_override_fonts/normal_font = ExtResource("3_swmth")
+theme_override_font_sizes/normal_font_size = 8
+text = "Temporary
+Temporary"
+fit_content = true
+
+[node name="Option1" type="Button" parent="PanelContainer/Question"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_swmth")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxFlat_guwo0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3c45x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ni15k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6fhm")
+text = "Temporary"
+alignment = 0
+
+[node name="Option2" type="Button" parent="PanelContainer/Question"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_swmth")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa8g4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dx1av")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xql8m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kwa0g")
+text = "Temporary
+"
+alignment = 0
+
+[node name="Option3" type="Button" parent="PanelContainer/Question"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_swmth")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxFlat_o0ibv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r8dvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_471oy")
+text = "Temporary"
+alignment = 0
+
+[node name="Validation" type="VBoxContainer" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Message" type="RichTextLabel" parent="PanelContainer/Validation"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("3_swmth")
+theme_override_font_sizes/normal_font_size = 8
+text = "Temporary
+Temporary"
+fit_content = true
+
+[connection signal="pressed" from="PanelContainer/Question/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="PanelContainer/Question/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="PanelContainer/Question/Option3" to="." method="_on_option_3_pressed"]
