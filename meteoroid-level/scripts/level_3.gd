@@ -34,3 +34,5 @@ func lose_screen() -> void:
 	var tween = create_tween()
 	tween.tween_property(color_rect, "color", Color8(255, 0, 0, 100), 2.0)
 	await tween.finished
+
+	get_tree().call_deferred("reload_current_scene")
