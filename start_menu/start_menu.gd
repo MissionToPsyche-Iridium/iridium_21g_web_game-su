@@ -23,7 +23,7 @@ func _ready() -> void:
 	$AnimationPlayer.play("continue_fade")          # Fade away the cover over the continue button
 	await get_tree().create_timer(1.0).timeout      # Wait 1 second to let the animation to finish 
 	$ContinueCover.hide()                           # Hide the cover to allow button to be pressed 
-	
+
 func _on_continue_pressed() -> void:                # When the continue button pressed
 	$Cover.show()                                   # Show the cover
 	$AnimationPlayer.play("cover")                  # Cover the disclaimer - "fade to black"
@@ -35,12 +35,11 @@ func _on_continue_pressed() -> void:                # When the continue button p
 	await get_tree().create_timer(1.0).timeout      # Wait 1 minute to let the animation finish 
 	$Cover.hide()                                   # Hide the cover to allow buttons to be pressed 
 
-
 func _on_start_pressed() -> void:                   # When the start button is pressed 
 	$Cover.show()                                   # Show the cover 
 	$AnimationPlayer.play("cover")                  # Cover the start menu - "fade to black"
 	await get_tree().create_timer(1.2).timeout      # Wait 1.2 seconds to let the animation finish 
-	get_tree().change_scene_to_file("res://scavenger-hunt/world.tscn")   # Change the scence to the scavenger hunt minigame 
+	get_tree().change_scene_to_file("res://scavenger-hunt/instructions/instructions.tscn")   # Change the scence to the scavenger hunt minigame 
 
 
 func _on_credits_pressed() -> void:                 # When the credits button is pressed 
