@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
 [ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
-[ext_resource type="Texture2D" uid="uid://d0u0oicwt380v" path="res://icon.png" id="4_3wnvb"]
+[ext_resource type="Texture2D" uid="uid://bl7p5gsxpml46" path="res://icon.png" id="4_3wnvb"]
 
 [sub_resource type="Image" id="Image_mg6fg"]
 data = {

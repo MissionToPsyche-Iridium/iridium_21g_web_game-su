@@ -1,26 +1,26 @@
 [gd_scene load_steps=51 format=4 uid="uid://17wx3jdqs3le"]
 
-[ext_resource type="Texture2D" uid="uid://cxyhm0m1gvi36" path="res://scavenger-hunt/floors/floor-1.png" id="1_a5wg4"]
+[ext_resource type="Texture2D" uid="uid://bbmvlgwtxifat" path="res://scavenger-hunt/floors/floor-1.png" id="1_a5wg4"]
 [ext_resource type="Script" path="res://scavenger-hunt/room1/room_1.gd" id="1_j7enj"]
-[ext_resource type="Texture2D" uid="uid://bb2ka07tjtc6w" path="res://scavenger-hunt/room1/wall.png" id="3_2aoti"]
-[ext_resource type="Texture2D" uid="uid://dtrxo210vkk5n" path="res://scavenger-hunt/borders/borders-1.png" id="3_fspv0"]
-[ext_resource type="Texture2D" uid="uid://1dx8qignep1m" path="res://scavenger-hunt/walls/walls-1.png" id="4_mkqcg"]
-[ext_resource type="Texture2D" uid="uid://b5dqxv6jf3au6" path="res://scavenger-hunt/room1/receptionist.png" id="4_noe72"]
-[ext_resource type="Texture2D" uid="uid://bnr2hme1nljq2" path="res://scavenger-hunt/borders/borders-2.png" id="6_xk80i"]
-[ext_resource type="Texture2D" uid="uid://jq12wx7sgqo3" path="res://scavenger-hunt/pop_up/notebook_page.png" id="11_0lhsj"]
-[ext_resource type="Texture2D" uid="uid://5vm72rklulkq" path="res://scavenger-hunt/doors/door-1.png" id="12_1qeqr"]
-[ext_resource type="Texture2D" uid="uid://befjg0r8hw71u" path="res://scavenger-hunt/room1/desk.png" id="12_a0lli"]
-[ext_resource type="Texture2D" uid="uid://khv5hqsmwslr" path="res://scavenger-hunt/room1/notebook.png" id="12_r8o7u"]
-[ext_resource type="Texture2D" uid="uid://bog8l48ifm1u" path="res://scavenger-hunt/doors/door-3.png" id="14_gj40p"]
+[ext_resource type="Texture2D" uid="uid://db7on6eemvptu" path="res://scavenger-hunt/room1/wall.png" id="3_2aoti"]
+[ext_resource type="Texture2D" uid="uid://bdil8oowyvhli" path="res://scavenger-hunt/borders/borders-1.png" id="3_fspv0"]
+[ext_resource type="Texture2D" uid="uid://d2r6bm42dcyq0" path="res://scavenger-hunt/walls/walls-1.png" id="4_mkqcg"]
+[ext_resource type="Texture2D" uid="uid://drslitq8g6fe8" path="res://scavenger-hunt/room1/receptionist.png" id="4_noe72"]
+[ext_resource type="Texture2D" uid="uid://dwo7l8p6lepdg" path="res://scavenger-hunt/borders/borders-2.png" id="6_xk80i"]
+[ext_resource type="Texture2D" uid="uid://chaceit2ji13c" path="res://scavenger-hunt/pop_up/notebook_page.png" id="11_0lhsj"]
+[ext_resource type="Texture2D" uid="uid://bkrdn0ht20v4f" path="res://scavenger-hunt/doors/door-1.png" id="12_1qeqr"]
+[ext_resource type="Texture2D" uid="uid://b21q0xks0p3th" path="res://scavenger-hunt/room1/desk.png" id="12_a0lli"]
+[ext_resource type="Texture2D" uid="uid://dkei1f1wl3e3r" path="res://scavenger-hunt/room1/notebook.png" id="12_r8o7u"]
+[ext_resource type="Texture2D" uid="uid://wwiunoxfhb0j" path="res://scavenger-hunt/doors/door-3.png" id="14_gj40p"]
 [ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/player/player.tscn" id="14_wv7gx"]
-[ext_resource type="Texture2D" uid="uid://oba7i50ix60l" path="res://scavenger-hunt/doors/door-4.png" id="15_lu7rn"]
-[ext_resource type="Texture2D" uid="uid://m3bqm0526r8v" path="res://scavenger-hunt/room1/chair.png" id="15_wkn5t"]
-[ext_resource type="Texture2D" uid="uid://dqrr4jtwlt867" path="res://scavenger-hunt/room1/table.png" id="16_4cwij"]
-[ext_resource type="Texture2D" uid="uid://bc6lhqu00q461" path="res://scavenger-hunt/doors/door-5.png" id="16_302dd"]
-[ext_resource type="Texture2D" uid="uid://ch8w5ckys1ayl" path="res://scavenger-hunt/room1/picture.png" id="16_y0xd7"]
+[ext_resource type="Texture2D" uid="uid://cn26bl32h40q0" path="res://scavenger-hunt/doors/door-4.png" id="15_lu7rn"]
+[ext_resource type="Texture2D" uid="uid://cxwoaq570txej" path="res://scavenger-hunt/room1/chair.png" id="15_wkn5t"]
+[ext_resource type="Texture2D" uid="uid://bx4pjkqdcyfqx" path="res://scavenger-hunt/room1/table.png" id="16_4cwij"]
+[ext_resource type="Texture2D" uid="uid://c6ufjx1orx5wu" path="res://scavenger-hunt/doors/door-5.png" id="16_302dd"]
+[ext_resource type="Texture2D" uid="uid://cnvjhhtokjq1x" path="res://scavenger-hunt/room1/picture.png" id="16_y0xd7"]
 [ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/pop_up/question.tscn" id="18_mxad4"]
 [ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/pop_up/description.tscn" id="20_yqpkd"]
-[ext_resource type="Texture2D" uid="uid://bo0jb4gjmqs8m" path="res://scavenger-hunt/doors/glass-5.png" id="22_3uegg"]
+[ext_resource type="Texture2D" uid="uid://dfbn8dbxjhywd" path="res://scavenger-hunt/doors/glass-5.png" id="22_3uegg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yu88q"]
 texture = ExtResource("1_a5wg4")
@@ -1737,8 +1737,10 @@ shape = SubResource("RectangleShape2D_04qg3")
 
 [node name="Player" parent="." instance=ExtResource("14_wv7gx")]
 position = Vector2(934, 1021)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(3.57628e-07, 0)
 zoom = Vector2(7, 7)
 limit_left = 603
 limit_top = 576
@@ -1762,10 +1764,10 @@ vertical_alignment = 1
 
 [node name="Question" parent="." instance=ExtResource("18_mxad4")]
 visible = false
-offset_left = 825.0
-offset_top = 702.0
-offset_right = 1055.0
-offset_bottom = 793.0
+offset_left = 824.0
+offset_top = 696.0
+offset_right = 1054.0
+offset_bottom = 787.0
 
 [node name="PageSprite" type="TextureRect" parent="."]
 visible = false

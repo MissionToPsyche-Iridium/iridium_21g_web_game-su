@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://du433bvkd0n40"]
+[gd_scene load_steps=5 format=3 uid="uid://du433bvkd0n40"]
 
-[ext_resource type="Texture2D" uid="uid://bleqvy00ws76l" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_eunme"]
+[ext_resource type="Texture2D" uid="uid://bct8wwfkiaqx3" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_eunme"]
+[ext_resource type="Script" path="res://scavenger-hunt/pop_up/description.gd" id="2_n8erp"]
 [ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_v6ws1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04vrp"]
@@ -9,6 +10,8 @@
 offset_right = 230.0
 offset_bottom = 91.0
 texture = ExtResource("1_eunme")
+stretch_mode = 4
+script = ExtResource("2_n8erp")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -25,7 +28,6 @@ alignment = 1
 
 [node name="Message" type="RichTextLabel" parent="PanelContainer/Description"]
 layout_mode = 2
-size_flags_vertical = 4
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 4
 theme_override_fonts/normal_font = ExtResource("2_v6ws1")
