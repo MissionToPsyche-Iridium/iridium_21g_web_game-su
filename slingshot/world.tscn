@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://blb8npkytvcgv"]
+
+[ext_resource type="Script" path="res://slingshot/world.gd" id="1_mbqyp"]
+[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/game_area.tscn" id="1_pshhq"]
+[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/mars.tscn" id="2_edj3g"]
+[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/timer.tscn" id="3_4fqr7"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/space_ship.tscn" id="4_1bufg"]
+[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://slingshot/checkpoint.tscn" id="6_l5o4u"]
+[ext_resource type="PackedScene" uid="uid://ig4xtm7hfw2h" path="res://slingshot/MarsCrashText.tscn" id="7_68g0i"]
+[ext_resource type="Script" path="res://slingshot/mars_crash_text.gd" id="8_7hr4e"]
+
+[node name="World" type="Node2D"]
+physics_interpolation_mode = 2
+script = ExtResource("1_mbqyp")
+
+[node name="gameArea" parent="." instance=ExtResource("1_pshhq")]
+position = Vector2(580, 321)
+gravity_space_override = 0
+
+[node name="mars" parent="." instance=ExtResource("2_edj3g")]
+position = Vector2(536, 370)
+
+[node name="Area2D" parent="mars" index="1"]
+gravity_point_unit_distance = 15.0
+
+[node name="Timer" parent="." instance=ExtResource("3_4fqr7")]
+
+[node name="space_ship" parent="." instance=ExtResource("4_1bufg")]
+position = Vector2(95, 501)
+motion_mode = 1
+
+[node name="checkpoint" parent="." instance=ExtResource("6_l5o4u")]
+position = Vector2(1037, 96)
+
+[node name="RichTextLabel" parent="." instance=ExtResource("7_68g0i")]
+script = ExtResource("8_7hr4e")
+
+[node name="Timer" parent="RichTextLabel" index="1"]
+one_shot = true
+
+[connection signal="body_exited" from="gameArea" to="." method="_on_game_area_body_exited"]
+[connection signal="body_exited" from="gameArea" to="RichTextLabel" method="_on_game_area_body_exited"]
+[connection signal="body_entered" from="mars/Area2D" to="Timer" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="mars/Area2D" to="RichTextLabel" method="_on_area_2d_body_entered"]
+[connection signal="child_entered_tree" from="checkpoint" to="." method="_on_checkpoint_child_entered_tree"]
+[connection signal="timeout" from="RichTextLabel/Timer" to="RichTextLabel" method="_on_timer_timeout"]
+
+[editable path="mars"]
+[editable path="RichTextLabel"]
