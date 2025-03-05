@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://17wx3jdqs3le"]
+[gd_scene load_steps=52 format=4 uid="uid://17wx3jdqs3le"]
 
 [ext_resource type="Texture2D" uid="uid://bbmvlgwtxifat" path="res://scavenger-hunt/floors/floor-1.png" id="1_a5wg4"]
 [ext_resource type="Script" path="res://scavenger-hunt/room1/room_1.gd" id="1_j7enj"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/pop_up/question.tscn" id="18_mxad4"]
 [ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/pop_up/description.tscn" id="20_yqpkd"]
 [ext_resource type="Texture2D" uid="uid://dfbn8dbxjhywd" path="res://scavenger-hunt/doors/glass-5.png" id="22_3uegg"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="22_merev"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yu88q"]
 texture = ExtResource("1_a5wg4")
@@ -1835,6 +1836,8 @@ offset_left = 957.0
 offset_top = 908.0
 offset_right = 1187.0
 offset_bottom = 999.0
+
+[node name="Audio" parent="." instance=ExtResource("22_merev")]
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_1_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_1_popup_open"]

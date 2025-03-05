@@ -1,34 +1,35 @@
-[gd_scene load_steps=32 format=3 uid="uid://byo5jn1nt53yv"]
+[gd_scene load_steps=33 format=3 uid="uid://byo5jn1nt53yv"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/player/player.gd" id="1_ma31h"]
-[ext_resource type="Texture2D" uid="uid://dhklp7iru8j3c" path="res://scavenger-hunt/player/player-1.png" id="1_mjr7w"]
-[ext_resource type="Texture2D" uid="uid://b5p7yfo3fuy4p" path="res://scavenger-hunt/player/player-2.png" id="2_7v250"]
-[ext_resource type="Texture2D" uid="uid://ctdls8150ps86" path="res://scavenger-hunt/player/player-4.png" id="3_xqoqv"]
-[ext_resource type="Texture2D" uid="uid://2vuxbiph84ni" path="res://scavenger-hunt/player/player-3.png" id="4_8l3qn"]
-[ext_resource type="Texture2D" uid="uid://ckvl3v1kyl2ho" path="res://scavenger-hunt/player/down/player-1.png" id="5_h6dv1"]
-[ext_resource type="Texture2D" uid="uid://cyv7h3c07bsq1" path="res://scavenger-hunt/player/down/player-2.png" id="6_8po8o"]
-[ext_resource type="Texture2D" uid="uid://bo6no55fopa5r" path="res://scavenger-hunt/player/down/player-3.png" id="7_1degi"]
-[ext_resource type="Texture2D" uid="uid://b1uq3naj5soua" path="res://scavenger-hunt/player/down/player-4.png" id="8_cosxe"]
-[ext_resource type="Texture2D" uid="uid://cka5m33isr76s" path="res://scavenger-hunt/player/down/player-5.png" id="9_ggvoj"]
-[ext_resource type="Texture2D" uid="uid://bdyucs6n5lyxm" path="res://scavenger-hunt/player/down/player-6.png" id="10_n2mvq"]
-[ext_resource type="Texture2D" uid="uid://cmk0ggu22re5x" path="res://scavenger-hunt/player/left/player-6.png" id="11_j7bsx"]
-[ext_resource type="Texture2D" uid="uid://blctljj0nu12e" path="res://scavenger-hunt/player/left/player-5.png" id="12_846wd"]
-[ext_resource type="Texture2D" uid="uid://becpagr3rnhjj" path="res://scavenger-hunt/player/left/player-4.png" id="13_hpmc3"]
-[ext_resource type="Texture2D" uid="uid://1t7nvosxn1kp" path="res://scavenger-hunt/player/left/player-3.png" id="14_y2sw5"]
-[ext_resource type="Texture2D" uid="uid://djej7wnm7kmjg" path="res://scavenger-hunt/player/left/player-2.png" id="15_2h5yg"]
-[ext_resource type="Texture2D" uid="uid://bw5hmp2vm7qul" path="res://scavenger-hunt/player/left/player-1.png" id="16_pv7wa"]
-[ext_resource type="Texture2D" uid="uid://c0fgfhkiw52kf" path="res://scavenger-hunt/player/right/player-1.png" id="17_lvjxj"]
-[ext_resource type="Texture2D" uid="uid://d143xcqi4gnnq" path="res://scavenger-hunt/player/right/player-3.png" id="18_wtfv8"]
-[ext_resource type="Texture2D" uid="uid://c6kdikxqjh4br" path="res://scavenger-hunt/player/right/player-2.png" id="19_masqf"]
-[ext_resource type="Texture2D" uid="uid://dj301t11nwnj8" path="res://scavenger-hunt/player/right/player-4.png" id="20_4ywxs"]
-[ext_resource type="Texture2D" uid="uid://cpy8gp0coif5y" path="res://scavenger-hunt/player/right/player-6.png" id="21_dmgxt"]
-[ext_resource type="Texture2D" uid="uid://bk8owmliqgnej" path="res://scavenger-hunt/player/right/player-5.png" id="22_rvn56"]
-[ext_resource type="Texture2D" uid="uid://dlvtkfmv8kd32" path="res://scavenger-hunt/player/up/player-4.png" id="23_udhy8"]
-[ext_resource type="Texture2D" uid="uid://cc2y34hy42myd" path="res://scavenger-hunt/player/up/player-5.png" id="24_mc87y"]
-[ext_resource type="Texture2D" uid="uid://b3vei8h14enrv" path="res://scavenger-hunt/player/up/player-6.png" id="25_jew5b"]
-[ext_resource type="Texture2D" uid="uid://b6t6n7ruooaej" path="res://scavenger-hunt/player/up/player-3.png" id="26_eqyin"]
-[ext_resource type="Texture2D" uid="uid://ciwstmk7na1mh" path="res://scavenger-hunt/player/up/player-2.png" id="27_7y3du"]
-[ext_resource type="Texture2D" uid="uid://pgqlyyp4wmmw" path="res://scavenger-hunt/player/up/player-1.png" id="28_doefu"]
+[ext_resource type="Texture2D" uid="uid://br2uyrtfbyxjv" path="res://scavenger-hunt/player/player-1.png" id="1_mjr7w"]
+[ext_resource type="Texture2D" uid="uid://boeujqciq2tmd" path="res://scavenger-hunt/player/player-2.png" id="2_7v250"]
+[ext_resource type="Texture2D" uid="uid://blart8655dbdk" path="res://scavenger-hunt/player/player-4.png" id="3_xqoqv"]
+[ext_resource type="Texture2D" uid="uid://ddx4xmps5beni" path="res://scavenger-hunt/player/player-3.png" id="4_8l3qn"]
+[ext_resource type="Texture2D" uid="uid://betpiksme1yrk" path="res://scavenger-hunt/player/down/player-1.png" id="5_h6dv1"]
+[ext_resource type="Texture2D" uid="uid://bf7wchjwncggh" path="res://scavenger-hunt/player/down/player-2.png" id="6_8po8o"]
+[ext_resource type="Texture2D" uid="uid://bd8j65u5kyklj" path="res://scavenger-hunt/player/down/player-3.png" id="7_1degi"]
+[ext_resource type="Texture2D" uid="uid://1xushljvchbj" path="res://scavenger-hunt/player/down/player-4.png" id="8_cosxe"]
+[ext_resource type="Texture2D" uid="uid://dmdpvtwenbbuw" path="res://scavenger-hunt/player/down/player-5.png" id="9_ggvoj"]
+[ext_resource type="Texture2D" uid="uid://djo4tkyovqha6" path="res://scavenger-hunt/player/down/player-6.png" id="10_n2mvq"]
+[ext_resource type="Texture2D" uid="uid://38jusxfiqd2d" path="res://scavenger-hunt/player/left/player-6.png" id="11_j7bsx"]
+[ext_resource type="Texture2D" uid="uid://cs8ihinqexjia" path="res://scavenger-hunt/player/left/player-5.png" id="12_846wd"]
+[ext_resource type="Texture2D" uid="uid://ba5yywomxdcjk" path="res://scavenger-hunt/player/left/player-4.png" id="13_hpmc3"]
+[ext_resource type="Texture2D" uid="uid://xti2yb063dtp" path="res://scavenger-hunt/player/left/player-3.png" id="14_y2sw5"]
+[ext_resource type="Texture2D" uid="uid://csrxp3svhqhws" path="res://scavenger-hunt/player/left/player-2.png" id="15_2h5yg"]
+[ext_resource type="Texture2D" uid="uid://3bpdlt68lh2e" path="res://scavenger-hunt/player/left/player-1.png" id="16_pv7wa"]
+[ext_resource type="Texture2D" uid="uid://cex7ksje62tyr" path="res://scavenger-hunt/player/right/player-1.png" id="17_lvjxj"]
+[ext_resource type="Texture2D" uid="uid://b71a3bhvu123o" path="res://scavenger-hunt/player/right/player-3.png" id="18_wtfv8"]
+[ext_resource type="Texture2D" uid="uid://b76q22nqq7l87" path="res://scavenger-hunt/player/right/player-2.png" id="19_masqf"]
+[ext_resource type="Texture2D" uid="uid://qq24eah1uqf6" path="res://scavenger-hunt/player/right/player-4.png" id="20_4ywxs"]
+[ext_resource type="Texture2D" uid="uid://44wc77owvax6" path="res://scavenger-hunt/player/right/player-6.png" id="21_dmgxt"]
+[ext_resource type="Texture2D" uid="uid://h4mxychjpbqm" path="res://scavenger-hunt/player/right/player-5.png" id="22_rvn56"]
+[ext_resource type="Texture2D" uid="uid://b5t7i5c8fti1a" path="res://scavenger-hunt/player/up/player-4.png" id="23_udhy8"]
+[ext_resource type="Texture2D" uid="uid://c0ra6ctgekjv8" path="res://scavenger-hunt/player/up/player-5.png" id="24_mc87y"]
+[ext_resource type="Texture2D" uid="uid://dgvd1b5t54mc7" path="res://scavenger-hunt/player/up/player-6.png" id="25_jew5b"]
+[ext_resource type="Texture2D" uid="uid://bwxka74a11hjh" path="res://scavenger-hunt/player/up/player-3.png" id="26_eqyin"]
+[ext_resource type="Texture2D" uid="uid://bplo2ng4m713s" path="res://scavenger-hunt/player/up/player-2.png" id="27_7y3du"]
+[ext_resource type="Texture2D" uid="uid://bktr32vpre0r3" path="res://scavenger-hunt/player/up/player-1.png" id="28_doefu"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="30_t7nbo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37rjj"]
 animations = [{
@@ -65,96 +66,96 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("5_h6dv1")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("6_8po8o")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("7_1degi")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("8_cosxe")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("9_ggvoj")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("10_n2mvq")
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("11_j7bsx")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("12_846wd")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("13_hpmc3")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("14_y2sw5")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("15_2h5yg")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("16_pv7wa")
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
-"duration": 0.6,
-"texture": ExtResource("17_lvjxj")
-}, {
-"duration": 0.6,
-"texture": ExtResource("18_wtfv8")
-}, {
-"duration": 0.6,
-"texture": ExtResource("19_masqf")
-}, {
-"duration": 0.6,
-"texture": ExtResource("20_4ywxs")
-}, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("21_dmgxt")
 }, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("22_rvn56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lvjxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wtfv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_masqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4ywxs")
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
-"duration": 0.6,
-"texture": ExtResource("23_udhy8")
+"duration": 1.0,
+"texture": ExtResource("28_doefu")
 }, {
-"duration": 0.6,
-"texture": ExtResource("24_mc87y")
-}, {
-"duration": 0.6,
-"texture": ExtResource("25_jew5b")
-}, {
-"duration": 0.6,
-"texture": ExtResource("26_eqyin")
-}, {
-"duration": 0.6,
+"duration": 1.0,
 "texture": ExtResource("27_7y3du")
 }, {
-"duration": 0.6,
-"texture": ExtResource("28_doefu")
+"duration": 1.0,
+"texture": ExtResource("26_eqyin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jew5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_mc87y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_udhy8")
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_avsdk"]
@@ -167,8 +168,7 @@ script = ExtResource("1_ma31h")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_37rjj")
-animation = &"walk_up"
-frame_progress = 0.197963
+animation = &"walk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -178,3 +178,7 @@ shape = SubResource("CircleShape2D_avsdk")
 target_position = Vector2(0, -12.3853)
 collision_mask = 4
 collide_with_areas = true
+
+[node name="Audio" parent="." instance=ExtResource("30_t7nbo")]
+
+[connection signal="frame_changed" from="PlayerSprite" to="." method="_on_player_sprite_frame_changed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ntavt4fbhu11"]
+[gd_scene load_steps=22 format=3 uid="uid://ntavt4fbhu11"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/instructions/instructions.gd" id="1_1keii"]
 [ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_76ro8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://1xushljvchbj" path="res://scavenger-hunt/player/down/player-4.png" id="6_31rxc"]
 [ext_resource type="Texture2D" uid="uid://dmdpvtwenbbuw" path="res://scavenger-hunt/player/down/player-5.png" id="7_ltbp7"]
 [ext_resource type="Texture2D" uid="uid://djo4tkyovqha6" path="res://scavenger-hunt/player/down/player-6.png" id="8_ougce"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="10_jcapo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qaxms"]
 animations = [{
@@ -56,19 +57,19 @@ bg_color = Color(0.277528, 0.277528, 0.277528, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywy14"]
 bg_color = Color(0.118581, 0.118581, 0.118581, 1)
 
-[sub_resource type="Animation" id="Animation_b5ovk"]
-resource_name = "cover_fade"
+[sub_resource type="Animation" id="Animation_ldyt3"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cover:color")
+tracks/0/path = NodePath("PromptCover:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+"values": [Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_5ju3q"]
@@ -84,6 +85,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b5ovk"]
+resource_name = "cover_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_kxlgi"]
@@ -114,21 +130,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_ldyt3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PromptCover:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3a4yj"]
@@ -228,5 +229,7 @@ color = Color(0, 0, 0, 0)
 libraries = {
 "": SubResource("AnimationLibrary_3a4yj")
 }
+
+[node name="Audio" parent="." instance=ExtResource("10_jcapo")]
 
 [connection signal="pressed" from="Ready" to="." method="_on_ready_pressed"]

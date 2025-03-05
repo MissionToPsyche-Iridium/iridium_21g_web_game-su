@@ -8,6 +8,8 @@ signal win
 
 
 var interactable = false
+var isOpen = false
+var correct = 3
 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,49 +30,62 @@ func _process(delta: float) -> void:
 				$Question/PanelContainer/Question.show()
 				$Question/PanelContainer/Validation.hide()
 				$Question.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
 				$Question/PanelContainer/Question.show()
 				$Question/PanelContainer/Validation.hide()
 				$Question.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
 				popup_close.emit()
 		if (collidingNode == $Sign):
 			if Input.is_action_just_pressed("interact"):
 				$SignPopUp.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
 				$SignPopUp.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
 				popup_close.emit()
 
-func _on_question_option_1() -> void:
-	$Question/PanelContainer/Validation/Message.text = "Sorry, that is incorrect. \nA defibrillator is a machine that gives a small electric shock to the heart to help it beat normally again. \nTry looking for more hints!"
-	$Question/PanelContainer/Question.hide()
-	$Question/PanelContainer/Validation.show()
-	_on_player_no_interact()
-	await get_tree().create_timer(2.0).timeout
-	$Question/PanelContainer/Question.show()
-	$Question/PanelContainer/Validation.hide()
-	$Question.hide()
-	popup_close.emit()
-
-func _on_question_option_2() -> void:
-	$Question/PanelContainer/Validation/Message.text = "Sorry, that is incorrect. \nAn anemometer is a tool that measures how fast the wind is blowing. \nTry looking for more hints!"
-	$Question/PanelContainer/Question.hide()
-	$Question/PanelContainer/Validation.show()
-	_on_player_no_interact()
-	await get_tree().create_timer(2.0).timeout
-	$Question/PanelContainer/Question.show()
-	$Question/PanelContainer/Validation.hide()
-	$Question.hide()
-	popup_close.emit()
-
-func _on_question_option_3() -> void:
+func correct_answer() -> void:
 	$Question/PanelContainer/Validation/Message.text = "Correct!"
 	$Question/PanelContainer/Question.hide()
 	$Question/PanelContainer/Validation.show()
 	interactable = false
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	win.emit()
+	
+func wrong_answer() -> void:
+	$Question/PanelContainer/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	$Question/PanelContainer/Question.hide()
+	$Question/PanelContainer/Validation.show()
+	_on_player_no_interact()
+	await get_tree().create_timer(2.0).timeout
+	$Question/PanelContainer/Question.show()
+	$Question/PanelContainer/Validation.hide()
+	$Question.hide()
+	popup_close.emit()
+	
+func _on_question_option_1() -> void:
+	if (correct == 1):
+		correct_answer()
+	else:
+		wrong_answer()
+
+func _on_question_option_2() -> void:
+	if (correct == 2):
+		correct_answer()
+	else:
+		wrong_answer()
+
+func _on_question_option_3() -> void:
+	if (correct == 3):
+		correct
 
 func _on_player_interact() -> void:
 	interactable = true

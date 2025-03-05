@@ -1,21 +1,22 @@
-[gd_scene load_steps=27 format=4 uid="uid://ciwfs2g02077f"]
+[gd_scene load_steps=28 format=4 uid="uid://ciwfs2g02077f"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/room4/room_4.gd" id="1_mjqox"]
-[ext_resource type="Texture2D" uid="uid://cxyhm0m1gvi36" path="res://scavenger-hunt/floors/floor-1.png" id="2_f70y4"]
-[ext_resource type="Texture2D" uid="uid://ec5yrxvdkst1" path="res://scavenger-hunt/floors/floor-2.png" id="3_so7rj"]
-[ext_resource type="Texture2D" uid="uid://dcxyqtgyuf2n5" path="res://scavenger-hunt/walls/walls-2.png" id="4_822jl"]
-[ext_resource type="Texture2D" uid="uid://balb6821wwhda" path="res://scavenger-hunt/walls/walls-5.png" id="5_icou4"]
-[ext_resource type="Texture2D" uid="uid://j5w812mqimtq" path="res://scavenger-hunt/walls/walls-6.png" id="6_wx3j0"]
-[ext_resource type="Texture2D" uid="uid://bnr2hme1nljq2" path="res://scavenger-hunt/borders/borders-2.png" id="7_ywrjm"]
-[ext_resource type="Texture2D" uid="uid://q004n0c3srp" path="res://scavenger-hunt/room4/desk.png" id="8_l6o8q"]
-[ext_resource type="Texture2D" uid="uid://b0xu0dadts1w7" path="res://scavenger-hunt/room4/computer.png" id="9_nc1s3"]
-[ext_resource type="Texture2D" uid="uid://vdnpsqqd5m13" path="res://scavenger-hunt/room4/screens.png" id="10_poc25"]
-[ext_resource type="Texture2D" uid="uid://eunou1swnfkf" path="res://scavenger-hunt/room4/lights-1.png" id="11_mftrt"]
-[ext_resource type="Texture2D" uid="uid://c7i6f070c5bj3" path="res://scavenger-hunt/room4/lights-3.png" id="12_81rux"]
-[ext_resource type="Texture2D" uid="uid://bt3lyfjg4j37h" path="res://scavenger-hunt/room4/lights-2.png" id="13_pmb82"]
-[ext_resource type="Texture2D" uid="uid://c5s3tid2t50th" path="res://scavenger-hunt/room4/controls.png" id="14_rsd64"]
+[ext_resource type="Texture2D" uid="uid://bbmvlgwtxifat" path="res://scavenger-hunt/floors/floor-1.png" id="2_f70y4"]
+[ext_resource type="Texture2D" uid="uid://cfofs5xrrix7f" path="res://scavenger-hunt/floors/floor-2.png" id="3_so7rj"]
+[ext_resource type="Texture2D" uid="uid://8fygrihoe5cm" path="res://scavenger-hunt/walls/walls-2.png" id="4_822jl"]
+[ext_resource type="Texture2D" uid="uid://da0vy6ptrp7cs" path="res://scavenger-hunt/walls/walls-5.png" id="5_icou4"]
+[ext_resource type="Texture2D" uid="uid://dj7848kgv184g" path="res://scavenger-hunt/walls/walls-6.png" id="6_wx3j0"]
+[ext_resource type="Texture2D" uid="uid://dwo7l8p6lepdg" path="res://scavenger-hunt/borders/borders-2.png" id="7_ywrjm"]
+[ext_resource type="Texture2D" uid="uid://dvr2t5m0slub7" path="res://scavenger-hunt/room4/desk.png" id="8_l6o8q"]
+[ext_resource type="Texture2D" uid="uid://c7colrnsckach" path="res://scavenger-hunt/room4/computer.png" id="9_nc1s3"]
+[ext_resource type="Texture2D" uid="uid://du28hhw2d3g5v" path="res://scavenger-hunt/room4/screens.png" id="10_poc25"]
+[ext_resource type="Texture2D" uid="uid://6jnpudki8s5" path="res://scavenger-hunt/room4/lights-1.png" id="11_mftrt"]
+[ext_resource type="Texture2D" uid="uid://bxb0pj2krfu7d" path="res://scavenger-hunt/room4/lights-3.png" id="12_81rux"]
+[ext_resource type="Texture2D" uid="uid://cpyyo1njl7bjv" path="res://scavenger-hunt/room4/lights-2.png" id="13_pmb82"]
+[ext_resource type="Texture2D" uid="uid://w1lb7jq5gu78" path="res://scavenger-hunt/room4/controls.png" id="14_rsd64"]
 [ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/player/player.tscn" id="15_ta71y"]
-[ext_resource type="Texture2D" uid="uid://baukst30o0gdr" path="res://scavenger-hunt/doors/glass-1.png" id="16_leyl0"]
+[ext_resource type="Texture2D" uid="uid://cpaqk324q4ufo" path="res://scavenger-hunt/doors/glass-1.png" id="16_leyl0"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="17_ukm5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ey7e"]
 texture = ExtResource("2_f70y4")
@@ -270,3 +271,5 @@ position = Vector2(2287, 405)
 position = Vector2(2066, 563)
 scale = Vector2(1, 0.99187)
 texture = ExtResource("16_leyl0")
+
+[node name="Audio" parent="." instance=ExtResource("17_ukm5e")]

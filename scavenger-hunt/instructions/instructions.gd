@@ -34,17 +34,16 @@ func _ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	$Cover.hide()
 	start = true
-	#$Player.play("default")
-	#label.add_theme_color_override("font_color", Color("White"))
 
 func _process(delta: float) -> void:
 	if (start):
-		#var typing_speed = base_speed * delta
 		if(label.get_visible_ratio() != 1.0):
 			if(count < 1):
 				count += base_speed*delta
 			else:
 				label.set_visible_characters(label.get_visible_characters()+1)
+				if (label.get_visible_characters() % 2 == 0):
+					$Audio/sfx_dialogue.play()
 				count -= 1
 		else:
 			if (covered):
@@ -75,4 +74,8 @@ func _unhandled_input(event):
 			label.set_visible_ratio(1.0)
 
 func _on_ready_pressed() -> void:
+	$Cover.show()
+	await get_tree().create_timer(1.0).timeout
+	$AnimationPlayer.play("cover")
+	await get_tree().create_timer(1.2).timeout
 	get_tree().change_scene_to_file("res://scavenger-hunt/world.tscn")

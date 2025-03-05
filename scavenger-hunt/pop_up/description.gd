@@ -1,5 +1,6 @@
 extends TextureRect
 
+
 #func _ready() -> void:
 	#adjust_font_size()
 	#get_window().size_changed.connect(_on_window_resized)
