@@ -86,27 +86,27 @@ script = ExtResource("2_8eaip")
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
-offset_right = 247.0
+offset_right = 246.0
 offset_bottom = 94.0
 scale = Vector2(0.9, 0.9)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_u1fxl")
-metadata/_edit_group_ = true
 
 [node name="Question" type="VBoxContainer" parent="PanelContainer"]
 layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 5
+theme_override_constants/separation = 7
 
 [node name="Question" type="RichTextLabel" parent="PanelContainer/Question"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 3
+theme_override_constants/line_separation = 4
 theme_override_fonts/normal_font = ExtResource("3_swmth")
 theme_override_font_sizes/normal_font_size = 8
 text = "Temporary
 Temporary"
 fit_content = true
+scroll_active = false
 
 [node name="Option1" type="Button" parent="PanelContainer/Question"]
 layout_mode = 2
@@ -122,8 +122,9 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_guwo0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3c45x")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ni15k")
 theme_override_styles/normal = SubResource("StyleBoxFlat_b6fhm")
-text = "Temporary"
+text = "The spacecraft will not orbit Psyche"
 alignment = 0
+autowrap_mode = 3
 
 [node name="Option2" type="Button" parent="PanelContainer/Question"]
 layout_mode = 2
@@ -142,6 +143,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kwa0g")
 text = "Temporary
 "
 alignment = 0
+autowrap_mode = 3
 
 [node name="Option3" type="Button" parent="PanelContainer/Question"]
 layout_mode = 2
@@ -158,6 +160,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_r8dvy")
 theme_override_styles/normal = SubResource("StyleBoxFlat_471oy")
 text = "Temporary"
 alignment = 0
+autowrap_mode = 3
 
 [node name="Validation" type="VBoxContainer" parent="PanelContainer"]
 visible = false
@@ -174,6 +177,7 @@ theme_override_font_sizes/normal_font_size = 8
 text = "Temporary
 Temporary"
 fit_content = true
+scroll_active = false
 
 [connection signal="pressed" from="PanelContainer/Question/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="PanelContainer/Question/Option2" to="." method="_on_option_2_pressed"]

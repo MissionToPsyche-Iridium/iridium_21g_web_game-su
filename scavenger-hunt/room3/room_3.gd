@@ -17,8 +17,8 @@ var questions_dict = {
 		"An anemometer", 
 		"A magnetometer"],
 	1: ["Why is the Psyche mission so important?", 
-		"The asteroid could be the core of a planetismal", 
-		"The asteroid is mostly made of rock and ice", 
+		"Psyche might be the a planetismal core", 
+		"Psyche is mostly made of rock and ice", 
 		"The spacecraft will not orbit the asteroid"],
 }
 
@@ -71,10 +71,10 @@ func _process(delta: float) -> void:
 				popup_close.emit()
 
 func correct_answer() -> void:
+	$Audio/sfx_correct.play()
 	$Question/PanelContainer/Validation/Message.text = "Correct!"
 	$Question/PanelContainer/Question.hide()
 	$Question/PanelContainer/Validation.show()
-	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
 	

@@ -1494,7 +1494,7 @@ cache/0/50/0/glyphs/33/texture_idx = -1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fils2"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd0r7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpfr4"]
 bg_color = Color(0.921569, 0.894118, 0.94902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txiwj"]
@@ -1516,6 +1516,8 @@ tile_set = SubResource("TileSet_1omfq")
 
 [node name="Cabinet" type="StaticBody2D" parent="."]
 position = Vector2(2254, 746)
+collision_layer = 4
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Cabinet"]
 texture = ExtResource("6_cpdd3")
@@ -1607,6 +1609,14 @@ offset_right = 2402.0
 offset_bottom = 615.0
 scale = Vector2(0.75, 0.75)
 
+[node name="CabinetDescription" parent="." instance=ExtResource("17_f67ey")]
+visible = false
+offset_left = 2164.0
+offset_top = 645.0
+offset_right = 2394.0
+offset_bottom = 736.0
+scale = Vector2(0.8, 0.8)
+
 [node name="SignPopUp" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(2234, 536)
@@ -1614,31 +1624,29 @@ scale = Vector2(0.209636, 0.209636)
 texture = ExtResource("14_hmt7t")
 
 [node name="Label" type="Label" parent="SignPopUp"]
-offset_left = -269.999
-offset_top = 69.2297
-offset_right = 274.001
-offset_bottom = 149.23
+offset_left = -272.0
+offset_top = 76.23
+offset_right = 272.0
+offset_bottom = 156.23
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 8
 theme_override_fonts/font = ExtResource("14_r8fbb")
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("StyleBoxFlat_sd0r7")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_xpfr4")
 text = "TASK 1: Plot course through meteoroids
 
 TASK 2: Mars gravity assist to slingshot toward the asteroid"
 autowrap_mode = 3
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="Label2" type="Label" parent="SignPopUp"]
 offset_left = -270.0
-offset_top = 193.0
+offset_top = 198.459
 offset_right = 274.0
-offset_bottom = 298.0
+offset_bottom = 291.459
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 8
 theme_override_fonts/font = ExtResource("14_r8fbb")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_txiwj")
 text = "
 TASK 3: Scan the asteroid using a magnetometer and other instruments
@@ -1654,14 +1662,6 @@ offset_bottom = -155.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5f6nh")
 
 [node name="Audio" parent="." instance=ExtResource("14_gxsgg")]
-
-[node name="CabinetDescription" parent="." instance=ExtResource("17_f67ey")]
-visible = false
-offset_left = 2164.0
-offset_top = 645.0
-offset_right = 2394.0
-offset_bottom = 736.0
-scale = Vector2(0.8, 0.8)
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_3_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_3_popup_open"]

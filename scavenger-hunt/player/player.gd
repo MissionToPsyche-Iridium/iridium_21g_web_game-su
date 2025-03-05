@@ -61,7 +61,7 @@ func _physics_process(delta):
 			
 		# Ensure correct animation is playing 
 		if velocity.length() > 0:  # If moving
-			moving = true
+			#moving = true
 			if direction == "up" and $PlayerSprite.animation != "walk_up":
 				$PlayerSprite.play("walk_up")
 			elif direction == "down" and $PlayerSprite.animation != "walk_down":
@@ -71,7 +71,7 @@ func _physics_process(delta):
 			elif direction == "right" and $PlayerSprite.animation != "walk_right":
 				$PlayerSprite.play("walk_right")
 		else:  # If stopped, play idle animation
-			moving = false
+			#moving = false
 			if direction == "up" and $PlayerSprite.animation != "idle_up":
 				$PlayerSprite.play("idle_up")
 			elif direction == "down" and $PlayerSprite.animation != "idle_down":
@@ -103,15 +103,15 @@ func _on_room_2_popup_close() -> void:
 	movable = true
 
 func _on_room_2_popup_open() -> void:
-	movable = false
 	moving = false
+	movable = false
 
 func _on_room_3_popup_close() -> void:
 	movable = true
 
 func _on_room_3_popup_open() -> void:
-	movable = false
 	moving = false
+	movable = false
 
 func load_sfx(sfx_to_load):
 	if $Audio/sfx_player.stream != sfx_to_load:
@@ -125,7 +125,7 @@ func _on_player_sprite_frame_changed() -> void:
 	if sfx_footsteps:  # Ensure the sound is assigned
 		load_sfx(sfx_footsteps)
 
-	if $PlayerSprite.frame in footstep_frames and moving:
+	if $PlayerSprite.frame in footstep_frames and (moving or movable):
 		if !$Audio/sfx_player.playing:  # Prevent overlapping sounds
 			$Audio/sfx_player.play()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1bu06s83i25f"]
+[gd_scene load_steps=8 format=3 uid="uid://d1bu06s83i25f"]
 
 [ext_resource type="AudioStream" uid="uid://jdcl5k6wa752" path="res://audio/close.wav" id="1_yjs70"]
 [ext_resource type="AudioStream" uid="uid://ba7vmjxtqfqa3" path="res://audio/open.wav" id="2_3fiy2"]
@@ -6,29 +6,41 @@
 [ext_resource type="AudioStream" uid="uid://bqrdsrk2hqkkc" path="res://audio/easygoing.wav" id="4_3vnsp"]
 [ext_resource type="AudioStream" uid="uid://bel7t3uvwukd" path="res://audio/Creaking Door (5).mp3" id="5_pj3rx"]
 [ext_resource type="AudioStream" uid="uid://cwxkwi36mvatf" path="res://audio/Steps_floor-019.wav" id="6_tfq48"]
+[ext_resource type="AudioStream" uid="uid://ip0n3romjy4l" path="res://audio/correct.wav" id="7_cad0n"]
 
 [node name="Audio" type="Node2D"]
 
 [node name="sfx_close" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_yjs70")
 volume_db = -20.0
+max_distance = 5000.0
 
 [node name="sfx_open" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_3fiy2")
 volume_db = -20.0
+max_distance = 5000.0
 
 [node name="sfx_dialogue" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7temx")
+max_distance = 5000.0
 
 [node name="sfx_background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_3vnsp")
 volume_db = -45.0
 autoplay = true
+max_distance = 5000.0
 
 [node name="sfx_doors" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_pj3rx")
 volume_db = -10.0
+max_distance = 5000.0
 
 [node name="sfx_player" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_tfq48")
-volume_db = -15.0
+volume_db = -10.0
+max_distance = 5000.0
+
+[node name="sfx_correct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_cad0n")
+volume_db = -20.0
+max_distance = 5000.0

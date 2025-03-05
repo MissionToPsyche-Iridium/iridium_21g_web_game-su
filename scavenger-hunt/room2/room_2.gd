@@ -150,10 +150,10 @@ func _process(delta: float) -> void:
 				popup_close.emit()
 
 func correct_answer() -> void:
+	$Audio/sfx_correct.play()
 	$Question/PanelContainer/Validation/Message.text = "Correct!"
 	$Question/PanelContainer/Question.hide()
 	$Question/PanelContainer/Validation.show()
-	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
 	

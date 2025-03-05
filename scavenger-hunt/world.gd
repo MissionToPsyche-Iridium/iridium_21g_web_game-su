@@ -33,7 +33,7 @@ var is_enterroom3 = false
 var is_leaveroom3a = false
 var is_leaveroom3b = false
 var is_enterroom4a = false
-var is_enterroom4b = false
+var is_movechair = false
 var is_enterroom4c = false
 
 var is_followingpath = false
@@ -164,9 +164,9 @@ func _physics_process(delta: float) -> void:
 				leaveroom3a_end()
 			pathfollower.progress_ratio += 0.05
 	if is_leaveroom3b:
-		isMoving.emit()
 		var pathfollower = $Room3/LeaveRoom3/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 1:
 				leave3_player_sprite.play("walk_up")
 			if pathfollower.progress_ratio >= 1:
@@ -182,7 +182,7 @@ func _physics_process(delta: float) -> void:
 				enter4_player_sprite.play("idle_left")
 				enterroom4a_end()
 			pathfollower.progress_ratio += 0.008
-	if is_enterroom4b:
+	if is_movechair:
 		var pathfollower = $Room4/MoveChair/PathFollow2D
 		if is_followingpath:
 			isMoving.emit()
@@ -264,8 +264,8 @@ func _on_room_1_win() -> void:
 	
 	$Room1/LeaveRoom1.show()
 	$Room1/LeaveRoom1Door.show()
-	$Room1/LeaveRoom1/PathFollow2D/Player.show()
-	$Room1/LeaveRoom1/PathFollow2D/Player/PlayerSprite.play("idle_up")
+	leave1_player.show()
+	leave1_player_sprite.play("idle_up")
 	
 	await get_tree().create_timer(1.0).timeout
 	animation.play("room1_cover_fade")
@@ -278,8 +278,8 @@ func _on_room_1_win() -> void:
 	
 	is_leaveroom1 = true
 	is_followingpath = true
+	leave1_player.moving = true
 	
-
 func leaveroom1_end():
 	is_followingpath = false
 	is_leaveroom1 = false	
@@ -323,6 +323,8 @@ func enterroom2():
 		
 	is_enterroom2 = true
 	is_followingpath = true
+	enter2_player.moving = true
+	
 
 func enterroom2_end():
 	enter2_player_sprite.play("idle_right")
@@ -364,8 +366,8 @@ func _on_room_2_win() -> void:
 	
 	$Room2/LeaveRoom2.show()
 	$Room2/LeaveRoom2Door.show()
-	$Room2/LeaveRoom2/PathFollow2D/Player.show()
-	$Room2/LeaveRoom2/PathFollow2D/Player/PlayerSprite.play("idle_right")
+	leave2_player.show()
+	leave2_player_sprite.play("idle_right")
 	
 	await get_tree().create_timer(1.0).timeout
 	animation.play("room2_cover_fade")
@@ -378,6 +380,7 @@ func _on_room_2_win() -> void:
 	
 	is_leaveroom2 = true
 	is_followingpath = true
+	leave2_player.moving = true
 	
 func leaveroom2_end():
 	is_followingpath = false
@@ -425,6 +428,8 @@ func enterroom3():
 	
 	is_enterroom3 = true
 	is_followingpath = true
+	enter3_player.moving = true
+	
 
 func enterroom3_end():
 	enter3_player_sprite.play("idle_right")
@@ -468,7 +473,7 @@ func _on_room_3_win() -> void:
 		
 	$Room3/LeaveRoom3.show()
 	$Room3/LeaveRoom3Door.show()
-	$Room3/LeaveRoom3/PathFollow2D/Player.show()
+	leave3_player.show()
 	$Room3/MoveSecurity.show()
 	
 	
@@ -480,6 +485,7 @@ func _on_room_3_win() -> void:
 	
 	is_leaveroom3a = true
 	is_followingpath = true
+	leave3_player.moving = true
 	
 func leaveroom3a_end():
 	is_followingpath = false
@@ -492,6 +498,7 @@ func leaveroom3a_end():
 func leaveroom3b():
 	is_followingpath = true
 	is_leaveroom3b = true
+	leave3_player.moving = true
 #End Room3
 
 func leaveroom3b_end():
@@ -534,20 +541,22 @@ func enterroom4():
 		
 	is_enterroom4a = true
 	is_followingpath = true
+	enter4_player.moving = true
 
 func enterroom4a_end():
 	is_followingpath = false
 	is_enterroom4a= false
 	await get_tree().create_timer(1.0).timeout
-	is_enterroom4b = true
+	is_movechair = true
 	is_followingpath = true
 	
 func enterroom4b_end():
 	is_followingpath = false
-	is_enterroom4b = false
+	is_movechair = false
 	await get_tree().create_timer(1.0).timeout
 	is_enterroom4c = true
 	is_followingpath = true
+	enter4_player.moving = true
 	
 func enterroom4_end():
 	is_followingpath = false
