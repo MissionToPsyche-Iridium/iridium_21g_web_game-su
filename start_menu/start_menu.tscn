@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
 [ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
-[ext_resource type="Texture2D" uid="uid://bl7p5gsxpml46" path="res://icon.png" id="4_3wnvb"]
+[ext_resource type="Texture2D" uid="uid://brr0rhsld6otp" path="res://icon.png" id="4_3wnvb"]
 
 [sub_resource type="Image" id="Image_mg6fg"]
 data = {
@@ -1506,7 +1506,6 @@ underline = 1
 uri = "https://psyche.asu.edu/"
 
 [node name="ButtonCover" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1523,13 +1522,13 @@ color = Color(0, 0, 0, 1)
 
 [node name="Disclaimer" type="Label" parent="."]
 layout_mode = 0
-offset_left = 553.0
-offset_top = 570.0
-offset_right = 1327.0
-offset_bottom = 1031.0
+offset_left = 526.0
+offset_top = 576.0
+offset_right = 1354.0
+offset_bottom = 1037.0
 theme_override_constants/line_spacing = 13
 theme_override_fonts/font = ExtResource("2_ye5xd")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 16
 text = "Disclaimer
 
 This work was created in partial fulfillment of Seattle University Capstone Course \"CPSC 4870\". The work is a result of the Psyche Student Collaborations component of NASA’s Psyche Mission (https://psyche.asu.edu). “Psyche: A Journey to a Metal World” [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA."
@@ -1564,7 +1563,6 @@ scale = Vector2(0.177181, 0.177181)
 texture = ExtResource("4_3wnvb")
 
 [node name="Cover" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 offset_left = -106.0
 offset_top = -110.0
