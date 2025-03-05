@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://2qdm2buwfiyl"]
+[gd_scene load_steps=51 format=4 uid="uid://2qdm2buwfiyl"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/room2/room_2.gd" id="1_8c3dr"]
 [ext_resource type="Texture2D" uid="uid://bbmvlgwtxifat" path="res://scavenger-hunt/floors/floor-1.png" id="3_7fwvd"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b84cywsv2tyhy" path="res://scavenger-hunt/room2/chair-1.png" id="14_l02px"]
 [ext_resource type="Texture2D" uid="uid://df68bpsfnn8ge" path="res://scavenger-hunt/room2/desk-1.png" id="15_12rjp"]
 [ext_resource type="Texture2D" uid="uid://lu46x14cqvtb" path="res://scavenger-hunt/room2/desk-2.png" id="16_1wcqs"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="17_dslfn"]
 [ext_resource type="Texture2D" uid="uid://cs3d3f244ajw2" path="res://scavenger-hunt/room2/papers.png" id="17_v1st5"]
 [ext_resource type="Texture2D" uid="uid://ctpwwg0rwsmfl" path="res://scavenger-hunt/room2/shelves.png" id="18_enf1t"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="18_umnqf"]
@@ -287,6 +288,9 @@ size = Vector2(87, 102)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erj2g"]
 size = Vector2(87, 61.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnrio"]
+size = Vector2(48, 20)
 
 [sub_resource type="Image" id="Image_t54hj"]
 data = {
@@ -1608,7 +1612,7 @@ texture = ExtResource("14_l02px")
 shape = SubResource("RectangleShape2D_6gqph")
 
 [node name="Chair2" type="StaticBody2D" parent="."]
-position = Vector2(1476, 339)
+position = Vector2(1514, 320)
 metadata/_edit_group_ = true
 
 [node name="Chair2Sprite" type="Sprite2D" parent="Chair2"]
@@ -1712,6 +1716,13 @@ collision_mask = 2
 position = Vector2(0, 20.25)
 shape = SubResource("RectangleShape2D_erj2g")
 
+[node name="ComputerArea" type="Area2D" parent="."]
+position = Vector2(1473, 342)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerArea"]
+shape = SubResource("RectangleShape2D_lnrio")
+
 [node name="Player" parent="." instance=ExtResource("13_aeyy5")]
 position = Vector2(1364, 449)
 scale = Vector2(2.5, 2.5)
@@ -1739,6 +1750,30 @@ text = "Press [E] to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ComputerDescription" parent="." instance=ExtResource("22_vo7p4")]
+visible = false
+offset_left = 1376.0
+offset_top = 276.0
+offset_right = 1606.0
+offset_bottom = 367.0
+
+[node name="LinkButton" type="LinkButton" parent="ComputerDescription"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 63.0
+offset_right = 167.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.34902, 0.14902, 0.317647, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_dslfn")
+theme_override_font_sizes/font_size = 8
+text = "psyche.asu.edu"
+underline = 1
+uri = "https://psyche.asu.edu/"
+
 [node name="Papers2Description" parent="." instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = 1458.0
@@ -1761,7 +1796,6 @@ offset_right = 1689.0
 offset_bottom = 371.0
 
 [node name="Question" parent="." instance=ExtResource("21_p8dfn")]
-visible = false
 offset_left = 1459.0
 offset_top = 398.0
 offset_right = 1689.0

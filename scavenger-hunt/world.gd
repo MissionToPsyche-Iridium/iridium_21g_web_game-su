@@ -181,7 +181,7 @@ func _physics_process(delta: float) -> void:
 			if pathfollower.progress_ratio >= 0.7167:
 				enter4_player_sprite.play("idle_left")
 				enterroom4a_end()
-			pathfollower.progress_ratio += 0.005
+			pathfollower.progress_ratio += 0.008
 	if is_enterroom4b:
 		var pathfollower = $Room4/MoveChair/PathFollow2D
 		if is_followingpath:
@@ -521,6 +521,7 @@ func leaveroom3b_end():
 
 #Start of Room4
 func enterroom4():
+	enter4_player_sprite.play("idle_up")
 	$Room4Cover.show()
 	$Room4.show()
 	$Room4/Player.hide()

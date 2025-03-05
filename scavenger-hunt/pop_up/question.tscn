@@ -85,11 +85,12 @@ metadata/_edit_group_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 5.0
+offset_left = 6.0
 offset_top = 5.0
-offset_right = 224.0
+offset_right = 222.0
 offset_bottom = 85.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_u1fxl")
+metadata/_edit_group_ = true
 
 [node name="Question" type="VBoxContainer" parent="PanelContainer"]
 layout_direction = 2
