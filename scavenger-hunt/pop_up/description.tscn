@@ -17,8 +17,9 @@ script = ExtResource("2_n8erp")
 layout_mode = 0
 offset_left = 7.0
 offset_top = 7.0
-offset_right = 223.0
-offset_bottom = 84.0
+offset_right = 247.0
+offset_bottom = 93.0
+scale = Vector2(0.9, 0.9)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_04vrp")
 
 [node name="Description" type="VBoxContainer" parent="PanelContainer"]
@@ -33,5 +34,10 @@ theme_override_constants/line_separation = 4
 theme_override_fonts/normal_font = ExtResource("2_v6ws1")
 theme_override_font_sizes/normal_font_size = 8
 text = "Temporary
+Temporary
+Temporary
+Temporary
+Temporary
+Temporary
 Temporary"
 fit_content = true

@@ -9,17 +9,35 @@ signal win
 
 var interactable = false
 var isOpen = false
-var correct = 3
-
+var correct
+var rng = RandomNumberGenerator.new()
+var questions_dict = {
+	0: ["Which of the following is an instrument on the spacecraft?", 
+		"A defibrillater", 
+		"An anemometer", 
+		"A magnetometer"],
+	1: ["Why is the Psyche mission so important?", 
+		"The asteroid could be the core of a planetismal", 
+		"The asteroid is mostly made of rock and ice", 
+		"The spacecraft will not orbit the asteroid"],
+}
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	$Question/PanelContainer/Question/Question.text = "Which of the following is an instrument on the spacecraft?"
-	$Question/PanelContainer/Question/Option1.text = "A defibrillater"
-	$Question/PanelContainer/Question/Option2.text = "An anemometer"
-	$Question/PanelContainer/Question/Option3.text = "A magnetometer"
-	$Player.movable = false
+func _ready() -> void:	
+	var question_number = rng.randi_range(0,1)
+	$Question/PanelContainer/Question/Question.text = questions_dict[question_number][0]
+	$Question/PanelContainer/Question/Option1.text = questions_dict[question_number][1]
+	$Question/PanelContainer/Question/Option2.text = questions_dict[question_number][2]
+	$Question/PanelContainer/Question/Option3.text = questions_dict[question_number][3]
+	
+	if (question_number == 0):
+		correct = 3
+	else:
+		correct = 1
 
+	$CabinetDescription/PanelContainer/Description/Message.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
+
+	$Player.movable = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

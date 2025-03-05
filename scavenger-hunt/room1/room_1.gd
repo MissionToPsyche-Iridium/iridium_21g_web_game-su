@@ -27,15 +27,10 @@ var questions_dict = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var question_number = rng.randi_range(0,1)
-	print(question_number)
 	$Question/PanelContainer/Question/Question.text = questions_dict[question_number][0]
-	print(questions_dict[question_number][0])
 	$Question/PanelContainer/Question/Option1.text = questions_dict[question_number][1]
-	print(questions_dict[question_number][1])
 	$Question/PanelContainer/Question/Option2.text = questions_dict[question_number][2]
-	print(questions_dict[question_number][2])
 	$Question/PanelContainer/Question/Option3.text = questions_dict[question_number][3]
-	print(questions_dict[question_number][3])
 	
 	if (question_number == 0):
 		correct = 1

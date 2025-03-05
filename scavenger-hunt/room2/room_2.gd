@@ -25,16 +25,10 @@ var questions_dict = {
 		"NASA's Discovery Program", 
 		"NASA and Space Discovery Program"],
 	1: ["How long ago did the space craft lauch?", 
-		"August 2029", 
-		"April 2029", 
-		"August 2028"],
+		"-", 
+		"-", 
+		"-"],
 }
-
-
-
-
-
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

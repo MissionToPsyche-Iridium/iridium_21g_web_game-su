@@ -6,7 +6,6 @@ const STOP_FORCE = 2600
 
 var direction
 var movable = false
-var facing = false
 var moving = false
 
 @export var sfx_footsteps : AudioStream
@@ -90,8 +89,7 @@ func _physics_process(delta):
 		
 		if ($RayCast2D.is_colliding()):
 			interact.emit()
-			
-		if (!$RayCast2D.is_colliding()):
+		else:
 			no_interact.emit()
 
 func _on_room_1_popup_close() -> void:
@@ -107,14 +105,13 @@ func _on_room_2_popup_close() -> void:
 func _on_room_2_popup_open() -> void:
 	movable = false
 	moving = false
-	
+
 func _on_room_3_popup_close() -> void:
 	movable = true
 
 func _on_room_3_popup_open() -> void:
 	movable = false
 	moving = false
-
 
 func load_sfx(sfx_to_load):
 	if $Audio/sfx_player.stream != sfx_to_load:
