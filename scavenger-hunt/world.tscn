@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://csj85o6s1ep81"]
+[gd_scene load_steps=58 format=3 uid="uid://csj85o6s1ep81"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/world.gd" id="1_jxgm3"]
 [ext_resource type="PackedScene" uid="uid://17wx3jdqs3le" path="res://scavenger-hunt/room1/room1.tscn" id="1_u157h"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://bo5fthu84jx22" path="res://scavenger-hunt/room3/bodyguard-3.png" id="26_mgua0"]
 [ext_resource type="Texture2D" uid="uid://dsagooj8k2f6o" path="res://scavenger-hunt/room3/bodyguard-4.png" id="27_0wev4"]
 [ext_resource type="Texture2D" uid="uid://bdckqee2ckeq7" path="res://scavenger-hunt/room3/bodyguard-5.png" id="28_v78sb"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="30_vp5yh"]
 
 [sub_resource type="Curve2D" id="Curve2D_uv60c"]
 _data = {
@@ -843,8 +844,9 @@ offset_bottom = 1109.0
 scale = Vector2(0.05, 0.05)
 text = "."
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Audio" parent="." instance=ExtResource("30_vp5yh")]
 
+[connection signal="isMoving" from="." to="Room1/EnterRoom1/PathFollow2D/Player" method="_on_world_is_moving"]
 [connection signal="win" from="Room1" to="." method="_on_room_1_win"]
 [connection signal="win" from="Room2" to="." method="_on_room_2_win"]
 [connection signal="win" from="Room3" to="." method="_on_room_3_win"]

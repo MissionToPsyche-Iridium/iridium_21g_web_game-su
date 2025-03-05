@@ -5,6 +5,7 @@ signal popup_close
 
 signal win
 
+var isOpen
 
 var interactable = false
 
@@ -54,32 +55,48 @@ func _process(delta: float) -> void:
 				$Question/PanelContainer/Question.show()
 				$Question/PanelContainer/Validation.hide()
 				$Question.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
 				$Question/PanelContainer/Question.show()
 				$Question/PanelContainer/Validation.hide()
 				$Question.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
 				popup_close.emit()
 		if (collidingNode == $NotebookArea):
 			if Input.is_action_just_pressed("interact"):
 				$PageSprite.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
 				$PageSprite.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
 				popup_close.emit()
 		if (collidingNode == $PictureArea):
 			if Input.is_action_just_pressed("interact"):
 				$PicturePopUp.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
 				$PicturePopUp.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
 				popup_close.emit()
 		if (collidingNode == $Chair4/Area2D):
 			if Input.is_action_just_pressed("interact"):
 				$ChairPopUp.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
 				$ChairPopUp.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
 				popup_close.emit()
 		
 func correct_answer() -> void:

@@ -1,5 +1,7 @@
 extends Node2D
 
+signal isMoving
+
 @onready var animation = $AnimationPlayer
 
 @onready var enter1_player = $Room1/EnterRoom1/PathFollow2D/Player
@@ -101,6 +103,7 @@ func _physics_process(delta: float) -> void:
 	if is_enterroom1:
 		var pathfollower = $Room1/EnterRoom1/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 0.5233:
 				enter1_player_sprite.play("walk_up")
 			if pathfollower.progress_ratio >= 1:
@@ -109,6 +112,7 @@ func _physics_process(delta: float) -> void:
 	if is_leaveroom1:
 		var pathfollower = $Room1/LeaveRoom1/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 0.4086:
 				leave1_player_sprite.play("walk_right")
 			if pathfollower.progress_ratio >= 0.4086:
@@ -120,6 +124,7 @@ func _physics_process(delta: float) -> void:
 	if is_enterroom2:
 		var pathfollower = $Room2/EnterRoom2/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 0.1467:
 				enter2_player_sprite.play("walk_up")
 			if pathfollower.progress_ratio >= 0.1467:
@@ -130,6 +135,7 @@ func _physics_process(delta: float) -> void:
 	if is_leaveroom2:
 		var pathfollower = $Room2/LeaveRoom2/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 0.29:
 				leave2_player_sprite.play("walk_down")
 			if pathfollower.progress_ratio >= 0.29:
@@ -141,6 +147,7 @@ func _physics_process(delta: float) -> void:
 	if is_enterroom3:
 		var pathfollower = $Room3/EnterRoom3/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 1:
 				enter3_player_sprite.play("walk_right")
 			if pathfollower.progress_ratio >= 1:
@@ -149,6 +156,7 @@ func _physics_process(delta: float) -> void:
 	if is_leaveroom3a:
 		var pathfollower = $Room3/MoveSecurity/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio < 1:
 				$Room3/MoveSecurity/PathFollow2D/AnimatedSprite2D.play("walk")
 			if pathfollower.progress_ratio >= 1:
@@ -156,6 +164,7 @@ func _physics_process(delta: float) -> void:
 				leaveroom3a_end()
 			pathfollower.progress_ratio += 0.05
 	if is_leaveroom3b:
+		isMoving.emit()
 		var pathfollower = $Room3/LeaveRoom3/PathFollow2D
 		if is_followingpath:
 			if pathfollower.progress_ratio < 1:
@@ -167,6 +176,7 @@ func _physics_process(delta: float) -> void:
 	if is_enterroom4a:
 		var pathfollower = $Room4/EnterRoom4/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			enter4_player_sprite.play("walk_up")
 			if pathfollower.progress_ratio >= 0.7167:
 				enter4_player_sprite.play("idle_left")
@@ -175,6 +185,7 @@ func _physics_process(delta: float) -> void:
 	if is_enterroom4b:
 		var pathfollower = $Room4/MoveChair/PathFollow2D
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio >= 1:
 				enterroom4b_end()
 			pathfollower.progress_ratio += 0.05
@@ -183,6 +194,7 @@ func _physics_process(delta: float) -> void:
 		var pathfollower2 = $Room4/MoveChair/PathFollow2D
 		pathfollower.progress_ratio == 0.7167
 		if is_followingpath:
+			isMoving.emit()
 			if pathfollower.progress_ratio > 0.7167:
 				enter4_player_sprite.play("walk_left")
 			if pathfollower.progress_ratio > 0.9067:
@@ -206,6 +218,7 @@ func enterroom1() -> void:
 	$Room1/EnterRoom1.show()
 	await get_tree().create_timer(2.0).timeout
 	$Room1/EnterRoom1Door.play("open")
+	$Audio/sfx_doors.play()
 	await get_tree().create_timer(2.0).timeout
 	
 	is_enterroom1 = true
@@ -214,6 +227,7 @@ func enterroom1() -> void:
 func enterroom1_end():
 	enter1_player_sprite.play("idle_up")
 	$Room1/EnterRoom1Door.play("close")
+	$Audio/sfx_doors.play()
 	is_followingpath = false
 	is_enterroom1 = false
 	await get_tree().create_timer(2.0).timeout
@@ -258,6 +272,7 @@ func _on_room_1_win() -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	$Room1/LeaveRoom1Door.play("open")
+	$Audio/sfx_doors.play()
 	
 	await get_tree().create_timer(1.0).timeout
 	
@@ -270,6 +285,7 @@ func leaveroom1_end():
 	is_leaveroom1 = false	
 	leave1_player_sprite.play("idle_up")
 	$Room1/LeaveRoom1Door.play("close")
+	$Audio/sfx_doors.play()
 	await get_tree().create_timer(0.5).timeout
 	animation.play("room1_cover")
 	$Room1/LeaveRoom1.hide()
@@ -303,6 +319,7 @@ func enterroom2():
 	animation.play("room2_cover_fade")
 
 	$Room2/EnterRoom2Door.play("open")
+	$Audio/sfx_doors.play()
 		
 	is_enterroom2 = true
 	is_followingpath = true
@@ -310,6 +327,7 @@ func enterroom2():
 func enterroom2_end():
 	enter2_player_sprite.play("idle_right")
 	$Room2/EnterRoom2Door.play("close")
+	$Audio/sfx_doors.play()
 	is_followingpath = false
 	is_enterroom2 = false
 	await get_tree().create_timer(2.0).timeout
@@ -354,6 +372,7 @@ func _on_room_2_win() -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	$Room2/LeaveRoom2Door.play("open")
+	$Audio/sfx_doors.play()
 	
 	await get_tree().create_timer(1.0).timeout
 	
@@ -365,6 +384,7 @@ func leaveroom2_end():
 	is_leaveroom2 = false	
 	leave2_player_sprite.play("idle_right")
 	$Room2/LeaveRoom2Door.play("close")
+	$Audio/sfx_doors.play()
 	await get_tree().create_timer(0.5).timeout
 	animation.play("room2_cover")
 	$Room2/LeaveRoom2.hide()
@@ -401,6 +421,7 @@ func enterroom3():
 	animation.play("room3_cover_fade")
 
 	$Room3/EnterRoom3Door.play("open")
+	$Audio/sfx_doors.play()
 	
 	is_enterroom3 = true
 	is_followingpath = true
@@ -408,6 +429,7 @@ func enterroom3():
 func enterroom3_end():
 	enter3_player_sprite.play("idle_right")
 	$Room3/EnterRoom3Door.play("close")
+	$Audio/sfx_doors.play()
 	is_followingpath = false
 	is_enterroom3 = false
 	await get_tree().create_timer(2.0).timeout
@@ -463,6 +485,7 @@ func leaveroom3a_end():
 	is_followingpath = false
 	is_leaveroom3a = false
 	$Room3/LeaveRoom3Door.play("open")
+	$Audio/sfx_doors.play()
 	await get_tree().create_timer(1.0).timeout
 	leaveroom3b()
 
@@ -476,6 +499,7 @@ func leaveroom3b_end():
 	is_leaveroom3b = false
 	leave3_player_sprite.play("idle_up")
 	$Room3/LeaveRoom3Door.play("close")
+	$Audio/sfx_doors.play()
 	await get_tree().create_timer(2.0).timeout
 	animation.play("room3_cover")
 	$Room3/LeaveRoom3.hide()

@@ -1,18 +1,19 @@
-[gd_scene load_steps=34 format=4 uid="uid://b18d830urpadj"]
+[gd_scene load_steps=35 format=4 uid="uid://b18d830urpadj"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/room3/room_3.gd" id="1_bybdk"]
-[ext_resource type="Texture2D" uid="uid://ec5yrxvdkst1" path="res://scavenger-hunt/floors/floor-2.png" id="3_vka00"]
-[ext_resource type="Texture2D" uid="uid://cxyhm0m1gvi36" path="res://scavenger-hunt/floors/floor-1.png" id="3_xoxfm"]
-[ext_resource type="Texture2D" uid="uid://dcxyqtgyuf2n5" path="res://scavenger-hunt/walls/walls-2.png" id="4_7m02r"]
-[ext_resource type="Texture2D" uid="uid://bnr2hme1nljq2" path="res://scavenger-hunt/borders/borders-2.png" id="5_k6pcd"]
-[ext_resource type="Texture2D" uid="uid://balb6821wwhda" path="res://scavenger-hunt/walls/walls-5.png" id="5_xf1vt"]
-[ext_resource type="Texture2D" uid="uid://baukst30o0gdr" path="res://scavenger-hunt/doors/glass-1.png" id="6_4raui"]
-[ext_resource type="Texture2D" uid="uid://m7sio43tcdvy" path="res://scavenger-hunt/doors/armor-1.png" id="7_jmo4o"]
-[ext_resource type="Texture2D" uid="uid://div7wx1xl4e7n" path="res://scavenger-hunt/room3/security.png" id="9_1v31f"]
+[ext_resource type="Texture2D" uid="uid://cfofs5xrrix7f" path="res://scavenger-hunt/floors/floor-2.png" id="3_vka00"]
+[ext_resource type="Texture2D" uid="uid://bbmvlgwtxifat" path="res://scavenger-hunt/floors/floor-1.png" id="3_xoxfm"]
+[ext_resource type="Texture2D" uid="uid://8fygrihoe5cm" path="res://scavenger-hunt/walls/walls-2.png" id="4_7m02r"]
+[ext_resource type="Texture2D" uid="uid://dwo7l8p6lepdg" path="res://scavenger-hunt/borders/borders-2.png" id="5_k6pcd"]
+[ext_resource type="Texture2D" uid="uid://da0vy6ptrp7cs" path="res://scavenger-hunt/walls/walls-5.png" id="5_xf1vt"]
+[ext_resource type="Texture2D" uid="uid://cpaqk324q4ufo" path="res://scavenger-hunt/doors/glass-1.png" id="6_4raui"]
+[ext_resource type="Texture2D" uid="uid://dwxffmbyexnmu" path="res://scavenger-hunt/doors/armor-1.png" id="7_jmo4o"]
+[ext_resource type="Texture2D" uid="uid://8ylrih7o5oyf" path="res://scavenger-hunt/room3/security.png" id="9_1v31f"]
 [ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/pop_up/question.tscn" id="9_aovdl"]
 [ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/player/player.tscn" id="10_iyeug"]
-[ext_resource type="Texture2D" uid="uid://bvjndqjvmvaqf" path="res://scavenger-hunt/room3/sign-small.png" id="13_t2qiv"]
-[ext_resource type="Texture2D" uid="uid://cky46h45faea3" path="res://scavenger-hunt/room3/sign-large.png" id="14_hmt7t"]
+[ext_resource type="Texture2D" uid="uid://ecdmbrvlwvym" path="res://scavenger-hunt/room3/sign-small.png" id="13_t2qiv"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="14_gxsgg"]
+[ext_resource type="Texture2D" uid="uid://d4eph1c1pgk1d" path="res://scavenger-hunt/room3/sign-large.png" id="14_hmt7t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kpdnq"]
 texture = ExtResource("3_xoxfm")
@@ -1586,6 +1587,8 @@ visible = false
 position = Vector2(2233.5, 535.5)
 scale = Vector2(0.209636, 0.209636)
 texture = ExtResource("14_hmt7t")
+
+[node name="Audio" parent="." instance=ExtResource("14_gxsgg")]
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_3_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_3_popup_open"]
