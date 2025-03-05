@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1bu06s83i25f"]
+
+[ext_resource type="AudioStream" uid="uid://jdcl5k6wa752" path="res://audio/close.wav" id="1_yjs70"]
+[ext_resource type="AudioStream" uid="uid://ba7vmjxtqfqa3" path="res://audio/open.wav" id="2_3fiy2"]
+[ext_resource type="AudioStream" uid="uid://f147q8phd6jh" path="res://audio/dialogue.wav" id="3_7temx"]
+[ext_resource type="AudioStream" uid="uid://bqrdsrk2hqkkc" path="res://audio/easygoing.wav" id="4_3vnsp"]
+[ext_resource type="AudioStream" uid="uid://bel7t3uvwukd" path="res://audio/Creaking Door (5).mp3" id="5_pj3rx"]
+[ext_resource type="AudioStream" uid="uid://cwxkwi36mvatf" path="res://audio/Steps_floor-019.wav" id="6_tfq48"]
+
+[node name="Audio" type="Node2D"]
+
+[node name="sfx_close" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_yjs70")
+volume_db = -20.0
+
+[node name="sfx_open" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_3fiy2")
+volume_db = -20.0
+
+[node name="sfx_dialogue" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7temx")
+
+[node name="sfx_background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3vnsp")
+volume_db = -45.0
+autoplay = true
+
+[node name="sfx_doors" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_pj3rx")
+volume_db = -10.0
+
+[node name="sfx_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_tfq48")
+volume_db = -15.0
