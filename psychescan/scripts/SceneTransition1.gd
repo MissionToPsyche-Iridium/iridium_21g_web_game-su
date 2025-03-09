@@ -5,15 +5,23 @@ extends Area2D
 
 # Tracks the player object currently in the area
 var is_overlap = false # Used to track if player is aligned with the correct area
+var is_prox_overlap = false # Used to track if player is in proximity of the correct area
 var player_node: CharacterBody2D = null
 var correctNode
 var incorrectNode
 var is_scene_change_pending = false
 var correctSound
 var incorrectSound
-var player_hitbox
+#var player_hitbox
+var prox_node: Area2D = null
 @onready var label
 var textDone = false
+var is_beeping: bool = true
+
+# Variables for beep sound (proximity sensor)
+@export var near_beep_delay: float = 0.2  # fastest beep rate (seconds)
+@export var far_beep_delay: float = 1.0  # slowest beep rate (seconds)
+@onready var beep_audio: AudioStreamPlayer = $BeepAudio
 
 func _ready():
 	monitoring = true
@@ -24,6 +32,7 @@ func _ready():
 	correctSound = get_parent().get_node("CorrectSound")
 	incorrectSound = get_parent().get_node("IncorrectSound")
 	label = get_parent().get_node("Label")
+	beep_loop()
 
 # Signals for collision detection
 func _on_area2d_body_entered(body):
@@ -38,15 +47,43 @@ func _on_area2d_body_exited(body):
 		is_overlap = false
 		print("Player exited area")
 
+func _on_area2d_area_entered(area: Area2D) -> void:
+	# This will be called when any Area2D enters Scene A’s collision shape.
+	# You can add additional checks (e.g., by name or group) to ensure it’s Scene B.
+	is_prox_overlap = true
+	prox_node = area
+	print("Player in proximity")
+
+func _on_area2d_area_exited(area: Area2D) -> void:
+	# Called when an Area2D leaves Scene A’s collision shape.
+	if area == prox_node:
+		is_prox_overlap = false
+		prox_node = null
+		print("Player out of proximity")
+
+func beep_loop() -> void:
+	while is_beeping:
+		var delay = far_beep_delay
+		if is_prox_overlap or is_overlap:
+			delay = near_beep_delay
+		beep_audio.play()
+		await(get_tree().create_timer(delay).timeout)
+
+
 func _process(delta: float) -> void:
+	# This section handles text auto type effect
 	if !textDone:
 		if label.get_visible_ratio() < 1:
 			label.set_visible_ratio(label.get_visible_ratio()+(.5*delta))
 		else:
 			textDone = true
-				
+
+	# This section handles scanning behavior		
 	if is_overlap and Input.is_action_just_pressed("ui_accept"): # If the player is aligned with the target area and presses enter
 		print("Input accepted")
+		is_beeping = false
+		var ani = player_node.get_node("AnimatedSprite2D") #idk this is not working
+		ani.queue_free() # Removes sparkle effect from already-scanned box
 		show_correct_indicator()
 		correctSound.play()
 		await correctSound.finished
@@ -57,7 +94,8 @@ func _process(delta: float) -> void:
 		incorrectSound.play()
 		await incorrectSound.finished
 		print("target misaligned")
-		
+
+	# This section handles proximity beep sound
 
 
 func change_scene():
@@ -88,3 +126,6 @@ func show_incorrect_indicator():
 	await(get_tree().create_timer(1.25).timeout)
 	incorrectNode.visible = false
 	print("Hiding Incorrect indicator")
+
+
+# shader jitter original: 0.342

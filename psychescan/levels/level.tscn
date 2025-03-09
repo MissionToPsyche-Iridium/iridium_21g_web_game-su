@@ -6,9 +6,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_awr2u"]
 shader = ExtResource("2_b60o3")
-shader_parameter/_ScanLineJitter = 0.407
-shader_parameter/_VerticalJump = 0.004
-shader_parameter/_HorizontalShake = 0.001
+shader_parameter/_ScanLineJitter = 0.263
+shader_parameter/_VerticalJump = 0.0
+shader_parameter/_HorizontalShake = 0.0
 shader_parameter/_ColorDrift = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7bw3"]

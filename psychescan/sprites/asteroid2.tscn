@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0u77fgeccqyi"]
+[gd_scene load_steps=9 format=3 uid="uid://c0u77fgeccqyi"]
 
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="1_fcdd2"]
 [ext_resource type="Texture2D" uid="uid://bv5nb5qo7314f" path="res://psychescan/assets/psyche2.png" id="1_t3x8u"]
@@ -6,6 +6,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6q4w"]
 size = Vector2(1120, 1088)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd8h1"]
+size = Vector2(320, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66oxv"]
+size = Vector2(288, 288)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
 size = Vector2(142, 124.584)
@@ -29,7 +35,25 @@ texture_offset = Vector2(64, 2)
 texture_scale = Vector2(1.45, 1.43)
 polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
 
-[node name="hitbox" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="ProxDetector" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(704, 224)
+shape = SubResource("RectangleShape2D_cd8h1")
+debug_color = Color(2.83971e-06, 0.643109, 0.305986, 0.42)
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="ProxDetector" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(144, 624)
+shape = SubResource("RectangleShape2D_66oxv")
+debug_color = Color(2.88785e-07, 0.649086, 0.157793, 0.42)
+
+[node name="hitbox" type="CharacterBody2D" parent="." groups=["player_boxes"]]
 collision_layer = 2
 collision_mask = 2
 
@@ -40,7 +64,7 @@ shape = SubResource("RectangleShape2D_y3eek")
 [node name="AnimatedSprite2D" parent="hitbox" instance=ExtResource("2_xxapa")]
 position = Vector2(704, 224)
 
-[node name="hitbox2" type="CharacterBody2D" parent="."]
+[node name="hitbox2" type="CharacterBody2D" parent="." groups=["player_boxes"]]
 collision_layer = 2
 collision_mask = 2
 

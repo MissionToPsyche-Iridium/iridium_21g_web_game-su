@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2k4nx07esqql"]
+[gd_scene load_steps=9 format=3 uid="uid://d2k4nx07esqql"]
 
 [ext_resource type="Script" path="res://psychescan/scripts/PlayerAsteroid.gd" id="1_y564n"]
 [ext_resource type="Texture2D" uid="uid://b02pg4ltcn72f" path="res://psychescan/assets/psycheYellow.png" id="2_6emri"]
@@ -6,6 +6,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6q4w"]
 size = Vector2(1376, 1344)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nddq"]
+size = Vector2(320, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1gh0"]
+size = Vector2(256, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3eek"]
 size = Vector2(128, 95.5)
@@ -31,7 +37,34 @@ texture_offset = Vector2(64, 2)
 texture_scale = Vector2(1.45, 1.43)
 polygon = PackedVector2Array(0, 0, -64, 0, -64, 579.518, -64, 640, 640, 640, 640, 578.621, 640, 0)
 
-[node name="hitbox" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="ProxDetector" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(512, 160)
+shape = SubResource("RectangleShape2D_7nddq")
+debug_color = Color(2.83971e-06, 0.643109, 0.305986, 0.42)
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="ProxDetector" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1184, 864)
+shape = SubResource("RectangleShape2D_7nddq")
+debug_color = Color(2.83971e-06, 0.643109, 0.305986, 0.42)
+
+[node name="Area2D3" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(96, 544)
+shape = SubResource("RectangleShape2D_c1gh0")
+debug_color = Color(3.7542e-06, 0.644514, 0.279388, 0.42)
+
+[node name="hitbox" type="CharacterBody2D" parent="." groups=["player_boxes"]]
 collision_layer = 2
 collision_mask = 2
 
@@ -43,7 +76,7 @@ shape = SubResource("RectangleShape2D_y3eek")
 position = Vector2(1184, 864)
 scale = Vector2(0.673685, 0.864864)
 
-[node name="hitbox2" type="CharacterBody2D" parent="."]
+[node name="hitbox2" type="CharacterBody2D" parent="." groups=["player_boxes"]]
 collision_layer = 2
 collision_mask = 2
 
@@ -54,7 +87,7 @@ shape = SubResource("RectangleShape2D_y3eek")
 [node name="AnimatedSprite2D" parent="hitbox2" instance=ExtResource("2_fsjjn")]
 position = Vector2(512, 160)
 
-[node name="hitbox3" type="CharacterBody2D" parent="."]
+[node name="hitbox3" type="CharacterBody2D" parent="." groups=["player_boxes"]]
 collision_layer = 2
 collision_mask = 2
 

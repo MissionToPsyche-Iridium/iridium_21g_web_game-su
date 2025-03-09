@@ -6,7 +6,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kn17i"]
 shader = ExtResource("2_bsm0a")
-shader_parameter/_ScanLineJitter = 0.407
+shader_parameter/_ScanLineJitter = 0.263
 shader_parameter/_VerticalJump = 0.004
 shader_parameter/_HorizontalShake = 0.001
 shader_parameter/_ColorDrift = 0.0

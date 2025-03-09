@@ -6,8 +6,8 @@
 anchors_preset = -1
 anchor_right = 0.133
 anchor_bottom = 0.198
-offset_right = 0.639999
-offset_bottom = 208.16
+offset_right = 76.664
+offset_bottom = 40.47
 theme_override_fonts/font = ExtResource("1_ac2bh")
 text = "You've reached
 the Psyche 
@@ -15,19 +15,18 @@ asteroid!
 Objectives will 
 be displayed 
 here.
-
-
-
-
-
-
-
-
-
 Use the arrow keys/WASD
 to move the camera.
+
+
+
+
+
+
 Press Enter/Spacebar 
 to scan the asteroid.
+(Hints: look for the sparkle.
+The beeping will speed up when you are close!
 (Press Enter/Space
 to continue)"
 autowrap_mode = 3

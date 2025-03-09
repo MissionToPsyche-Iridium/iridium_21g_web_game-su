@@ -41,9 +41,9 @@ polygon = PackedVector2Array(43, -6, 75, -6, 75, 26, 43, 26)
 
 [node name="Label" parent="." instance=ExtResource("2_hkxe4")]
 offset_left = 1184.0
-offset_top = 160.0
+offset_top = 150.0
 offset_right = 1440.0
-offset_bottom = 582.0
+offset_bottom = 572.0
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -52,7 +52,6 @@ stream = ExtResource("5_15ndt")
 
 [node name="CRTHumBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_4qhsd")
-volume_db = -4.0
 autoplay = true
 parameters/looping = false
 

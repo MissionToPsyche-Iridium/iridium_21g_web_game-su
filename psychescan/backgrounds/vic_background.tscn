@@ -15,7 +15,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="VictoryMessage" parent="." instance=ExtResource("1_yqwwf")]
-position = Vector2(155, 120)
+position = Vector2(140, 120)
 
 [node name="main" type="Polygon2D" parent="."]
 scale = Vector2(1.55089, 2.10742)
@@ -35,15 +35,14 @@ shape = SubResource("RectangleShape2D_yc7cd")
 
 [node name="Label" parent="." instance=ExtResource("5_lyrys")]
 offset_left = 1184.0
-offset_top = 160.0
+offset_top = 150.0
 offset_right = 1471.0
-offset_bottom = 429.0
+offset_bottom = 419.0
 visible_characters = 0
 visible_ratio = 0.0
 
 [node name="CRTHumBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_v4dcy")
-volume_db = -4.0
 autoplay = true
 parameters/looping = false
 
