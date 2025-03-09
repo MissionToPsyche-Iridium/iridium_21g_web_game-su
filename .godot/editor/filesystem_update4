@@ -1,0 +1,8 @@
+res://psychescan/texts/tutorialText.tscn
+res://psychescan/texts/scannertext1.tscn
+res://psychescan/texts/scannertext2.tscn
+res://psychescan/texts/scannertext3.tscn
+res://psychescan/texts/victory_text.tscn
+res://psychescan/levels/main_level.tscn
+res://psychescan/scripts/To_Next_Level.gd
+res://psychescan/levels/victory_scene.tscn

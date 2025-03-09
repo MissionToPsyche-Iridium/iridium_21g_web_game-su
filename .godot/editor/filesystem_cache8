@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1741492512
+::res://::1741492641
 computer_ui_global.tscn::PackedScene::6548701820445567290::1740781705::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3
 consoleBackgroundLarge.png::CompressedTexture2D::2723689111455138601::1740356828::1741492281::1::::<><>::
 icon.png::CompressedTexture2D::1675861808954676850::1740706773::1741492280::1::::<><>::
@@ -141,7 +141,7 @@ next_level_button.gd::GDScript::-1::1740305945::0::1::::<>Button<>::
 path.gd::GDScript::-1::1739902310::0::1::::<>Line2D<>::
 shuttle.gd::GDScript::-1::1739902310::0::1::::<>CharacterBody2D<>::
 start_button.gd::GDScript::-1::1739902310::0::1::::<>Button<>::
-::res://psychescan/::1741492484
+::res://psychescan/::1741492623
 scan_bus_layout.tres::AudioBusLayout::6119108574665046245::1741492083::0::1::::<><>::
 ::res://psychescan/addons/::1741491788
 AccurateCRT.gdshader::Shader::-1::1741491788::0::1::::<><>::
