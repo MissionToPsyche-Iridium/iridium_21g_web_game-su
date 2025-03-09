@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://db3wqf71m7ltl"]
 
-[ext_resource type="FontFile" uid="uid://qch05issch7d" path="res://psychescan/fonts/dogicapixel.ttf" id="1_ac2bh"]
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_gs7tp"]
 
 [node name="Label" type="Label"]
 anchors_preset = -1
@@ -8,7 +8,7 @@ anchor_right = 0.133
 anchor_bottom = 0.198
 offset_right = 76.664
 offset_bottom = 40.47
-theme_override_fonts/font = ExtResource("1_ac2bh")
+theme_override_fonts/font = ExtResource("1_gs7tp")
 text = "You've reached
 the Psyche 
 asteroid! 

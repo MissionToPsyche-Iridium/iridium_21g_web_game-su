@@ -1,0 +1,359 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1741492512
+computer_ui_global.tscn::PackedScene::6548701820445567290::1740781705::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3
+consoleBackgroundLarge.png::CompressedTexture2D::2723689111455138601::1740356828::1741492281::1::::<><>::
+icon.png::CompressedTexture2D::1675861808954676850::1740706773::1741492280::1::::<><>::
+README.md::TextFile::-1::1740781823::0::1::::<><>::
+::res://Credits scene/::1740786818
+credits.gd::GDScript::-1::1740549190::0::1::::<>Node2D<>::
+credits.tscn::PackedScene::3526691904300370162::1740786818::0::1::::<><>::res://Credits scene/credits.gd
+::res://Finished Screen/::1741492280
+BrettleySignatureRegular-RpEMo.ttf::FontFile::2825170430220193655::1737496800::1741492279::1::::<><>::
+cover-12280-1623743075.jpg::CompressedTexture2D::3709812761001708266::1737496800::1741492280::1::::<><>::
+istockphoto-1368151405-612x612.jpg::CompressedTexture2D::3652330861707273787::1737496800::1741492280::1::::<><>::
+scene.gd::GDScript::-1::1740305945::0::1::::<>Node2D<>::
+Scene.tscn::PackedScene::5659203506674058026::1740305945::0::1::::<><>::res://Finished Screen/scene.gd<>uid://bsbhmdfweh4gd::::res://Finished Screen/istockphoto-1368151405-612x612.jpg<>uid://bs4ccry6bv003::::res://Finished Screen/cover-12280-1623743075.jpg<>uid://bgise5ysuqast::::res://Finished Screen/BrettleySignatureRegular-RpEMo.ttf
+::res://fonts/::1741492279
+dogicapixel.ttf::FontFile::7167392483821810559::1736901799::1741492279::1::::<><>::
+dogicapixelbold.ttf::FontFile::8722334262772682209::1736901799::1741492279::1::::<><>::
+::res://marsslingshot2.0/::1741492280
+checkpoint.gd::GDScript::-1::1740305945::0::1::::<>StaticBody2D<>::
+checkpoint.png::CompressedTexture2D::7286288881880723764::1739907408::1741492280::1::::<><>::
+checkpoint.tscn::PackedScene::4843484515972896960::1740305945::0::1::::<><>::uid://db2sd4a5jaqxw::::res://marsslingshot2.0/checkpoint.png<>res://marsslingshot2.0/checkpoint.gd
+game_area.tscn::PackedScene::3562792104268630375::1740786818::0::1::::<><>::
+icon.svg::CompressedTexture2D::7279013629566310137::1739907408::1741492280::1::::<><>::
+mars.gd::GDScript::-1::1739907408::0::1::::<>StaticBody2D<>::
+mars.tscn::PackedScene::2856038970008483203::1740305945::0::1::::<><>::res://marsslingshot2.0/mars.gd<>uid://dsx2pr6ebamps::::res://marsslingshot2.0/R.png
+R.png::CompressedTexture2D::8471809011589510672::1739907408::1741492280::1::::<><>::
+satillite.tscn::PackedScene::6286140872190967418::1740305945::0::1::::<><>::uid://dbyaj5nsegnkb::::res://marsslingshot2.0/icon.svg
+space_ship.gd::GDScript::-1::1739907408::0::1::::<>CharacterBody2D<>::
+space_ship.tscn::PackedScene::6013995576123617782::1740305945::0::1::::<><>::uid://dbyaj5nsegnkb::::res://marsslingshot2.0/icon.svg<>res://marsslingshot2.0/space_ship.gd
+timer.gd::GDScript::-1::1739907408::0::1::::<>Timer<>::
+timer.tscn::PackedScene::6477136135482842115::1740305945::0::1::::<><>::res://marsslingshot2.0/timer.gd
+world.gd::GDScript::-1::1739907408::0::1::::<>Node2D<>::
+world.tscn::PackedScene::3162590021962538817::1740786818::0::1::::<><>::res://marsslingshot2.0/world.gd<>uid://bq03wvh64xhe2::::res://marsslingshot2.0/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://marsslingshot2.0/mars.tscn<>uid://cyjtqrvccw1f8::::res://marsslingshot2.0/timer.tscn<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/space_ship.tscn<>uid://cbahqnt0etewm::::res://marsslingshot2.0/checkpoint.tscn<>uid://d1tlbsejlug7c::::res://consoleBackgroundLarge.png
+::res://marsslingshot2.0/slingshot/::1741492280
+checkpoint.gd::GDScript::-1::1741131348::0::1::::<>StaticBody2D<>::
+checkpoint.png::CompressedTexture2D::7286288881880723764::1741131348::1741492280::1::::<><>::
+checkpoint.tscn::PackedScene::4843484515972896960::1741131348::0::1::::<><>::uid://db2sd4a5jaqxw::::res://slingshot/checkpoint.png<>res://slingshot/checkpoint.gd
+game_area.tscn::PackedScene::3562792104268630375::1741131348::0::1::::<><>::
+icon.svg::CompressedTexture2D::7279013629566310137::1741131348::1741492280::1::::<><>::
+mars.gd::GDScript::-1::1741131348::0::1::::<>StaticBody2D<>::
+mars.tscn::PackedScene::2856038970008483203::1741131348::0::1::::<><>::res://slingshot/mars.gd<>uid://dsx2pr6ebamps::::res://slingshot/R.png
+MarsCrashText.tscn::PackedScene::575699899623474317::1741131348::0::1::::<><>::res://slingshot/timer.gd
+mars_crash.gd::GDScript::-1::1741131348::0::1::::<>Node2D<>::
+mars_crash.tscn::PackedScene::8422870439507633415::1741131348::0::1::::<><>::res://slingshot/mars_crash.gd
+mars_crash_text.gd::GDScript::-1::1741131348::0::1::::<>RichTextLabel<>::
+off_course.gd::GDScript::-1::1741131348::0::1::::<>Node2D<>::
+off_course.tscn::PackedScene::3869467777425870406::1741131348::0::1::::<><>::res://slingshot/off_course.gd
+R.png::CompressedTexture2D::8471809011589510672::1741131348::1741492280::1::::<><>::
+satillite.tscn::PackedScene::6286140872190967418::1741131348::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg
+space_ship.gd::GDScript::-1::1741131348::0::1::::<>CharacterBody2D<>::
+space_ship.tscn::PackedScene::6013995576123617782::1741131348::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg<>res://slingshot/space_ship.gd<>res://slingshot/timer.gd
+timer.gd::GDScript::-1::1741131348::0::1::::<>Timer<>::
+timer.tscn::PackedScene::6477136135482842115::1741131348::0::1::::<><>::res://slingshot/timer.gd
+world.gd::GDScript::-1::1741131348::0::1::::<>Node2D<>::
+world.tscn::PackedScene::3162590021962538817::1741131348::0::1::::<><>::res://slingshot/world.gd<>uid://bq03wvh64xhe2::::res://slingshot/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://slingshot/mars.tscn<>uid://cyjtqrvccw1f8::::res://slingshot/timer.tscn<>uid://crxhvmr5p37e5::::res://slingshot/space_ship.tscn<>uid://cbahqnt0etewm::::res://slingshot/checkpoint.tscn<>uid://ig4xtm7hfw2h::::res://slingshot/MarsCrashText.tscn<>res://slingshot/mars_crash_text.gd
+::res://meteoroid-level/::1741492280
+export_presets.cfg::TextFile::-1::1737429355::0::1::::<><>::
+icon.svg::CompressedTexture2D::3496657146786033377::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/assets/::1741492280
+Space Background (1).png::CompressedTexture2D::8551277472619883432::1737429355::1741492280::1::::<><>::
+space background border.png::CompressedTexture2D::8083729490709303315::1737429355::1741492280::1::::<><>::
+Space Background yellow.png::CompressedTexture2D::4308282512415740130::1737429355::1741492280::1::::<><>::
+Space Background.png::CompressedTexture2D::5461013031263394257::1738122120::1741492280::1::::<><>::
+space bg border.png::CompressedTexture2D::4195980941199789962::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/assets/10 asteriod sprite pack/::1741492280
+co asteriods.png::CompressedTexture2D::1936635964939148986::1737429355::1741492280::1::::<><>::
+destroyed asteriod 1.png::CompressedTexture2D::5572869093555098371::1737429355::1741492280::1::::<><>::
+large asteriod 2.png::CompressedTexture2D::4688916915491995311::1737429355::1741492280::1::::<><>::
+large asteriod.png::CompressedTexture2D::2393463966021172340::1737429355::1741492280::1::::<><>::
+medium asteriod 1.png::CompressedTexture2D::7073929030178314095::1737429355::1741492280::1::::<><>::
+medium asteriod 2.png::CompressedTexture2D::5498008634783372188::1737429355::1741492280::1::::<><>::
+medium asteriod 3.png::CompressedTexture2D::933419043133471533::1737429355::1741492280::1::::<><>::
+Small asteriod 1.png::CompressedTexture2D::1400030221516488637::1737429355::1741492280::1::::<><>::
+small asteriod 2.png::CompressedTexture2D::1903867801983628021::1737429355::1741492280::1::::<><>::
+small asteriod 3.png::CompressedTexture2D::677284442733491645::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/::1737429355
+::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/::1741492280
+2021-05-08-213757-Zeichnung 10.png.png::CompressedTexture2D::2204529597582212380::1737429355::1741492280::1::::<><>::
+2021-05-08-213802-Zeichnung 10.png.png::CompressedTexture2D::702995933301915985::1737429355::1741492279::1::::<><>::
+::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_classicfnf/::1741492280
+2021-05-08-195642-Zeichnung 10.png.png::CompressedTexture2D::858935947540359425::1737429355::1741492280::1::::<><>::
+2021-05-08-195710-Zeichnung 10.png.png::CompressedTexture2D::6541420199798573384::1737429355::1741492279::1::::<><>::
+::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_classic_black_outline/::1741492280
+2021-05-09-103923-Zeichnung 10.png.png::CompressedTexture2D::341643547634375903::1737429355::1741492279::1::::<><>::
+2021-05-09-103929-Zeichnung 10.png.png::CompressedTexture2D::8418261945828696025::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_nightblue/::1741492280
+2021-05-08-213336-Zeichnung 10.png.png::CompressedTexture2D::7593306380750446538::1737429355::1741492280::1::::<><>::
+2021-05-08-213342-Zeichnung 10.png.png::CompressedTexture2D::5349123276898729548::1737429355::1741492280::1::::<><>::
+Space Background.png::CompressedTexture2D::5461013031263394257::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/arrows_rainbow/::1741492280
+2021-05-09-104139-Zeichnung 10.png.png::CompressedTexture2D::9033229373721739360::1737429355::1741492280::1::::<><>::
+2021-05-09-104143-Zeichnung 10.png.png::CompressedTexture2D::7016482969648566972::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/::1739902310
+::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/::1739902310
+::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/BGM/::1741492281
+Playful_Boss - Loopable.wav::AudioStreamWAV::5075720110728987141::1739902310::1741492281::1::::<><>::
+Playful_GameOver.wav::AudioStreamWAV::8142020073653502172::1739902310::1741492281::1::::<><>::
+Playful_Stage - Loopable.wav::AudioStreamWAV::6434427571485627235::1739902310::1741492281::1::::<><>::
+::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/::1741492281
+Playful_Attack.wav::AudioStreamWAV::7206008057585797977::1739902310::1741492281::1::::<><>::
+Playful_Healing.wav::AudioStreamWAV::5607119077842040856::1739902310::1741492281::1::::<><>::
+Playful_Hit.wav::AudioStreamWAV::7332952811814447386::1739902310::1741492281::1::::<><>::
+Playful_LevelUp.wav::AudioStreamWAV::351029262637941739::1739902310::1741492281::1::::<><>::
+Playful_MajorPickup.wav::AudioStreamWAV::6912778423009105753::1739902310::1741492281::1::::<><>::
+Playful_Pickup.wav::AudioStreamWAV::4604533710511473831::1739902310::1741492281::1::::<><>::
+::res://meteoroid-level/assets/RocketsPack_beemaxstudio/::1741492280
+rocket1.png::CompressedTexture2D::978582474981096387::1737429355::1741492280::1::::<><>::
+rocket2.png::CompressedTexture2D::8805587748238563806::1737429355::1741492280::1::::<><>::
+rocket3.png::CompressedTexture2D::406553335799372945::1737429355::1741492280::1::::<><>::
+rocket4.png::CompressedTexture2D::2938631618295149816::1737429355::1741492280::1::::<><>::
+rocket5.png::CompressedTexture2D::7835445462739481025::1737429355::1741492280::1::::<><>::
+rocket6.png::CompressedTexture2D::860723124705303658::1737429355::1741492280::1::::<><>::
+::res://meteoroid-level/scenes/::1740786818
+end_screen.tscn::PackedScene::938195871881461229::1739902310::0::1::::<><>::res://meteoroid-level/scripts/next_level_button.gd
+input_arrows.tscn::PackedScene::4849968704058625561::1739902310::0::1::::<><>::uid://kasif2ih61nh::::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png
+input_container.tscn::PackedScene::8040228614796621407::1739902310::0::1::::<><>::res://meteoroid-level/scripts/input_container.gd
+killzone.tscn::PackedScene::5508202319634049245::1739902310::0::1::::<><>::res://meteoroid-level/scripts/killzone.gd
+level_1.tscn::PackedScene::8183333518045023678::1740786818::0::1::::<><>::res://meteoroid-level/scripts/level_1.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cj2mc7kb0e0tx::::res://meteoroid-level/assets/Space Background.png<>uid://dt3kj47nwnoai::::res://meteoroid-level/assets/Space Background (1).png<>uid://b2m71v06nq1lu::::res://meteoroid-level/assets/Space Background yellow.png<>uid://b01tgtgcpx4i5::::res://meteoroid-level/assets/space bg border.png<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://d1tlbsejlug7c::::res://consoleBackgroundLarge.png
+level_1_screen.tscn::PackedScene::2134164164262616306::1739902310::0::1::::<><>::res://meteoroid-level/scripts/level_1_start.gd
+level_2.tscn::PackedScene::3738743211435572838::1740786818::0::1::::<><>::res://meteoroid-level/scripts/level_2.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cj2mc7kb0e0tx::::res://meteoroid-level/assets/Space Background.png<>uid://dt3kj47nwnoai::::res://meteoroid-level/assets/Space Background (1).png<>uid://b2m71v06nq1lu::::res://meteoroid-level/assets/Space Background yellow.png<>uid://b01tgtgcpx4i5::::res://meteoroid-level/assets/space bg border.png<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://d1tlbsejlug7c::::res://consoleBackgroundLarge.png
+level_2_screen.tscn::PackedScene::3109361780925147148::1739902310::0::1::::<><>::res://meteoroid-level/scripts/level_2_start.gd
+level_3.tscn::PackedScene::5829538703089930264::1740786818::0::1::::<><>::res://meteoroid-level/scripts/level_3.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cj2mc7kb0e0tx::::res://meteoroid-level/assets/Space Background.png<>uid://dt3kj47nwnoai::::res://meteoroid-level/assets/Space Background (1).png<>uid://b2m71v06nq1lu::::res://meteoroid-level/assets/Space Background yellow.png<>uid://b01tgtgcpx4i5::::res://meteoroid-level/assets/space bg border.png<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://d1tlbsejlug7c::::res://consoleBackgroundLarge.png
+level_3_screen.tscn::PackedScene::3686966768063067408::1739902310::0::1::::<><>::res://meteoroid-level/scripts/level_3_start.gd
+moving_debris.tscn::PackedScene::6206093476750680439::1739902310::0::1::::<><>::uid://t7gj768t8rc4::::res://meteoroid-level/assets/10 asteriod sprite pack/Small asteriod 1.png<>res://meteoroid-level/scripts/moving_debris.gd<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn
+non_moving_debris.tscn::PackedScene::1532995182926943286::1739902310::0::1::::<><>::uid://jwc1m32j8qph::::res://meteoroid-level/assets/10 asteriod sprite pack/small asteriod 3.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn
+path.tscn::PackedScene::3658051682662829387::1739902310::0::1::::<><>::res://meteoroid-level/scripts/path.gd
+shuttle.tscn::PackedScene::8045799112014115850::1739902310::0::1::::<><>::uid://n7bd0u1p2ktn::::res://meteoroid-level/assets/RocketsPack_beemaxstudio/rocket1.png<>res://meteoroid-level/scripts/shuttle.gd<>uid://b6up86dahe50n::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Pickup.wav
+start_screen.tscn::PackedScene::3313906559616397305::1739902310::0::1::::<><>::res://meteoroid-level/scripts/start_button.gd
+::res://meteoroid-level/scripts/::1740781823
+input_container.gd::GDScript::-1::1739902310::0::1::::<>HBoxContainer<>::
+killzone.gd::GDScript::-1::1739902310::0::1::::<>Area2D<>::
+level_1.gd::GDScript::-1::1739902310::0::1::::<>Node2D<>::
+level_1_start.gd::GDScript::-1::1739902310::0::1::::<>Button<>::
+level_2.gd::GDScript::-1::1740781823::0::1::::<>Node2D<>::
+level_2_start.gd::GDScript::-1::1739902310::0::1::::<>Button<>::
+level_3.gd::GDScript::-1::1740781823::0::1::::<>Node2D<>::
+level_3_start.gd::GDScript::-1::1739902310::0::1::::<>Button<>::
+moving_debris.gd::GDScript::-1::1739902310::0::1::::<>Node2D<>::
+next_level_button.gd::GDScript::-1::1740305945::0::1::::<>Button<>::
+path.gd::GDScript::-1::1739902310::0::1::::<>Line2D<>::
+shuttle.gd::GDScript::-1::1739902310::0::1::::<>CharacterBody2D<>::
+start_button.gd::GDScript::-1::1739902310::0::1::::<>Button<>::
+::res://psychescan/::1741492484
+scan_bus_layout.tres::AudioBusLayout::6119108574665046245::1741492083::0::1::::<><>::
+::res://psychescan/addons/::1741491788
+AccurateCRT.gdshader::Shader::-1::1741491788::0::1::::<><>::
+Glitch.gdshader::Shader::-1::1741491788::0::1::::<><>::
+::res://psychescan/assets/::1741492281
+consoleBackgroundLarge.png::CompressedTexture2D::448240249357809482::1740356828::1741492281::1::::<><>::
+correct.wav::AudioStreamWAV::5596039980950741083::1739666658::1741492281::1::::<><>::
+CRTHum.mp3::AudioStreamMP3::8173666801032928841::1739838607::1741492279::1::::<><>::
+green light.png::CompressedTexture2D::2543929188090904058::1740193673::1741492280::1::::<><>::
+incorrect.wav::AudioStreamWAV::271195893270086582::1739664584::1741492281::1::::<><>::
+initial background.svg::CompressedTexture2D::4635087876830461168::1734400578::1741492280::1::::<><>::
+proxSound.wav::AudioStreamWAV::234704664812877085::1739666807::1741492281::1::::<><>::
+psyche1.png::CompressedTexture2D::5586549588874306411::1738460323::1741492280::1::::<><>::
+psyche2.png::CompressedTexture2D::3923110440510808551::1738460617::1741492280::1::::<><>::
+psyche3.png::CompressedTexture2D::1776013265845004445::1738460692::1741492281::1::::<><>::
+psycheYellow.png::CompressedTexture2D::4197802984694948291::1739662790::1741492280::1::::<><>::
+Red CRT.jpg::CompressedTexture2D::8263468408935006755::1740305186::1741492281::1::::<><>::
+Red Glow.png::CompressedTexture2D::5747668171890910736::1740199062::1741492280::1::::<><>::
+red light.png::CompressedTexture2D::8297105983361990013::1740193737::1741492280::1::::<><>::
+RedCRT.jpg::CompressedTexture2D::7072665497417817619::1740205344::1741492280::1::::<><>::
+sparkle_spritesheet.png::CompressedTexture2D::5418990521139387888::1739519500::1741492280::1::::<><>::
+squareReticle.png::CompressedTexture2D::781500181626997914::1739504708::1741492280::1::::<><>::
+youWin.png::CompressedTexture2D::5852762100494119539::1737021109::1741492280::1::::<><>::
+::res://psychescan/backgrounds/::1741492083
+background2.tscn::PackedScene::4541181162237543009::1741492083::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>res://psychescan/scripts/SceneTransition2.gd<>uid://cvoudoufq5ms2::::res://psychescan/texts/scannertext2.tscn<>uid://dlxs0txad5wb::::res://psychescan/assets/proxSound.wav<>uid://letgubvalxhy::::res://psychescan/assets/squareReticle.png<>uid://cly07w2aa5yrj::::res://psychescan/assets/correct.wav<>uid://d4ms6udvlwkc::::res://psychescan/assets/incorrect.wav<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3<>uid://bcike3hlobc0y::::res://psychescan/assets/green light.png
+background3.tscn::PackedScene::5792817114665563137::1741492083::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>res://psychescan/scripts/SceneTransition3.gd<>uid://icn4cxvh50yi::::res://psychescan/texts/scannertext3.tscn<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>uid://dlxs0txad5wb::::res://psychescan/assets/proxSound.wav<>uid://letgubvalxhy::::res://psychescan/assets/squareReticle.png<>uid://cly07w2aa5yrj::::res://psychescan/assets/correct.wav<>uid://d4ms6udvlwkc::::res://psychescan/assets/incorrect.wav<>uid://bcike3hlobc0y::::res://psychescan/assets/green light.png<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3
+background.tscn::PackedScene::7619888676006441872::1741492083::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>res://psychescan/scripts/SceneTransition1.gd<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>uid://bi87b1jlyy8cf::::res://psychescan/texts/scannertext1.tscn<>uid://dlxs0txad5wb::::res://psychescan/assets/proxSound.wav<>uid://letgubvalxhy::::res://psychescan/assets/squareReticle.png<>uid://cly07w2aa5yrj::::res://psychescan/assets/correct.wav<>uid://d4ms6udvlwkc::::res://psychescan/assets/incorrect.wav<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3<>uid://bcike3hlobc0y::::res://psychescan/assets/green light.png
+computer_ui_global.tscn::PackedScene::6548701820445567290::1741492083::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3
+tutorialBackground.tscn::PackedScene::7010179177494620253::1741492083::0::1::::<><>::uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>res://psychescan/scripts/Tutorial_To_Next_Level.gd<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://letgubvalxhy::::res://psychescan/assets/squareReticle.png<>uid://cly07w2aa5yrj::::res://psychescan/assets/correct.wav<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3<>uid://bcike3hlobc0y::::res://psychescan/assets/green light.png
+vic_background.tscn::PackedScene::1137736370402036168::1741492083::0::1::::<><>::uid://svwaclav8uph::::res://psychescan/sprites/victory_message.tscn<>uid://gnepl3snpu07::::res://psychescan/assets/consoleBackgroundLarge.png<>res://psychescan/scripts/To_Next_Level.gd<>uid://dq62abyfwocnx::::res://psychescan/texts/victory_text.tscn<>uid://dopndlk12huy8::::res://psychescan/assets/CRTHum.mp3<>uid://bcike3hlobc0y::::res://psychescan/assets/green light.png
+::res://psychescan/levels/::1741492083
+level2.tscn::PackedScene::8170210285516169031::1741492083::0::1::::<><>::uid://c0u77fgeccqyi::::res://psychescan/sprites/asteroid2.tscn<>res://psychescan/addons/Glitch.gdshader<>uid://b5x1ucl4jwbq4::::res://psychescan/backgrounds/background2.tscn
+level3.tscn::PackedScene::2560300434343043779::1741492083::0::1::::<><>::uid://d2k4nx07esqql::::res://psychescan/sprites/asteroid3.tscn<>uid://cosc37m3bowe8::::res://psychescan/backgrounds/background3.tscn<>res://psychescan/addons/Glitch.gdshader
+level.tscn::PackedScene::5180286663584502367::1741492083::0::1::::<><>::uid://dgtepn6enoocu::::res://psychescan/backgrounds/background.tscn<>uid://fdj4n1xw0w83::::res://psychescan/sprites/asteroid1.tscn<>res://psychescan/addons/Glitch.gdshader
+main_level.tscn::PackedScene::1238848156924404652::1739842464::0::1::::<><>::uid://dn7vq2upimlf3::::res://psychescan/levels/tutorialLevel.tscn
+tutorialLevel.tscn::PackedScene::8139082185773459890::1741492083::0::1::::<><>::uid://fdj4n1xw0w83::::res://psychescan/sprites/asteroid1.tscn<>uid://c641vkv3xk5kr::::res://psychescan/backgrounds/tutorialBackground.tscn<>res://psychescan/addons/Glitch.gdshader
+victory_scene.tscn::PackedScene::7193989705513981898::1741492083::0::1::::<><>::uid://svwaclav8uph::::res://psychescan/sprites/victory_message.tscn<>uid://qhel7w7se32c::::res://psychescan/backgrounds/vic_background.tscn<>res://psychescan/addons/Glitch.gdshader
+::res://psychescan/scripts/::1741492083
+crtFilter.gd::GDScript::-1::1738465570::0::1::::<>Polygon2D<>::
+PlayerAsteroid.gd::GDScript::-1::1739561179::0::1::::<>CharacterBody2D<>::
+SceneTransition1.gd::GDScript::-1::1741492083::0::1::::<>Area2D<>::
+SceneTransition2.gd::GDScript::-1::1741492083::0::1::::<>Area2D<>::
+SceneTransition3.gd::GDScript::-1::1741492083::0::1::::<>Area2D<>::
+sparkle.gd::GDScript::-1::1739663046::0::1::::<>AnimatedSprite2D<>::
+To_Next_Level.gd::GDScript::-1::1741492083::0::1::::<>Area2D<>::
+Tutorial_To_Next_Level.gd::GDScript::-1::1740419528::0::1::::<>Area2D<>::
+::res://psychescan/sprites/::1741492083
+asteroid1.tscn::PackedScene::357736316454371422::1741492083::0::1::::<><>::res://psychescan/scripts/PlayerAsteroid.gd<>uid://clufwj1x38o5p::::res://psychescan/assets/psyche1.png<>uid://dipu66gwaj7se::::res://psychescan/sprites/sparkle.tscn
+asteroid2.tscn::PackedScene::6570850374661780264::1741492083::0::1::::<><>::res://psychescan/scripts/PlayerAsteroid.gd<>uid://bv5nb5qo7314f::::res://psychescan/assets/psyche2.png<>uid://dipu66gwaj7se::::res://psychescan/sprites/sparkle.tscn
+asteroid3.tscn::PackedScene::9076789863074935547::1741492083::0::1::::<><>::res://psychescan/scripts/PlayerAsteroid.gd<>uid://b02pg4ltcn72f::::res://psychescan/assets/psycheYellow.png<>uid://dipu66gwaj7se::::res://psychescan/sprites/sparkle.tscn
+incorrect.tscn::PackedScene::1214658688306955610::1740368400::0::1::::<><>::uid://dqhgegtd125g8::::res://psychescan/assets/red light.png<>uid://dpy5d8x15pph8::::res://psychescan/assets/Red CRT.jpg
+sparkle.tscn::PackedScene::7753009804453491568::1739841594::0::1::::<><>::res://psychescan/scripts/sparkle.gd<>uid://cjg88nm1c5cxk::::res://psychescan/assets/sparkle_spritesheet.png
+victory_message.tscn::PackedScene::1308087014229633005::1740359226::0::1::::<><>::uid://cpneewaxv5h28::::res://psychescan/assets/youWin.png
+::res://psychescan/texts/::1741492506
+scannertext1.tscn::PackedScene::3018002008286951213::1741492506::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+scannertext2.tscn::PackedScene::6276928836051505471::1741492506::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+scannertext3.tscn::PackedScene::566480755083493596::1741492506::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+tutorialText.tscn::PackedScene::7288618131623470013::1741492503::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+victory_text.tscn::PackedScene::8347918708324154569::1741492506::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+::res://scavenger-hunt/::1741492083
+world.gd::GDScript::-1::1741492083::0::1::::<>Node2D<>::
+world.tscn::PackedScene::6056877971304360184::1741492083::0::1::::<><>::res://scavenger-hunt/world.gd<>uid://17wx3jdqs3le::::res://scavenger-hunt/room1/room1.tscn<>uid://2qdm2buwfiyl::::res://scavenger-hunt/room2/room2.tscn<>uid://cpaqk324q4ufo::::res://scavenger-hunt/doors/glass-1.png<>uid://byo5jn1nt53yv::::res://scavenger-hunt/player/player.tscn<>uid://cper7xlqolf1v::::res://scavenger-hunt/doors/glass-2.png<>uid://26aqqxaejgsl::::res://scavenger-hunt/doors/glass-3.png<>uid://cyi7wangucn5::::res://scavenger-hunt/doors/glass-4.png<>uid://dfbn8dbxjhywd::::res://scavenger-hunt/doors/glass-5.png<>uid://c6ufjx1orx5wu::::res://scavenger-hunt/doors/door-5.png<>uid://cn26bl32h40q0::::res://scavenger-hunt/doors/door-4.png<>uid://wwiunoxfhb0j::::res://scavenger-hunt/doors/door-3.png<>uid://bqs4vwx5kqioy::::res://scavenger-hunt/doors/door-2.png<>uid://bkrdn0ht20v4f::::res://scavenger-hunt/doors/door-1.png<>uid://ciwfs2g02077f::::res://scavenger-hunt/room4/room_4.tscn<>uid://dwxffmbyexnmu::::res://scavenger-hunt/doors/armor-1.png<>uid://m4qyqqqb3frr::::res://scavenger-hunt/doors/armor-2.png<>uid://go6e2dvlmqqc::::res://scavenger-hunt/doors/armor-3.png<>uid://d33xodut1fg7q::::res://scavenger-hunt/doors/armor-4.png<>uid://bjvrjrslvwyq8::::res://scavenger-hunt/doors/armor-5.png<>uid://cicu6r6qxhqgx::::res://scavenger-hunt/room4/chair.png<>uid://bqjahhysxm888::::res://scavenger-hunt/doors/armor-6.png<>uid://8ylrih7o5oyf::::res://scavenger-hunt/room3/security.png<>uid://b18d830urpadj::::res://scavenger-hunt/room3/room_3.tscn<>uid://qdfo8shaxlex::::res://scavenger-hunt/room3/bodyguard-1.png<>uid://ckwe0ypn7o3q5::::res://scavenger-hunt/room3/bodyguard-2.png<>uid://bo5fthu84jx22::::res://scavenger-hunt/room3/bodyguard-3.png<>uid://dsagooj8k2f6o::::res://scavenger-hunt/room3/bodyguard-4.png<>uid://bdckqee2ckeq7::::res://scavenger-hunt/room3/bodyguard-5.png
+::res://scavenger-hunt/borders/::1741492280
+borders-1.png::CompressedTexture2D::2474870520566960783::1740781823::1741492280::1::::<><>::
+borders-2.png::CompressedTexture2D::7213373301841711819::1740781823::1741492280::1::::<><>::
+::res://scavenger-hunt/doors/::1741492280
+armor-1.png::CompressedTexture2D::3701416567950114721::1740781823::1741492280::1::::<><>::
+armor-2.png::CompressedTexture2D::6452981799007518545::1740781823::1741492280::1::::<><>::
+armor-3.png::CompressedTexture2D::3151232028279105216::1740781823::1741492280::1::::<><>::
+armor-4.png::CompressedTexture2D::1863666819141891731::1740781823::1741492280::1::::<><>::
+armor-5.png::CompressedTexture2D::8386021690725755254::1740781823::1741492280::1::::<><>::
+armor-6.png::CompressedTexture2D::6945718348429264994::1740781823::1741492280::1::::<><>::
+door-1.png::CompressedTexture2D::5416929240026962238::1740781823::1741492280::1::::<><>::
+door-2.png::CompressedTexture2D::452328556814144348::1740781823::1741492280::1::::<><>::
+door-3.png::CompressedTexture2D::1675041192199494870::1740781823::1741492280::1::::<><>::
+door-4.png::CompressedTexture2D::1034398936937526300::1740781823::1741492280::1::::<><>::
+door-5.png::CompressedTexture2D::8077392851445479602::1740781823::1741492280::1::::<><>::
+glass-1.png::CompressedTexture2D::9036878666214830938::1740781823::1741492280::1::::<><>::
+glass-2.png::CompressedTexture2D::7855995690682799917::1740781823::1741492280::1::::<><>::
+glass-3.png::CompressedTexture2D::1613861656747952785::1740781823::1741492279::1::::<><>::
+glass-4.png::CompressedTexture2D::5667678158956593297::1740781823::1741492279::1::::<><>::
+glass-5.png::CompressedTexture2D::5833185191935305809::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/floors/::1741492279
+floor-1.png::CompressedTexture2D::4863829535943407131::1740781823::1741492279::1::::<><>::
+floor-2.png::CompressedTexture2D::2611631733011024895::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/fonts/::1741492279
+dogicapixel.ttf::FontFile::106225932706540275::1740781823::1741492279::1::::<><>::
+dogicapixelbold.ttf::FontFile::1534668438438393886::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/instructions/::1741492083
+instructions.gd::GDScript::-1::1741492083::0::1::::<>Node2D<>::
+instructions.tscn::PackedScene::951716689265352966::1741492083::0::1::::<><>::res://scavenger-hunt/instructions/instructions.gd<>uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf<>uid://br2uyrtfbyxjv::::res://scavenger-hunt/player/player-1.png<>uid://betpiksme1yrk::::res://scavenger-hunt/player/down/player-1.png<>uid://bf7wchjwncggh::::res://scavenger-hunt/player/down/player-2.png<>uid://bd8j65u5kyklj::::res://scavenger-hunt/player/down/player-3.png<>uid://1xushljvchbj::::res://scavenger-hunt/player/down/player-4.png<>uid://dmdpvtwenbbuw::::res://scavenger-hunt/player/down/player-5.png<>uid://djo4tkyovqha6::::res://scavenger-hunt/player/down/player-6.png
+story.gd::GDScript::-1::1741131348::0::1::::<>RefCounted<>::
+::res://scavenger-hunt/player/::1741492279
+player-1.png::CompressedTexture2D::5010055051759831474::1740781823::1741492279::1::::<><>::
+player-2.png::CompressedTexture2D::2984486769519893127::1740781823::1741492279::1::::<><>::
+player-3.png::CompressedTexture2D::3913175345238107654::1740781823::1741492279::1::::<><>::
+player-4.png::CompressedTexture2D::7518635478868241421::1740781823::1741492279::1::::<><>::
+player.gd::GDScript::-1::1741492083::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4101692525076583029::1741492083::0::1::::<><>::res://scavenger-hunt/player/player.gd<>uid://dhklp7iru8j3c::::res://scavenger-hunt/player/player-1.png<>uid://b5p7yfo3fuy4p::::res://scavenger-hunt/player/player-2.png<>uid://ctdls8150ps86::::res://scavenger-hunt/player/player-4.png<>uid://2vuxbiph84ni::::res://scavenger-hunt/player/player-3.png<>uid://ckvl3v1kyl2ho::::res://scavenger-hunt/player/down/player-1.png<>uid://cyv7h3c07bsq1::::res://scavenger-hunt/player/down/player-2.png<>uid://bo6no55fopa5r::::res://scavenger-hunt/player/down/player-3.png<>uid://b1uq3naj5soua::::res://scavenger-hunt/player/down/player-4.png<>uid://cka5m33isr76s::::res://scavenger-hunt/player/down/player-5.png<>uid://bdyucs6n5lyxm::::res://scavenger-hunt/player/down/player-6.png<>uid://cmk0ggu22re5x::::res://scavenger-hunt/player/left/player-6.png<>uid://blctljj0nu12e::::res://scavenger-hunt/player/left/player-5.png<>uid://becpagr3rnhjj::::res://scavenger-hunt/player/left/player-4.png<>uid://1t7nvosxn1kp::::res://scavenger-hunt/player/left/player-3.png<>uid://djej7wnm7kmjg::::res://scavenger-hunt/player/left/player-2.png<>uid://bw5hmp2vm7qul::::res://scavenger-hunt/player/left/player-1.png<>uid://c0fgfhkiw52kf::::res://scavenger-hunt/player/right/player-1.png<>uid://d143xcqi4gnnq::::res://scavenger-hunt/player/right/player-3.png<>uid://c6kdikxqjh4br::::res://scavenger-hunt/player/right/player-2.png<>uid://dj301t11nwnj8::::res://scavenger-hunt/player/right/player-4.png<>uid://cpy8gp0coif5y::::res://scavenger-hunt/player/right/player-6.png<>uid://bk8owmliqgnej::::res://scavenger-hunt/player/right/player-5.png<>uid://dlvtkfmv8kd32::::res://scavenger-hunt/player/up/player-4.png<>uid://cc2y34hy42myd::::res://scavenger-hunt/player/up/player-5.png<>uid://b3vei8h14enrv::::res://scavenger-hunt/player/up/player-6.png<>uid://b6t6n7ruooaej::::res://scavenger-hunt/player/up/player-3.png<>uid://ciwstmk7na1mh::::res://scavenger-hunt/player/up/player-2.png<>uid://pgqlyyp4wmmw::::res://scavenger-hunt/player/up/player-1.png
+::res://scavenger-hunt/player/down/::1741492279
+player-1.png::CompressedTexture2D::1309346245450442617::1740781823::1741492279::1::::<><>::
+player-2.png::CompressedTexture2D::1447232704490255875::1740781823::1741492279::1::::<><>::
+player-3.png::CompressedTexture2D::3389429898967939079::1740781823::1741492279::1::::<><>::
+player-4.png::CompressedTexture2D::1242896050394985772::1740781823::1741492279::1::::<><>::
+player-5.png::CompressedTexture2D::7226844882079583655::1740781823::1741492279::1::::<><>::
+player-6.png::CompressedTexture2D::2315084668169756510::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/player/left/::1741492279
+player-1.png::CompressedTexture2D::5088817085043176482::1740781823::1741492279::1::::<><>::
+player-2.png::CompressedTexture2D::3601678320592719722::1740781823::1741492279::1::::<><>::
+player-3.png::CompressedTexture2D::293218164226592158::1740781823::1741492279::1::::<><>::
+player-4.png::CompressedTexture2D::7619597768729401919::1740781823::1741492279::1::::<><>::
+player-5.png::CompressedTexture2D::7087068317840837210::1740781823::1741492279::1::::<><>::
+player-6.png::CompressedTexture2D::7055937929751162276::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/player/right/::1741492279
+player-1.png::CompressedTexture2D::1545822024191069176::1740781823::1741492279::1::::<><>::
+player-2.png::CompressedTexture2D::9159416627568559338::1740781823::1741492279::1::::<><>::
+player-3.png::CompressedTexture2D::7285563766019231188::1740781823::1741492279::1::::<><>::
+player-4.png::CompressedTexture2D::8793537404772536438::1740781823::1741492279::1::::<><>::
+player-5.png::CompressedTexture2D::49247906855042022::1740781823::1741492279::1::::<><>::
+player-6.png::CompressedTexture2D::2695387148589819589::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/player/up/::1741492279
+player-1.png::CompressedTexture2D::3202119261660266344::1740781823::1741492279::1::::<><>::
+player-2.png::CompressedTexture2D::1092848910993258626::1740781823::1741492279::1::::<><>::
+player-3.png::CompressedTexture2D::1990170287296930543::1740781823::1741492279::1::::<><>::
+player-4.png::CompressedTexture2D::5034162462157778889::1740781823::1741492279::1::::<><>::
+player-5.png::CompressedTexture2D::4896330246530214538::1740781823::1741492279::1::::<><>::
+player-6.png::CompressedTexture2D::7181621605603290181::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/pop_up/::1741492279
+description.gd::GDScript::-1::1741492083::0::1::::<>TextureRect<>::
+description.tscn::PackedScene::8624656042158087199::1741492083::0::1::::<><>::uid://bct8wwfkiaqx3::::res://scavenger-hunt/pop_up/pop_up.png<>res://scavenger-hunt/pop_up/description.gd<>uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+notebook_page.png::CompressedTexture2D::6450341045981738734::1740781823::1741492279::1::::<><>::
+pop_up.gd::GDScript::-1::1741492083::0::1::::<>TextureRect<>::
+pop_up.png::CompressedTexture2D::207505847554163795::1740781823::1741492279::1::::<><>::
+question.tscn::PackedScene::1571026436189961998::1741492083::0::1::::<><>::uid://bct8wwfkiaqx3::::res://scavenger-hunt/pop_up/pop_up.png<>res://scavenger-hunt/pop_up/pop_up.gd<>uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+::res://scavenger-hunt/room1/::1741492280
+chair.png::CompressedTexture2D::6042044668221896555::1740781823::1741492279::1::::<><>::
+desk.png::CompressedTexture2D::7550902553255365300::1740781823::1741492280::1::::<><>::
+notebook.png::CompressedTexture2D::5619469146693977552::1740781823::1741492279::1::::<><>::
+picture.png::CompressedTexture2D::1175998954105124939::1740781823::1741492279::1::::<><>::
+receptionist.png::CompressedTexture2D::971014597238734592::1740781823::1741492279::1::::<><>::
+room1.tscn::PackedScene::1892348354534901274::1741492083::0::1::::<><>::uid://bbmvlgwtxifat::::res://scavenger-hunt/floors/floor-1.png<>res://scavenger-hunt/room1/room_1.gd<>uid://db7on6eemvptu::::res://scavenger-hunt/room1/wall.png<>uid://bdil8oowyvhli::::res://scavenger-hunt/borders/borders-1.png<>uid://d2r6bm42dcyq0::::res://scavenger-hunt/walls/walls-1.png<>uid://drslitq8g6fe8::::res://scavenger-hunt/room1/receptionist.png<>uid://dwo7l8p6lepdg::::res://scavenger-hunt/borders/borders-2.png<>uid://chaceit2ji13c::::res://scavenger-hunt/pop_up/notebook_page.png<>uid://bkrdn0ht20v4f::::res://scavenger-hunt/doors/door-1.png<>uid://b21q0xks0p3th::::res://scavenger-hunt/room1/desk.png<>uid://dkei1f1wl3e3r::::res://scavenger-hunt/room1/notebook.png<>uid://wwiunoxfhb0j::::res://scavenger-hunt/doors/door-3.png<>uid://byo5jn1nt53yv::::res://scavenger-hunt/player/player.tscn<>uid://cn26bl32h40q0::::res://scavenger-hunt/doors/door-4.png<>uid://cxwoaq570txej::::res://scavenger-hunt/room1/chair.png<>uid://bx4pjkqdcyfqx::::res://scavenger-hunt/room1/table.png<>uid://c6ufjx1orx5wu::::res://scavenger-hunt/doors/door-5.png<>uid://cnvjhhtokjq1x::::res://scavenger-hunt/room1/picture.png<>uid://wnattyfpcri1::::res://scavenger-hunt/pop_up/question.tscn<>uid://du433bvkd0n40::::res://scavenger-hunt/pop_up/description.tscn<>uid://dfbn8dbxjhywd::::res://scavenger-hunt/doors/glass-5.png
+room1a.tscn::PackedScene::6431298543463063623::1740781823::0::1::::<><>::res://scavenger-hunt/room1/room_1.gd<>uid://dtrxo210vkk5n::::res://scavenger-hunt/borders/borders-1.png<>uid://cxyhm0m1gvi36::::res://scavenger-hunt/floors/floor-1.png<>res://room1/receptionist_short.png<>res://room1/receptionist_tall.png<>uid://befjg0r8hw71u::::res://scavenger-hunt/room1/desk.png<>uid://dqrr4jtwlt867::::res://scavenger-hunt/room1/table.png<>uid://m3bqm0526r8v::::res://scavenger-hunt/room1/chair.png<>uid://byo5jn1nt53yv::::res://scavenger-hunt/player/player.tscn<>res://scavenger-hunt/pop_up/pop_up.tscn<>uid://dad653sjnvr6f::::res://scavenger-hunt/fonts/dogicapixel.ttf
+room_1.gd::GDScript::-1::1741492083::0::1::::<>Node2D<>::
+table.png::CompressedTexture2D::4724390423246225968::1740781823::1741492279::1::::<><>::
+wall.png::CompressedTexture2D::2201807125630590602::1740781823::1741492279::1::::<><>::
+wifi.png::CompressedTexture2D::1048473409537838504::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/room2/::1741492279
+chair-1.png::CompressedTexture2D::4716324216803767507::1740781823::1741492279::1::::<><>::
+chair-2.png::CompressedTexture2D::8199675228743329146::1740781823::1741492279::1::::<><>::
+desk-1.png::CompressedTexture2D::1896278290199682151::1740781823::1741492279::1::::<><>::
+desk-2.png::CompressedTexture2D::7206772866395152288::1740781823::1741492279::1::::<><>::
+papers.png::CompressedTexture2D::7462238318882853449::1740781823::1741492279::1::::<><>::
+room2.tscn::PackedScene::1928333823410561699::1741492083::0::1::::<><>::res://scavenger-hunt/room2/room_2.gd<>uid://cxyhm0m1gvi36::::res://scavenger-hunt/floors/floor-1.png<>uid://dtrxo210vkk5n::::res://scavenger-hunt/borders/borders-1.png<>uid://dcxyqtgyuf2n5::::res://scavenger-hunt/walls/walls-2.png<>uid://1dx8qignep1m::::res://scavenger-hunt/walls/walls-1.png<>uid://q0gbwnbq0hok::::res://scavenger-hunt/room2/scientist.png<>uid://baukst30o0gdr::::res://scavenger-hunt/doors/glass-1.png<>uid://bnr2hme1nljq2::::res://scavenger-hunt/borders/borders-2.png<>uid://d6xa07vrpnxp::::res://scavenger-hunt/room2/chair-2.png<>uid://byo5jn1nt53yv::::res://scavenger-hunt/player/player.tscn<>uid://8lbexaxumgrj::::res://scavenger-hunt/room2/chair-1.png<>uid://dwat8ffwhdey::::res://scavenger-hunt/room2/desk-1.png<>uid://rljw4ulkray::::res://scavenger-hunt/room2/desk-2.png<>uid://clneildr4auh2::::res://scavenger-hunt/room2/papers.png<>uid://u3hakl4axa6y::::res://scavenger-hunt/room2/shelves.png<>uid://wnattyfpcri1::::res://scavenger-hunt/pop_up/question.tscn<>uid://du433bvkd0n40::::res://scavenger-hunt/pop_up/description.tscn
+room_2.gd::GDScript::-1::1741492083::0::1::::<>Node2D<>::
+scientist.png::CompressedTexture2D::2364910313653829657::1740781823::1741492279::1::::<><>::
+shelves.png::CompressedTexture2D::1816166045932128163::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/room3/::1741492279
+bodyguard-1.png::CompressedTexture2D::8303641701762804960::1740781823::1741492279::1::::<><>::
+bodyguard-2.png::CompressedTexture2D::7417846120813288375::1740781823::1741492279::1::::<><>::
+bodyguard-3.png::CompressedTexture2D::1022628273576808837::1740781823::1741492279::1::::<><>::
+bodyguard-4.png::CompressedTexture2D::2875294841832501248::1740781823::1741492279::1::::<><>::
+bodyguard-5.png::CompressedTexture2D::5824553276467453263::1740781823::1741492279::1::::<><>::
+room_3.gd::GDScript::-1::1741492083::0::1::::<>Node2D<>::
+room_3.tscn::PackedScene::4279697676549006903::1741492083::0::1::::<><>::res://scavenger-hunt/room3/room_3.gd<>uid://ec5yrxvdkst1::::res://scavenger-hunt/floors/floor-2.png<>uid://cxyhm0m1gvi36::::res://scavenger-hunt/floors/floor-1.png<>uid://dcxyqtgyuf2n5::::res://scavenger-hunt/walls/walls-2.png<>uid://bnr2hme1nljq2::::res://scavenger-hunt/borders/borders-2.png<>uid://balb6821wwhda::::res://scavenger-hunt/walls/walls-5.png<>uid://baukst30o0gdr::::res://scavenger-hunt/doors/glass-1.png<>uid://m7sio43tcdvy::::res://scavenger-hunt/doors/armor-1.png<>uid://div7wx1xl4e7n::::res://scavenger-hunt/room3/security.png<>uid://wnattyfpcri1::::res://scavenger-hunt/pop_up/question.tscn<>uid://byo5jn1nt53yv::::res://scavenger-hunt/player/player.tscn<>uid://bvjndqjvmvaqf::::res://scavenger-hunt/room3/sign-small.png<>uid://cky46h45faea3::::res://scavenger-hunt/room3/sign-large.png
+security.png::CompressedTexture2D::2828103366225591974::1740781823::1741492279::1::::<><>::
+sign-large.png::CompressedTexture2D::2480168947453795218::1740781823::1741492279::1::::<><>::
+sign-small.png::CompressedTexture2D::8724708954397735847::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/room4/::1741492279
+chair.png::CompressedTexture2D::6452044856821854395::1740781823::1741492279::1::::<><>::
+computer.png::CompressedTexture2D::6512127623522866784::1740781823::1741492279::1::::<><>::
+controls.png::CompressedTexture2D::7697832591184944538::1740781823::1741492279::1::::<><>::
+desk.png::CompressedTexture2D::5891772746220666795::1740781823::1741492279::1::::<><>::
+lights-1.png::CompressedTexture2D::6834407518695661485::1740781823::1741492279::1::::<><>::
+lights-2.png::CompressedTexture2D::9198977370299592025::1740781823::1741492279::1::::<><>::
+lights-3.png::CompressedTexture2D::3661474463003174968::1740781823::1741492279::1::::<><>::
+room_4.gd::GDScript::-1::1741492083::0::1::::<>Node2D<>::
+room_4.tscn::PackedScene::5380105584906164445::1741492083::0::1::::<><>::res://scavenger-hunt/room4/room_4.gd<>uid://cxyhm0m1gvi36::::res://scavenger-hunt/floors/floor-1.png<>uid://ec5yrxvdkst1::::res://scavenger-hunt/floors/floor-2.png<>uid://dcxyqtgyuf2n5::::res://scavenger-hunt/walls/walls-2.png<>uid://balb6821wwhda::::res://scavenger-hunt/walls/walls-5.png<>uid://j5w812mqimtq::::res://scavenger-hunt/walls/walls-6.png<>uid://bnr2hme1nljq2::::res://scavenger-hunt/borders/borders-2.png<>uid://q004n0c3srp::::res://scavenger-hunt/room4/desk.png<>uid://b0xu0dadts1w7::::res://scavenger-hunt/room4/computer.png<>uid://vdnpsqqd5m13::::res://scavenger-hunt/room4/screens.png<>uid://eunou1swnfkf::::res://scavenger-hunt/room4/lights-1.png<>uid://c7i6f070c5bj3::::res://scavenger-hunt/room4/lights-3.png<>uid://bt3lyfjg4j37h::::res://scavenger-hunt/room4/lights-2.png<>uid://c5s3tid2t50th::::res://scavenger-hunt/room4/controls.png<>uid://byo5jn1nt53yv::::res://scavenger-hunt/player/player.tscn<>uid://baukst30o0gdr::::res://scavenger-hunt/doors/glass-1.png
+screens.png::CompressedTexture2D::1777853657423742519::1740781823::1741492279::1::::<><>::
+::res://scavenger-hunt/walls/::1741492279
+walls-1.png::CompressedTexture2D::3708729153172672852::1740781823::1741492279::1::::<><>::
+walls-2.png::CompressedTexture2D::8295088100524466230::1740781823::1741492279::1::::<><>::
+walls-3.png::CompressedTexture2D::9149778245071150047::1740781823::1741492279::1::::<><>::
+walls-4.png::CompressedTexture2D::5361617304965508389::1740781823::1741492279::1::::<><>::
+walls-5.png::CompressedTexture2D::4731339125349349323::1740781823::1741492279::1::::<><>::
+walls-6.png::CompressedTexture2D::8915885757706039895::1740781823::1741492279::1::::<><>::
+::res://slingshot/::1741492280
+checkpoint.gd::GDScript::-1::1741131348::0::1::::<>StaticBody2D<>::
+checkpoint.png::CompressedTexture2D::7286288881880723764::1741131348::1741492279::1::::<><>::
+checkpoint.tscn::PackedScene::4843484515972896960::1741131348::0::1::::<><>::uid://db2sd4a5jaqxw::::res://slingshot/checkpoint.png<>res://slingshot/checkpoint.gd
+game_area.tscn::PackedScene::3562792104268630375::1741131348::0::1::::<><>::
+icon.svg::CompressedTexture2D::7279013629566310137::1741131348::1741492279::1::::<><>::
+mars.gd::GDScript::-1::1741131348::0::1::::<>StaticBody2D<>::
+mars.tscn::PackedScene::2856038970008483203::1741131348::0::1::::<><>::res://slingshot/mars.gd<>uid://dsx2pr6ebamps::::res://slingshot/R.png
+MarsCrashText.tscn::PackedScene::575699899623474317::1741131348::0::1::::<><>::res://slingshot/timer.gd
+mars_crash.gd::GDScript::-1::1741131348::0::1::::<>Node2D<>::
+mars_crash.tscn::PackedScene::8422870439507633415::1741131348::0::1::::<><>::res://slingshot/mars_crash.gd
+mars_crash_text.gd::GDScript::-1::1741131348::0::1::::<>RichTextLabel<>::
+off_course.gd::GDScript::-1::1741131348::0::1::::<>Node2D<>::
+off_course.tscn::PackedScene::3869467777425870406::1741131348::0::1::::<><>::res://slingshot/off_course.gd
+R.png::CompressedTexture2D::8471809011589510672::1741131348::1741492280::1::::<><>::
+satillite.tscn::PackedScene::6286140872190967418::1741131348::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg
+space_ship.gd::GDScript::-1::1741131348::0::1::::<>CharacterBody2D<>::
+space_ship.tscn::PackedScene::6013995576123617782::1741131348::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg<>res://slingshot/space_ship.gd<>res://slingshot/timer.gd
+timer.gd::GDScript::-1::1741131348::0::1::::<>Timer<>::
+timer.tscn::PackedScene::6477136135482842115::1741131348::0::1::::<><>::res://slingshot/timer.gd
+world.gd::GDScript::-1::1741131348::0::1::::<>Node2D<>::
+world.tscn::PackedScene::3162590021962538817::1741131348::0::1::::<><>::res://slingshot/world.gd<>uid://bq03wvh64xhe2::::res://slingshot/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://slingshot/mars.tscn<>uid://cyjtqrvccw1f8::::res://slingshot/timer.tscn<>uid://crxhvmr5p37e5::::res://slingshot/space_ship.tscn<>uid://cbahqnt0etewm::::res://slingshot/checkpoint.tscn<>uid://ig4xtm7hfw2h::::res://slingshot/MarsCrashText.tscn<>res://slingshot/mars_crash_text.gd
+::res://start_menu/::1741492083
+start_menu.gd::GDScript::-1::1741492083::0::1::::<>Control<>::
+start_menu.tscn::PackedScene::3121592549760689413::1741492083::0::1::::<><>::res://start_menu/start_menu.gd<>uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf<>uid://bl7p5gsxpml46::::res://icon.png
+::res://Test Speech Scene/::1741492279
+credits_container.gd::GDScript::-1::1739397704::0::1::::<>Control<>::
+icon.svg::CompressedTexture2D::7914189365979930230::1739397704::1741492279::1::::<><>::
+istockphoto-1368151405-612x612.jpg::CompressedTexture2D::2392585233601328217::1739397704::1741492279::1::::<><>::
+speech.tscn::PackedScene::1649093349280492044::1739397704::0::1::::<><>::res://credits_container.gd<>uid://ri1m1xodfi5r::::res://istockphoto-1368151405-612x612.jpg<>uid://dacksi4rv7420::::res://icon.svg
