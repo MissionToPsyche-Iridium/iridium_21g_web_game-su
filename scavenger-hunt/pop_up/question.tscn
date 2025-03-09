@@ -1,114 +1,101 @@
 [gd_scene load_steps=16 format=3 uid="uid://wnattyfpcri1"]
 
-[ext_resource type="Texture2D" uid="uid://bct8wwfkiaqx3" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_cosv8"]
+[ext_resource type="Texture2D" uid="uid://c5ls6saonevjj" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_cosv8"]
 [ext_resource type="Script" path="res://scavenger-hunt/pop_up/pop_up.gd" id="2_8eaip"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="3_swmth"]
+[ext_resource type="FontFile" uid="uid://dteh7oki37e2b" path="res://fonts/PixelOperator8.ttf" id="3_jirbc"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="3_r7wbi"]
+[ext_resource type="StyleBox" uid="uid://bx43r5y5r8lr5" path="res://scavenger-hunt/pop_up/question-hover.tres" id="5_8q6e3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1fxl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fivdh"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guwo0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mt7n"]
 expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c45x"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga8it"]
 expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni15k"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6fhm"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_islpc"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghk72"]
 expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa8g4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u1hd"]
 expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx1av"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xql8m"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwa0g"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gllus"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63312"]
 expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0ibv"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ieyqv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8dvy"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_471oy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w4wg"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
 
 [node name="Question" type="TextureRect"]
-offset_right = 230.0
-offset_bottom = 90.0
+offset_right = 248.0
+offset_bottom = 97.0
 texture = ExtResource("1_cosv8")
 stretch_mode = 4
 script = ExtResource("2_8eaip")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_left = 6.0
+[node name="Question" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(215, 80)
+layout_mode = 2
+offset_left = 7.0
 offset_top = 5.0
-offset_right = 246.0
-offset_bottom = 94.0
-scale = Vector2(0.9, 0.9)
-theme_override_styles/panel = SubResource("StyleBoxEmpty_u1fxl")
-
-[node name="Question" type="VBoxContainer" parent="PanelContainer"]
-layout_direction = 2
-layout_mode = 2
+offset_right = 240.0
+offset_bottom = 92.0
 size_flags_vertical = 4
-theme_override_constants/separation = 7
+theme_override_constants/separation = 3
+alignment = 1
 
-[node name="Question" type="RichTextLabel" parent="PanelContainer/Question"]
+[node name="Question" type="Label" parent="Question"]
+custom_minimum_size = Vector2(215, 17)
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 4
-theme_override_fonts/normal_font = ExtResource("3_swmth")
-theme_override_font_sizes/normal_font_size = 8
-text = "Temporary
-Temporary"
-fit_content = true
-scroll_active = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_r7wbi")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fivdh")
+text = "Temporary Temporary Temporary Temporary Temporary"
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Option1" type="Button" parent="PanelContainer/Question"]
+[node name="Options" type="VBoxContainer" parent="Question"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Option1" type="Button" parent="Question/Options"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
@@ -116,17 +103,35 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_swmth")
+theme_override_fonts/font = ExtResource("3_r7wbi")
 theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxFlat_guwo0")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3c45x")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ni15k")
-theme_override_styles/normal = SubResource("StyleBoxFlat_b6fhm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6mt7n")
+theme_override_styles/hover = ExtResource("5_8q6e3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ga8it")
+theme_override_styles/normal = SubResource("StyleBoxFlat_islpc")
+text = "The spacecraft will not orbit"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Option2" type="Button" parent="Question/Options"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r7wbi")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxFlat_ghk72")
+theme_override_styles/hover = ExtResource("5_8q6e3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7u1hd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gllus")
 text = "The spacecraft will not orbit Psyche"
 alignment = 0
 autowrap_mode = 3
 
-[node name="Option2" type="Button" parent="PanelContainer/Question"]
+[node name="Option3" type="Button" parent="Question/Options"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
@@ -134,51 +139,37 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_swmth")
+theme_override_fonts/font = ExtResource("3_r7wbi")
 theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxFlat_wa8g4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dx1av")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xql8m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kwa0g")
-text = "Temporary
-"
+theme_override_styles/focus = SubResource("StyleBoxFlat_63312")
+theme_override_styles/hover = ExtResource("5_8q6e3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ieyqv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0w4wg")
+text = "The spacecraft will not orbit Psyche"
 alignment = 0
 autowrap_mode = 3
 
-[node name="Option3" type="Button" parent="PanelContainer/Question"]
-layout_mode = 2
-theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_swmth")
-theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxFlat_o0ibv")
-theme_override_styles/hover = SubResource("StyleBoxFlat_r8dvy")
-theme_override_styles/normal = SubResource("StyleBoxFlat_471oy")
-text = "Temporary"
-alignment = 0
-autowrap_mode = 3
-
-[node name="Validation" type="VBoxContainer" parent="PanelContainer"]
+[node name="Validation" type="VBoxContainer" parent="."]
 visible = false
 layout_mode = 2
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 222.0
+offset_bottom = 85.0
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Message" type="RichTextLabel" parent="PanelContainer/Validation"]
+[node name="Message" type="Label" parent="Validation"]
+custom_minimum_size = Vector2(215, 80)
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 4
-theme_override_fonts/normal_font = ExtResource("3_swmth")
-theme_override_font_sizes/normal_font_size = 8
-text = "Temporary
-Temporary"
-fit_content = true
-scroll_active = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_jirbc")
+theme_override_font_sizes/font_size = 8
+text = "Temporary Temporary Temporary Temporary Temporary Temporary"
+vertical_alignment = 1
+autowrap_mode = 3
 
-[connection signal="pressed" from="PanelContainer/Question/Option1" to="." method="_on_option_1_pressed"]
-[connection signal="pressed" from="PanelContainer/Question/Option2" to="." method="_on_option_2_pressed"]
-[connection signal="pressed" from="PanelContainer/Question/Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="Question/Options/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="Question/Options/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="Question/Options/Option3" to="." method="_on_option_3_pressed"]

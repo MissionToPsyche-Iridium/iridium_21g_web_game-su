@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const WALK_FORCE = 1200
-const WALK_MAX_SPEED = 200
+const WALK_FORCE = 1400
+const WALK_MAX_SPEED = 400
 const STOP_FORCE = 2600
 
 var direction
@@ -91,6 +91,13 @@ func _physics_process(delta):
 			interact.emit()
 		else:
 			no_interact.emit()
+			
+func _input(event):
+	if event is InputEventKey:
+		# Ignore volume keys to prevent movement issues
+		if event.keycode in [KEY_VOLUMEUP, KEY_VOLUMEDOWN, KEY_VOLUMEMUTE]:  # Volume Up, Volume Down, Mute
+			event.set_pressed(false)  # Block the input
+			return
 
 func _on_room_1_popup_close() -> void:
 	movable = true

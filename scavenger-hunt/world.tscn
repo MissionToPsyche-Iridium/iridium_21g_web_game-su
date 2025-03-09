@@ -3,32 +3,32 @@
 [ext_resource type="Script" path="res://scavenger-hunt/world.gd" id="1_jxgm3"]
 [ext_resource type="PackedScene" uid="uid://17wx3jdqs3le" path="res://scavenger-hunt/room1/room1.tscn" id="1_u157h"]
 [ext_resource type="PackedScene" uid="uid://2qdm2buwfiyl" path="res://scavenger-hunt/room2/room2.tscn" id="3_yrd6d"]
-[ext_resource type="Texture2D" uid="uid://cpaqk324q4ufo" path="res://scavenger-hunt/doors/glass-1.png" id="4_ancd8"]
+[ext_resource type="Texture2D" uid="uid://cvtkbjcg06s0u" path="res://scavenger-hunt/assets/doors/glass/glass-1.png" id="4_ancd8"]
 [ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/player/player.tscn" id="4_w582j"]
-[ext_resource type="Texture2D" uid="uid://cper7xlqolf1v" path="res://scavenger-hunt/doors/glass-2.png" id="5_ihh3w"]
-[ext_resource type="Texture2D" uid="uid://26aqqxaejgsl" path="res://scavenger-hunt/doors/glass-3.png" id="6_4gv6q"]
-[ext_resource type="Texture2D" uid="uid://cyi7wangucn5" path="res://scavenger-hunt/doors/glass-4.png" id="7_r3m0y"]
-[ext_resource type="Texture2D" uid="uid://dfbn8dbxjhywd" path="res://scavenger-hunt/doors/glass-5.png" id="8_ivcbf"]
-[ext_resource type="Texture2D" uid="uid://c6ufjx1orx5wu" path="res://scavenger-hunt/doors/door-5.png" id="10_u4qi8"]
-[ext_resource type="Texture2D" uid="uid://cn26bl32h40q0" path="res://scavenger-hunt/doors/door-4.png" id="11_i7h2n"]
-[ext_resource type="Texture2D" uid="uid://wwiunoxfhb0j" path="res://scavenger-hunt/doors/door-3.png" id="12_65obh"]
-[ext_resource type="Texture2D" uid="uid://bqs4vwx5kqioy" path="res://scavenger-hunt/doors/door-2.png" id="13_lwkhj"]
-[ext_resource type="Texture2D" uid="uid://bkrdn0ht20v4f" path="res://scavenger-hunt/doors/door-1.png" id="14_b2v1r"]
+[ext_resource type="Texture2D" uid="uid://dppovm2vnorlu" path="res://scavenger-hunt/assets/doors/glass/glass-2.png" id="5_ihh3w"]
+[ext_resource type="Texture2D" uid="uid://cbfl1jwat80eh" path="res://scavenger-hunt/assets/doors/glass/glass-3.png" id="6_4gv6q"]
+[ext_resource type="Texture2D" uid="uid://d1xfllg5ktmj8" path="res://scavenger-hunt/assets/doors/glass/glass-4.png" id="7_r3m0y"]
+[ext_resource type="Texture2D" uid="uid://tqf5j2em4w70" path="res://scavenger-hunt/assets/doors/glass/glass-5.png" id="8_ivcbf"]
+[ext_resource type="Texture2D" uid="uid://cs1xe0wi6wst2" path="res://scavenger-hunt/assets/doors/wood/door-5.png" id="10_u4qi8"]
+[ext_resource type="Texture2D" uid="uid://brlxbsovtqpeg" path="res://scavenger-hunt/assets/doors/wood/door-4.png" id="11_i7h2n"]
+[ext_resource type="Texture2D" uid="uid://c8rara0m14prn" path="res://scavenger-hunt/assets/doors/wood/door-3.png" id="12_65obh"]
+[ext_resource type="Texture2D" uid="uid://bl137g4ij8x1g" path="res://scavenger-hunt/assets/doors/wood/door-2.png" id="13_lwkhj"]
+[ext_resource type="Texture2D" uid="uid://cdbh06tixl85t" path="res://scavenger-hunt/assets/doors/wood/door-1.png" id="14_b2v1r"]
 [ext_resource type="PackedScene" uid="uid://ciwfs2g02077f" path="res://scavenger-hunt/room4/room_4.tscn" id="15_eua0n"]
-[ext_resource type="Texture2D" uid="uid://dwxffmbyexnmu" path="res://scavenger-hunt/doors/armor-1.png" id="17_qj57u"]
-[ext_resource type="Texture2D" uid="uid://m4qyqqqb3frr" path="res://scavenger-hunt/doors/armor-2.png" id="18_yiqqs"]
-[ext_resource type="Texture2D" uid="uid://go6e2dvlmqqc" path="res://scavenger-hunt/doors/armor-3.png" id="19_xd2am"]
-[ext_resource type="Texture2D" uid="uid://d33xodut1fg7q" path="res://scavenger-hunt/doors/armor-4.png" id="20_4ke4w"]
-[ext_resource type="Texture2D" uid="uid://bjvrjrslvwyq8" path="res://scavenger-hunt/doors/armor-5.png" id="21_ahkmg"]
-[ext_resource type="Texture2D" uid="uid://cicu6r6qxhqgx" path="res://scavenger-hunt/room4/chair.png" id="22_po28j"]
-[ext_resource type="Texture2D" uid="uid://bqjahhysxm888" path="res://scavenger-hunt/doors/armor-6.png" id="22_pvan3"]
-[ext_resource type="Texture2D" uid="uid://8ylrih7o5oyf" path="res://scavenger-hunt/room3/security.png" id="23_g6535"]
+[ext_resource type="Texture2D" uid="uid://b35nwgw3rd8pi" path="res://scavenger-hunt/assets/doors/armor/armor-1.png" id="17_qj57u"]
+[ext_resource type="Texture2D" uid="uid://cn6fej53ol1o2" path="res://scavenger-hunt/assets/doors/armor/armor-2.png" id="18_yiqqs"]
+[ext_resource type="Texture2D" uid="uid://d3km1m1sod26d" path="res://scavenger-hunt/assets/doors/armor/armor-3.png" id="19_xd2am"]
+[ext_resource type="Texture2D" uid="uid://dmbdfbgx3fm2o" path="res://scavenger-hunt/assets/doors/armor/armor-4.png" id="20_4ke4w"]
+[ext_resource type="Texture2D" uid="uid://bw3iubb5t0ajj" path="res://scavenger-hunt/assets/doors/armor/armor-5.png" id="21_ahkmg"]
+[ext_resource type="Texture2D" uid="uid://bqspm0vurfwop" path="res://scavenger-hunt/room4/chair.png" id="22_po28j"]
+[ext_resource type="Texture2D" uid="uid://cc4s1gbnd208s" path="res://scavenger-hunt/assets/doors/armor/armor-6.png" id="22_pvan3"]
+[ext_resource type="Texture2D" uid="uid://d02336ixu6anl" path="res://scavenger-hunt/room3/security.png" id="23_g6535"]
 [ext_resource type="PackedScene" uid="uid://b18d830urpadj" path="res://scavenger-hunt/room3/room_3.tscn" id="23_s2607"]
-[ext_resource type="Texture2D" uid="uid://qdfo8shaxlex" path="res://scavenger-hunt/room3/bodyguard-1.png" id="24_mw65c"]
-[ext_resource type="Texture2D" uid="uid://ckwe0ypn7o3q5" path="res://scavenger-hunt/room3/bodyguard-2.png" id="25_0vo5n"]
-[ext_resource type="Texture2D" uid="uid://bo5fthu84jx22" path="res://scavenger-hunt/room3/bodyguard-3.png" id="26_mgua0"]
-[ext_resource type="Texture2D" uid="uid://dsagooj8k2f6o" path="res://scavenger-hunt/room3/bodyguard-4.png" id="27_0wev4"]
-[ext_resource type="Texture2D" uid="uid://bdckqee2ckeq7" path="res://scavenger-hunt/room3/bodyguard-5.png" id="28_v78sb"]
+[ext_resource type="Texture2D" uid="uid://bprnvt5m804bq" path="res://scavenger-hunt/room3/bodyguard-1.png" id="24_mw65c"]
+[ext_resource type="Texture2D" uid="uid://bmoxamkut33el" path="res://scavenger-hunt/room3/bodyguard-2.png" id="25_0vo5n"]
+[ext_resource type="Texture2D" uid="uid://lgmtedmg5occ" path="res://scavenger-hunt/room3/bodyguard-3.png" id="26_mgua0"]
+[ext_resource type="Texture2D" uid="uid://cygkxq3iqcq64" path="res://scavenger-hunt/room3/bodyguard-4.png" id="27_0wev4"]
+[ext_resource type="Texture2D" uid="uid://c8150afd1ys8x" path="res://scavenger-hunt/room3/bodyguard-5.png" id="28_v78sb"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="30_vp5yh"]
 
 [sub_resource type="Curve2D" id="Curve2D_uv60c"]
@@ -608,9 +608,10 @@ script = ExtResource("1_jxgm3")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -66.0
-offset_right = 2765.0
-offset_bottom = 1080.0
+offset_left = -318.0
+offset_top = -225.0
+offset_right = 5512.0
+offset_bottom = 2699.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -629,6 +630,7 @@ rotates = false
 loop = false
 
 [node name="Player" parent="Room1/EnterRoom1/PathFollow2D" instance=ExtResource("4_w582j")]
+scale = Vector2(1.2, 1.2)
 
 [node name="EnterRoom1Door" type="AnimatedSprite2D" parent="Room1"]
 position = Vector2(936, 1124)
@@ -648,6 +650,7 @@ loop = false
 
 [node name="Player" parent="Room1/LeaveRoom1/PathFollow2D" instance=ExtResource("4_w582j")]
 position = Vector2(-1.52588e-05, 3.8147e-06)
+scale = Vector2(1.2, 1.2)
 
 [node name="LeaveRoom1Door" type="AnimatedSprite2D" parent="Room1"]
 position = Vector2(1128, 609)
@@ -657,7 +660,7 @@ animation = &"open"
 [node name="Room1Camera" type="Camera2D" parent="Room1"]
 position = Vector2(530, 576)
 anchor_mode = 0
-zoom = Vector2(3.483, 3.483)
+zoom = Vector2(1.742, 1.742)
 
 [node name="Room2" parent="." instance=ExtResource("3_yrd6d")]
 position = Vector2(0, -1)
@@ -678,7 +681,7 @@ loop = false
 
 [node name="Player" parent="Room2/EnterRoom2/PathFollow2D" instance=ExtResource("4_w582j")]
 position = Vector2(-1.52662e-05, 0)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(1.2, 1.2)
 
 [node name="LeaveRoom2Door" type="AnimatedSprite2D" parent="Room2"]
 position = Vector2(1730, 562.5)
@@ -694,10 +697,11 @@ rotates = false
 loop = false
 
 [node name="Player" parent="Room2/LeaveRoom2/PathFollow2D" instance=ExtResource("4_w582j")]
+scale = Vector2(1.2, 1.2)
 
 [node name="Room2Camera" type="Camera2D" parent="Room2"]
 position = Vector2(1483, 441)
-zoom = Vector2(3.49, 3.49)
+zoom = Vector2(1.746, 1.746)
 
 [node name="Room4" parent="." instance=ExtResource("15_eua0n")]
 position = Vector2(0, -1)
@@ -711,6 +715,7 @@ rotates = false
 loop = false
 
 [node name="Player" parent="Room4/EnterRoom4/PathFollow2D" instance=ExtResource("4_w582j")]
+scale = Vector2(1.2, 1.2)
 
 [node name="MoveChair" type="Path2D" parent="Room4"]
 position = Vector2(2257, 271)
@@ -732,7 +737,7 @@ animation = &"open"
 
 [node name="Room4Camera" type="Camera2D" parent="Room4"]
 position = Vector2(2238, 270)
-zoom = Vector2(5, 5)
+zoom = Vector2(2.5, 2.5)
 
 [node name="Room3" parent="." instance=ExtResource("23_s2607")]
 position = Vector2(0, -1)
@@ -770,6 +775,7 @@ rotates = false
 loop = false
 
 [node name="Player" parent="Room3/EnterRoom3/PathFollow2D" instance=ExtResource("4_w582j")]
+scale = Vector2(1.2, 1.2)
 
 [node name="LeaveRoom3" type="Path2D" parent="Room3"]
 position = Vector2(2285, 550)
@@ -780,17 +786,18 @@ rotates = false
 loop = false
 
 [node name="Player" parent="Room3/LeaveRoom3/PathFollow2D" instance=ExtResource("4_w582j")]
+scale = Vector2(1.2, 1.2)
 
 [node name="Room3Camera" type="Camera2D" parent="Room3"]
 position = Vector2(2236, 614)
-zoom = Vector2(5.05, 5.05)
+zoom = Vector2(2.525, 2.525)
 
 [node name="Room4Cover" type="ColorRect" parent="."]
 visible = false
-offset_left = 1855.0
-offset_top = 90.0
-offset_right = 2636.0
-offset_bottom = 565.0
+offset_left = 3754.0
+offset_top = 144.0
+offset_right = 5181.0
+offset_bottom = 928.0
 color = Color(0, 0, 0, 1)
 
 [node name="Room3Cover" type="ColorRect" parent="."]
@@ -800,10 +807,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1912.0
-offset_top = 416.0
-offset_right = 2555.0
-offset_bottom = 803.0
+offset_left = 3852.0
+offset_top = 807.0
+offset_right = 5141.0
+offset_bottom = 1638.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -813,10 +820,10 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1039.0
-offset_top = 178.0
-offset_right = 1965.0
-offset_bottom = 697.0
+offset_left = 2080.0
+offset_top = 322.0
+offset_right = 3873.0
+offset_bottom = 1438.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -825,10 +832,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="Room1Cover" type="ColorRect" parent="."]
 visible = false
-offset_left = 456.0
-offset_top = 518.0
-offset_right = 1420.0
-offset_bottom = 1203.0
+offset_left = 963.0
+offset_top = 1043.0
+offset_right = 2785.0
+offset_bottom = 2218.0
 color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -836,18 +843,9 @@ libraries = {
 "": SubResource("AnimationLibrary_j0nex")
 }
 
-[node name="Button" type="Button" parent="."]
-offset_left = 1245.0
-offset_top = 1053.0
-offset_right = 1301.0
-offset_bottom = 1109.0
-scale = Vector2(0.05, 0.05)
-text = "."
-
 [node name="Audio" parent="." instance=ExtResource("30_vp5yh")]
 
 [connection signal="isMoving" from="." to="Room1/EnterRoom1/PathFollow2D/Player" method="_on_world_is_moving"]
 [connection signal="win" from="Room1" to="." method="_on_room_1_win"]
 [connection signal="win" from="Room2" to="." method="_on_room_2_win"]
 [connection signal="win" from="Room3" to="." method="_on_room_3_win"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

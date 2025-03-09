@@ -27,7 +27,6 @@ func _ready() -> void:
 	$PromptCover.color = Color(0,0,0)
 	$Cover.show()
 	$PromptCover.show()
-	$Player.play("idle")
 	$Ready.hide()
 	await get_tree().create_timer(1.0).timeout
 	$AnimationPlayer.play("cover_fade")
@@ -72,10 +71,18 @@ func _unhandled_input(event):
 			changeText()
 		else:
 			label.set_visible_ratio(1.0)
+	if event.is_action_pressed("interact"):
+		while text.size() != 0:
+			covered = true
+			$AnimationPlayer.play("prompt_cover")
+			if(label.get_visible_ratio() == 1.0):
+				changeText()
+			else:
+				label.set_visible_ratio(1.0)
 
 func _on_ready_pressed() -> void:
 	$Cover.show()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.2).timeout
 	$AnimationPlayer.play("cover")
 	await get_tree().create_timer(1.2).timeout
 	get_tree().change_scene_to_file("res://scavenger-hunt/world.tscn")

@@ -18,7 +18,7 @@ func _ready() -> void:
 	$Continue.show()                                # Show continue button 
 	await get_tree().create_timer(1.0).timeout      # Wait 1 second
 	$AnimationPlayer.play("cover_fade")             # Fade the cover to display the disclaimer 
-	await get_tree().create_timer(10.0).timeout     # Wait 10 seconds
+	await get_tree().create_timer(7.0).timeout     # Wait 10 seconds
 	$Cover.hide()                                   # Hide the cover to allow buttons to be pressed 
 	$AnimationPlayer.play("continue_fade")          # Fade away the cover over the continue button
 	await get_tree().create_timer(1.0).timeout      # Wait 1 second to let the animation to finish 

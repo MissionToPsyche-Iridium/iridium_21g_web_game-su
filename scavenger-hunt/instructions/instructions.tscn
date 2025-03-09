@@ -1,61 +1,16 @@
-[gd_scene load_steps=22 format=3 uid="uid://ntavt4fbhu11"]
+[gd_scene load_steps=14 format=3 uid="uid://ntavt4fbhu11"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/instructions/instructions.gd" id="1_1keii"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_76ro8"]
-[ext_resource type="Texture2D" uid="uid://br2uyrtfbyxjv" path="res://scavenger-hunt/player/player-1.png" id="2_x1h4f"]
-[ext_resource type="Texture2D" uid="uid://betpiksme1yrk" path="res://scavenger-hunt/player/down/player-1.png" id="3_74boy"]
-[ext_resource type="Texture2D" uid="uid://bf7wchjwncggh" path="res://scavenger-hunt/player/down/player-2.png" id="4_37o5u"]
-[ext_resource type="Texture2D" uid="uid://bd8j65u5kyklj" path="res://scavenger-hunt/player/down/player-3.png" id="5_1yexy"]
-[ext_resource type="Texture2D" uid="uid://1xushljvchbj" path="res://scavenger-hunt/player/down/player-4.png" id="6_31rxc"]
-[ext_resource type="Texture2D" uid="uid://dmdpvtwenbbuw" path="res://scavenger-hunt/player/down/player-5.png" id="7_ltbp7"]
-[ext_resource type="Texture2D" uid="uid://djo4tkyovqha6" path="res://scavenger-hunt/player/down/player-6.png" id="8_ougce"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="1_76ro8"]
+[ext_resource type="Texture2D" uid="uid://btph37eelsbfk" path="res://scavenger-hunt/player/player-1.png" id="2_x1h4f"]
+[ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start_menu/normal.tres" id="4_um3cu"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="10_jcapo"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qaxms"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_74boy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_37o5u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_1yexy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_31rxc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_ltbp7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_ougce")
-}],
-"loop": true,
-"name": &"default",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_x1h4f")
-}],
-"loop": false,
-"name": &"idle",
-"speed": 5.0
-}]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssyvb"]
+bg_color = Color(0.185383, 0.185383, 0.185383, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hlrv8"]
-bg_color = Color(0.162066, 0.162066, 0.162065, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gevy"]
-bg_color = Color(0.237539, 0.237539, 0.237539, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tc1q3"]
-bg_color = Color(0.277528, 0.277528, 0.277528, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywy14"]
-bg_color = Color(0.118581, 0.118581, 0.118581, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gio2"]
+bg_color = Color(0.423651, 0.423651, 0.423651, 1)
 
 [sub_resource type="Animation" id="Animation_ldyt3"]
 length = 0.001
@@ -152,20 +107,18 @@ offset_bottom = 1043.0
 color = Color(0, 0, 0, 1)
 
 [node name="Prompt" type="Label" parent="."]
-offset_left = -111.0
+offset_left = -109.0
 offset_top = 116.0
-offset_right = 179.0
+offset_right = 181.0
 offset_bottom = 130.0
 theme_override_constants/line_spacing = 9
 theme_override_fonts/font = ExtResource("1_76ro8")
 text = "Press Enter to continue"
 
-[node name="Player" type="AnimatedSprite2D" parent="."]
+[node name="Player" type="Sprite2D" parent="."]
 position = Vector2(-251, -7)
 scale = Vector2(12.875, 12.875)
-sprite_frames = SubResource("SpriteFrames_qaxms")
-frame = 3
-frame_progress = 0.97087
+texture = ExtResource("2_x1h4f")
 
 [node name="Ready" type="Button" parent="."]
 offset_left = 81.0
@@ -173,10 +126,10 @@ offset_top = -21.0
 offset_right = 167.0
 offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("1_76ro8")
-theme_override_styles/focus = SubResource("StyleBoxFlat_hlrv8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6gevy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tc1q3")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ywy14")
+theme_override_styles/focus = ExtResource("4_um3cu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ssyvb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7gio2")
+theme_override_styles/normal = ExtResource("4_um3cu")
 text = "READY!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -197,9 +150,9 @@ anchor_left = 0.5
 anchor_top = 0.8
 anchor_right = 0.5
 anchor_bottom = 0.84
-offset_left = -770.0
+offset_left = -774.0
 offset_top = -757.0
-offset_right = -259.0
+offset_right = -263.0
 offset_bottom = -482.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -219,9 +172,9 @@ offset_bottom = 359.0
 color = Color(0, 0, 0, 0)
 
 [node name="PromptCover" type="ColorRect" parent="."]
-offset_left = -129.0
+offset_left = -127.0
 offset_top = 95.0
-offset_right = 293.0
+offset_right = 295.0
 offset_bottom = 160.0
 color = Color(0, 0, 0, 0)
 

@@ -17,7 +17,7 @@ var questions_dict = {
 		"An anemometer", 
 		"A magnetometer"],
 	1: ["Why is the Psyche mission so important?", 
-		"Psyche might be the a planetismal core", 
+		"Psyche might have part of a planetismal core", 
 		"Psyche is mostly made of rock and ice", 
 		"The spacecraft will not orbit the asteroid"],
 }
@@ -25,17 +25,17 @@ var questions_dict = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	var question_number = rng.randi_range(0,1)
-	$Question/PanelContainer/Question/Question.text = questions_dict[question_number][0]
-	$Question/PanelContainer/Question/Option1.text = questions_dict[question_number][1]
-	$Question/PanelContainer/Question/Option2.text = questions_dict[question_number][2]
-	$Question/PanelContainer/Question/Option3.text = questions_dict[question_number][3]
+	$Question/Question/Question.text = questions_dict[question_number][0]
+	$Question/Question/Option1.text = questions_dict[question_number][1]
+	$Question/Question/Option2.text = questions_dict[question_number][2]
+	$Question/Question/Option3.text = questions_dict[question_number][3]
 	
 	if (question_number == 0):
 		correct = 3
 	else:
 		correct = 1
 
-	$CabinetDescription/PanelContainer/Description/Message.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
+	$CabinetDescription/Container/Message.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
 
 	$Player.movable = false
 
@@ -45,47 +45,66 @@ func _process(delta: float) -> void:
 		var collidingNode = $Player/RayCast2D.get_collider()
 		if (collidingNode == $SecurityGuard):
 			if Input.is_action_just_pressed("interact"):
-				$Question/PanelContainer/Question.show()
-				$Question/PanelContainer/Validation.hide()
+				$Question/Question.show()
+				$Question/Validation.hide()
 				$Question.show()
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
+				$Player/CloseInstructions.show()
 				popup_open.emit()
-			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
-				$Question/PanelContainer/Question.show()
-				$Question/PanelContainer/Validation.hide()
+			if Input.is_action_just_pressed("ui_cancel"):
+				$Question/Question.show()
+				$Question/Validation.hide()
 				$Question.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
+				$Player/CloseInstructions.hide()
 				popup_close.emit()
 		if (collidingNode == $Sign):
 			if Input.is_action_just_pressed("interact"):
 				$SignPopUp.show()
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
+				$Player/CloseInstructions.show()
 				popup_open.emit()
-			if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_cancel"):
+			if Input.is_action_just_pressed("ui_cancel"):
 				$SignPopUp.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
+				$Player/CloseInstructions.hide()
+				popup_close.emit()
+		if (collidingNode == $Cabinet):
+			if Input.is_action_just_pressed("interact"):
+				$CabinetDescription.show()
+				if (!isOpen): $Audio/sfx_open.play()
+				isOpen = true
+				$Player/CloseInstructions.show()
+				popup_open.emit()
+			if Input.is_action_just_pressed("ui_cancel"):
+				$CabinetDescription.hide()
+				if (isOpen): $Audio/sfx_close.play()
+				isOpen = false
+				$Player/CloseInstructions.hide()
 				popup_close.emit()
 
 func correct_answer() -> void:
+	$Player/CloseInstructions.hide()
 	$Audio/sfx_correct.play()
-	$Question/PanelContainer/Validation/Message.text = "Correct!"
-	$Question/PanelContainer/Question.hide()
-	$Question/PanelContainer/Validation.show()
+	$Question/Validation/Message.text = "Correct!"
+	$Question/Question.hide()
+	$Question/Validation.show()
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
 	
 func wrong_answer() -> void:
-	$Question/PanelContainer/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
-	$Question/PanelContainer/Question.hide()
-	$Question/PanelContainer/Validation.show()
+	$Player/CloseInstructions.hide()
+	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	$Question/Question.hide()
+	$Question/Validation.show()
 	_on_player_no_interact()
 	await get_tree().create_timer(2.0).timeout
-	$Question/PanelContainer/Question.show()
-	$Question/PanelContainer/Validation.hide()
+	$Question/Question.show()
+	$Question/Validation.hide()
 	$Question.hide()
 	popup_close.emit()
 	
@@ -103,7 +122,9 @@ func _on_question_option_2() -> void:
 
 func _on_question_option_3() -> void:
 	if (correct == 3):
-		correct
+		correct_answer()
+	else:
+		wrong_answer()
 
 func _on_player_interact() -> void:
 	interactable = true

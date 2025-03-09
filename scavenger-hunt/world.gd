@@ -39,6 +39,8 @@ var is_enterroom4c = false
 var is_followingpath = false
 
 func _ready() -> void:
+	$Audio/sfx_background.play()
+	
 	#Room1
 	$Room1Cover.color = Color(0,0,0,255)
 	$Room1Cover.show()
