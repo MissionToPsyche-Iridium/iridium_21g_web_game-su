@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi87b1jlyy8cf"]
+
+[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_pkvto"]
+
+[node name="Label" type="Label"]
+anchors_preset = -1
+anchor_right = 0.133
+anchor_bottom = 0.198
+offset_right = 32.64
+offset_bottom = 123.16
+theme_override_fonts/font = ExtResource("1_pkvto")
+text = "Objective: 
+Do something cool like scan the asteroid
+
+
+
+
+
+
+
+
+
+
+
+
+
+Current Instrument: 
+Thingamabob
+The thingamabob 
+does things 
+and stuff"
+autowrap_mode = 3
