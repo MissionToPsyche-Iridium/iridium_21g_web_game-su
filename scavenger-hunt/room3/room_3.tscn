@@ -321,16 +321,16 @@ limit_bottom = 1572
 visible = false
 offset_left = 2172.0
 offset_top = 525.0
-offset_right = 2402.0
-offset_bottom = 615.0
+offset_right = 2420.0
+offset_bottom = 622.0
 scale = Vector2(0.75, 0.75)
 
 [node name="CabinetDescription" parent="." instance=ExtResource("17_f67ey")]
 visible = false
 offset_left = 2164.0
 offset_top = 645.0
-offset_right = 2394.0
-offset_bottom = 736.0
+offset_right = 2412.0
+offset_bottom = 742.0
 scale = Vector2(0.8, 0.8)
 
 [node name="SignPopUp" type="Sprite2D" parent="."]

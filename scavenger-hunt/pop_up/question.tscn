@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://wnattyfpcri1"]
+[gd_scene load_steps=15 format=3 uid="uid://wnattyfpcri1"]
 
 [ext_resource type="Texture2D" uid="uid://c5ls6saonevjj" path="res://scavenger-hunt/pop_up/pop_up.png" id="1_cosv8"]
 [ext_resource type="Script" path="res://scavenger-hunt/pop_up/pop_up.gd" id="2_8eaip"]
-[ext_resource type="FontFile" uid="uid://dteh7oki37e2b" path="res://fonts/PixelOperator8.ttf" id="3_jirbc"]
 [ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="3_r7wbi"]
 [ext_resource type="StyleBox" uid="uid://bx43r5y5r8lr5" path="res://scavenger-hunt/pop_up/question-hover.tres" id="5_8q6e3"]
 
@@ -109,7 +108,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_6mt7n")
 theme_override_styles/hover = ExtResource("5_8q6e3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ga8it")
 theme_override_styles/normal = SubResource("StyleBoxFlat_islpc")
-text = "The spacecraft will not orbit"
+text = "The spacecraft will not collect data"
 alignment = 0
 autowrap_mode = 3
 
@@ -127,7 +126,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_ghk72")
 theme_override_styles/hover = ExtResource("5_8q6e3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7u1hd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gllus")
-text = "The spacecraft will not orbit Psyche"
+text = "Possibly part of a planetesimal core"
 alignment = 0
 autowrap_mode = 3
 
@@ -154,8 +153,8 @@ visible = false
 layout_mode = 2
 offset_left = 7.0
 offset_top = 5.0
-offset_right = 222.0
-offset_bottom = 85.0
+offset_right = 240.0
+offset_bottom = 92.0
 size_flags_vertical = 4
 alignment = 1
 
@@ -164,7 +163,7 @@ custom_minimum_size = Vector2(215, 80)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("3_jirbc")
+theme_override_fonts/font = ExtResource("3_r7wbi")
 theme_override_font_sizes/font_size = 8
 text = "Temporary Temporary Temporary Temporary Temporary Temporary"
 vertical_alignment = 1

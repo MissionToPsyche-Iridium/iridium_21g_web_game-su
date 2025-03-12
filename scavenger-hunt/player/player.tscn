@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://c4vebwd1hd677" path="res://scavenger-hunt/player/up/player-2.png" id="27_7y3du"]
 [ext_resource type="Texture2D" uid="uid://ddl6k3da8472h" path="res://scavenger-hunt/player/up/player-1.png" id="28_doefu"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="30_t7nbo"]
-[ext_resource type="FontFile" uid="uid://cpk0g3x8fbj2e" path="res://fonts/Kenney Pixel.ttf" id="31_tirco"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="31_tirco"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37rjj"]
 animations = [{
@@ -190,12 +190,12 @@ collide_with_areas = true
 [node name="PressE" type="Label" parent="."]
 visible = false
 offset_left = -62.5
-offset_top = 20.8333
+offset_top = 23.75
 offset_right = 62.5
-offset_bottom = 32.8333
+offset_bottom = 35.75
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("31_tirco")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 8
 theme_override_styles/normal = SubResource("StyleBoxEmpty_suwon")
 text = "Press [E] to interact"
 horizontal_alignment = 1
@@ -210,14 +210,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -60.4167
-offset_top = 51.25
+offset_top = 44.5833
 offset_right = 60.5833
-offset_bottom = 65.25
+offset_bottom = 58.5833
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("31_tirco")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 8
 text = "Press [ESC] to close"
 horizontal_alignment = 1
 vertical_alignment = 1

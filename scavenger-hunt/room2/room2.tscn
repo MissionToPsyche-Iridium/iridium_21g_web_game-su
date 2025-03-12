@@ -269,7 +269,7 @@ size = Vector2(132, 68.5)
 size = Vector2(30, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mlrd"]
-size = Vector2(30, 38)
+size = Vector2(30, 0.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jeks0"]
 size = Vector2(30, 39)
@@ -386,6 +386,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Papers1Area"]
+position = Vector2(0, 6.25)
 shape = SubResource("RectangleShape2D_8mlrd")
 
 [node name="Papers2" type="StaticBody2D" parent="."]
@@ -471,8 +472,8 @@ limit_bottom = 1380
 visible = false
 offset_left = 1376.0
 offset_top = 276.0
-offset_right = 1606.0
-offset_bottom = 367.0
+offset_right = 1624.0
+offset_bottom = 373.0
 
 [node name="LinkButton" type="LinkButton" parent="ComputerDescription"]
 layout_mode = 0
@@ -495,29 +496,29 @@ uri = "https://psyche.asu.edu/"
 visible = false
 offset_left = 1458.0
 offset_top = 388.0
-offset_right = 1688.0
-offset_bottom = 479.0
+offset_right = 1706.0
+offset_bottom = 485.0
 
 [node name="Papers1Description" parent="." instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = 1402.0
 offset_top = 356.0
-offset_right = 1632.0
-offset_bottom = 447.0
+offset_right = 1650.0
+offset_bottom = 453.0
 
 [node name="ShelvesDescription" parent="." instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = 1459.0
 offset_top = 280.0
-offset_right = 1689.0
-offset_bottom = 371.0
+offset_right = 1707.0
+offset_bottom = 377.0
 
 [node name="Question" parent="." instance=ExtResource("21_p8dfn")]
 visible = false
 offset_left = 1459.0
 offset_top = 398.0
-offset_right = 1689.0
-offset_bottom = 488.0
+offset_right = 1707.0
+offset_bottom = 495.0
 
 [node name="Audio" parent="." instance=ExtResource("18_umnqf")]
 

@@ -16,19 +16,19 @@ var questions_dict = {
 		"A defibrillater", 
 		"An anemometer", 
 		"A magnetometer"],
-	1: ["Why is the Psyche mission so important?", 
-		"Psyche might have part of a planetismal core", 
-		"Psyche is mostly made of rock and ice", 
-		"The spacecraft will not orbit the asteroid"],
+	1: ["Why is Psyche so important?", 
+		"Possibly part of a planetesimal core", 
+		"It is mostly made of rock and ice", 
+		"The spacecraft will not collect data"],
 }
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	var question_number = rng.randi_range(0,1)
 	$Question/Question/Question.text = questions_dict[question_number][0]
-	$Question/Question/Option1.text = questions_dict[question_number][1]
-	$Question/Question/Option2.text = questions_dict[question_number][2]
-	$Question/Question/Option3.text = questions_dict[question_number][3]
+	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
+	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
+	$Question/Question/Options/Option3.text = questions_dict[question_number][3]
 	
 	if (question_number == 0):
 		correct = 3
@@ -51,6 +51,7 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$Question/Question.show()
@@ -59,6 +60,7 @@ func _process(delta: float) -> void:
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 		if (collidingNode == $Sign):
 			if Input.is_action_just_pressed("interact"):
@@ -66,12 +68,14 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$SignPopUp.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 		if (collidingNode == $Cabinet):
 			if Input.is_action_just_pressed("interact"):
@@ -79,12 +83,14 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$CabinetDescription.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 
 func correct_answer() -> void:

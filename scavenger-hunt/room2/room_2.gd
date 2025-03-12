@@ -69,9 +69,9 @@ func _ready() -> void:
 	
 	var question_number = rng.randi_range(0,1)
 	$Question/Question/Question.text = questions_dict[question_number][0]
-	$Question/Question/Option1.text = questions_dict[question_number][1]
-	$Question/Question/Option2.text = questions_dict[question_number][2]
-	$Question/Question/Option3.text = questions_dict[question_number][3]
+	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
+	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
+	$Question/Question/Options/Option3.text = questions_dict[question_number][3]
 	
 	if (question_number == 0):
 		correct = 2
@@ -97,6 +97,7 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$Question/Question.show()
@@ -105,6 +106,7 @@ func _process(delta: float) -> void:
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 		if (collidingNode == $ShelvesArea):
 			if Input.is_action_just_pressed("interact"):
@@ -112,12 +114,14 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$ShelvesDescription.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 		if (collidingNode == $Papers1Area):
 			if Input.is_action_just_pressed("interact"):
@@ -125,12 +129,14 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$Papers1Description.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 		if (collidingNode == $Papers2Area):
 			if Input.is_action_just_pressed("interact"):
@@ -138,12 +144,14 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$Papers2Description.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 		if (collidingNode == $ComputerArea):
 			if Input.is_action_just_pressed("interact"):
@@ -151,12 +159,14 @@ func _process(delta: float) -> void:
 				if (!isOpen): $Audio/sfx_open.play()
 				isOpen = true
 				$Player/CloseInstructions.show()
+				$Player/PressE.hide()
 				popup_open.emit()
 			if Input.is_action_just_pressed("ui_cancel"):
 				$ComputerDescription.hide()
 				if (isOpen): $Audio/sfx_close.play()
 				isOpen = false
 				$Player/CloseInstructions.hide()
+				$Player/PressE.show()
 				popup_close.emit()
 
 func correct_answer() -> void:

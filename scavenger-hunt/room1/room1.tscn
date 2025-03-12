@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cs1xe0wi6wst2" path="res://scavenger-hunt/assets/doors/wood/door-5.png" id="16_302dd"]
 [ext_resource type="Texture2D" uid="uid://ctddcwr87hbyh" path="res://scavenger-hunt/room1/picture.png" id="16_y0xd7"]
 [ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/pop_up/question.tscn" id="18_mxad4"]
-[ext_resource type="FontFile" uid="uid://dteh7oki37e2b" path="res://fonts/PixelOperator8.ttf" id="19_fi0nm"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="19_fi0nm"]
 [ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/pop_up/description.tscn" id="20_yqpkd"]
 [ext_resource type="Texture2D" uid="uid://tqf5j2em4w70" path="res://scavenger-hunt/assets/doors/glass/glass-5.png" id="22_3uegg"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="22_merev"]
@@ -479,7 +479,7 @@ offset_right = 323.889
 offset_bottom = 183.222
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 5
+theme_override_constants/line_spacing = 6
 theme_override_fonts/font = ExtResource("19_fi0nm")
 theme_override_font_sizes/font_size = 8
 text = "It's someone's work journal...
@@ -514,6 +514,7 @@ offset_bottom = 57.8333
 scale = Vector2(0.833, 0.833)
 
 [node name="Audio" parent="." instance=ExtResource("22_merev")]
+visible = false
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_1_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_1_popup_open"]

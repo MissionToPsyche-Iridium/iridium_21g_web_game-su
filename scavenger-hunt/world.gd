@@ -256,7 +256,7 @@ func _on_room_1_win() -> void:
 	await get_tree().create_timer(1.0).timeout
 
 	$Room1/Room1Camera.enabled = true   # zoom out
-	$Room1/Question.hide()
+	$Room1/Player/Camera2D/Question.hide()
 	$Room1/LeaveDoor.hide()
 	$Room1/Player/Camera2D.enabled = false
 	
