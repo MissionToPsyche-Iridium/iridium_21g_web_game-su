@@ -21,6 +21,10 @@ window/size/viewport_width=2792
 window/size/viewport_height=1735
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
 [gui]
 
 theme/default_font_subpixel_positioning=0
