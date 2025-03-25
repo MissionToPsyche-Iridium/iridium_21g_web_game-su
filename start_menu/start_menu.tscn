@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkqef5inybfnp"]
+[gd_scene load_steps=15 format=3 uid="uid://bkqef5inybfnp"]
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
 [ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start_menu/normal.tres" id="3_jvopk"]
-[ext_resource type="Texture2D" uid="uid://4phrgbdedixh" path="res://icon.png" id="4_3wnvb"]
+[ext_resource type="Texture2D" uid="uid://bgfba8vft7mk0" path="res://icon.png" id="4_3wnvb"]
 [ext_resource type="PackedScene" uid="uid://drin5td47d3wd" path="res://globals.tscn" id="5_2kgno"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="6_knjbu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
 bg_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
@@ -170,6 +171,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Disclaimer" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 117.0
 offset_top = 120.0
@@ -186,6 +188,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Continue" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 606.0
 offset_top = 695.0
@@ -229,6 +232,8 @@ libraries = {
 }
 
 [node name="Globals" parent="." instance=ExtResource("5_2kgno")]
+
+[node name="Audio" parent="." instance=ExtResource("6_knjbu")]
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

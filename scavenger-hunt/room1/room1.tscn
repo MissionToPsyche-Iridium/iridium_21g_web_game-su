@@ -514,7 +514,6 @@ offset_bottom = 57.8333
 scale = Vector2(0.833, 0.833)
 
 [node name="Audio" parent="." instance=ExtResource("22_merev")]
-visible = false
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_1_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_1_popup_open"]

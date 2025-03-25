@@ -22,6 +22,7 @@ var covered = true
 var start = false
 
 func _ready() -> void:
+	Audio.play_music_rooms(-30)
 	#$Prompt.hide()
 	$Cover.color = Color(0,0,0)
 	$PromptCover.color = Color(0,0,0)
@@ -81,8 +82,11 @@ func _unhandled_input(event):
 				label.set_visible_ratio(1.0)
 
 func _on_ready_pressed() -> void:
+	Audio.volume_db = -30
 	$Cover.show()
 	await get_tree().create_timer(0.2).timeout
+	Audio.volume_db = -25
 	$AnimationPlayer.play("cover")
 	await get_tree().create_timer(1.2).timeout
+	Audio.volume_db = -20
 	get_tree().change_scene_to_file("res://scavenger-hunt/world.tscn")

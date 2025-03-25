@@ -39,8 +39,6 @@ var is_enterroom4c = false
 var is_followingpath = false
 
 func _ready() -> void:
-	$Audio/sfx_background.play()
-	
 	#Room1
 	$Room1Cover.color = Color(0,0,0,255)
 	$Room1Cover.show()
@@ -97,6 +95,8 @@ func _ready() -> void:
 	enter4_player.movable = false
 	$Room4/EnterRoom4.hide()	
 	
+	
+	#if (Input.is_action_just_pressed("1")):
 	enterroom1()
 	#leaveroom2_end()
 	#enterroom3()
@@ -207,6 +207,35 @@ func _physics_process(delta: float) -> void:
 				enterroom4_end()
 			pathfollower.progress_ratio += 0.005
 
+
+#var input_buffer = ""
+#
+#func _input(event: InputEvent) -> void:
+	#if event is InputEventKey and event.pressed:
+		#if event.unicode > 0:  # Check if it's a printable character
+			#input_buffer += char(event.unicode)
+		#
+	#if event.is_action_pressed("ui_accept"):  # When Enter is pressed
+		#process_input(input_buffer)
+		#input_buffer = ""  # Clear buffer for next input
+#
+#func process_input(input_text):
+	#if input_text == ("3"):
+		#is_followingpath = false
+		#is_enterroom1 = false
+		#
+		#$Room1/Player/Camera2D.enabled = false
+		#$Room1/Player.hide()
+		#$Room1/Player.movable = false
+		#$Room1.interactable = false
+		#$Room1/Room1Camera.enabled = false
+		#$Room1/Player.movable = false
+		#$Room1.hide()
+		#$Room3/Room3Camera.enabled = true
+		#
+		#$Room3Cover.show()
+		#$Room3.show()
+		#enterroom3()
 
 
 
@@ -439,9 +468,9 @@ func enterroom3_end():
 	$Audio/sfx_doors.play()
 	is_followingpath = false
 	is_enterroom3 = false
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	animation.play("room3_cover")
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	playroom3()
 
 func playroom3():
@@ -458,9 +487,11 @@ func playroom3():
 	$Room3/Player.movable = true
 
 func _on_room_3_win() -> void:
+	Audio.volume_db -= 5
 	$Room3Cover.show()
 	animation.play("room3_cover")
 	await get_tree().create_timer(1.0).timeout
+	Audio.volume_db -= 5
 
 	$Room3/Player/Camera2D.enabled = false
 	$Room3/Room3Camera.enabled = true   # zoom out
@@ -468,7 +499,7 @@ func _on_room_3_win() -> void:
 	$Room3/LeaveDoor.hide()
 	$Room3/SecurityGuard.hide()
 	$Room3/SecurityGuard/CollisionShape2D.disabled = true
-	
+		
 	$Room3/Player.hide()
 	$Room3/Player.movable = false
 	$Room3.interactable = false
@@ -478,48 +509,57 @@ func _on_room_3_win() -> void:
 	leave3_player.show()
 	$Room3/MoveSecurity.show()
 	
-	
 	await get_tree().create_timer(1.0).timeout
+	Audio.volume_db -= 5
+	
 	animation.play("room3_cover_fade")
-
 	
 	await get_tree().create_timer(1.0).timeout
+	Audio.volume_db -= 5
 	
 	is_leaveroom3a = true
 	is_followingpath = true
 	leave3_player.moving = true
 	
+	
 func leaveroom3a_end():
+	Audio.volume_db -= 5
 	is_followingpath = false
 	is_leaveroom3a = false
 	$Room3/LeaveRoom3Door.play("open")
 	$Audio/sfx_doors.play()
+	Audio.play_music_minigame(-30)
 	await get_tree().create_timer(1.0).timeout
+	Audio.volume_db += 5
 	leaveroom3b()
 
 func leaveroom3b():
 	is_followingpath = true
 	is_leaveroom3b = true
 	leave3_player.moving = true
+	Audio.volume_db += 5
 #End Room3
 
 func leaveroom3b_end():
+	Audio.volume_db += 5
 	is_followingpath = false
 	is_leaveroom3b = false
 	leave3_player_sprite.play("idle_up")
 	$Room3/LeaveRoom3Door.play("close")
 	$Audio/sfx_doors.play()
 	await get_tree().create_timer(2.0).timeout
+	Audio.volume_db += 5
 	animation.play("room3_cover")
 	$Room3/LeaveRoom3.hide()
 	await get_tree().create_timer(1.0).timeout
 	
 	$Room3/Room3Camera.enabled = false
 	$Room4/Room4Camera.enabled = true
-	
+		
 	$Room4Cover.show()
 	$Room3Cover.hide()
 	$Room4.show()
+	
 	
 	await get_tree().create_timer(1.0).timeout
 	enterroom4()
@@ -540,7 +580,7 @@ func enterroom4():
 	$Room4/Room4Door.show()
 	
 	animation.play("room4_cover_fade")
-		
+	
 	is_enterroom4a = true
 	is_followingpath = true
 	enter4_player.moving = true
