@@ -43,6 +43,7 @@ visible_ratio = 0.0
 
 [node name="CRTHumBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_v4dcy")
+volume_db = -15.0
 autoplay = true
 parameters/looping = false
 

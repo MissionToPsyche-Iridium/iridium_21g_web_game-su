@@ -1,4 +1,4 @@
-extends Polygon2D
+extends Polygon2D # code for the CRT screen shader
 
 const RANGE = 0.05
 const NOISE_QUALITY = 250.0

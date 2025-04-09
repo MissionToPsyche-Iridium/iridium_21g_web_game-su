@@ -52,6 +52,7 @@ stream = ExtResource("5_15ndt")
 
 [node name="CRTHumBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_4qhsd")
+volume_db = -15.0
 autoplay = true
 parameters/looping = false
 

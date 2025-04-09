@@ -47,20 +47,20 @@ func _on_area2d_body_exited(body):
 		is_overlap = false
 		print("Player exited area")
 
-func _on_area2d_area_entered(area: Area2D) -> void:
-	# This will be called when any Area2D enters Scene A’s collision shape.
-	# You can add additional checks (e.g., by name or group) to ensure it’s Scene B.
+# These area flags detect proximity of the player to the target area, which is used to change the beep rate of the proximity sensor
+func _on_area2d_area_entered(area: Area2D) -> void: 
 	is_prox_overlap = true
 	prox_node = area
 	print("Player in proximity")
 
 func _on_area2d_area_exited(area: Area2D) -> void:
-	# Called when an Area2D leaves Scene A’s collision shape.
 	if area == prox_node:
 		is_prox_overlap = false
 		prox_node = null
 		print("Player out of proximity")
 
+# This function handles the beeping sound of the proximity sensor
+# It plays a sound at a set interval, which is changed based on the proximity of the player to the target area
 func beep_loop() -> void:
 	while is_beeping:
 		var delay = far_beep_delay
@@ -71,7 +71,7 @@ func beep_loop() -> void:
 
 
 func _process(delta: float) -> void:
-	# This section handles text auto type effect
+	# Auto Type effect
 	if !textDone:
 		if label.get_visible_ratio() < 1:
 			label.set_visible_ratio(label.get_visible_ratio()+(.5*delta))
@@ -82,7 +82,7 @@ func _process(delta: float) -> void:
 	if is_overlap and Input.is_action_just_pressed("ui_accept"): # If the player is aligned with the target area and presses enter
 		print("Input accepted")
 		is_beeping = false
-		var ani = player_node.get_node("AnimatedSprite2D") #idk this is not working
+		var ani = player_node.get_node("AnimatedSprite2D")
 		ani.queue_free() # Removes sparkle effect from already-scanned box
 		show_correct_indicator()
 		correctSound.play()
@@ -95,7 +95,6 @@ func _process(delta: float) -> void:
 		await incorrectSound.finished
 		print("target misaligned")
 
-	# This section handles proximity beep sound
 
 
 func change_scene():
@@ -126,6 +125,5 @@ func show_incorrect_indicator():
 	await(get_tree().create_timer(1.25).timeout)
 	incorrectNode.visible = false
 	print("Hiding Incorrect indicator")
-
 
 # shader jitter original: 0.342

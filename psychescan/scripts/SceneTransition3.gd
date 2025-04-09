@@ -51,14 +51,11 @@ func _on_area2d_body_exited(body):
 		print("Player exited area")
 
 func _on_area2d_area_entered(area: Area2D) -> void:
-	# This will be called when any Area2D enters Scene A’s collision shape.
-	# You can add additional checks (e.g., by name or group) to ensure it’s Scene B.
 	is_prox_overlap = true
 	prox_node = area
 	print("Player in proximity")
 
 func _on_area2d_area_exited(area: Area2D) -> void:
-	# Called when an Area2D leaves Scene A’s collision shape.
 	if area == prox_node:
 		is_prox_overlap = false
 		prox_node = null
@@ -73,6 +70,7 @@ func beep_loop() -> void:
 		await(get_tree().create_timer(delay).timeout)
 
 func _process(delta: float) -> void:
+	# Auto Type effect
 	if !textDone:
 		if label.get_visible_ratio() < 1:
 			label.set_visible_ratio(label.get_visible_ratio()+(.5*delta))

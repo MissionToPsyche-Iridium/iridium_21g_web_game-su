@@ -31,7 +31,7 @@ shape = SubResource("RectangleShape2D_v6q4w")
 [node name="TextureShape" type="Polygon2D" parent="."]
 position = Vector2(125.772, 0)
 scale = Vector2(1.96286, 2.1)
-color = Color(1, 0.956863, 0.407843, 1)
+color = Color(0.957552, 0.313468, 1, 1)
 texture = ExtResource("2_6emri")
 texture_offset = Vector2(64, 2)
 texture_scale = Vector2(1.45, 1.43)
