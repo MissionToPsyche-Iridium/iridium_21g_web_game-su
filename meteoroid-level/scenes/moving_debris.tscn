@@ -1,18 +1,18 @@
 [gd_scene load_steps=7 format=3 uid="uid://cuojpnqpbf5v4"]
 
-[ext_resource type="Texture2D" uid="uid://t7gj768t8rc4" path="res://meteoroid-level/assets/10 asteriod sprite pack/Small asteriod 1.png" id="1_ncg2o"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/moving_debris.gd" id="1_pall4"]
 [ext_resource type="PackedScene" uid="uid://ckqhj1j1mjc3v" path="res://meteoroid-level/scenes/killzone.tscn" id="2_62lbh"]
+[ext_resource type="Texture2D" uid="uid://cf7xo5tvtgl6c" path="res://meteoroid-level/assets/moving debris.png" id="2_equyb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0bqno"]
-atlas = ExtResource("1_ncg2o")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gc8x"]
+atlas = ExtResource("2_equyb")
+region = Rect2(14, 19, 71, 101)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0x18u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0bqno")
+"texture": SubResource("AtlasTexture_2gc8x")
 }],
 "loop": true,
 "name": &"default",
@@ -20,13 +20,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_766fc"]
-radius = 47.0425
+radius = 363.319
 
 [node name="Moving Debris" type="Node2D"]
 script = ExtResource("1_pall4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_0x18u")
 
 [node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_62lbh")]
@@ -34,5 +33,5 @@ scale = Vector2(0.0625, 0.0625)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
-position = Vector2(-8, -15)
+position = Vector2(16, -48)
 shape = SubResource("CircleShape2D_766fc")
