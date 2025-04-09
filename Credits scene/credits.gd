@@ -25,39 +25,52 @@ var credits = [
 		"Credits",
 		"A game by Us"
 	],[
-		"Programming",
+		"Programmers",
+		"Kevin Bui",
+		"Colin Curry",
+		"Hanjin Jacobs",
+		"Grace Lane",
+		"Lyle Vitales",
+	],[
+		"Artists",
+		"Adapted by Grace Lane from LimeZu (https://limezu.itch.io/)",
 		"Grace Lane",
 		"Kevin Bui",
-		"Lyle Vitales",
-		"Colin Curry",
-		"Hanjin Jacobs"
-	],[
-		"Art",
-		"Grace Lane"
 	],[
 		"Music",
-		"Some Online Site"
+		"https://haberchuck.itch.io/pc-98-visual-novel-bgm-pack",
 	],[
 		"Sound Effects",
-		"Some Online Site"
+		"https://dryoma.itch.io/footsteps-sounds",
+		"https://liminal-space-dev.itch.io/free-horror-sfx-sounds",
 	],[
-		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
-	],[
-		"Tools used",
-		"Developed with Godot Engine",
-		"https://godotengine.org/license",
-		"",
-		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
+		"Tools",
+		"Developed with Godot Engine https://godotengine.org/license",
+		"Procreate",
+		"Microsoft Paint"
 	],[
 		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
-	]
+		"Dr. Nate Kremer-Herman, PhD",
+		"Dr. Cassie Bowman, Ed.D",
+	],[
+		"Beta Testers",
+		"Mason Welch",
+	],[
+		"Disclaimer",
+		"This work was created in partial fulfillment of Seattle ",
+		"University Capstone Program. The work is a result ",
+		"of the Psyche Student Collaborations component of NASA's ",
+		"Psyche Mission (https://psyche.asu.edu). 'Psyche: A Journey to ",
+		"a Metal World'[Contract number NNM16AA09C] is part of the ",
+		"NASA Discovery Program mission to solar system targets.",
+		"Trade names and trademarks of ASU and NASA are used in this",
+		"work for identification only. Their usage does not constitute",
+		"an official endorsement, either expressed or implied, by",
+		"Arizona State University or National Aeronautics and Space",
+		"Administration. The content is solely the responsibility of",
+		"the authors and does not necessarily represent the official",
+		"views of ASU or NASA."
+	],
 ]
 
 
