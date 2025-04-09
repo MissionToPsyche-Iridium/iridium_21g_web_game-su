@@ -52,4 +52,12 @@ func play_dialogue(volume):
 	_play_sound(dialogue, volume)	
 
 
+
+
 	
+
+
+func _on_mute_toggled(toggled_on: bool) -> void:
+	var master_bus_index = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_bus_index, toggled_on)
+	$Mute.focus_mode = false
