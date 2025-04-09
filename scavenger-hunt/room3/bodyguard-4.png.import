@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://cnpdfd30nq8fn"
+=======
+uid="uid://cb1us36wfowtf"
+>>>>>>> Stashed changes
 path="res://.godot/imported/bodyguard-4.png-e6b7ea0fd0575bdb49bcf021ba913378.ctex"
 metadata={
 "vram_texture": false

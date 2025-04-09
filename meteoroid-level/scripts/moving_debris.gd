@@ -5,7 +5,7 @@ extends Node2D
 const MOVE = 1 # number of tiles to move over on grid
 
 var tile_size = 128
-var animation_speed = 1 # speed of movement to next tile(s)
+var animation_speed = 1.5 # speed of movement to next tile(s)
 var moving = false 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +16,7 @@ func _ready() -> void:
 func move() -> void:
 	var tween = create_tween() # animate the movement
 	tween.tween_property(self, "position", position + (Vector2.LEFT * tile_size * MOVE), 1.0/animation_speed)
+	tween.tween_property(self, "rotation", rotation + (2 * PI), 1.0/animation_speed)
 	moving = true
 	await tween.finished
 	moving = false

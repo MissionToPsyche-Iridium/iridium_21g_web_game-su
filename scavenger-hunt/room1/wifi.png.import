@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://begglaa0t0iln"
+=======
+uid="uid://ds0q686t8pqf0"
+>>>>>>> Stashed changes
 path="res://.godot/imported/wifi.png-e0788c8f03a422817f87b0e1f7c51b12.ctex"
 metadata={
 "vram_texture": false
