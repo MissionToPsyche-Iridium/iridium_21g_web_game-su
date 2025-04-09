@@ -1,5 +1,3 @@
-# script for end of meteoroid level button to transition to next minigame (slingshot)
-
 extends Button
 
 func _on_pressed() -> void:

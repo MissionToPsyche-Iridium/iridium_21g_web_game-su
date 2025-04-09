@@ -1,5 +1,3 @@
-# script for start button of level one
-
 extends Button
 
 

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 res://test/unit/test_meteoroid-level.gd
 res://meteoroid-level/scripts/shuttle.gd
 res://start_menu/start_menu.tscn
@@ -25,25 +24,3 @@ res://psychescan/texts/scannertext2.tscn
 res://psychescan/texts/scannertext3.tscn
 res://psychescan/texts/tutorialText.tscn
 res://psychescan/texts/victory_text.tscn
-=======
-res://start_menu/start_menu.tscn
-res://meteoroid-level/scenes/shuttle.tscn
-res://meteoroid-level/scenes/level_1.tscn
-res://meteoroid-level/scenes/level_2.tscn
-res://meteoroid-level/scenes/level_3.tscn
-res://meteoroid-level/scripts/moving_debris.gd
-res://meteoroid-level/scripts/shuttle.gd
-res://meteoroid-level/scenes/moving_debris.tscn
-res://meteoroid-level/scripts/input_container.gd
-res://meteoroid-level/scripts/killzone.gd
-res://meteoroid-level/scripts/level_1.gd
-res://meteoroid-level/scripts/level_1_start.gd
-res://meteoroid-level/scripts/level_2.gd
-res://meteoroid-level/scripts/level_2_start.gd
-res://meteoroid-level/scripts/level_3.gd
-res://meteoroid-level/scripts/level_3_start.gd
-res://meteoroid-level/scripts/next_level_button.gd
-res://meteoroid-level/scripts/path.gd
-res://meteoroid-level/scripts/start_button.gd
-res://meteoroid-level/scenes/non_moving_debris.tscn
->>>>>>> Stashed changes

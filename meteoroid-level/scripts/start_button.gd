@@ -1,5 +1,3 @@
-# script for button to start the minigame
-
 extends Button
 
 
