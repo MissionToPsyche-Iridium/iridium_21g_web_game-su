@@ -96,7 +96,7 @@ func _input(event):
 	if event is InputEventKey:
 		# Ignore volume keys to prevent movement issues
 		if event.keycode in [KEY_VOLUMEUP, KEY_VOLUMEDOWN, KEY_VOLUMEMUTE]:  # Volume Up, Volume Down, Mute
-			return
+			velocity = Vector2(0,0)
 
 func _on_room_1_popup_close() -> void:
 	movable = true

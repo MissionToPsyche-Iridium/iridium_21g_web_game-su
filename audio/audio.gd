@@ -54,7 +54,7 @@ func play_dialogue(volume):
 
 
 
-	
+
 
 
 func _on_mute_toggled(toggled_on: bool) -> void:
