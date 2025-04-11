@@ -1,8 +1,6 @@
-res://scavenger-hunt/world.gd
-res://psychescan/levels/level3tester.tscn
-res://psychescan/levels/level3.tscn
 res://psychescan/levels/tutorialLevel.tscn
 res://psychescan/levels/level.tscn
 res://psychescan/levels/level2.tscn
-res://psychescan/backgrounds/vic_background.tscn
 res://psychescan/levels/victory_scene.tscn
+res://psychescan/levels/main_level.tscn
+res://psychescan/levels/level3.tscn
