@@ -6,10 +6,6 @@ func _ready() -> void:
 	Audio.play_music_start(-40)
 	$Cover.show()
 	$ButtonCover.show()
-	#$Disclaimer.hide()
-	#$Continue.hide()
-	#$ContinueCover.color = Color(0, 0, 0, 255)
-	#$ContinueCover.show()
 	$Logo.show()
 	await get_tree().create_timer(2.0).timeout      # Wait 2 seconds before covering the Psyche logo
 	Audio.volume_db = -35

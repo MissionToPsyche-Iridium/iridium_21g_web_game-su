@@ -35,10 +35,13 @@ var is_leaveroom3b = false
 var is_enterroom4a = false
 var is_movechair = false
 var is_enterroom4c = false
+var is_zoomin = false
 
 var is_followingpath = false
 
 func _ready() -> void:
+	$ZoomIn/PathFollow2D/ZoomingCamera.enabled = false
+	
 	#Room1
 	$Room1Cover.color = Color(0,0,0,255)
 	$Room1Cover.show()
@@ -206,6 +209,15 @@ func _physics_process(delta: float) -> void:
 				enter4_player_sprite.play("idle_up")
 				enterroom4_end()
 			pathfollower.progress_ratio += 0.005
+	if is_zoomin:
+		var pathfollower = $ZoomIn/PathFollow2D
+		if is_followingpath:
+			if pathfollower.progress_ratio < 1:
+				pathfollower.progress_ratio += 0.005
+				if ($ZoomIn/PathFollow2D/ZoomingCamera.zoom < Vector2(60,60)):
+					$ZoomIn/PathFollow2D/ZoomingCamera.zoom += Vector2(0.1,0.1)
+			if pathfollower.progress_ratio >= 1:
+				endrooms()
 
 
 #var input_buffer = ""
@@ -605,17 +617,20 @@ func enterroom4_end():
 	is_enterroom4c = false
 	
 	await get_tree().create_timer(1.0).timeout
+	$Room4/Room4Camera.enabled = false
+	$ZoomIn/PathFollow2D/ZoomingCamera.enabled = true
+	is_zoomin = true
+	is_followingpath = true
+	
+	
+func endrooms():
+	is_zoomin = false
+	is_followingpath = false
+	await get_tree().create_timer(1.0).timeout
 	animation.play("room4_cover")
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	#TODO: CHANGE THIS HERE
-	get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
+	get_tree().change_scene_to_file("res://scavenger-hunt/scenes/lauch.tscn")
+	
 #End of Room4
-
-
-func _on_button_pressed() -> void:
-	$Room1.hide()
-	$Room1/Room1Camera.enabled = false
-	$Room1/Player/Camera2D.enabled = false
-	leaveroom2_end()

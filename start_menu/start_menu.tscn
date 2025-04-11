@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bkqef5inybfnp"]
+[gd_scene load_steps=12 format=3 uid="uid://bkqef5inybfnp"]
 
 [ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
 [ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start_menu/normal.tres" id="3_jvopk"]
-[ext_resource type="Texture2D" uid="uid://4phrgbdedixh" path="res://icon.png" id="4_3wnvb"]
-[ext_resource type="PackedScene" uid="uid://drin5td47d3wd" path="res://globals.tscn" id="5_2kgno"]
+[ext_resource type="Texture2D" uid="uid://bgfba8vft7mk0" path="res://icon.png" id="4_3wnvb"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="6_knjbu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
@@ -13,26 +12,8 @@ bg_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yr5en"]
 bg_color = Color(0.172833, 0.172833, 0.172833, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spiwr"]
-bg_color = Color(0.190762, 0.190763, 0.190761, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7unw"]
-bg_color = Color(0.127736, 0.127736, 0.127735, 1)
-
 [sub_resource type="Animation" id="Animation_0w0uo"]
 resource_name = "continue_fade"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ContinueCover:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_hy8bh"]
 resource_name = "cover"
@@ -170,57 +151,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Disclaimer" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 117.0
-offset_top = 120.0
-offset_right = 1271.0
-offset_bottom = 662.0
-theme_override_constants/line_spacing = 17
-theme_override_fonts/font = ExtResource("2_ye5xd")
-theme_override_font_sizes/font_size = 24
-text = "Disclaimer
-
-This work was created in partial fulfillment of Seattle University Capstone Course \"CPSC 4870\". The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission (https://psyche.asu.edu). “Psyche: A Journey to a Metal World” [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA."
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Continue" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 606.0
-offset_top = 695.0
-offset_right = 797.0
-offset_bottom = 740.0
-theme_override_fonts/font = ExtResource("2_ye5xd")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxFlat_spiwr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_b7unw")
-theme_override_styles/normal = ExtResource("3_jvopk")
-text = "CONTINUE"
-
-[node name="ContinueCover" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 585.5
-offset_top = 677.0
-offset_right = 826.5
-offset_bottom = 749.0
-color = Color(0, 0, 0, 1)
-
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(698, 440.5)
 scale = Vector2(0.239958, 0.239958)
 texture = ExtResource("4_3wnvb")
 
 [node name="Cover" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
-offset_left = -379.5
-offset_top = -514.5
-offset_right = 1852.5
-offset_bottom = 887.5
+offset_left = -72.0
+offset_top = -43.0
+offset_right = 1450.0
+offset_bottom = 888.0
 color = Color(0, 0, 0, 0)
 
 [node name="WorldCamera" type="Camera2D" parent="."]
@@ -231,10 +172,7 @@ libraries = {
 "": SubResource("AnimationLibrary_iqgaj")
 }
 
-[node name="Globals" parent="." instance=ExtResource("5_2kgno")]
-
 [node name="Audio" parent="." instance=ExtResource("6_knjbu")]
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

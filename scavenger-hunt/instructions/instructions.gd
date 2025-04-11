@@ -7,10 +7,7 @@ var text = [
 		"For the first time ever, we are exploring a world made not of rock or ice, but of metal.",
 		"This metal-rich asteroid is named Psyche.",
 		"I need your help to get me to the control room to launch the spacecraft!",
-		"Use WASD or arrow keys to move me around.", 
-		"Look for hints by walking up to things. If you can interact with it, a message will appear prompting you to hit the [E] key.",
-		"Please help me answer the question in each room so we can get to the control room!",
-		"After we get to the control room, I'll need your help on the computer carrying out parts of the mission!",
+		"I'll need your help on the computer carrying out parts of the mission!",
 		"Are you ready?"
 		]
 @onready var label := $Story/Label
