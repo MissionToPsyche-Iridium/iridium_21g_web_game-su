@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpneewaxv5h28"
-path="res://.godot/imported/youWin.png-2140286511d80eb199da5e7889cfbe91.ctex"
+uid="uid://djfb7io06xoru"
+path="res://.godot/imported/meter-line.png-e4246d4979d8fcc035d4d66d44d10fb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://psychescan/assets/youWin.png"
-dest_files=["res://.godot/imported/youWin.png-2140286511d80eb199da5e7889cfbe91.ctex"]
+source_file="res://scavenger-hunt/assets/launch/meter-line.png"
+dest_files=["res://.godot/imported/meter-line.png-e4246d4979d8fcc035d4d66d44d10fb8.ctex"]
 
 [params]
 

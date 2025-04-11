@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7bjhqqipa1eq"
-path="res://.godot/imported/initial background.svg-7bbeda64b5c110c4e807bc7362d565ef.ctex"
+uid="uid://bsv160ub7qn3p"
+path="res://.godot/imported/borders-1.png-6471ac8f3bcf1ce7623936607cdf50a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://psychescan/assets/initial background.svg"
-dest_files=["res://.godot/imported/initial background.svg-7bbeda64b5c110c4e807bc7362d565ef.ctex"]
+source_file="res://scavenger-hunt/assets/borders/borders-1.png"
+dest_files=["res://.godot/imported/borders-1.png-6471ac8f3bcf1ce7623936607cdf50a4.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
