@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcqh1k32covhr"]
+[gd_scene load_steps=9 format=3 uid="uid://ulcfsnrgiqaq"]
 
-[ext_resource type="PackedScene" uid="uid://d2k4nx07esqql" path="res://psychescan/sprites/asteroid3.tscn" id="1_2ljbq"]
-[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="2_v7qx5"]
-[ext_resource type="PackedScene" uid="uid://cosc37m3bowe8" path="res://psychescan/backgrounds/background3.tscn" id="3_5tj0h"]
+[ext_resource type="PackedScene" uid="uid://d2k4nx07esqql" path="res://psychescan/sprites/asteroid3.tscn" id="1_xx4kk"]
+[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="2_5oc8r"]
+[ext_resource type="PackedScene" uid="uid://cosc37m3bowe8" path="res://psychescan/backgrounds/background3.tscn" id="3_o08cs"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u57hy"]
-shader = ExtResource("2_v7qx5")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qlbpp"]
+shader = ExtResource("2_5oc8r")
 shader_parameter/overlay = true
 shader_parameter/resolution = Vector2(640, 480)
 shader_parameter/brightness = 1.4
@@ -48,20 +48,20 @@ scale = Vector2(2.31974, 2.12525)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("1_2ljbq")]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_xx4kk")]
 position = Vector2(277.603, 201.893)
 scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 
-[node name="CRTShader" type="Polygon2D" parent="."]
-material = SubResource("ShaderMaterial_u57hy")
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_qlbpp")
 position = Vector2(-281.664, -46.3898)
 scale = Vector2(2.84442, 2.27598)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)
 
-[node name="background" parent="." instance=ExtResource("3_5tj0h")]
+[node name="background" parent="." instance=ExtResource("3_o08cs")]
 scale = Vector2(1.268, 1.268)
 
 [node name="CameraBounds1" type="StaticBody2D" parent="."]

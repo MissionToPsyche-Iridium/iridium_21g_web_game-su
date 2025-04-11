@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://qhel7w7se32c"]
+[gd_scene load_steps=7 format=3 uid="uid://qhel7w7se32c"]
 
-[ext_resource type="PackedScene" uid="uid://svwaclav8uph" path="res://psychescan/sprites/victory_message.tscn" id="1_yqwwf"]
 [ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="2_eanpc"]
 [ext_resource type="Script" path="res://psychescan/scripts/To_Next_Level.gd" id="4_y01lp"]
 [ext_resource type="PackedScene" uid="uid://dq62abyfwocnx" path="res://psychescan/texts/victory_text.tscn" id="5_lyrys"]
@@ -13,9 +12,6 @@ size = Vector2(32, 32)
 [node name="background" type="StaticBody2D"]
 collision_layer = 2
 collision_mask = 2
-
-[node name="VictoryMessage" parent="." instance=ExtResource("1_yqwwf")]
-position = Vector2(140, 120)
 
 [node name="main" type="Polygon2D" parent="."]
 scale = Vector2(1.55089, 2.10742)
