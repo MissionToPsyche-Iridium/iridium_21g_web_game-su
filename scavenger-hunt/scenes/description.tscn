@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://du433bvkd0n40"]
+
+[ext_resource type="Texture2D" uid="uid://c5ls6saonevjj" path="res://scavenger-hunt/assets/pop_up/pop_up.png" id="1_eunme"]
+[ext_resource type="Script" path="res://scavenger-hunt/scripts/description.gd" id="2_n8erp"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="3_c0p2o"]
+
+[node name="Description" type="TextureRect"]
+offset_right = 248.0
+offset_bottom = 97.0
+texture = ExtResource("1_eunme")
+stretch_mode = 4
+script = ExtResource("2_n8erp")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 240.0
+offset_bottom = 92.0
+alignment = 1
+
+[node name="Message" type="Label" parent="Container"]
+custom_minimum_size = Vector2(216, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("3_c0p2o")
+theme_override_font_sizes/font_size = 8
+text = "Temporary Temporary Temporary Temporary Temporary Temporary Temporary Temporary Temporary Temporary Temporary Temporary"
+vertical_alignment = 1
+autowrap_mode = 3
