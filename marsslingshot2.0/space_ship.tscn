@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://crxhvmr5p37e5"]
+[gd_scene load_steps=6 format=3 uid="uid://crxhvmr5p37e5"]
 
-[ext_resource type="Texture2D" uid="uid://dbyaj5nsegnkb" path="res://marsslingshot2.0/icon.svg" id="1_03ltk"]
-[ext_resource type="Script" path="res://marsslingshot2.0/space_ship.gd" id="1_omm6k"]
+[ext_resource type="Script" path="res://slingshot/space_ship.gd" id="1_omm6k"]
+[ext_resource type="Texture2D" uid="uid://bw37l15shxbrk" path="res://slingshot/shuttle.png" id="2_4au6y"]
+[ext_resource type="Script" path="res://slingshot/timer.gd" id="3_qk4u3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1qdcw"]
 
@@ -9,6 +10,7 @@
 radius = 12.0
 
 [node name="space_ship" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_omm6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,11 +18,19 @@ position = Vector2(3.8147e-06, 0)
 shape = SubResource("CircleShape2D_1qdcw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3.8147e-06, 0)
-scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("1_03ltk")
+position = Vector2(0.033476, 0.22076)
+rotation = 1.5708
+scale = Vector2(0.0960498, 0.0723183)
+texture = ExtResource("2_4au6y")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_lcr0e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+script = ExtResource("3_qk4u3")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

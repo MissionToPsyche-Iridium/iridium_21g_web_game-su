@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2sd4a5jaqxw"
-path="res://.godot/imported/checkpoint.png-d568674bcf9461a630a4a2126a548272.ctex"
+uid="uid://bw37l15shxbrk"
+path="res://.godot/imported/shuttle.png-bc3b87e6f5cc62dbd5d580b892b9af5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slingshot/checkpoint.png"
-dest_files=["res://.godot/imported/checkpoint.png-d568674bcf9461a630a4a2126a548272.ctex"]
+source_file="res://slingshot/shuttle.png"
+dest_files=["res://.godot/imported/shuttle.png-bc3b87e6f5cc62dbd5d580b892b9af5c.ctex"]
 
 [params]
 

@@ -1,10 +1,21 @@
 extends Timer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+var count = 0
+var time = 0.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	use_boost()
+	time = time_left
+	if is_stopped():
+			start()
+			paused = true
+	
+
+
+func use_boost():
+	if Input.is_action_just_pressed("ui_up"):
+		paused = false
+		print(time_left)
+	if Input.is_action_just_released("ui_up"):
+		paused = true

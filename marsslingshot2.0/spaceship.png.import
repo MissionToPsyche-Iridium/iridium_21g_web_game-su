@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2sd4a5jaqxw"
-path="res://.godot/imported/checkpoint.png-d568674bcf9461a630a4a2126a548272.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://db42ytvnxphre"
+valid=false
 
 [deps]
 
-source_file="res://slingshot/checkpoint.png"
-dest_files=["res://.godot/imported/checkpoint.png-d568674bcf9461a630a4a2126a548272.ctex"]
+source_file="res://slingshot/spaceship.png"
 
 [params]
 
