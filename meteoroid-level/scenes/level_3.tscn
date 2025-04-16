@@ -184,11 +184,11 @@ position = Vector2(6, -256)
 
 [node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(1009, 50)
+position = Vector2(1008, 43)
 texture = ExtResource("13_t7t6d")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(911, -24)
+position = Vector2(911, -4)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

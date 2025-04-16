@@ -122,7 +122,7 @@ stream = ExtResource("11_rmbhd")
 
 [node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(730, 15)
+position = Vector2(736, 11)
 texture = ExtResource("12_8mj8v")
 
 [node name="Camera2D2" type="Camera2D" parent="."]

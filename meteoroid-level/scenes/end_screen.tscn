@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://nmp7i8bxi64h"]
+[gd_scene load_steps=6 format=3 uid="uid://nmp7i8bxi64h"]
 
+[ext_resource type="Script" path="res://meteoroid-level/scripts/end_screen.gd" id="1_mq2rv"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/next_level_button.gd" id="1_wada7"]
+[ext_resource type="Texture2D" uid="uid://c4n507vefiuwn" path="res://consoleBackgroundLarge.png" id="2_77jtx"]
+[ext_resource type="FontFile" uid="uid://ca46xqutaucrs" path="res://meteoroid-level/assets/dogicapixel.ttf" id="2_j61un"]
+[ext_resource type="AudioStream" uid="uid://bge3kfdxuw75b" path="res://meteoroid-level/assets/mouse-click.wav" id="3_nn714"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -11,19 +15,20 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mq2rv")
 
 [node name="Message" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -792.0
-offset_top = -244.0
-offset_right = 769.0
-offset_bottom = -177.0
+offset_left = -1065.0
+offset_top = -474.5
+offset_right = 496.0
+offset_bottom = -197.5
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_j61un")
 theme_override_font_sizes/font_size = 48
-text = "The Psyche spacecraft travels through space using solar-electric propulsion. Changes in movements are slow. When obstacles like space debris are detected, scientists must calculate course corrections to avoid the obstacles in the best way to save fuel."
 autowrap_mode = 2
 
 [node name="NextLevelButton" type="Button" parent="."]
@@ -31,13 +36,25 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -152.0
-offset_top = 148.0
-offset_right = 137.0
-offset_bottom = 244.0
+offset_left = -598.0
+offset_top = 145.5
+offset_right = -46.0
+offset_bottom = 241.5
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "END SIMULATION"
 script = ExtResource("1_wada7")
 
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(97, 46.5)
+texture = ExtResource("2_77jtx")
+
+[node name="Clicksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nn714")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
 [connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="NextLevelButton" method="_on_timer_timeout"]

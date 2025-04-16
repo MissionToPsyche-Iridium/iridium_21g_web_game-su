@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://5n2mwakon7kw"]
+[gd_scene load_steps=6 format=3 uid="uid://5n2mwakon7kw"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_1_start.gd" id="1_6hiu1"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/level_1_screen.gd" id="1_umrlm"]
+[ext_resource type="FontFile" uid="uid://ca46xqutaucrs" path="res://meteoroid-level/assets/dogicapixel.ttf" id="2_57elp"]
+[ext_resource type="Texture2D" uid="uid://c4n507vefiuwn" path="res://consoleBackgroundLarge.png" id="2_aeet2"]
+[ext_resource type="AudioStream" uid="uid://bge3kfdxuw75b" path="res://meteoroid-level/assets/mouse-click.wav" id="3_eqwd3"]
 
 [node name="Level 1 Screen" type="Control"]
 layout_mode = 3
@@ -9,27 +13,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_umrlm")
 
 [node name="Message" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -4357.5
-offset_top = -271.5
-offset_right = 4357.5
-offset_bottom = 271.5
+anchors_preset = -1
+anchor_left = 0.387
+anchor_top = 0.433
+anchor_right = 0.387
+anchor_bottom = 0.433
+offset_left = -4369.5
+offset_top = -145.255
+offset_right = 4345.5
+offset_bottom = 397.745
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_57elp")
 theme_override_font_sizes/font_size = 48
-text = "Loading Course Simulation...
-
-Settings: 
-Non-moving debris
-Limited to 10 maneuvers
-"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -50,4 +50,16 @@ theme_override_font_sizes/font_size = 64
 text = "READY"
 script = ExtResource("1_6hiu1")
 
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1493, 914)
+texture = ExtResource("2_aeet2")
+
+[node name="Clicksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_eqwd3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
 [connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="Message/StartButton" method="_on_timer_timeout"]
