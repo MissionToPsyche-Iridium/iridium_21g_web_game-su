@@ -4,7 +4,7 @@
 [ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="2_v7qx5"]
 [ext_resource type="PackedScene" uid="uid://cosc37m3bowe8" path="res://psychescan/backgrounds/background3.tscn" id="3_5tj0h"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u57hy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fd7os"]
 shader = ExtResource("2_v7qx5")
 shader_parameter/overlay = true
 shader_parameter/resolution = Vector2(640, 480)
@@ -43,19 +43,14 @@ size = Vector2(1663.79, 20)
 [node name="level" type="Node2D"]
 scale = Vector2(1.268, 1.268)
 
-[node name="black background" type="Polygon2D" parent="."]
-scale = Vector2(2.31974, 2.12525)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
-
-[node name="CharacterBody2D2" parent="." instance=ExtResource("1_2ljbq")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_2ljbq")]
 position = Vector2(277.603, 201.893)
 scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 
 [node name="CRTShader" type="Polygon2D" parent="."]
-material = SubResource("ShaderMaterial_u57hy")
+material = SubResource("ShaderMaterial_fd7os")
 position = Vector2(-281.664, -46.3898)
 scale = Vector2(2.84442, 2.27598)
 color = Color(1, 1, 1, 0)

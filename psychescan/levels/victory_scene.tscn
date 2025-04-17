@@ -1,9 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://daq27vcb07gww"]
+[gd_scene load_steps=7 format=3 uid="uid://daq27vcb07gww"]
 
+[ext_resource type="Shader" path="res://psychescan/addons/StarScroll.gdshader" id="1_mnvu7"]
 [ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="2_30gpm"]
+[ext_resource type="Texture2D" uid="uid://bvc0xsfc5xp4f" path="res://psychescan/assets/meteoroid-level-border-background.png" id="2_c55o4"]
 [ext_resource type="PackedScene" uid="uid://qhel7w7se32c" path="res://psychescan/backgrounds/vic_background.tscn" id="2_igxqu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4whcr"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8emcb"]
+shader = ExtResource("1_mnvu7")
+shader_parameter/Direction = Vector2(1, 0)
+shader_parameter/Speed = 0.15
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u1x6f"]
 shader = ExtResource("2_30gpm")
 shader_parameter/overlay = true
 shader_parameter/resolution = Vector2(640, 480)
@@ -30,17 +37,21 @@ shader_parameter/vignette_opacity = 0.5
 [node name="level" type="Node2D"]
 scale = Vector2(1.268, 1.268)
 
-[node name="black background" type="Polygon2D" parent="."]
-scale = Vector2(2.31974, 2.12525)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
-
-[node name="background" parent="." instance=ExtResource("2_igxqu")]
-scale = Vector2(1.268, 1.268)
+[node name="StarBackground" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8emcb")
+position = Vector2(686, 671)
+scale = Vector2(4.74709, 5.56027)
+texture = ExtResource("2_c55o4")
+region_enabled = true
+region_rect = Rect2(0, 0, 737.375, 433.688)
 
 [node name="CRTShader" type="Polygon2D" parent="."]
-material = SubResource("ShaderMaterial_4whcr")
+material = SubResource("ShaderMaterial_u1x6f")
 position = Vector2(-281.664, -46.3898)
 scale = Vector2(2.84442, 2.27598)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)
+
+[node name="background" parent="." instance=ExtResource("2_igxqu")]
+scale = Vector2(1.268, 1.268)

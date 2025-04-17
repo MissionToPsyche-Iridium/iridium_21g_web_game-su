@@ -43,11 +43,6 @@ size = Vector2(1354, 20)
 [node name="level" type="Node2D"]
 scale = Vector2(1.268, 1.268)
 
-[node name="black background" type="Polygon2D" parent="."]
-scale = Vector2(2.31974, 2.12525)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_a4ck4")]
 position = Vector2(277.603, 201.893)
 scale = Vector2(0.85, 0.85)

@@ -7,7 +7,7 @@ valid=false
 
 [deps]
 
-source_file="res://slingshot/spaceship.png"
+source_file="res://marsslingshot2.0/spaceship.png"
 
 [params]
 

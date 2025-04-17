@@ -12,7 +12,6 @@ var incorrectNode
 var is_scene_change_pending = false
 var correctSound
 var incorrectSound
-#var player_hitbox
 var prox_node: Area2D = null
 @onready var label
 var textDone = false
