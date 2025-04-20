@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkqef5inybfnp"]
+[gd_scene load_steps=13 format=3 uid="uid://bkqef5inybfnp"]
 
-[ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_1qjrd"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="2_ye5xd"]
-[ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start_menu/normal.tres" id="3_jvopk"]
-[ext_resource type="Texture2D" uid="uid://4phrgbdedixh" path="res://icon.png" id="4_3wnvb"]
-[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="6_knjbu"]
+[ext_resource type="Script" path="res://start-menu/start_menu.gd" id="1_wan2u"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="2_1nwy0"]
+[ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start-menu/normal.tres" id="3_gymqj"]
+[ext_resource type="Texture2D" uid="uid://bgfba8vft7mk0" path="res://icon.png" id="4_u6vjw"]
+[ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="5_44oyq"]
+[ext_resource type="PackedScene" uid="uid://bqimdocoobe63" path="res://credits/credits.tscn" id="6_dqvsa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
 bg_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
@@ -60,7 +61,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
-script = ExtResource("1_1qjrd")
+script = ExtResource("1_wan2u")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -80,7 +81,7 @@ offset_left = 170.5
 offset_top = 310.0
 offset_right = 1226.5
 offset_bottom = 406.0
-theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_fonts/font = ExtResource("2_1nwy0")
 theme_override_font_sizes/font_size = 96
 text = "SUPER PSYCHED"
 horizontal_alignment = 1
@@ -92,11 +93,11 @@ offset_left = 578.0
 offset_top = 434.0
 offset_right = 819.0
 offset_bottom = 518.0
-theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_fonts/font = ExtResource("2_1nwy0")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/focus = SubResource("StyleBoxFlat_pi4qy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yr5en")
-theme_override_styles/normal = ExtResource("3_jvopk")
+theme_override_styles/normal = ExtResource("3_gymqj")
 text = "START"
 
 [node name="Credits" type="Button" parent="."]
@@ -105,11 +106,11 @@ offset_left = 620.5
 offset_top = 529.5
 offset_right = 778.5
 offset_bottom = 574.5
-theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_fonts/font = ExtResource("2_1nwy0")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxFlat_pi4qy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yr5en")
-theme_override_styles/normal = ExtResource("3_jvopk")
+theme_override_styles/normal = ExtResource("3_gymqj")
 text = "CREDITS"
 
 [node name="Feedback" type="LinkButton" parent="."]
@@ -118,7 +119,7 @@ offset_left = 11.5
 offset_top = 830.5
 offset_right = 272.5
 offset_bottom = 854.5
-theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_fonts/font = ExtResource("2_1nwy0")
 theme_override_font_sizes/font_size = 24
 text = "Beta Feedback"
 underline = 1
@@ -130,7 +131,7 @@ offset_left = 949.0
 offset_top = 830.5
 offset_right = 1378.0
 offset_bottom = 854.5
-theme_override_fonts/font = ExtResource("2_ye5xd")
+theme_override_fonts/font = ExtResource("2_1nwy0")
 theme_override_font_sizes/font_size = 24
 text = "More Info About Psyche"
 underline = 1
@@ -154,7 +155,7 @@ color = Color(0, 0, 0, 1)
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(698, 440.5)
 scale = Vector2(0.239958, 0.239958)
-texture = ExtResource("4_3wnvb")
+texture = ExtResource("4_u6vjw")
 
 [node name="Cover" type="ColorRect" parent="."]
 layout_mode = 1
@@ -172,7 +173,11 @@ libraries = {
 "": SubResource("AnimationLibrary_iqgaj")
 }
 
-[node name="Audio" parent="." instance=ExtResource("6_knjbu")]
+[node name="Audio" parent="." instance=ExtResource("5_44oyq")]
 
+[node name="Credits2" parent="." instance=ExtResource("6_dqvsa")]
+visible = false
+
+[connection signal="from_start" from="." to="Credits2" method="_on_start_menu_from_start"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

@@ -9,15 +9,16 @@ const open_popup = preload("res://audio/open.mp3")
 const close_popup = preload("res://audio/close.mp3")
 const steps = preload("res://audio/steps.mp3")
 const correct = preload("res://audio/correct.mp3")
+const incorrect = preload("res://audio/incorrect.wav")
 
-func _play_music(music: AudioStream, volume = -10.0):
+func _play_music(music: AudioStream, volume):
 	if stream == music:
 		return
 	stream = music
 	volume_db = volume
 	play()
 	
-func _play_sound(music: AudioStream, volume = 0.0):
+func _play_sound(music: AudioStream, volume):
 	if stream == music:
 		return
 	stream = music
@@ -46,7 +47,10 @@ func play_steps(volume):
 	_play_sound(steps, volume)
 	
 func play_correct(volume):
-	_play_sound(correct, volume)	
+	_play_sound(correct, volume)
+	
+func play_incorrect(volume):
+	_play_sound(incorrect, volume)	
 
 func play_dialogue(volume):
 	_play_sound(dialogue, volume)	

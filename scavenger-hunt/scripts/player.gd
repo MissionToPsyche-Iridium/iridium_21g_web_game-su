@@ -19,6 +19,8 @@ var footstep_frames : Array = [1,4]
 signal interact
 signal no_interact
 
+var arrow_length = 13
+
 func _physics_process(delta):
 	move_player()
 
@@ -29,10 +31,10 @@ func move_player():
 					 # Get the player's input: left is negative (-1200)
 		if walk_x < 0:                                  # If left was pressed
 			direction = "left"                                                  # Set direction to "left"
-			arrow.target_position = Vector2(-20, 0)                        # Set direction of RayCast2D to face left
+			arrow.target_position = Vector2(-arrow_length, 0)                        # Set direction of RayCast2D to face left
 		if walk_x > 0:                                 # If right was pressed
 			direction = "right"                                                 # Set direciton to "right"
-			arrow.target_position = Vector2(20, 0)                         # Set direction of RayCast2D to face right 
+			arrow.target_position = Vector2(arrow_length, 0)                         # Set direction of RayCast2D to face right 
 		if abs(walk_x) < WALK_FORCE * 0.2:                                      # Slow down the player if they're not trying to move.
 			if direction == "left":                                             
 				$PlayerSprite.play("idle_left")
@@ -49,10 +51,10 @@ func move_player():
 		var walk_y = WALK_FORCE * (-1 if Input.is_action_pressed("ui_up") else 1 if Input.is_action_pressed("ui_down") else 0)
 		if walk_y < 0:
 			direction = "up"
-			arrow.target_position = Vector2(0, -20)
+			arrow.target_position = Vector2(0, -arrow_length)
 		if walk_y > 0:
 			direction = "down"
-			arrow.target_position = Vector2(0, 20)
+			arrow.target_position = Vector2(0, arrow_length)
 		# Slow down the player if they're not trying to move.
 		if abs(walk_y) < WALK_FORCE * 0.2:
 			if direction == "up":

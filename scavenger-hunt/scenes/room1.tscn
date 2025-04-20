@@ -1,26 +1,29 @@
-[gd_scene load_steps=43 format=4 uid="uid://gcyk1e71f4ge"]
+[gd_scene load_steps=46 format=4 uid="uid://17wx3jdqs3le"]
 
-[ext_resource type="Texture2D" uid="uid://f50duh6pb70e" path="res://scavenger-hunt/assets/floors/floor-1.png" id="1_a5wg4"]
+[ext_resource type="Texture2D" uid="uid://nsllocn4wyu3" path="res://scavenger-hunt/assets/floors/floor-1.png" id="1_a5wg4"]
 [ext_resource type="Script" path="res://scavenger-hunt/scripts/room_1.gd" id="1_j7enj"]
-[ext_resource type="Texture2D" uid="uid://cgg62du438x1b" path="res://scavenger-hunt/assets/borders/borders-1.png" id="3_fspv0"]
-[ext_resource type="Texture2D" uid="uid://bgbmghvcude1g" path="res://scavenger-hunt/assets/walls/walls-1.png" id="4_mkqcg"]
-[ext_resource type="Texture2D" uid="uid://dsjhjimk4bqrx" path="res://scavenger-hunt/assets/room1/receptionist.png" id="4_noe72"]
-[ext_resource type="Texture2D" uid="uid://by1ly3nuu18dt" path="res://scavenger-hunt/assets/borders/borders-2.png" id="6_xk80i"]
-[ext_resource type="Texture2D" uid="uid://cxwbiigbrynvy" path="res://scavenger-hunt/assets/pop_up/notebook_page.png" id="11_0lhsj"]
-[ext_resource type="Texture2D" uid="uid://puhyvnyepjne" path="res://scavenger-hunt/assets/doors/wood/door-1.png" id="12_1qeqr"]
-[ext_resource type="Texture2D" uid="uid://yd5yvtobjfql" path="res://scavenger-hunt/assets/room1/desk.png" id="12_a0lli"]
-[ext_resource type="Texture2D" uid="uid://c1itsed8n31fc" path="res://scavenger-hunt/assets/room1/notebook.png" id="12_r8o7u"]
-[ext_resource type="Texture2D" uid="uid://ivk1nl2x5tva" path="res://scavenger-hunt/assets/doors/wood/door-3.png" id="14_gj40p"]
-[ext_resource type="PackedScene" uid="uid://bqxanko0hg4hl" path="res://scavenger-hunt/scenes/player.tscn" id="14_wv7gx"]
-[ext_resource type="Texture2D" uid="uid://c7iqwwsmlg7io" path="res://scavenger-hunt/assets/doors/wood/door-4.png" id="15_lu7rn"]
-[ext_resource type="Texture2D" uid="uid://7k8u3uwr8dc0" path="res://scavenger-hunt/assets/room1/chair.png" id="15_wkn5t"]
-[ext_resource type="Texture2D" uid="uid://cg14higfr2aib" path="res://scavenger-hunt/assets/room1/table.png" id="16_4cwij"]
-[ext_resource type="Texture2D" uid="uid://b1e7x7k8q4tnq" path="res://scavenger-hunt/assets/doors/wood/door-5.png" id="16_302dd"]
-[ext_resource type="Texture2D" uid="uid://bak0vbosqnah5" path="res://scavenger-hunt/assets/room1/picture.png" id="16_y0xd7"]
-[ext_resource type="PackedScene" path="res://scavenger-hunt/scenes/question.tscn" id="18_mxad4"]
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="19_fi0nm"]
-[ext_resource type="PackedScene" path="res://scavenger-hunt/scenes/description.tscn" id="20_yqpkd"]
-[ext_resource type="Texture2D" uid="uid://bi5wc8hbw0rlw" path="res://scavenger-hunt/assets/doors/glass/glass-5.png" id="22_3uegg"]
+[ext_resource type="Texture2D" uid="uid://shk6kfu8o2h6" path="res://scavenger-hunt/assets/borders/borders-1.png" id="3_fspv0"]
+[ext_resource type="Texture2D" uid="uid://c18rhl1hjlbbu" path="res://scavenger-hunt/assets/walls/walls-1.png" id="4_mkqcg"]
+[ext_resource type="Texture2D" uid="uid://353gtkfrs5mj" path="res://scavenger-hunt/assets/room1/receptionist.png" id="4_noe72"]
+[ext_resource type="Texture2D" uid="uid://b3imhh5bphvce" path="res://scavenger-hunt/assets/borders/borders-2.png" id="6_xk80i"]
+[ext_resource type="Texture2D" uid="uid://du04jg8okhdsh" path="res://scavenger-hunt/assets/pop_up/notebook_page.png" id="11_0lhsj"]
+[ext_resource type="Texture2D" uid="uid://cdbh06tixl85t" path="res://scavenger-hunt/assets/doors/wood/door-1.png" id="12_1qeqr"]
+[ext_resource type="Texture2D" uid="uid://d2wk85bw5jv8v" path="res://scavenger-hunt/assets/room1/desk.png" id="12_a0lli"]
+[ext_resource type="Texture2D" uid="uid://bbdv8chpun6gj" path="res://scavenger-hunt/assets/room1/notebook.png" id="12_r8o7u"]
+[ext_resource type="Texture2D" uid="uid://c8rara0m14prn" path="res://scavenger-hunt/assets/doors/wood/door-3.png" id="14_gj40p"]
+[ext_resource type="PackedScene" uid="uid://byo5jn1nt53yv" path="res://scavenger-hunt/scenes/player.tscn" id="14_wv7gx"]
+[ext_resource type="Texture2D" uid="uid://brlxbsovtqpeg" path="res://scavenger-hunt/assets/doors/wood/door-4.png" id="15_lu7rn"]
+[ext_resource type="Texture2D" uid="uid://c3u4yq3pftugc" path="res://scavenger-hunt/assets/room1/chair.png" id="15_wkn5t"]
+[ext_resource type="Texture2D" uid="uid://hkyeo22qhxh7" path="res://scavenger-hunt/assets/room1/table.png" id="16_4cwij"]
+[ext_resource type="Texture2D" uid="uid://cs1xe0wi6wst2" path="res://scavenger-hunt/assets/doors/wood/door-5.png" id="16_302dd"]
+[ext_resource type="Texture2D" uid="uid://ctddcwr87hbyh" path="res://scavenger-hunt/assets/room1/picture.png" id="16_y0xd7"]
+[ext_resource type="PackedScene" uid="uid://wnattyfpcri1" path="res://scavenger-hunt/scenes/question.tscn" id="18_mxad4"]
+[ext_resource type="Texture2D" uid="uid://d2gix3gserx5q" path="res://scavenger-hunt/assets/room1/top-half-chair.png" id="18_xu72g"]
+[ext_resource type="Texture2D" uid="uid://4sd5txcdlwko" path="res://scavenger-hunt/assets/room1/top-half-table.png" id="19_enyhu"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="19_fi0nm"]
+[ext_resource type="Texture2D" uid="uid://c7nqnemaykbbm" path="res://scavenger-hunt/assets/room1/top-half-table1.png" id="20_rabt5"]
+[ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/scenes/description.tscn" id="20_yqpkd"]
+[ext_resource type="Texture2D" uid="uid://tqf5j2em4w70" path="res://scavenger-hunt/assets/doors/glass/glass-5.png" id="22_3uegg"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="22_merev"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yu88q"]
@@ -207,19 +210,16 @@ radius = 19.0008
 height = 58.0012
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfxvv"]
-size = Vector2(6400, 1016.67)
+size = Vector2(6400, 1366.67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhomk"]
-size = Vector2(14, 21.0499)
+size = Vector2(14, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l54co"]
-size = Vector2(36, 39)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_koiod"]
-size = Vector2(69, 18)
+size = Vector2(36, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hq2a"]
-size = Vector2(12, 13)
+size = Vector2(12, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxsrr"]
 size = Vector2(41.5, 0)
@@ -251,16 +251,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxhcq"]
-size = Vector2(48, 126)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_afgvc"]
-size = Vector2(27, 4)
+size = Vector2(48, 125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfwip"]
 size = Vector2(60, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04qg3"]
 size = Vector2(53.875, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w41ee"]
+size = Vector2(39, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afgvc"]
+size = Vector2(27, 4)
 
 [node name="Room1" type="Node2D"]
 scale = Vector2(2, 2)
@@ -273,6 +276,7 @@ tile_set = SubResource("TileSet_0wprq")
 [node name="Walls" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAOAA0AAQABAAEAAAAPAA0AAQABAAEAAAAQAA0AAQABAAEAAAARAA0AAQABAAEAAAASAA0AAQABAAEAAAATAA0AAQABAAEAAAAUAA0AAQABAAEAAAAVAA0AAQABAAEAAAAWAA0AAQACAAEAAAAZAA0AAQAIAAEAAAANAA0AAQAIAAEAAAAOAAwAAQABAAAAAAAPAAwAAQABAAAAAAAQAAwAAQABAAAAAAARAAwAAQABAAAAAAASAAwAAQABAAAAAAATAAwAAQABAAAAAAAUAAwAAQABAAAAAAAVAAwAAQABAAAAAAAWAAwAAQACAAAAAAAYAAwAAQAAAAAAAAAZAAwAAQABAAAAAAANAAwAAQABAAAAAAAYAA0AAQAAAAEAAAA=")
 tile_set = SubResource("TileSet_lr774")
+collision_visibility_mode = 1
 
 [node name="Border" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAA3ACUACgAAAAAAAAA4ACUACgAAAAAAAAA5ACUACgAAAAAAAABAACUACgAAAAMAAAA8ACUACgAAAAAAAAA9ACUACgAAAAAAAAA+ACUACgAAAAAAAAA/ACUACgAAAAAAAABAAB8ACgABAAEAAABAACAACgABAAEAAABAACEACgABAAEAAABAACIACgABAAEAAABAACMACgABAAEAAABAACQACgABAAEAAAA1AB8ACgACAAEAAAA1ACAACgACAAEAAAA1ACEACgACAAEAAAA1ACIACgACAAEAAAA1ACMACgACAAEAAAA1ACQACgACAAEAAAA1ACUACgABAAMAAAA2ACUACgAAAAAAAAAOAAwAAAAAAAEAAAAPAAwAAAAAAAEAAAAQAAwAAAAAAAEAAAARAAwAAAAAAAEAAAASAAwAAAAAAAEAAAATAAwAAAAAAAEAAAAUAAwAAAAAAAEAAAAVAAwAAAAAAAEAAAAWAAwAAQACAAEAAAAYAAwAAQADAAEAAAAMAAwAAQAGAAEAAAAMAA0AAQAGAAIAAAAMAA4AAQAGAAIAAAAMAA8AAQAGAAIAAAAMABAAAQAGAAIAAAAMABEAAQAGAAIAAAAMABIAAQAGAAIAAAAMABMAAQAGAAIAAAAMABQAAQAGAAIAAAAMABUAAQAGAAIAAAAMABYAAQAGAAMAAAANAAwAAQAHAAEAAAANABYAAQAHAAMAAAAOABYAAQAHAAMAAAAPABYAAQAHAAMAAAAQABYAAQAHAAMAAAARABYAAQAHAAMAAAASABYAAQACAAEAAAAUABYAAQADAAEAAAAVABYAAQAHAAMAAAAWABYAAQAHAAMAAAAXABYAAQAHAAMAAAAYABYAAQAHAAMAAAAaAA0AAQAIAAIAAAAaAA4AAQAIAAIAAAAaAA8AAQAIAAIAAAAaABAAAQAIAAIAAAAaABEAAQAIAAIAAAAaABIAAQAIAAIAAAAaABMAAQAIAAIAAAAaABQAAQAIAAIAAAAaABUAAQAIAAIAAAAaAAwAAQAIAAEAAAAZAAwAAQAHAAEAAAAaABYAAQAIAAMAAAAZABYAAQAHAAMAAAAWAAsAAAABAAEAAAAYAAsAAAACAAEAAAA=")
@@ -303,74 +307,66 @@ position = Vector2(0.000172933, 0.000274658)
 texture = ExtResource("12_a0lli")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desk"]
-position = Vector2(0.000244141, -441.667)
+position = Vector2(0, -266.668)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xfxvv")
 
 [node name="Chair" type="StaticBody2D" parent="."]
 position = Vector2(744, 912)
-metadata/_edit_group_ = true
 
 [node name="ChairSprite" type="Sprite2D" parent="Chair"]
 scale = Vector2(3, 3)
 texture = ExtResource("15_wkn5t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair"]
+position = Vector2(0, 8.49994)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_qhomk")
 
 [node name="Table" type="StaticBody2D" parent="."]
 position = Vector2(789, 924)
-metadata/_edit_group_ = true
 
 [node name="TableSprite" type="Sprite2D" parent="Table"]
 scale = Vector2(3, 3)
 texture = ExtResource("16_4cwij")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_l54co")
 
 [node name="Chair2" type="StaticBody2D" parent="."]
 position = Vector2(834, 912)
-metadata/_edit_group_ = true
 
 [node name="ChairSprite" type="Sprite2D" parent="Chair2"]
 scale = Vector2(3, 3)
 texture = ExtResource("15_wkn5t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair2"]
+position = Vector2(0, 8.5)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_qhomk")
 
-[node name="QuestionArea" type="Area2D" parent="."]
-position = Vector2(941, 706)
-collision_layer = 5
-collision_mask = 2
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestionArea"]
-shape = SubResource("RectangleShape2D_koiod")
-
 [node name="Chair3" type="StaticBody2D" parent="."]
 position = Vector2(1035, 912)
-metadata/_edit_group_ = true
 
 [node name="ChairSprite" type="Sprite2D" parent="Chair3"]
 scale = Vector2(3, 3)
 texture = ExtResource("15_wkn5t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair3"]
+position = Vector2(0, 8.49994)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_qhomk")
 
 [node name="Table2" type="StaticBody2D" parent="."]
 position = Vector2(1080, 924)
-metadata/_edit_group_ = true
 
 [node name="TableSprite" type="Sprite2D" parent="Table2"]
 scale = Vector2(3, 3)
 texture = ExtResource("16_4cwij")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table2"]
+position = Vector2(0, -3.5)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_4hq2a")
 
@@ -383,6 +379,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("15_wkn5t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair4"]
+position = Vector2(0, 8.5)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_qhomk")
 
@@ -394,29 +391,15 @@ position = Vector2(0, 19)
 shape = SubResource("RectangleShape2D_fxsrr")
 
 [node name="LeaveDoor" type="StaticBody2D" parent="."]
-position = Vector2(1128, 609)
+position = Vector2(1128, 612)
 collision_mask = 2
-metadata/_edit_group_ = true
 
 [node name="DoorSprite" type="AnimatedSprite2D" parent="LeaveDoor"]
 sprite_frames = SubResource("SpriteFrames_lddvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeaveDoor"]
+position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_rxhcq")
-
-[node name="NotebookArea" type="Area2D" parent="."]
-position = Vector2(839, 1017)
-collision_layer = 4
-collision_mask = 2
-
-[node name="NotebookSprite" type="Sprite2D" parent="NotebookArea"]
-position = Vector2(-50, -100)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_r8o7u")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NotebookArea"]
-position = Vector2(-50, -89)
-shape = SubResource("RectangleShape2D_afgvc")
 
 [node name="PictureArea" type="Area2D" parent="."]
 position = Vector2(771, 630)
@@ -443,9 +426,33 @@ texture = ExtResource("22_3uegg")
 position = Vector2(0.0625, -52.2123)
 shape = SubResource("RectangleShape2D_04qg3")
 
+[node name="QuestionArea" type="StaticBody2D" parent="."]
+position = Vector2(938.5, 703.5)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestionArea"]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_w41ee")
+
+[node name="NotebookArea" type="Area2D" parent="."]
+position = Vector2(839, 1017)
+collision_layer = 4
+collision_mask = 2
+
+[node name="NotebookSprite" type="Sprite2D" parent="NotebookArea"]
+position = Vector2(-50, -99.75)
+scale = Vector2(0.5, 0.499999)
+texture = ExtResource("12_r8o7u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NotebookArea"]
+position = Vector2(-50, -89)
+shape = SubResource("RectangleShape2D_afgvc")
+
 [node name="Player" parent="." instance=ExtResource("14_wv7gx")]
 position = Vector2(934, 1021)
 scale = Vector2(1.2, 1.2)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(3.57628e-07, 0)
@@ -455,6 +462,36 @@ limit_top = 1152
 limit_right = 2538
 limit_bottom = 2148
 
+[node name="Top-half-chair" type="Sprite2D" parent="."]
+position = Vector2(744, 912)
+scale = Vector2(3, 3)
+texture = ExtResource("18_xu72g")
+
+[node name="Top-half-chair2" type="Sprite2D" parent="."]
+position = Vector2(834, 912)
+scale = Vector2(3, 3)
+texture = ExtResource("18_xu72g")
+
+[node name="Top-half-chair3" type="Sprite2D" parent="."]
+position = Vector2(1035, 912)
+scale = Vector2(3, 3)
+texture = ExtResource("18_xu72g")
+
+[node name="Top-half-chair4" type="Sprite2D" parent="."]
+position = Vector2(1125, 912)
+scale = Vector2(3, 3)
+texture = ExtResource("18_xu72g")
+
+[node name="Top-half-table1" type="Sprite2D" parent="."]
+position = Vector2(789, 921.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_rabt5")
+
+[node name="Top-half-table2" type="Sprite2D" parent="."]
+position = Vector2(1080, 924)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("19_enyhu")
+
 [node name="PageSprite" type="TextureRect" parent="."]
 visible = false
 anchors_preset = 8
@@ -462,14 +499,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 653.5
-offset_top = 878.0
-offset_right = 983.5
-offset_bottom = 1088.0
+offset_left = 688.0
+offset_top = 864.5
+offset_right = 1018.0
+offset_bottom = 1074.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("11_0lhsj")
+metadata/_edit_group_ = true
 
 [node name="Message" type="Label" parent="PageSprite"]
 layout_mode = 0
@@ -508,11 +546,10 @@ vertical_alignment = 1
 
 [node name="PicturePopUp" parent="." instance=ExtResource("20_yqpkd")]
 visible = false
-offset_left = 653.5
-offset_top = 630.5
-offset_right = 901.5
-offset_bottom = 727.5
-scale = Vector2(0.833, 0.833)
+offset_left = 697.0
+offset_top = 665.0
+offset_right = 945.0
+offset_bottom = 762.0
 
 [node name="CloseInstructions" type="Label" parent="PicturePopUp"]
 z_index = 10
@@ -537,11 +574,10 @@ vertical_alignment = 1
 
 [node name="ChairPopUp" parent="." instance=ExtResource("20_yqpkd")]
 visible = false
-offset_left = 1016.5
-offset_top = 904.5
-offset_right = 1264.5
-offset_bottom = 1001.5
-scale = Vector2(0.833, 0.833)
+offset_left = 947.5
+offset_top = 902.5
+offset_right = 1195.5
+offset_bottom = 999.5
 
 [node name="CloseInstructions" type="Label" parent="ChairPopUp"]
 z_index = 10
@@ -566,11 +602,10 @@ vertical_alignment = 1
 
 [node name="Question" parent="." instance=ExtResource("18_mxad4")]
 visible = false
-offset_left = 836.5
-offset_top = 682.0
-offset_right = 1084.5
-offset_bottom = 779.0
-scale = Vector2(0.833, 0.833)
+offset_left = 812.5
+offset_top = 694.5
+offset_right = 1060.5
+offset_bottom = 791.5
 
 [node name="CloseInstructions" type="Label" parent="Question"]
 z_index = 10

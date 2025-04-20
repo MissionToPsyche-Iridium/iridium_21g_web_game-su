@@ -89,8 +89,9 @@ func _reset_room(room_num):
 	wide_cameras[room_num].enabled = false
 	
 	if room_num < 3:
-		active_players[room_num].movable = false
+		playing_cameras[room_num].enabled = false
 		active_players[room_num].hide()
+		active_players[room_num].movable = false
 		_reset_player(room_num,active_players[room_num])
 		
 		enter_solid_doors[room_num].hide()
@@ -100,8 +101,6 @@ func _reset_room(room_num):
 		
 		enter_ani_doors[room_num].show()
 		leave_ani_doors[room_num].hide()
-		
-		playing_cameras[room_num].enabled = false
 		
 		rooms[room_num].get_node("LeaveRoom" + str(room_num+1)).hide()
 		leave_players[room_num].movable = false
@@ -210,12 +209,14 @@ func enter_end(room_num):
 	if room_num < 3:
 		enter_ani_doors[room_num].play("close")
 		$Audio/sfx_doors.play()
+		await get_tree().create_timer(1.0).timeout
 		fade(room_num, false)
 		await get_tree().create_timer(1.0).timeout
 		enter_ani_doors[room_num].hide()
 		enter_solid_doors[room_num].show()
 		enter_solid_doors[room_num].get_node("CollisionShape2D").disabled = false
 		enter_players[room_num].hide()
+		rooms[room_num].get_node("EnterRoom" + str(room_num+1)).hide()
 		play_room(room_num)
 	elif room_num == 3:
 		start_zoom()
@@ -266,6 +267,7 @@ func _process_leave(room_num):
 func end_partA():
 	partA = false
 	await get_tree().create_timer(1.0).timeout
+	Audio.play_music_minigame(-15)
 	partB = true
 
 func end_partB():
@@ -284,9 +286,9 @@ func leave_end(room_num):
 		$Audio/sfx_doors.play()
 		fade(room_num,false)
 		await get_tree().create_timer(1.0).timeout
-		active_players[room_num].hide()
 		leave_players[room_num].hide()
-		await get_tree().create_timer(2.0).timeout
+		rooms[room_num].get_node("LeaveRoom" + str(current_room+1)).hide()
+		await get_tree().create_timer(1.0).timeout
 		switch_room(room_num + 1)
 
 func _process_zoom():
@@ -296,11 +298,9 @@ func _process_zoom():
 	if is_followingpath:
 		if pathfollower.progress_ratio < 1:
 			pathfollower.progress_ratio += 0.005
-			if zooming_camera.zoom < Vector2(60, 60):
+			if zooming_camera.zoom < Vector2(22, 22):
 				zooming_camera.zoom += Vector2(0.1, 0.1)
 		else:
-			room_states["zoom"] = false
-			is_followingpath = false
 			end_zoom()
 
 func enter_room(room_num):
@@ -344,17 +344,15 @@ func fade(room_num, uncover):
 				animation.play("room4_cover")
 
 func play_room(room_num):
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	wide_cameras[room_num].enabled = false
 	if room_num < 3:
 		playing_cameras[room_num].enabled = true
-	enter_ani_doors[room_num].hide()
-	rooms[room_num].get_node("EnterRoom" + str(room_num+1)).hide()
-	rooms[room_num].get_node("Player").show()
+	active_players[room_num].show()
 	await get_tree().create_timer(1.0).timeout
 	fade(room_num, true)
 	await get_tree().create_timer(1.0).timeout
-	rooms[room_num].get_node("Player").movable = true
+	active_players[room_num].movable = true
 	covers[room_num].hide()
 	
 func _on_win():
@@ -366,6 +364,9 @@ func _on_win():
 	leave_solid_doors[current_room].hide()
 	leave_solid_doors[current_room].get_node("CollisionShape2D").disabled = true
 	active_players[current_room].hide()
+	active_players[current_room].movable = false
+	active_players[current_room].moving = false
+	rooms[current_room].interactable = false
 	rooms[current_room].get_node("Question").hide()
 	start_leave()
 
@@ -375,7 +376,6 @@ func switch_room(next_index):
 		rooms[next_index].show()
 		covers[current_room].hide()
 		wide_cameras[current_room].enabled = false
-		fade(current_room,false)
 		wide_cameras[next_index].enabled = true
 		current_room = next_index
 		await get_tree().create_timer(0.5).timeout
@@ -398,6 +398,7 @@ func start_zoom():
 
 func end_zoom():
 	room_states["zoom"] = false
+	is_followingpath = false
 	fade(current_room,false)
 	await get_tree().create_timer(1.0).timeout
 	fade(current_room,true)

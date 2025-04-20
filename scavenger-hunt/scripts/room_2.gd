@@ -14,11 +14,11 @@ var time_zone = Time.get_time_zone_from_system()                                
 var start_unix_time = Time.get_unix_time_from_datetime_dict(start_date)
 var current_datetime = Time.get_datetime_dict_from_system()   # UTC time zone
 var current_unix_time = Time.get_unix_time_from_datetime_dict(current_datetime)  # Unix time (seconds) in UTC	
-
 var start_zone
 var days
 var hours
 var minutes
+
 var questions_dict = {
 	0: ["To what program did the team submit their proposal and concept study?", 
 		"NASA's Space Exploration Program", 
@@ -58,7 +58,7 @@ func _ready() -> void:
 	questions_dict[1][2] = ("%d days" % [(days - 4)])
 	questions_dict[1][3] = ("%d days" % [(days + 5)])
 	
-	var question_number = rng.randi_range(0,1)
+	var question_number = rng.randi_range(0,2)
 	$Question/Question/Question.text = questions_dict[question_number][0]
 	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
 	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
@@ -73,22 +73,22 @@ func _ready() -> void:
 		
 	$Papers1Description/Container/Message.text = "It's a 256 page proposal that was selected for the concept study."
 	$Papers2Description/Container/Message.text = "Wow! It's a 1,000 word concept study submitted for consideration for NASA’s Discovery Program."
-	$ShelvesDescription/Container/Message.text = "It's a collection of some of the research the team did. Some of it dates all the way back to 2011."
+	$ShelvesDescription/Container/Message.text = "It's a collection of some of the research the team did. Some of it dates all the way back to 2011 when they submitted the concept study."
 	$ComputerDescription/Container/Message.text = "It's the Psyche website. It has a lot of important information"
+	
 	$Player.movable = false
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (interactable == true):
 		var collidingNode = $Player/RayCast2D.get_collider()
-		if collidingNode == $QuestionArea:
+		if collidingNode == $Scientist:
 			handle_popup($Question)
-		elif collidingNode == $Papers1Area:
+		elif collidingNode == $Papers1:
 			handle_popup($Papers1Description)
-		elif collidingNode == $Papers2Area:
+		elif collidingNode == $Papers2:
 			handle_popup($Papers2Description)
-		elif collidingNode == $ShelvesArea:
+		elif collidingNode == $Shelves:
 			handle_popup($ShelvesDescription)
 		elif collidingNode == $ComputerArea:
 			handle_popup($ComputerDescription)
@@ -114,18 +114,21 @@ func correct_answer() -> void:
 	$Question/Validation/Message.text = "Correct!"
 	$Question/Question.hide()
 	$Question/Validation.show()
+	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
-	
+
 func wrong_answer() -> void:
 	$Audio/sfx_close.stop()
 	$Audio/sfx_close.play()
-	$Player/Camera2D/Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
-	$Player/Camera2D/Question/Question.hide()
-	$Player/Camera2D/Question/Validation.show()
+	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	$Question/Question.hide()
+	$Question/Validation.show()
+	await get_tree().create_timer(2.0).timeout
+	$Question/Validation.hide()
+	$Question/Question.show()
 	
 func _on_question_option_1() -> void:
-	
 	if (correct == 1):
 		correct_answer()
 	else:

@@ -31,7 +31,7 @@ var questions_dict = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var question_number = rng.randi_range(0,1)
+	var question_number = rng.randi_range(0,2)
 	$Question/Question/Question.text = questions_dict[question_number][0]
 	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
 	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
@@ -56,17 +56,20 @@ func _process(delta: float) -> void:
 	if (interactable == true):
 		var collidingNode = $Player/RayCast2D.get_collider()
 		if collidingNode == $QuestionArea:
-			handle_popup($Question, "question")
+			handle_popup($Question)
 		elif collidingNode == $NotebookArea:
-			handle_popup($PageSprite, "notebook")
+			handle_popup($PageSprite)
 		elif collidingNode == $PictureArea:
-			handle_popup($PicturePopUp, "picture")
+			handle_popup($PicturePopUp)
 		elif collidingNode == $Chair4/Area2D:
-			handle_popup($ChairPopUp, "chair")
+			handle_popup($ChairPopUp)
 
 
-func handle_popup(popup_node: Node, area_name: String) -> void:
+func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
+		if popup_node == $Question: 
+			$Question/Question.show()
+			$Question/Validation.hide()
 		popup_node.show()
 		if !isOpen:
 			$Audio/sfx_open.play()
@@ -89,6 +92,7 @@ func correct_answer() -> void:
 	$Question/Validation/Message.text = "Correct!"
 	$Question/Question.hide()
 	$Question/Validation.show()
+	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
 	
@@ -98,6 +102,10 @@ func wrong_answer() -> void:
 	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
 	$Question/Question.hide()
 	$Question/Validation.show()
+	await get_tree().create_timer(2.0).timeout
+	$Question/Validation.hide()
+	$Question/Question.show()
+	
 
 func _on_question_option_1() -> void:
 	if (correct == 1):

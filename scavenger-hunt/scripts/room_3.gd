@@ -21,7 +21,6 @@ var questions_dict = {
 		"mostly made of rock and ice", 
 		"not going to collect data"],
 }
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	var question_number = rng.randi_range(0,1)
@@ -37,7 +36,7 @@ func _ready() -> void:
 
 	$CabinetDescription/Container/Message.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
 
-	$Player.movable = false
+	$Player.movable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -71,15 +70,19 @@ func correct_answer() -> void:
 	$Question/Validation/Message.text = "Correct!"
 	$Question/Question.hide()
 	$Question/Validation.show()
+	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
 	
 func wrong_answer() -> void:
 	$Audio/sfx_close.stop()
 	$Audio/sfx_close.play()
-	$Player/Camera2D/Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
-	$Player/Camera2D/Question/Question.hide()
-	$Player/Camera2D/Question/Validation.show()
+	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	$Question/Question.hide()
+	$Question/Validation.show()
+	await get_tree().create_timer(2.0).timeout
+	$Question/Validation.hide()
+	$Question/Question.show()
 	
 func _on_question_option_1() -> void:
 	if (correct == 1):

@@ -1,5 +1,6 @@
 extends Control
 
+signal from_start
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,11 +30,12 @@ func _on_start_pressed() -> void:                   # When the start button is p
 	$AnimationPlayer.play("cover")                  # Cover the start menu - "fade to black"
 	await get_tree().create_timer(1.2).timeout      # Wait 1.2 seconds to let the animation finish 
 	Audio.volume_db = -30
-	get_tree().change_scene_to_file("res://scavenger-hunt/instructions/instructions.tscn")   # Change the scence to the scavenger hunt minigame 
+	get_tree().change_scene_to_file("res://scavenger-hunt/scenes/instructions.tscn")   # Change the scence to the scavenger hunt minigame 
 	Audio.stop()
 
 func _on_credits_pressed() -> void:                 # When the credits button is pressed 
 	$Cover.show()                                   # Show the cover
 	$AnimationPlayer.play("cover")                  # Cover the start menu - "fade to black"
+	from_start.emit()
 	await get_tree().create_timer(1.2).timeout      # Wait 1.2 seconds to let the animation finish 
-	get_tree().change_scene_to_file("res://Credits scene/credits.tscn")   # Change the scence to the credits screen 
+	get_tree().change_scene_to_file("res://scavenger-hunt/scenes/leave.tscn")   # Change the scence to the credits screen 
