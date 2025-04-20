@@ -13,10 +13,10 @@ const lineSpeed = 100
 #[name, delay, text
 var textBlocks = [
 	["Psyche", 4.5, "A unique metal asteroid which provides a window into the formation of planetary cores."],
-	["bananab", 5, "some text ove here"],
-	["bananac", 5, "some text idk"],
-	["bananad", 5, "some text well"],
-	["bananae", 5, "some text you see"],
+	["Multispectral Imager", 5, "The Multispectral Imager provides high-resolution images using filters to discriminate between Psyche’s metallic and silicate constituents."],
+	["Spectrometer", 5, "The Spectrometer will detect, measure, and map Psyche’s elemental composition."],
+	["Magnetometer", 5, "The Magnetometer is designed to detect and measure the remanent magnetic field of the asteroid."],
+	["Asteriods", 5, "some text you see"],
 	["bananaf", 5, "some text"],
 	["bananag", 5, "some text"],
 	["bananah", 5, "some text"]
@@ -38,10 +38,13 @@ func _process(delta: float) -> void:
 		pass#simply exists as a check
 	else:
 		lineTimer += delta
-		if lineTimer >= lineTime:
-			lineTimer -= lineTime
+		#if lineTimer >= lineTime:
+		if blocks.size() == 0 && textBlocks.size() != 0:
+			#lineTimer -= lineTime
 			addBlock()
-		if blocks.size() > 0:
+		elif blocks.size() > 0:
+			if blocks.back().global_position.x + blocks.back().rightPoint() + 50 < startPos.x:
+				addBlock()
 			for i in blocks:
 				i.move(-lineSpeed*delta)
 				i.checkFail(delta)
