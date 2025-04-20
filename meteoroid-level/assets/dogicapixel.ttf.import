@@ -3,12 +3,11 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ca46xqutaucrs"
-path="res://.godot/imported/dogicapixel.ttf-0a0277e430fdd65c929999b331553c68.fontdata"
+valid=false
 
 [deps]
 
 source_file="res://meteoroid-level/assets/dogicapixel.ttf"
-dest_files=["res://.godot/imported/dogicapixel.ttf-0a0277e430fdd65c929999b331553c68.fontdata"]
 
 [params]
 
