@@ -41,3 +41,7 @@ func player_movement(delta):
 func _on_timer_timeout() -> void:
 	gas = false
 	print("out of gas")
+
+func get_time_left() :
+	return $Timer.time_left
+	

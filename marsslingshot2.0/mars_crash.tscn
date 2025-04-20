@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsadpfbtx8lyt"]
 
-[ext_resource type="Script" path="res://slingshot/mars_crash.gd" id="1_qmlrs"]
+[ext_resource type="Script" path="res://slingshot/mars_crash.gd" id="1_m457p"]
 
 [node name="MarsCrash" type="Node2D"]
-script = ExtResource("1_qmlrs")
+script = ExtResource("1_m457p")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 462.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgxqsrrr3uyoh"]
 
 [ext_resource type="Script" path="res://slingshot/mars.gd" id="1_gtiou"]
-[ext_resource type="Texture2D" uid="uid://dsx2pr6ebamps" path="res://slingshot/R.png" id="2_cktq1"]
+[ext_resource type="Texture2D" uid="uid://dsx2pr6ebamps" path="res://slingshot/assets/R.png" id="2_cktq1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oiufe"]
 radius = 582.278
