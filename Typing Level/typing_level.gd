@@ -12,7 +12,7 @@ var textBox = false
 const lineSpeed = 100
 #[name, delay, text
 var textBlocks = [
-	["banana", 4.5, "some text idk what to say here you see"],
+	["Psyche", 4.5, "A unique metal asteroid which provides a window into the formation of planetary cores."],
 	["bananab", 5, "some text ove here"],
 	["bananac", 5, "some text idk"],
 	["bananad", 5, "some text well"],
@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 			for i in blocks:
 				i.move(-lineSpeed*delta)
 				i.checkFail(delta)
-				if i.global_position.x < i.rightPoint():
+				if i.global_position.x  < -i.rightPoint():
 					if not i.completed():
 						textBlocks.append(i.getInfo())
 					blocks.erase(i)

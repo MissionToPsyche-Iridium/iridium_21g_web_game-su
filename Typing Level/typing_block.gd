@@ -63,8 +63,7 @@ func move(speed):
 	position.x += speed
 
 func rightPoint():
-	print(label.get_line_height())
-	return -label.get_total_character_count()*300
+	return label.get_global_rect().size[0]
 
 func setInformation(information):
 	info = information
