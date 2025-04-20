@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://xq3ldp26b7do"]
 
-[ext_resource type="Script" path="res://credits_container.gd" id="1_ah5oq"]
-[ext_resource type="Texture2D" uid="uid://ri1m1xodfi5r" path="res://istockphoto-1368151405-612x612.jpg" id="1_w1vrn"]
-[ext_resource type="Texture2D" uid="uid://dacksi4rv7420" path="res://icon.svg" id="2_206os"]
+[ext_resource type="Script" path="res://Test Speech Scene/credits_container.gd" id="1_ah5oq"]
+[ext_resource type="Texture2D" uid="uid://bac8r82dtlyj6" path="res://Test Speech Scene/istockphoto-1368151405-612x612.jpg" id="1_w1vrn"]
+[ext_resource type="Texture2D" uid="uid://dk0xsphtnjip7" path="res://Test Speech Scene/icon.svg" id="2_206os"]
 
 [node name="Speech" type="Node2D"]
 
