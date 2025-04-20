@@ -1,6 +1,6 @@
 extends Node2D
 
-const scrollSpeed = 200
+const scrollSpeed = 100
 
 @export var text: PackedScene
 var texts = null
@@ -9,17 +9,17 @@ var startPos
 var lineTimer = 0
 var lineTime = 0
 var textBox = false
-const lineSpeed = 500
+const lineSpeed = 100
 #[name, delay, text
 var textBlocks = [
-	["banana", .9, "some text idk what to say here you see"],
-	["bananab", 1, "some text ove here"],
-	["bananac", 1, "some text idk"],
-	["bananad", 1, "some text well"],
-	["bananae", 1, "some text you see"],
-	["bananaf", 1, "some text"],
-	["bananag", 1, "some text"],
-	["bananah", 1, "some text"]
+	["banana", 4.5, "some text idk what to say here you see"],
+	["bananab", 5, "some text ove here"],
+	["bananac", 5, "some text idk"],
+	["bananad", 5, "some text well"],
+	["bananae", 5, "some text you see"],
+	["bananaf", 5, "some text"],
+	["bananag", 5, "some text"],
+	["bananah", 5, "some text"]
 ]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -59,8 +59,8 @@ func addBlock():
 		return
 	var popValues = textBlocks.pop_front()
 	var newText = text.instantiate(0)
-	add_child(newText)
-	newText.setPos(startPos)
+	$Node2D2/Node2D.add_child(newText)
+	#newText.setPos(startPos)
 	newText.setText(popValues[0])
 	newText.setInformation(popValues)
 	lineTime = popValues[1]
