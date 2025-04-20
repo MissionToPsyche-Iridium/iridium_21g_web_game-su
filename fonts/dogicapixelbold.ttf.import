@@ -3,11 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dwjftoa7547xl"
-valid=false
+path="res://.godot/imported/dogicapixelbold.ttf-b9c2ae7da60b09676a573fdd72fc79ca.fontdata"
 
 [deps]
 
 source_file="res://fonts/dogicapixelbold.ttf"
+dest_files=["res://.godot/imported/dogicapixelbold.ttf-b9c2ae7da60b09676a573fdd72fc79ca.fontdata"]
 
 [params]
 

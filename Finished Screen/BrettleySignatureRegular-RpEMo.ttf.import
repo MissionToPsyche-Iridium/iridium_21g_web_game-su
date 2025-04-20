@@ -3,11 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bgise5ysuqast"
-valid=false
+path="res://.godot/imported/BrettleySignatureRegular-RpEMo.ttf-ec3cbd76c334fc593bdc47367371717f.fontdata"
 
 [deps]
 
 source_file="res://Finished Screen/BrettleySignatureRegular-RpEMo.ttf"
+dest_files=["res://.godot/imported/BrettleySignatureRegular-RpEMo.ttf-ec3cbd76c334fc593bdc47367371717f.fontdata"]
 
 [params]
 

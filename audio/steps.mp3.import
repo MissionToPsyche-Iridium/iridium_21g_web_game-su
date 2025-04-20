@@ -3,11 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://codrt5g4sp41k"
-valid=false
+path="res://.godot/imported/steps.mp3-c67deca77b4bd7e848c3ca9e86dd91a3.mp3str"
 
 [deps]
 
 source_file="res://audio/steps.mp3"
+dest_files=["res://.godot/imported/steps.mp3-c67deca77b4bd7e848c3ca9e86dd91a3.mp3str"]
 
 [params]
 

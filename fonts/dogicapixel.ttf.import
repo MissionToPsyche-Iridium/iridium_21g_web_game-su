@@ -3,11 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dad653sjnvr6f"
-valid=false
+path="res://.godot/imported/dogicapixel.ttf-9b7ab71389cd84bcfe93f79f51044f08.fontdata"
 
 [deps]
 
 source_file="res://fonts/dogicapixel.ttf"
+dest_files=["res://.godot/imported/dogicapixel.ttf-9b7ab71389cd84bcfe93f79f51044f08.fontdata"]
 
 [params]
 

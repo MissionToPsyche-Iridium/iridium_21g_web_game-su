@@ -3,11 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dopndlk12huy8"
-valid=false
+path="res://.godot/imported/CRTHum.mp3-b4bb960bed60b26847ddba40f5e55a13.mp3str"
 
 [deps]
 
 source_file="res://psychescan/assets/CRTHum.mp3"
+dest_files=["res://.godot/imported/CRTHum.mp3-b4bb960bed60b26847ddba40f5e55a13.mp3str"]
 
 [params]
 
