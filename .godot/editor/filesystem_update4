@@ -1,2 +1,6 @@
 res://start-menu/start_menu.tscn
 res://psychescan/texts/scannertext2.tscn
+res://psychescan/backgrounds/background3.tscn
+res://Typing Level/TypingLevel.tscn
+res://psychescan/backgrounds/background2.tscn
+res://psychescan/levels/level3.tscn
