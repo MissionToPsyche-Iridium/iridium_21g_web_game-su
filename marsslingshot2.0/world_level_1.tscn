@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://c1fg6c0a58tq7"]
 
-[ext_resource type="Script" path="res://slingshot/world_level_1.gd" id="1_reier"]
+[ext_resource type="Script" path="res://marsslingshot2.0/world_level_1.gd" id="1_reier"]
 [ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/space_ship.tscn" id="2_w6gui"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://slingshot/label.tscn" id="3_dw70b"]
-[ext_resource type="Script" path="res://slingshot/color_rect.gd" id="4_31rtf"]
-[ext_resource type="Script" path="res://slingshot/label_2.gd" id="5_gxfap"]
-[ext_resource type="Script" path="res://slingshot/static_body_2d.gd" id="6_b2mtf"]
-[ext_resource type="Texture2D" uid="uid://db2sd4a5jaqxw" path="res://slingshot/assets/checkpoint.png" id="7_y3f3v"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/label.tscn" id="3_dw70b"]
+[ext_resource type="Script" path="res://marsslingshot2.0/color_rect.gd" id="4_31rtf"]
+[ext_resource type="Script" path="res://marsslingshot2.0/label_2.gd" id="5_gxfap"]
+[ext_resource type="Script" path="res://marsslingshot2.0/static_body_2d.gd" id="6_b2mtf"]
+[ext_resource type="Texture2D" uid="uid://db2sd4a5jaqxw" path="res://slingshot/checkpoint.png" id="7_y3f3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd74w"]
 size = Vector2(1152, 645)
