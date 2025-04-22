@@ -314,6 +314,14 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 100
 text = "x"
 
+[node name="SignoffControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1157.0
+offset_top = 278.0
+offset_right = 1980.0
+offset_bottom = 702.0
+
 [connection signal="animation_finished" from="Node2D2/satellitePlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Node2D2/psychePlayer" to="." method="_on_psyche_player_animation_finished"]
 [connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]
