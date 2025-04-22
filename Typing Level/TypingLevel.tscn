@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Typing Level/typing_level.gd" id="1_yaj5j"]
 [ext_resource type="PackedScene" uid="uid://bfb4cc1is55wv" path="res://Typing Level/TypingBlock.tscn" id="2_wc733"]
-[ext_resource type="Texture2D" uid="uid://dmitpk0danggl" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
+[ext_resource type="Texture2D" uid="uid://dllaiteuoljol" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
 [ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="3_rhs66"]
 [ext_resource type="Texture2D" uid="uid://clufwj1x38o5p" path="res://psychescan/assets/psyche1.png" id="3_sbcle"]
 [ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="5_onspf"]
@@ -60,6 +60,22 @@ tracks/3/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_fsffb"]
+resource_name = "Spin"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PsycheShuttle:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0472, 7.33038]
+}
+
 [sub_resource type="Animation" id="Animation_w0hc3"]
 resource_name = "Start Cutscene"
 length = 5.0
@@ -82,22 +98,6 @@ tracks/1/path = NodePath("PsycheShuttle:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0472, 7.33038]
-}
-
-[sub_resource type="Animation" id="Animation_fsffb"]
-resource_name = "Spin"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PsycheShuttle:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
 "times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,

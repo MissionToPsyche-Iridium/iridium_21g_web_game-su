@@ -81,7 +81,7 @@ func _process(delta: float) -> void:
 			animationPlayer.play("endingSection")
 			playing = true
 	elif state == 4:
-		pass
+		changeScene()
 		
 
 func stateTwo(delta):
@@ -105,7 +105,7 @@ func stateTwo(delta):
 		
 	
 func changeScene():
-	get_tree().change_scene_to_file("res://start_menu/start_menu.tscn")
+	get_tree().change_scene_to_file("res://credits/credits.tscn")
 #adds a block to the blocks list
 func addBlock():
 	if textBlocks.size() == 0:
