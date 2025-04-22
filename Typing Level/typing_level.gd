@@ -6,24 +6,51 @@ const scrollSpeed = 100
 var texts = null
 var blocks = []
 var startPos
-var lineTimer = 0
-var lineTime = 0
 var textBox = false
+var state = 0
+var nextLeter = 0
+var label
+var animationPlayer
+var psychePlayer
+var playing = false
+var psychePlaying = false
+var correctSound
+var correct
 const lineSpeed = 100
+
+
+var rightTextBlocks = [
+	"The Psyche satellite will send out words. Hit [Enter] to continue",
+	"To complete this section, type the words to analyze what they are.",
+	"The satellite will continue to send out information until all information has been recieved."
+]
+
+
 #[name, delay, text
 var textBlocks = [
-	["Psyche", 4.5, "A unique metal asteroid which provides a window into the formation of planetary cores."],
-	["Multispectral Imager", 5, "The Multispectral Imager provides high-resolution images using filters to discriminate between Psyche’s metallic and silicate constituents."],
-	["Spectrometer", 5, "The Spectrometer will detect, measure, and map Psyche’s elemental composition."],
-	["Magnetometer", 5, "The Magnetometer is designed to detect and measure the remanent magnetic field of the asteroid."],
-	["Asteriods", 5, "some text you see"],
-	["bananaf", 5, "some text"],
-	["bananag", 5, "some text"],
-	["bananah", 5, "some text"]
+	["Psyche", "A unique metal asteroid which provides a window into the formation of planetary cores."],
+	["Instruments","The instruments consist of a magnetometer, a multispectral imager, and a gamma ray and neutron spectrometer."],
+	["Multispectral Imager", "The Multispectral Imager provides high-resolution images using filters to discriminate between Psyche’s metallic and silicate constituents."],
+	["Spectrometer", "The Spectrometer will detect, measure, and map Psyche’s elemental composition."],
+	["Magnetometer", "The Magnetometer is designed to detect and measure the remanent magnetic field of the asteroid."],
+	["Communication", "The Psyche mission will test a new laser communication technology that encodes data in photons to communicate between a probe and Earth. This allows for more data in less time."],
+	["Radio", "The Psyche mission will use the X-band radio telecommunications system to measure Psyche’s gravity field to high precision."],
+	["Phase B", "Science and engineering teams on the mission designed the spacecraft and the instruments that will be used to analyze the asteroid."],
+	["Phase C", "Science and engineering teams begin to build their instruments."],
+	["Phase D", "This phase involes the assembly and launch of the spacecraft"],
+	["Phase E", "This is the phase which involes the travel to the asteroid along with the data collection of the asteroid"],
+	["Gravity Assist", "The Mars Gravity Assist is a slingshot maneuver saves propellant, time and expense. It does this by entering and leaving the gravitational field of Mars."]
 ]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	startPos = $Node2D.position
+	label = $Node2D2/Label
+	animationPlayer = $Node2D2/satellitePlayer
+	psychePlayer = $Node2D2/psychePlayer
+	correctSound = $Node2D2/CorrectSound
+	correct = $Node2D2/Correct
+	label.text = rightTextBlocks.pop_front()
+	label.visible_ratio = 0
 	return
 	texts = text.instantiate(0)
 	add_child(texts)
@@ -34,28 +61,51 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if textBox:
-		pass#simply exists as a check
-	else:
-		lineTimer += delta
-		#if lineTimer >= lineTime:
-		if blocks.size() == 0 && textBlocks.size() != 0:
-			#lineTimer -= lineTime
-			addBlock()
-		elif blocks.size() > 0:
-			if blocks.back().global_position.x + blocks.back().rightPoint() + 50 < startPos.x:
-				addBlock()
-			for i in blocks:
-				i.move(-lineSpeed*delta)
-				i.checkFail(delta)
-				if i.global_position.x  < -i.rightPoint():
-					if not i.completed():
-						textBlocks.append(i.getInfo())
-					blocks.erase(i)
-					i.free()
-		elif textBlocks.size() == 0:
-			get_tree().change_scene_to_file("res://start_menu/start_menu.tscn")
+	print(state)
+	if not psychePlaying:
+		psychePlayer.play("PsycheSpin")
+		psychePlaying = true
+	if state == 0:
+		if not playing:
+			animationPlayer.play("Spin")
+			playing = true
+		cycleText(delta)
+	elif state == 1:
+		if not playing:
+			animationPlayer.play("Start Cutscene")
+			playing = true
+	elif state == 2:
+		stateTwo(delta)
+	elif state == 3:
+		if not playing:
+			animationPlayer.play("endingSection")
+			playing = true
+	elif state == 4:
+		changeScene()
+		
 
+func stateTwo(delta):
+	if textBox:
+		return#simply exists as a check
+	if blocks.size() == 0 && textBlocks.size() != 0:
+		addBlock()
+	elif blocks.size() > 0:
+		if blocks.back().global_position.x + blocks.back().rightPoint() + 50 < startPos.x:
+			addBlock()
+		for i in blocks:
+			i.move(-lineSpeed*delta)
+			i.checkFail(delta)
+			if i.global_position.x  < -i.rightPoint():
+				if not i.completed():
+					textBlocks.append(i.getInfo())
+				blocks.erase(i)
+				i.free()
+	elif textBlocks.size() == 0:
+		state = 3
+		
+	
+func changeScene():
+	get_tree().change_scene_to_file("res://credits/credits.tscn")
 #adds a block to the blocks list
 func addBlock():
 	if textBlocks.size() == 0:
@@ -66,22 +116,58 @@ func addBlock():
 	#newText.setPos(startPos)
 	newText.setText(popValues[0])
 	newText.setInformation(popValues)
-	lineTime = popValues[1]
 	blocks.append(newText)
 
 func _unhandled_input(event):
+	if state == 0:
+		if event.is_action_pressed("ui_accept"):
+			if label.visible_ratio < 1:
+				return
+			if rightTextBlocks.size() > 0:
+				label.visible_ratio = 0
+				nextLeter = 0
+				label.text = rightTextBlocks.pop_front()
+			else:
+				label.visible_ratio = 0
+				correctSound.play()
+				correct.visible = true
+				state=1
+		return
 	if textBox:
 		return
 	if event is InputEventKey and not event.is_pressed():
 		for i in blocks:
 			i.typeChecking(event)
 			if i.checkDone():
-				$Control/Label.text = i.getInfo()[2]
+				correct.visible = true
+				correctSound.play()
+				$Control/Label.text = i.getInfo()[1]
 				$Control.visible = true
 				textBox = true
 
 
 func _on_button_button_up() -> void:
+	correct.visible = false
 	$Control.visible = false
 	textBox = false
-	pass # Replace with function body.
+
+func cycleText(delta):
+	if label.visible_ratio < 1:
+		nextLeter += delta*30
+		label.visible_characters = nextLeter
+		
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Spin":
+		playing = false
+	if anim_name == "Start Cutscene":
+		state = 2
+		correct.visible = false
+		playing = false
+	if anim_name == "endingSection":
+		state = 4
+		playing = false
+
+
+func _on_psyche_player_animation_finished(anim_name: StringName) -> void:
+	psychePlaying = false #resets the ability to loop psyche spinning
