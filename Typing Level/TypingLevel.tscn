@@ -1,11 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://de30lnc5vve28"]
+[gd_scene load_steps=11 format=3 uid="uid://de30lnc5vve28"]
 
 [ext_resource type="Script" path="res://Typing Level/typing_level.gd" id="1_yaj5j"]
 [ext_resource type="PackedScene" uid="uid://bfb4cc1is55wv" path="res://Typing Level/TypingBlock.tscn" id="2_wc733"]
+[ext_resource type="Texture2D" uid="uid://dmitpk0danggl" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
 [ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="3_rhs66"]
-[ext_resource type="PackedScene" uid="uid://dq62abyfwocnx" path="res://psychescan/texts/victory_text.tscn" id="4_5lirs"]
+[ext_resource type="Texture2D" uid="uid://clufwj1x38o5p" path="res://psychescan/assets/psyche1.png" id="3_sbcle"]
 [ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="5_onspf"]
 [ext_resource type="Texture2D" uid="uid://bcike3hlobc0y" path="res://psychescan/assets/green light.png" id="6_hde7p"]
+
+[sub_resource type="Animation" id="Animation_6pbho"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PsycheShuttle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(644, 468)]
+}
+
+[sub_resource type="Animation" id="Animation_w0hc3"]
+resource_name = "Start Cutscene"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PsycheShuttle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(644, 468), Vector2(1090, 468)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qoj6a"]
+_data = {
+"RESET": SubResource("Animation_6pbho"),
+"Start Cutscene": SubResource("Animation_w0hc3")
+}
 
 [node name="TypingLevel" type="Node2D"]
 script = ExtResource("1_yaj5j")
@@ -22,8 +60,19 @@ scale = Vector2(2.31974, 2.12525)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, 0, 512, 608, 512, 608, 0)
 
+[node name="Psyche1" type="Sprite2D" parent="Node2D2"]
+position = Vector2(646, 455)
+scale = Vector2(0.633745, 0.603112)
+texture = ExtResource("3_sbcle")
+
 [node name="Node2D" type="Node2D" parent="Node2D2"]
-position = Vector2(1490, 488)
+position = Vector2(1097, 385)
+
+[node name="PsycheShuttle" type="Sprite2D" parent="Node2D2"]
+position = Vector2(644, 468)
+rotation = 1.0472
+scale = Vector2(0.300781, 0.300781)
+texture = ExtResource("3_1ma2t")
 
 [node name="main" type="Polygon2D" parent="Node2D2"]
 scale = Vector2(1.55089, 2.10742)
@@ -31,11 +80,16 @@ texture = ExtResource("3_rhs66")
 texture_scale = Vector2(2.67, 3.7)
 polygon = PackedVector2Array(0, 0, 0, 0, 1120, 0, 1120, 512, 0, 512)
 
-[node name="Label" parent="Node2D2" instance=ExtResource("4_5lirs")]
-offset_left = 1167.0
-offset_top = 135.0
-offset_right = 1471.0
-offset_bottom = 349.0
+[node name="Label" type="Label" parent="Node2D2"]
+offset_left = 1171.0
+offset_top = 138.0
+offset_right = 1460.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 25
+text = "The Psyche sattellite will send out words. To complete this section, type the words to analyze what they are."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -46,14 +100,20 @@ autoplay = true
 parameters/looping = false
 
 [node name="Correct" type="PointLight2D" parent="Node2D2"]
+visible = false
 position = Vector2(1330, 739)
 scale = Vector2(0.181952, 0.193103)
 energy = 11.21
 blend_mode = 2
 texture = ExtResource("6_hde7p")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_qoj6a")
+}
+
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(1482, 479)
+position = Vector2(1098, 384)
 
 [node name="Control" type="Control" parent="."]
 visible = false
@@ -101,4 +161,5 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 100
 text = "x"
 
+[connection signal="animation_finished" from="Node2D2/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]
