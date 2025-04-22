@@ -53,6 +53,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if state == 0:
+		if not playing:
+			animationPlayer.play("Spin")
+			playing = true
 		cycleText(delta)
 		return
 	if state == 1:
@@ -132,5 +135,10 @@ func cycleText(delta):
 		
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	state = 2
+	if anim_name == "Spin":
+		if state == 0:
+			animationPlayer.play("Spin")
+		playing = false
+	if anim_name == "Start Cutscene":
+		state = 2
 	pass # Replace with function body.
