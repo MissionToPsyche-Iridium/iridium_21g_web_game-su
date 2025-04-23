@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dipu66gwaj7se"]
 
 [ext_resource type="Script" path="res://psychescan/scripts/sparkle.gd" id="1_c0550"]
-[ext_resource type="Texture2D" uid="uid://cjg88nm1c5cxk" path="res://psychescan/assets/sparkle_spritesheet.png" id="1_m88ie"]
+[ext_resource type="Texture2D" uid="uid://u3yuxsotbo7c" path="res://psychescan/assets/sparkle_spritesheet.png" id="1_m88ie"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_du7f2"]
 atlas = ExtResource("1_m88ie")
@@ -110,15 +110,15 @@ animations = [{
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
-position = Vector2(32, 32)
-scale = Vector2(0.673684, 0.864865)
+position = Vector2(57, 56)
+scale = Vector2(1.2, 1.52)
 sprite_frames = SubResource("SpriteFrames_7ovow")
 animation = &"sparkle"
 frame_progress = 0.238879
 script = ExtResource("1_c0550")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 1.5
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
