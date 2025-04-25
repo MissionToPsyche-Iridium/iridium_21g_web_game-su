@@ -247,7 +247,6 @@ size = Vector2(14, 8.99996)
 size = Vector2(12, 8.88887)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nyjjo"]
-load_path = "res://.godot/imported/door-2.png-e774a56a04fb41636429b65e3611d30e.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lddvi"]
 animations = [{
