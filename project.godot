@@ -24,7 +24,7 @@ Globals="*res://Globals/globals.tscn"
 
 window/size/viewport_width=2792
 window/size/viewport_height=1735
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -32,7 +32,6 @@ enabled=PackedStringArray()
 
 [gui]
 
-theme/default_font_subpixel_positioning=0
 theme/lcd_subpixel_layout=0
 
 [input]
@@ -141,7 +140,8 @@ stop={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=3
+textures/canvas_textures/default_texture_filter=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 viewport/transparent_background=true
+2d/snap/snap_2d_transforms_to_pixel=true
 environment/main_scene="res://start_menu/start_menu.tscn"

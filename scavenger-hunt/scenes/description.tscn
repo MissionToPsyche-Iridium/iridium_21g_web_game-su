@@ -14,31 +14,33 @@ offset_bottom = 97.0
 layout_mode = 0
 offset_left = -2.0
 offset_top = -2.0
-offset_right = 249.0
-offset_bottom = 101.0
+offset_right = 919.0
+offset_bottom = 366.0
 color = Color(1, 1, 1, 0.278431)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 247.0
-offset_bottom = 99.0
+offset_right = 915.0
+offset_bottom = 362.0
 texture = ExtResource("1_eunme")
+stretch_mode = 5
 
 [node name="Container" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 7.0
-offset_right = 240.0
-offset_bottom = 92.0
+offset_left = 25.0
+offset_top = 29.0
+offset_right = 886.0
+offset_bottom = 328.0
 alignment = 1
 
 [node name="Message" type="Label" parent="Container"]
 custom_minimum_size = Vector2(216, 80)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 theme_override_fonts/font = ExtResource("3_c0p2o")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 32
 text = "Temporary Temporary Temporary Temporary Temporary
 Temporary Temporary Temporary Temporary Temporary"
 vertical_alignment = 1
