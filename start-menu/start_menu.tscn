@@ -1,20 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://bkqef5inybfnp"]
+[gd_scene load_steps=11 format=3 uid="uid://dsby6p2tu5igv"]
 
 [ext_resource type="Script" path="res://start-menu/start_menu.gd" id="1_wan2u"]
-[ext_resource type="FontFile" uid="uid://c87bkaopo4npy" path="res://fonts/dogicapixel.ttf" id="2_1nwy0"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="2_1nwy0"]
 [ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start-menu/normal.tres" id="3_gymqj"]
-[ext_resource type="Texture2D" uid="uid://dtuvsvl5vxd5y" path="res://icon.png" id="4_u6vjw"]
+[ext_resource type="Texture2D" uid="uid://b6yr5rpc3ae3f" path="res://Globals/icon.png" id="4_s3a8p"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="5_44oyq"]
-[ext_resource type="PackedScene" uid="uid://bqimdocoobe63" path="res://credits/credits.tscn" id="6_dqvsa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
 bg_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yr5en"]
 bg_color = Color(0.172833, 0.172833, 0.172833, 1)
-
-[sub_resource type="Animation" id="Animation_0w0uo"]
-resource_name = "continue_fade"
 
 [sub_resource type="Animation" id="Animation_hy8bh"]
 resource_name = "cover"
@@ -48,7 +44,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iqgaj"]
 _data = {
-"continue_fade": SubResource("Animation_0w0uo"),
 "cover": SubResource("Animation_hy8bh"),
 "cover_fade": SubResource("Animation_epmn3")
 }
@@ -66,10 +61,10 @@ script = ExtResource("1_wan2u")
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.186784
-anchor_top = -0.341499
-anchor_right = 1.19134
-anchor_bottom = 1.29368
+anchor_left = -0.0451289
+anchor_top = -0.0835735
+anchor_right = 0.555874
+anchor_bottom = 0.601729
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -154,8 +149,8 @@ color = Color(0, 0, 0, 1)
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(698, 440.5)
-scale = Vector2(0.239958, 0.239958)
-texture = ExtResource("4_u6vjw")
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("4_s3a8p")
 
 [node name="Cover" type="ColorRect" parent="."]
 layout_mode = 1
@@ -175,9 +170,5 @@ libraries = {
 
 [node name="Audio" parent="." instance=ExtResource("5_44oyq")]
 
-[node name="Credits2" parent="." instance=ExtResource("6_dqvsa")]
-visible = false
-
-[connection signal="from_start" from="." to="Credits2" method="_on_start_menu_from_start"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

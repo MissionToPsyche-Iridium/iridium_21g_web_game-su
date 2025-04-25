@@ -221,7 +221,7 @@ animations = [{
 }]
 
 [node name="Room4" type="Node2D"]
-scale = Vector2(2, 2)
+scale = Vector2(6, 6)
 script = ExtResource("1_mjqox")
 
 [node name="Floor" type="TileMapLayer" parent="."]

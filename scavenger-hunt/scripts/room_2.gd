@@ -4,6 +4,29 @@ signal popup_open
 signal popup_close
 signal win
 
+@onready var player = $Player
+@onready var page_text = $Player/Camera2D/PageSprite/Message
+@onready var page = $Player/Camera2D/PageSprite
+@onready var question_popup = $Player/Camera2D/QuestionPopUp
+@onready var question = $Player/Camera2D/QuestionPopUp/QuestionContainer
+@onready var question_label = $Player/Camera2D/QuestionPopUp/QuestionContainer/QuestionLabel
+@onready var validation = $Player/Camera2D/QuestionPopUp/ValidationContainer
+@onready var valid_msg = $Player/Camera2D/QuestionPopUp/ValidationContainer/Message
+@onready var papers1 = $Player/Camera2D/Papers1Description
+@onready var papers1_msg = $Player/Camera2D/Papers1Description/Container/Message
+@onready var papers2 = $Player/Camera2D/Papers2Description
+@onready var papers2_msg = $Player/Camera2D/Papers2Description/Container/Message
+@onready var shelves = $Player/Camera2D/ShelvesDescription
+@onready var shelves_msg = $Player/Camera2D/ShelvesDescription/Container/Message
+@onready var computer = $Player/Camera2D/ComputerDescription
+@onready var comp_msg = $Player/Camera2D/ComputerDescription/Container/Message
+@onready var wifi_area = $WifiArea
+@onready var wifi = $Player/Camera2D/WifiPopUp
+@onready var wifi_msg = $Player/Camera2D/WifiPopUp/Container/Message
+@onready var guy_area = $GuyArea
+@onready var guy = $Player/Camera2D/GuyPopUp
+@onready var guy_msg = $Player/Camera2D/GuyPopUp/Container/Message
+
 var interactable = false
 var isOpen = false
 var rng = RandomNumberGenerator.new()
@@ -46,7 +69,6 @@ func _ready() -> void:
 	start_zone = "Eastern Daylight Time"
 	start_utc = start_unix_time + (5 * 60 * 60)                                 # Add 5 hours from EDT to convert to UTC
 
-
 	var elapsed_seconds = current_utc - start_utc
 
 	# Convert to days, hours, minutes
@@ -59,10 +81,10 @@ func _ready() -> void:
 	questions_dict[1][3] = ("%d days" % [(days + 5)])
 	
 	var question_number = rng.randi_range(0,2)
-	$Question/Question/Question.text = questions_dict[question_number][0]
-	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
-	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
-	$Question/Question/Options/Option3.text = questions_dict[question_number][3]
+	question_label.text = questions_dict[question_number][0]
+	question.get_node("Options/Option1").text = questions_dict[question_number][1]
+	question.get_node("Options/Option2").text = questions_dict[question_number][2]
+	question.get_node("Options/Option3").text = questions_dict[question_number][3]
 	
 	if question_number == 0:
 		correct = 2
@@ -71,30 +93,42 @@ func _ready() -> void:
 	elif question_number == 2:
 		correct = 3
 		
-	$Papers1Description/Container/Message.text = "It's a 256 page proposal that was selected for the concept study."
-	$Papers2Description/Container/Message.text = "Wow! It's a 1,000 word concept study submitted for consideration for NASA’s Discovery Program."
-	$ShelvesDescription/Container/Message.text = "It's a collection of some of the research the team did. Some of it dates all the way back to 2011 when they submitted the concept study."
-	$ComputerDescription/Container/Message.text = "It's the Psyche website. It has a lot of important information"
+	papers1_msg.text = "It's a 256 page proposal that was selected for the concept study."
+	papers2_msg.text = "Wow! It's a 1,000 word concept study submitted for consideration for NASA’s Discovery Program."
+	shelves_msg.text = "It's a collection of some of the research the team did. Some of it dates all the way back to 2011 when they submitted the concept study."
+	comp_msg.text = "It's the Psyche website. It has a lot of important information"
+	wifi_msg.text = "It says:\nWiFi: Super Psyched\nPassword: 16-19-25-3-8-5"
+	guy_msg.text = "\"I'm reading about Psyche. You need to get to the control room!\""
+
+	$Scientist/Sprite2D.play("default")
+	$GuyArea/Guy.play("default")
 	
-	$Player.movable = false
+	player.movable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (interactable == true):
 		var collidingNode = $Player/RayCast2D.get_collider()
 		if collidingNode == $Scientist:
-			handle_popup($Question)
+			handle_popup(question_popup)
 		elif collidingNode == $Papers1:
-			handle_popup($Papers1Description)
+			handle_popup(papers1)
 		elif collidingNode == $Papers2:
-			handle_popup($Papers2Description)
+			handle_popup(papers2)
 		elif collidingNode == $Shelves:
-			handle_popup($ShelvesDescription)
+			handle_popup(shelves)
 		elif collidingNode == $ComputerArea:
-			handle_popup($ComputerDescription)
+			handle_popup(computer)
+		elif collidingNode == wifi_area:
+			handle_popup(wifi)
+		elif collidingNode == guy_area:
+			handle_popup(guy)
 
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
+		if popup_node == question_popup: 
+			question.show()
+			validation.hide()
 		popup_node.show()
 		if !isOpen:
 			$Audio/sfx_open.play()
@@ -111,22 +145,18 @@ func handle_popup(popup_node: Node) -> void:
 
 func correct_answer() -> void:
 	$Audio/sfx_correct.play()
-	$Question/Validation/Message.text = "Correct!"
-	$Question/Question.hide()
-	$Question/Validation.show()
+	valid_msg.text = "Correct!"
+	question.hide()
+	validation.show()
 	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
 
 func wrong_answer() -> void:
-	$Audio/sfx_close.stop()
 	$Audio/sfx_close.play()
-	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
-	$Question/Question.hide()
-	$Question/Validation.show()
-	await get_tree().create_timer(2.0).timeout
-	$Question/Validation.hide()
-	$Question/Question.show()
+	valid_msg.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	question.hide()
+	validation.show()
 	
 func _on_question_option_1() -> void:
 	if (correct == 1):

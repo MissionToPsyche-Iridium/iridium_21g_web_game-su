@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const WALK_FORCE = 1400
-const WALK_MAX_SPEED = 400
+const WALK_FORCE = 3000
+const WALK_MAX_SPEED = 1000
 const STOP_FORCE = 2600
 
 var direction
@@ -20,6 +20,20 @@ signal interact
 signal no_interact
 
 var arrow_length = 13
+
+var open := false
+
+func _ready() -> void:
+	Globals.hint_open.connect(_on_hint_open)
+	Globals.hint_close.connect(_on_hint_close)
+
+func _on_hint_open():
+	open = true
+	movable = false
+
+func _on_hint_close():
+	open = false
+	movable = true
 
 func _physics_process(delta):
 	move_player()
@@ -101,16 +115,11 @@ func move_player():
 				$PlayerSprite.play("idle_right")
 		
 		if direction != curr_direction:
-			print("direction: ", direction)
 			curr_direction = direction
 		
 		if walk_x != curr_walkx or walk_y != curr_walky:
-			print("x",walk_x)
-			print("y",walk_y)
 			curr_walkx = walk_x
 			curr_walky = walk_y
-			
-
 
 func _on_room_1_popup_close() -> void:
 	movable = true

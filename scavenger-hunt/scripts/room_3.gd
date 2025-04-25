@@ -6,6 +6,17 @@ signal popup_close
 
 signal win
 
+@onready var player = $Player
+@onready var page_text = $Player/Camera2D/PageSprite/Message
+@onready var page = $Player/Camera2D/PageSprite
+@onready var question_popup = $Player/Camera2D/QuestionPopUp
+@onready var question = $Player/Camera2D/QuestionPopUp/QuestionContainer
+@onready var question_label = $Player/Camera2D/QuestionPopUp/QuestionContainer/QuestionLabel
+@onready var validation = $Player/Camera2D/QuestionPopUp/ValidationContainer
+@onready var valid_msg = $Player/Camera2D/QuestionPopUp/ValidationContainer/Message
+@onready var cabinet_popup = $Player/Camera2D/CabinetDescription
+@onready var cabinet_msg = $Player/Camera2D/CabinetDescription/Container/Message
+@onready var sign_popup = $Player/Camera2D/SignPopUp
 
 var interactable = false
 var isOpen = false
@@ -24,33 +35,39 @@ var questions_dict = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	var question_number = rng.randi_range(0,1)
-	$Question/Question/Question.text = questions_dict[question_number][0]
-	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
-	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
-	$Question/Question/Options/Option3.text = questions_dict[question_number][3]
+	question_label.text = questions_dict[question_number][0]
+	question.get_node("Options/Option1").text = questions_dict[question_number][1]
+	question.get_node("Options/Option2").text = questions_dict[question_number][2]
+	question.get_node("Options/Option3").text = questions_dict[question_number][3]
 	
 	if (question_number == 0):
 		correct = 3
 	else:
 		correct = 1
 
-	$CabinetDescription/Container/Message.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
+	cabinet_msg.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
 
-	$Player.movable = true
+	$SecurityGuard/Sprite2D.play("default")
+
+	player.movable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (interactable == true):
 		var collidingNode = $Player/RayCast2D.get_collider()
 		if collidingNode == $SecurityGuard:
-			handle_popup($Question)
+			handle_popup(question_popup)
 		elif collidingNode == $Cabinet:
-			handle_popup($CabinetDescription)
+			handle_popup(cabinet_popup)
 		elif collidingNode == $Sign:
-			handle_popup($SignPopUp)
+			handle_popup(sign_popup)
 
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
+		match popup_node:
+			question_popup: 
+				question.show()
+				validation.hide()
 		popup_node.show()
 		if !isOpen:
 			$Audio/sfx_open.play()
@@ -67,9 +84,9 @@ func handle_popup(popup_node: Node) -> void:
 
 func correct_answer() -> void:
 	$Audio/sfx_correct.play()
-	$Question/Validation/Message.text = "Correct!"
-	$Question/Question.hide()
-	$Question/Validation.show()
+	valid_msg.text = "Correct!"
+	question.hide()
+	validation.show()
 	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
@@ -77,12 +94,9 @@ func correct_answer() -> void:
 func wrong_answer() -> void:
 	$Audio/sfx_close.stop()
 	$Audio/sfx_close.play()
-	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
-	$Question/Question.hide()
-	$Question/Validation.show()
-	await get_tree().create_timer(2.0).timeout
-	$Question/Validation.hide()
-	$Question/Question.show()
+	valid_msg.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	question.hide()
+	validation.show()
 	
 func _on_question_option_1() -> void:
 	if (correct == 1):

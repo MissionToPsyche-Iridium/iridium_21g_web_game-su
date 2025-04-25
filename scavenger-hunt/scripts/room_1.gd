@@ -5,6 +5,30 @@ signal popup_close
 signal win
 
 @onready var player = $Player
+@onready var question_area= $QuestionArea
+@onready var question_popup = $Player/Camera2D/QuestionPopUp
+@onready var question = $Player/Camera2D/QuestionPopUp/QuestionContainer
+@onready var question_label = $Player/Camera2D/QuestionPopUp/QuestionContainer/QuestionLabel
+@onready var validation = $Player/Camera2D/QuestionPopUp/ValidationContainer
+@onready var valid_msg = $Player/Camera2D/QuestionPopUp/ValidationContainer/Message
+@onready var notebook_area = $NotebookArea
+@onready var page_text = $Player/Camera2D/PageSprite/Message
+@onready var page = $Player/Camera2D/PageSprite
+@onready var picture_area = $PictureArea
+@onready var picture = $Player/Camera2D/PicturePopUp
+@onready var picture_msg = $Player/Camera2D/PicturePopUp/Container/Message
+@onready var chair_area = $Chairs/Area2D
+@onready var chair = $Player/Camera2D/ChairPopUp
+@onready var chair_msg = $Player/Camera2D/ChairPopUp/Container/Message
+@onready var coffee_table_area = $CoffeeTable/Area2D
+@onready var coffee_table = $Player/Camera2D/CoffeeTablePopUp
+@onready var coffee_table_msg = $Player/Camera2D/CoffeeTablePopUp/Container/Message
+@onready var lady_area = $Lady
+@onready var lady = $Player/Camera2D/LadyDescription
+@onready var lady_msg = $Player/Camera2D/LadyDescription/Container/Message
+@onready var kids_area = $Kids
+@onready var kids = $Player/Camera2D/KidPopUp
+@onready var kids_msg = $Player/Camera2D/KidPopUp/Container/Message
 
 var isOpen
 
@@ -29,47 +53,70 @@ var questions_dict = {
 		"SpaceX Toucan Light"],
 }
 
+@onready var num_opened := 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var question_number = rng.randi_range(0,2)
-	$Question/Question/Question.text = questions_dict[question_number][0]
-	$Question/Question/Options/Option1.text = questions_dict[question_number][1]
-	$Question/Question/Options/Option2.text = questions_dict[question_number][2]
-	$Question/Question/Options/Option3.text = questions_dict[question_number][3]
+	question_label.text = questions_dict[question_number][0]
+	question.get_node("Options/Option1").text = questions_dict[question_number][1]
+	question.get_node("Options/Option2").text = questions_dict[question_number][2]
+	question.get_node("Options/Option3").text = questions_dict[question_number][3]
 	
 	if question_number == 0:
 		correct = 1
-		$PageSprite/Message.text = "It's someone's work journal...\n\nOctober 12, 2023\n\nToday I learned that Psyche takes off tomorrow... My boss wasn't very happy... Oops!"
+		page_text.text = "It's someone's work journal...\n\nOctober 12, 2023\n\nToday I learned that Psyche takes off tomorrow... My boss wasn't very happy... Oops!"
 	elif question_number == 1:
 		correct = 3
-		$PageSprite/Message.text = "It's someone's work journal...\n\nAugust 1, 2023\n\nI can't believe I have to wait so long for the spacecraft to start orbiting Psyche. I wish it was 6 years in the future already!"
+		page_text.text = "It's someone's work journal...\n\nAugust 1, 2023\n\nI can't believe I have to wait so long for the spacecraft to start orbiting Psyche. I wish it was 6 years in the future already!"
 	elif question_number == 2:
 		correct = 2
-		$PageSprite/Message.text = "It's someone's work journal...\n\nOctober 13, 2023\n\nI've been calling the rocket Toucan Light since the beginnign. My friend told me he thought I was joking this whole time. I didn't realize how wrong I was until today... Oops!"
+		page_text.text = "It's someone's work journal...\n\nOctober 13, 2023\n\nI've been calling the rocket Toucan Light since the beginning. My friend told me he thought I was joking this whole time. I didn't realize how wrong I was until today... Oops!"
 
-	$PicturePopUp/Container/Message.text = "It's a picture of the preliminary design of the instruments and spacecraft. The description says it will reach Psyche in August 2029."
-	$ChairPopUp/Container/Message.text = "It's just a chair..."
-	$Player.movable = false
+	picture_msg.text = "It's a picture of the preliminary design of the instruments and spacecraft. The description says it will reach Psyche in August 2029."
+	chair_msg.text = "It's just a chair..."
+	coffee_table_msg.text = "It's a collection of articles about Psyche. Hmm there's something underneath them... Oh! It's a sticky note that says\n16-19-25-3-8-5\nHmmm... I wonder what that means."
+	lady_msg.text = "\"It's bring your kids to work day today, but they won't stop playing. I don't blame them, though.\""
+	kids_msg.text = "\"We're not allowed to talk to strangers.\""
+	
+	$Receptionist/ReceptionistSprite.play("default")
+	$Kids/Boy.play("default")
+	$Kids/Girl.play("default")
+	$Lady/AnimatedSprite2D.play("default")
+	
+	player.movable = true
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (interactable == true):
 		var collidingNode = $Player/RayCast2D.get_collider()
-		if collidingNode == $QuestionArea:
-			handle_popup($Question)
-		elif collidingNode == $NotebookArea:
-			handle_popup($PageSprite)
-		elif collidingNode == $PictureArea:
-			handle_popup($PicturePopUp)
-		elif collidingNode == $Chair4/Area2D:
-			handle_popup($ChairPopUp)
-
+		if collidingNode == question_area:
+			handle_popup(question_popup)
+		elif collidingNode == notebook_area:
+			handle_popup(page)
+		elif collidingNode == picture_area:
+			handle_popup(picture)
+		elif collidingNode == chair_area:
+			handle_popup(chair)
+		elif collidingNode == coffee_table_area:
+			handle_popup(coffee_table)
+		elif collidingNode == lady_area:
+			handle_popup(lady)
+		elif collidingNode == kids_area:
+			handle_popup(kids)
 
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
-		if popup_node == $Question: 
-			$Question/Question.show()
-			$Question/Validation.hide()
+		match popup_node:
+			question_popup: 
+				question.show()
+				validation.hide()
+			chair:
+				num_opened += 1
+				if num_opened % 2 == 0:
+					chair_msg.text = "This is... just a chair"
+				else:
+					chair_msg.text = "It's just a chair..."
 		popup_node.show()
 		if !isOpen:
 			$Audio/sfx_open.play()
@@ -87,11 +134,10 @@ func handle_popup(popup_node: Node) -> void:
 
 func correct_answer() -> void:
 	_on_player_no_interact()
-	$Audio/sfx_correct.stop()
 	$Audio/sfx_correct.play()
-	$Question/Validation/Message.text = "Correct!"
-	$Question/Question.hide()
-	$Question/Validation.show()
+	valid_msg.text = "Correct!"
+	question.hide()
+	validation.show()
 	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
@@ -99,13 +145,9 @@ func correct_answer() -> void:
 func wrong_answer() -> void:
 	$Audio/sfx_close.stop()
 	$Audio/sfx_close.play()
-	$Question/Validation/Message.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
-	$Question/Question.hide()
-	$Question/Validation.show()
-	await get_tree().create_timer(2.0).timeout
-	$Question/Validation.hide()
-	$Question/Question.show()
-	
+	valid_msg.text = "Sorry, that is incorrect. Try looking around the room for more hints!"
+	question.hide()
+	validation.show()
 
 func _on_question_option_1() -> void:
 	if (correct == 1):

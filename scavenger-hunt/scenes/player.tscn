@@ -160,12 +160,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8y6v7"]
-size = Vector2(16.25, 12.9167)
+size = Vector2(16, 12.0417)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_suwon"]
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(2.4, 2.4)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_ma31h")
@@ -176,7 +175,7 @@ sprite_frames = SubResource("SpriteFrames_37rjj")
 animation = &"idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8.9407e-07, 9.16667)
+position = Vector2(4.17233e-07, 10.0417)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_8y6v7")
 
@@ -202,5 +201,12 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_suwon")
 text = "Press [E] to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="PressE"]
+z_index = -1
+layout_mode = 0
+offset_right = 127.0
+offset_bottom = 11.0
+color = Color(1, 1, 1, 0.164706)
 
 [connection signal="frame_changed" from="PlayerSprite" to="." method="_on_player_sprite_frame_changed"]

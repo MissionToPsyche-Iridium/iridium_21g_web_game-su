@@ -77,11 +77,15 @@ var room_states = {
 	"zoom": false
 }
 
+var open := false
+
+var starting_room = 0
+
 func _ready() -> void:
 	zooming_camera.enabled = false
 	for i in range(rooms.size()):
 		_reset_room(i)
-	enter_room(0)
+	enter_room(starting_room)
 
 func _reset_room(room_num):
 	rooms[room_num].hide()
@@ -227,9 +231,9 @@ func _process_leave(room_num):
 		isMoving.emit()
 		match room_num:
 			0: 
-				if pathfollower.progress_ratio < 0.4086:
+				if pathfollower.progress_ratio < 0.3929:
 					leave_sprites[room_num].play("walk_right")
-				if pathfollower.progress_ratio >= 0.4086:
+				if pathfollower.progress_ratio >= 0.3929:
 					leave_sprites[room_num].play("walk_up")
 				if pathfollower.progress_ratio >= 1:
 					leave_sprites[room_num].play("idle_up")
@@ -298,8 +302,8 @@ func _process_zoom():
 	if is_followingpath:
 		if pathfollower.progress_ratio < 1:
 			pathfollower.progress_ratio += 0.005
-			if zooming_camera.zoom < Vector2(22, 22):
-				zooming_camera.zoom += Vector2(0.1, 0.1)
+			if zooming_camera.zoom < Vector2(8, 8):
+				zooming_camera.zoom += Vector2(0.03585, 0.03585)
 		else:
 			end_zoom()
 
@@ -354,6 +358,8 @@ func play_room(room_num):
 	await get_tree().create_timer(1.0).timeout
 	active_players[room_num].movable = true
 	covers[room_num].hide()
+	if room_num == 0:
+		Globals.get_node("Hint").show()
 	
 func _on_win():
 	covers[current_room].color = Color(0,0,0,0)
@@ -367,7 +373,7 @@ func _on_win():
 	active_players[current_room].movable = false
 	active_players[current_room].moving = false
 	rooms[current_room].interactable = false
-	rooms[current_room].get_node("Question").hide()
+	rooms[current_room].get_node("Player/Camera2D/QuestionPopUp").hide()
 	start_leave()
 
 func switch_room(next_index):
