@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://qhel7w7se32c"]
 
-[ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="2_eanpc"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="2_eanpc"]
 [ext_resource type="Script" path="res://psychescan/scripts/To_Next_Level.gd" id="4_y01lp"]
 [ext_resource type="PackedScene" uid="uid://dq62abyfwocnx" path="res://psychescan/texts/victory_text.tscn" id="5_lyrys"]
-[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="5_v4dcy"]
-[ext_resource type="Texture2D" uid="uid://bcike3hlobc0y" path="res://psychescan/assets/green light.png" id="6_urxrn"]
+[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_v4dcy"]
+[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/textures/green light.png" id="6_urxrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc7cd"]
 size = Vector2(32, 32)

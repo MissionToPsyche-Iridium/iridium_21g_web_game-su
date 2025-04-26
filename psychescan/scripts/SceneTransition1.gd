@@ -124,5 +124,3 @@ func show_incorrect_indicator():
 	await(get_tree().create_timer(1.25).timeout)
 	incorrectNode.visible = false
 	print("Hiding Incorrect indicator")
-
-# shader jitter original: 0.342

@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://cosc37m3bowe8"]
 
-[ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="1_7gcdm"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="1_7gcdm"]
 [ext_resource type="Script" path="res://psychescan/scripts/SceneTransition3.gd" id="2_b5kgy"]
 [ext_resource type="PackedScene" uid="uid://icn4cxvh50yi" path="res://psychescan/texts/scannertext3.tscn" id="2_qf436"]
 [ext_resource type="PackedScene" uid="uid://rkniskrqmb35" path="res://psychescan/sprites/incorrect.tscn" id="3_vpxig"]
-[ext_resource type="AudioStream" uid="uid://dlxs0txad5wb" path="res://psychescan/assets/proxSound.wav" id="5_4y83v"]
-[ext_resource type="Texture2D" uid="uid://letgubvalxhy" path="res://psychescan/assets/squareReticle.png" id="5_a2f54"]
-[ext_resource type="AudioStream" uid="uid://cly07w2aa5yrj" path="res://psychescan/assets/correct.wav" id="7_2ggvi"]
-[ext_resource type="AudioStream" uid="uid://d4ms6udvlwkc" path="res://psychescan/assets/incorrect.wav" id="8_8gnid"]
-[ext_resource type="Texture2D" uid="uid://bcike3hlobc0y" path="res://psychescan/assets/green light.png" id="9_mv61h"]
-[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="9_n7n2q"]
+[ext_resource type="AudioStream" uid="uid://cp5mo6quaa8a3" path="res://psychescan/assets/audio/proxSound.wav" id="5_4y83v"]
+[ext_resource type="Texture2D" uid="uid://by3gha64uoyhi" path="res://psychescan/assets/textures/squareReticle.png" id="5_a2f54"]
+[ext_resource type="AudioStream" uid="uid://bbq1nmd6hlrr1" path="res://psychescan/assets/audio/correct.wav" id="7_2ggvi"]
+[ext_resource type="AudioStream" uid="uid://dathja5b2a5xa" path="res://audio/incorrect.wav" id="8_8gnid"]
+[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/textures/green light.png" id="9_mv61h"]
+[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/audio/CRTHum.mp3" id="9_n7n2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1n4vd"]
 size = Vector2(80, 80)

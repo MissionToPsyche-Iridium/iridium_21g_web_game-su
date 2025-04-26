@@ -28,7 +28,7 @@ text = "Use WASD or arrow keys to move the scanner
 
 Look for the shiny indicators on the asteroid
 
-Listen to the beep. It will get faster as you get closer  to the correct area"
+Listen to the beep. It will get faster as you get closer to the correct area(s)"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

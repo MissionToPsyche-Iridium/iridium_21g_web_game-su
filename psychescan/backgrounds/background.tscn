@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://dgtepn6enoocu"]
 
-[ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="1_0s0cn"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="1_s37x8"]
 [ext_resource type="Script" path="res://psychescan/scripts/SceneTransition1.gd" id="2_c15xl"]
 [ext_resource type="PackedScene" uid="uid://rkniskrqmb35" path="res://psychescan/sprites/incorrect.tscn" id="3_1ra4o"]
 [ext_resource type="PackedScene" uid="uid://bi87b1jlyy8cf" path="res://psychescan/texts/scannertext1.tscn" id="4_2e1mo"]
-[ext_resource type="AudioStream" uid="uid://dlxs0txad5wb" path="res://psychescan/assets/proxSound.wav" id="5_1ppxt"]
-[ext_resource type="Texture2D" uid="uid://letgubvalxhy" path="res://psychescan/assets/squareReticle.png" id="5_pyqq4"]
-[ext_resource type="AudioStream" uid="uid://cly07w2aa5yrj" path="res://psychescan/assets/correct.wav" id="7_6q6fh"]
-[ext_resource type="AudioStream" uid="uid://d4ms6udvlwkc" path="res://psychescan/assets/incorrect.wav" id="8_dejfb"]
-[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="9_tfg6s"]
-[ext_resource type="Texture2D" uid="uid://bcike3hlobc0y" path="res://psychescan/assets/green light.png" id="10_qupq8"]
+[ext_resource type="AudioStream" uid="uid://cp5mo6quaa8a3" path="res://psychescan/assets/audio/proxSound.wav" id="5_1ppxt"]
+[ext_resource type="Texture2D" uid="uid://by3gha64uoyhi" path="res://psychescan/assets/textures/squareReticle.png" id="5_pyqq4"]
+[ext_resource type="AudioStream" uid="uid://bbq1nmd6hlrr1" path="res://psychescan/assets/audio/correct.wav" id="7_6q6fh"]
+[ext_resource type="AudioStream" uid="uid://dathja5b2a5xa" path="res://audio/incorrect.wav" id="8_dejfb"]
+[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/audio/CRTHum.mp3" id="9_tfg6s"]
+[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/textures/green light.png" id="10_qupq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6sm7"]
 size = Vector2(80, 80)
@@ -20,7 +20,7 @@ collision_mask = 2
 
 [node name="main" type="Polygon2D" parent="."]
 scale = Vector2(1.55089, 2.10742)
-texture = ExtResource("1_0s0cn")
+texture = ExtResource("1_s37x8")
 texture_scale = Vector2(2.67, 3.7)
 polygon = PackedVector2Array(0, 0, 0, 0, 1120, 0, 1120, 512, 0, 512)
 

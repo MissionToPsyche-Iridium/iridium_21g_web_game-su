@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dipu66gwaj7se"]
 
 [ext_resource type="Script" path="res://psychescan/scripts/sparkle.gd" id="1_c0550"]
-[ext_resource type="Texture2D" uid="uid://u3yuxsotbo7c" path="res://psychescan/assets/sparkle_spritesheet.png" id="1_m88ie"]
+[ext_resource type="Texture2D" uid="uid://u3yuxsotbo7c" path="res://psychescan/assets/textures/sparkle_spritesheet.png" id="1_m88ie"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_du7f2"]
 atlas = ExtResource("1_m88ie")
