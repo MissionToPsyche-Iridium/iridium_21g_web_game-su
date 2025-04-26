@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bvp0cuo80ar3k"]
 
-[ext_resource type="Script" path="res://slingshot/script/transition_screen.gd" id="1_bie52"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/transition_screen.gd" id="1_bie52"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bie52")

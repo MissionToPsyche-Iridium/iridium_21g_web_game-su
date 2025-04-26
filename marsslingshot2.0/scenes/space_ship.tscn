@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://crxhvmr5p37e5"]
 
-[ext_resource type="Script" path="res://slingshot/script/space_ship.gd" id="1_omm6k"]
-[ext_resource type="Texture2D" uid="uid://bw37l15shxbrk" path="res://slingshot/assets/shuttle.png" id="2_4au6y"]
-[ext_resource type="Script" path="res://slingshot/script/timer.gd" id="3_qk4u3"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/space_ship.gd" id="1_omm6k"]
+[ext_resource type="Texture2D" uid="uid://bw37l15shxbrk" path="res://marsslingshot2.0/assets/shuttle.png" id="2_4au6y"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/timer.gd" id="3_qk4u3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1qdcw"]
 

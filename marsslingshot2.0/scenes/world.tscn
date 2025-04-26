@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://blb8npkytvcgv"]
 
-[ext_resource type="Script" path="res://slingshot/script/world.gd" id="1_qnauu"]
-[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/scenes/game_area.tscn" id="2_482iq"]
-[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/scenes/mars.tscn" id="3_1ewpu"]
-[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/scenes/timer.tscn" id="4_g5xfb"]
-[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/scenes/space_ship.tscn" id="5_nkrjh"]
-[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://slingshot/scenes/checkpoint.tscn" id="6_cr8g0"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://slingshot/scenes/label.tscn" id="7_ntjii"]
-[ext_resource type="Script" path="res://slingshot/script/color_rect.gd" id="8_o5qwo"]
+[ext_resource type="Script" path="res://slingshot/world.gd" id="1_qnauu"]
+[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/game_area.tscn" id="2_482iq"]
+[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/mars.tscn" id="3_1ewpu"]
+[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/timer.tscn" id="4_g5xfb"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/space_ship.tscn" id="5_nkrjh"]
+[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://slingshot/checkpoint.tscn" id="6_cr8g0"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/label.tscn" id="7_ntjii"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/color_rect.gd" id="8_o5qwo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oiufe"]
 radius = 582.278

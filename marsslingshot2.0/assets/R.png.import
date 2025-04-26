@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsx2pr6ebamps"
-path="res://.godot/imported/R.png-8c9305c93885aa66b8c42f24f61f287f.ctex"
+path="res://.godot/imported/R.png-13e724cf93b1b916a893809a14d552bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slingshot/assets/R.png"
-dest_files=["res://.godot/imported/R.png-8c9305c93885aa66b8c42f24f61f287f.ctex"]
+source_file="res://marsslingshot2.0/assets/R.png"
+dest_files=["res://.godot/imported/R.png-13e724cf93b1b916a893809a14d552bd.ctex"]
 
 [params]
 

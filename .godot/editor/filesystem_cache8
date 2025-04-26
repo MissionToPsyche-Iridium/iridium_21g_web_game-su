@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745636316
+::res://::1745646988
 export_presets.cfg::TextFile::-1::1745630934::0::1::::<><>::
 README.md::TextFile::-1::1741740552::0::1::::<><>::
 ::res://addons/::1745191876
@@ -145,7 +145,7 @@ leave.tscn::PackedScene::483881436728993153::1745609175::0::1::::<><>::res://cre
 ::res://credits/scripts/::1745609175
 credits.gd::GDScript::-1::1745609175::0::1::::<>CanvasLayer<>::
 leave.gd::GDScript::-1::1745609175::0::1::::<>Node2D<>::
-::res://fonts/::1745611162
+::res://fonts/::1745637005
 AnandaBlackPersonalUseRegular-rg9Rx.ttf::FontFile::3141749635047531531::1745609175::1745609667::1::::<><>::
 dogicapixel.ttf::FontFile::684858247163964228::1741740553::1745637002::1::::<><>::
 dogicapixelbold.ttf::FontFile::4951778532328040482::1741740553::1745637005::1::::<><>::
@@ -174,7 +174,7 @@ prelaunch.ogv::VideoStreamTheora::-1::1745609175::0::1::::<><>::
 launch.tscn::PackedScene::1775822634824600802::1745609175::0::1::::<><>::res://launch/scripts/launch.gd<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf
 ::res://launch/scripts/::1745609175
 launch.gd::GDScript::-1::1745609175::0::1::::<>Control<>::
-::res://marsslingshot2.0/::1745610977
+::res://marsslingshot2.0/::1745646969
 boosterbar.gd::GDScript::-1::1744822851::0::1::::<>ColorRect<>::
 checkpoint.gd::GDScript::-1::1744822851::0::1::::<>StaticBody2D<>::
 checkpoint.png::CompressedTexture2D::2265138767971149237::1741740553::1745609668::1::::<><>::
@@ -208,41 +208,41 @@ world.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
 world.tscn::PackedScene::3162590021962538817::1745610977::0::1::::<><>::res://slingshot/world.gd<>uid://bq03wvh64xhe2::::res://slingshot/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://slingshot/mars.tscn<>uid://cyjtqrvccw1f8::::res://slingshot/timer.tscn<>uid://crxhvmr5p37e5::::res://slingshot/space_ship.tscn<>uid://cbahqnt0etewm::::res://slingshot/checkpoint.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/label.tscn<>res://marsslingshot2.0/color_rect.gd
 world_level_1.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
 world_level_1.tscn::PackedScene::6608492996021213876::1745355465::0::1::::<><>::res://marsslingshot2.0/world_level_1.gd<>uid://crxhvmr5p37e5::::res://slingshot/space_ship.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/label.tscn<>res://marsslingshot2.0/color_rect.gd<>res://marsslingshot2.0/label_2.gd<>res://marsslingshot2.0/static_body_2d.gd<>uid://db2sd4a5jaqxw::::res://slingshot/checkpoint.png
-::res://marsslingshot2.0/assets/::1745609668
-checkpoint.png::CompressedTexture2D::4787850864932292156::1745190454::1745609668::1::::<><>::
-R.png::CompressedTexture2D::4159404781624495445::1745190454::1745609668::1::::<><>::
-shuttle.png::CompressedTexture2D::1528002902177552196::1745190454::1745609668::1::::<><>::
-spaceship.png::CompressedTexture2D::900573719795700885::1745190454::1745609667::0::::<><>::
-::res://marsslingshot2.0/scenes/::1745636620
-checkpoint.tscn::PackedScene::4843484515972896960::1745190454::0::1::::<><>::uid://db2sd4a5jaqxw::::res://slingshot/assets/checkpoint.png<>res://slingshot/checkpoint.gd
+::res://marsslingshot2.0/assets/::1745646882
+checkpoint.png::CompressedTexture2D::7286288881880723764::1745190454::1745646988::1::::<><>::
+R.png::CompressedTexture2D::8471809011589510672::1745190454::1745646988::1::::<><>::
+shuttle.png::CompressedTexture2D::3990341821124301880::1745190454::1745646988::1::::<><>::
+spaceship.png::CompressedTexture2D::7291001098450021034::1745190454::1745647018::0::::<><>::
+::res://marsslingshot2.0/scenes/::1745646882
+checkpoint.tscn::PackedScene::4843484515972896960::1745646882::0::1::::<><>::uid://db2sd4a5jaqxw::::res://slingshot/assets/checkpoint.png<>res://slingshot/script/checkpoint.gd
 game_area.tscn::PackedScene::3562792104268630375::1745190454::0::1::::<><>::
-label.tscn::PackedScene::5329884093673904465::1745190454::0::1::::<><>::res://slingshot/label.gd
-mars.tscn::PackedScene::2856038970008483203::1745190454::0::1::::<><>::res://slingshot/mars.gd<>uid://dsx2pr6ebamps::::res://slingshot/assets/R.png
-MarsCrashText.tscn::PackedScene::575699899623474317::1745190454::0::1::::<><>::res://slingshot/timer.gd
-mars_crash.tscn::PackedScene::8422870439507633415::1745190454::0::1::::<><>::res://slingshot/mars_crash.gd
-off_course.tscn::PackedScene::3869467777425870406::1745190454::0::1::::<><>::res://slingshot/off_course.gd
+label.tscn::PackedScene::5329884093673904465::1745646882::0::1::::<><>::res://slingshot/script/label.gd
+mars.tscn::PackedScene::2856038970008483203::1745646882::0::1::::<><>::res://slingshot/script/mars.gd<>uid://dsx2pr6ebamps::::res://slingshot/assets/R.png
+MarsCrashText.tscn::PackedScene::575699899623474317::1745646882::0::1::::<><>::res://slingshot/script/timer.gd
+mars_crash.tscn::PackedScene::8422870439507633415::1745646882::0::1::::<><>::res://slingshot/script/mars_crash.gd
+off_course.tscn::PackedScene::3869467777425870406::1745646882::0::1::::<><>::res://slingshot/script/off_course.gd
 satillite.tscn::PackedScene::6286140872190967418::1745190454::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg
-space_ship.tscn::PackedScene::6013995576123617782::1745190454::0::1::::<><>::res://slingshot/space_ship.gd<>uid://bw37l15shxbrk::::res://slingshot/assets/shuttle.png<>res://slingshot/timer.gd
-timer.tscn::PackedScene::6477136135482842115::1745190454::0::1::::<><>::res://slingshot/timer.gd
-TransitionScreen.tscn::PackedScene::3892874636436711862::1745190454::0::1::::<><>::res://slingshot/transition_screen.gd
-world.tscn::PackedScene::3162590021962538817::1745636511::0::1::::<><>::res://slingshot/world.gd<>uid://bq03wvh64xhe2::::res://slingshot/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://slingshot/mars.tscn<>uid://cyjtqrvccw1f8::::res://slingshot/timer.tscn<>uid://crxhvmr5p37e5::::res://slingshot/space_ship.tscn<>uid://cbahqnt0etewm::::res://slingshot/checkpoint.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/label.tscn<>res://marsslingshot2.0/script/color_rect.gd
-world_level_1.tscn::PackedScene::6608492996021213876::1745636620::0::1::::<><>::res://marsslingshot2.0/script/world_level_1.gd<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/label.tscn<>res://marsslingshot2.0/script/color_rect.gd<>res://marsslingshot2.0/script/label_2.gd<>res://marsslingshot2.0/script/static_body_2d.gd<>uid://cahjg7deeqi57::::res://marsslingshot2.0/assets/checkpoint.png
-::res://marsslingshot2.0/script/::1745190454
+space_ship.tscn::PackedScene::6013995576123617782::1745646882::0::1::::<><>::res://slingshot/script/space_ship.gd<>uid://bw37l15shxbrk::::res://slingshot/assets/shuttle.png<>res://slingshot/script/timer.gd
+timer.tscn::PackedScene::6477136135482842115::1745646882::0::1::::<><>::res://slingshot/script/timer.gd
+TransitionScreen.tscn::PackedScene::3892874636436711862::1745646882::0::1::::<><>::res://slingshot/script/transition_screen.gd
+world.tscn::PackedScene::3162590021962538817::1745646882::0::1::::<><>::res://slingshot/script/world.gd<>uid://bq03wvh64xhe2::::res://slingshot/scenes/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://slingshot/scenes/mars.tscn<>uid://cyjtqrvccw1f8::::res://slingshot/scenes/timer.tscn<>uid://crxhvmr5p37e5::::res://slingshot/scenes/space_ship.tscn<>uid://cbahqnt0etewm::::res://slingshot/scenes/checkpoint.tscn<>uid://ch63oavybuyab::::res://slingshot/scenes/label.tscn<>res://slingshot/script/color_rect.gd
+world_level_1.tscn::PackedScene::6608492996021213876::1745646882::0::1::::<><>::res://slingshot/script/world_level_1.gd<>uid://crxhvmr5p37e5::::res://slingshot/scenes/space_ship.tscn<>uid://ch63oavybuyab::::res://slingshot/scenes/label.tscn<>res://slingshot/script/color_rect.gd<>res://slingshot/script/label_2.gd<>res://slingshot/script/checkpoint.gd<>uid://db2sd4a5jaqxw::::res://slingshot/assets/checkpoint.png
+::res://marsslingshot2.0/script/::1745646882
 boosterbar.gd::GDScript::-1::1745190454::0::1::::<>ColorRect<>::
 checkpoint.gd::GDScript::-1::1745190454::0::1::::<>StaticBody2D<>::
 color_rect.gd::GDScript::-1::1745190454::0::1::::<>ColorRect<>::
 label.gd::GDScript::-1::1745190454::0::1::::<>Label<>::
 label_2.gd::GDScript::-1::1745190454::0::1::::<>Label<>::
-mars.gd::GDScript::-1::1745190454::0::1::::<>StaticBody2D<>::
-mars_crash.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
+mars.gd::GDScript::-1::1745646882::0::1::::<>StaticBody2D<>::
+mars_crash.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
 mars_crash_text.gd::GDScript::-1::1745190454::0::1::::<>RichTextLabel<>::
-off_course.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
+off_course.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
 space_ship.gd::GDScript::-1::1745190454::0::1::::<>CharacterBody2D<>::
-static_body_2d.gd::GDScript::-1::1745190454::0::1::::<>StaticBody2D<>::
+static_body_2d.gd::GDScript::-1::1745646882::0::1::::<>StaticBody2D<>::
 timer.gd::GDScript::-1::1745190454::0::1::::<>Timer<>::
-transition_screen.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
-world.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
-world_level_1.gd::GDScript::-1::1745190454::0::1::::<>Node2D<>::
+transition_screen.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
+world.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
+world_level_1.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
 ::res://marsslingshot2.0/slingshot/::1745609668
 checkpoint.gd::GDScript::-1::1741740553::0::1::::<>StaticBody2D<>::
 checkpoint.png::CompressedTexture2D::792890335219409939::1741740553::1745609668::1::::<><>::
@@ -269,19 +269,23 @@ timer.tscn::PackedScene::6477136135482842115::1741740553::0::1::::<><>::res://sl
 world.gd::GDScript::-1::1741740553::0::1::::<>Node2D<>::
 world.tscn::PackedScene::3162590021962538817::1741740553::0::1::::<><>::res://slingshot/world.gd<>uid://bq03wvh64xhe2::::res://slingshot/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://slingshot/mars.tscn<>uid://cyjtqrvccw1f8::::res://slingshot/timer.tscn<>uid://crxhvmr5p37e5::::res://slingshot/space_ship.tscn<>uid://cbahqnt0etewm::::res://slingshot/checkpoint.tscn<>uid://ch63oavybuyab::::res://slingshot/label.tscn
 ::res://meteoroid-level/::1745436580
-::res://meteoroid-level/assets/::1745609669
-dogicapixel.ttf::FontFile::4493257860863629688::1744853109::1745609667::1::::<><>::
-fuel tank.png::CompressedTexture2D::6349581218866152606::1744853109::1745609668::1::::<><>::
-meteoroid-level-background.png::CompressedTexture2D::676156577625493772::1744400909::1745609668::1::::<><>::
-meteoroid-level-border-background.png::CompressedTexture2D::1056446112237300775::1744400909::1745609668::1::::<><>::
-mouse-click.wav::AudioStreamWAV::7293787482174941216::1744853109::1745609669::1::::<><>::
-propulsion sound.wav::AudioStreamWAV::4441002516650300903::1744400909::1745609669::1::::<><>::
-psyche shuttle.png::CompressedTexture2D::550216513936451273::1744400909::1745609668::1::::<><>::
-rocket engine nozzle.png::CompressedTexture2D::3105349397751398089::1744853109::1745609668::1::::<><>::
-satellitedish.png::CompressedTexture2D::7262180349611768876::1744853109::1745609668::1::::<><>::
-solarpanel.png::CompressedTexture2D::700524814212081493::1745436552::1745609668::1::::<><>::
-space rocks.png::CompressedTexture2D::1240770759946205152::1744400909::1745609668::1::::<><>::
-wires.png::CompressedTexture2D::500460825839446649::1744853109::1745609668::1::::<><>::
+::res://meteoroid-level/assets/::1745646882
+buttons.png::CompressedTexture2D::7095271726504388033::1745646882::1745646988::1::::<><>::
+dogicapixel.ttf::FontFile::5444407504430725317::1744853109::1745646988::1::::<><>::
+fuel tank.png::CompressedTexture2D::7231264948304084212::1744853109::1745646988::1::::<><>::
+meteoroid-level-background.png::CompressedTexture2D::7941759422630959503::1745646882::1745646988::1::::<><>::
+meteoroid-level-border-background.png::CompressedTexture2D::3611143816376318401::1744400909::1745646988::1::::<><>::
+mouse-click.wav::AudioStreamWAV::2167110260998640480::1744853109::1745646988::1::::<><>::
+perspective view of psyche spacecraft.png::CompressedTexture2D::1364907541119160427::1745646882::1745646988::1::::<><>::
+propulsion sound.wav::AudioStreamWAV::8070048357270107579::1744400909::1745646988::1::::<><>::
+psyche shuttle.png::CompressedTexture2D::8735666188172070991::1744400909::1745646988::1::::<><>::
+psyche view from above.png::CompressedTexture2D::1437131582286638161::1745646882::1745646988::1::::<><>::
+psyche view of earth.png::CompressedTexture2D::1709259792856584624::1745646882::1745646988::1::::<><>::
+rocket engine nozzle.png::CompressedTexture2D::2370901387194233329::1744853109::1745646988::1::::<><>::
+satellitedish.png::CompressedTexture2D::591012980325052354::1744853109::1745646988::1::::<><>::
+solarpanel.png::CompressedTexture2D::4763759909769193932::1745436552::1745646988::1::::<><>::
+space rocks.png::CompressedTexture2D::5498511045053809417::1744400909::1745646988::1::::<><>::
+wires.png::CompressedTexture2D::7199354325545618500::1744853109::1745646988::1::::<><>::
 ::res://meteoroid-level/assets/10 asteriod sprite pack/::1745436552
 ::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/::1741740553
 ::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/::1745609668
@@ -313,43 +317,45 @@ Playful_Hit.wav::AudioStreamWAV::7332952811814447386::1741740553::1745609669::1:
 Playful_LevelUp.wav::AudioStreamWAV::351029262637941739::1741740553::1745609669::1::::<><>::
 Playful_MajorPickup.wav::AudioStreamWAV::6912778423009105753::1741740553::1745609669::1::::<><>::
 Playful_Pickup.wav::AudioStreamWAV::4604533710511473831::1741740553::1745609669::1::::<><>::
-::res://meteoroid-level/scenes/::1745636893
-end_screen.tscn::PackedScene::938195871881461229::1745636351::0::1::::<><>::res://meteoroid-level/scripts/end_screen.gd<>res://meteoroid-level/scripts/next_level_button.gd<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://b5atkhmwunvb1::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://db6fu5al4tyds::::res://meteoroid-level/assets/mouse-click.wav
-input_arrows.tscn::PackedScene::4849968704058625561::1741740553::0::1::::<><>::uid://kasif2ih61nh::::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png
-input_container.tscn::PackedScene::8040228614796621407::1741740553::0::1::::<><>::res://meteoroid-level/scripts/input_container.gd
-killzone.tscn::PackedScene::5508202319634049245::1741740553::0::1::::<><>::res://meteoroid-level/scripts/killzone.gd
-level_1.tscn::PackedScene::8183333518045023678::1745636362::0::1::::<><>::res://meteoroid-level/scripts/level_1.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://jvsg2ium2w2g::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://pb0rpfwrqi44::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png
-level_1_screen.tscn::PackedScene::2134164164262616306::1745636374::0::1::::<><>::res://meteoroid-level/scripts/level_1_start.gd<>res://meteoroid-level/scripts/level_1_screen.gd<>uid://b5atkhmwunvb1::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://db6fu5al4tyds::::res://meteoroid-level/assets/mouse-click.wav
-level_2.tscn::PackedScene::3738743211435572838::1745636383::0::1::::<><>::res://meteoroid-level/scripts/level_2.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://jvsg2ium2w2g::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://pb0rpfwrqi44::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png
-level_2_screen.tscn::PackedScene::3109361780925147148::1745636390::0::1::::<><>::res://meteoroid-level/scripts/level_2_screen.gd<>res://meteoroid-level/scripts/level_2_start.gd<>uid://b5atkhmwunvb1::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://db6fu5al4tyds::::res://meteoroid-level/assets/mouse-click.wav
-level_3.tscn::PackedScene::5829538703089930264::1745636404::0::1::::<><>::res://meteoroid-level/scripts/level_3.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://pb0rpfwrqi44::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://jvsg2ium2w2g::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png
-level_3_screen.tscn::PackedScene::3686966768063067408::1745636340::0::1::::<><>::res://meteoroid-level/scripts/level_3_screen.gd<>res://meteoroid-level/scripts/level_3_start.gd<>uid://b5atkhmwunvb1::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://db6fu5al4tyds::::res://meteoroid-level/assets/mouse-click.wav
-moving_debris.tscn::PackedScene::6206093476750680439::1744853109::0::1::::<><>::res://meteoroid-level/scripts/moving_debris.gd<>uid://eguco7fnxcfi::::res://meteoroid-level/assets/rocket engine nozzle.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn<>uid://cf7xo5tvtgl6c::::res://meteoroid-level/assets/moving debris.png<>uid://dwro0qtsisexs::::res://meteoroid-level/assets/fuel tank.png<>uid://b6id1lks1gi2m::::res://meteoroid-level/assets/satellitedish.png<>uid://cmmu0ojh72bw0::::res://meteoroid-level/assets/wires.png
-non_moving_debris.tscn::PackedScene::1532995182926943286::1745636893::0::1::::<><>::uid://rxbkv8s3h5we::::res://meteoroid-level/assets/space rocks.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn
-path.tscn::PackedScene::3658051682662829387::1741740553::0::1::::<><>::res://meteoroid-level/scripts/path.gd
-shuttle.tscn::PackedScene::8045799112014115850::1744853109::0::1::::<><>::res://meteoroid-level/scripts/shuttle.gd<>uid://dmitpk0danggl::::res://meteoroid-level/assets/psyche shuttle.png<>uid://dbfhtcgf0r7s2::::res://meteoroid-level/assets/propulsion sound.wav
+::res://meteoroid-level/scenes/::1745646882
+end_screen.tscn::PackedScene::938195871881461229::1745646882::0::1::::<><>::res://meteoroid-level/scripts/end_screen.gd<>res://meteoroid-level/scripts/next_level_button.gd<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png<>uid://uqfl2mcd7c70::::res://meteoroid-level/assets/psyche view from above.png<>uid://cjtkujfqgepu8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://5408vyt7fsei::::res://meteoroid-level/assets/mouse-click.wav<>uid://byg2y0frq8ik4::::res://fonts/dogicapixelbold.ttf<>uid://c8dadasnqr4e4::::res://meteoroid-level/assets/buttons.png<>uid://v2re0p6veoo3::::res://audio/dialogue.mp3<>uid://yl8i2qgmqnlg::::res://meteoroid-level/assets/psyche view of earth.png<>uid://tpf3e6lh0m8b::::res://meteoroid-level/assets/perspective view of psyche spacecraft.png
+input_arrows.tscn::PackedScene::4849968704058625561::1745646882::0::1::::<><>::uid://kasif2ih61nh::::res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png
+input_container.tscn::PackedScene::8040228614796621407::1745646882::0::1::::<><>::res://meteoroid-level/scripts/input_container.gd
+killzone.tscn::PackedScene::5508202319634049245::1745646882::0::1::::<><>::res://meteoroid-level/scripts/killzone.gd
+level_1.tscn::PackedScene::8183333518045023678::1745646882::0::1::::<><>::res://meteoroid-level/scripts/level_1.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://dlfbu8xyaqbj0::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://dam0mjk2qoxfh::::res://fonts/dogicapixel.ttf<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png
+level_1_screen.tscn::PackedScene::2134164164262616306::1745646882::0::1::::<><>::res://meteoroid-level/scripts/level_1_start.gd<>res://meteoroid-level/scripts/level_1_screen.gd<>uid://cjtkujfqgepu8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png<>uid://byg2y0frq8ik4::::res://fonts/dogicapixelbold.ttf<>uid://5408vyt7fsei::::res://meteoroid-level/assets/mouse-click.wav<>uid://c8dadasnqr4e4::::res://meteoroid-level/assets/buttons.png<>uid://v2re0p6veoo3::::res://audio/dialogue.mp3<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn
+level_2.tscn::PackedScene::3738743211435572838::1745646882::0::1::::<><>::res://meteoroid-level/scripts/level_2.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://dlfbu8xyaqbj0::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://dam0mjk2qoxfh::::res://fonts/dogicapixel.ttf<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png
+level_2_screen.tscn::PackedScene::3109361780925147148::1745646882::0::1::::<><>::res://meteoroid-level/scripts/level_2_screen.gd<>res://meteoroid-level/scripts/level_2_start.gd<>uid://cjtkujfqgepu8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png<>uid://byg2y0frq8ik4::::res://fonts/dogicapixelbold.ttf<>uid://5408vyt7fsei::::res://meteoroid-level/assets/mouse-click.wav<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://c8dadasnqr4e4::::res://meteoroid-level/assets/buttons.png<>uid://v2re0p6veoo3::::res://audio/dialogue.mp3<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn
+level_3.tscn::PackedScene::5829538703089930264::1745646882::0::1::::<><>::res://meteoroid-level/scripts/level_3.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://dam0mjk2qoxfh::::res://fonts/dogicapixel.ttf<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://dms0njr5j00xv::::res://meteoroid-level/scenes/input_container.tscn<>uid://dlfbu8xyaqbj0::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://dcqewqv0fchne::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://fabnvf6irph0::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png
+level_3_screen.tscn::PackedScene::3686966768063067408::1745646882::0::1::::<><>::res://meteoroid-level/scripts/level_3_screen.gd<>res://meteoroid-level/scripts/level_3_start.gd<>uid://cjtkujfqgepu8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png<>uid://byg2y0frq8ik4::::res://fonts/dogicapixelbold.ttf<>uid://5408vyt7fsei::::res://meteoroid-level/assets/mouse-click.wav<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://c8dadasnqr4e4::::res://meteoroid-level/assets/buttons.png<>uid://v2re0p6veoo3::::res://audio/dialogue.mp3<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn
+moving_debris.tscn::PackedScene::6206093476750680439::1745646882::0::1::::<><>::res://meteoroid-level/scripts/moving_debris.gd<>uid://eguco7fnxcfi::::res://meteoroid-level/assets/rocket engine nozzle.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn<>uid://cf7xo5tvtgl6c::::res://meteoroid-level/assets/moving debris.png<>uid://dwro0qtsisexs::::res://meteoroid-level/assets/fuel tank.png<>uid://b6id1lks1gi2m::::res://meteoroid-level/assets/satellitedish.png<>uid://cmmu0ojh72bw0::::res://meteoroid-level/assets/wires.png
+non_moving_debris.tscn::PackedScene::1532995182926943286::1745646882::0::1::::<><>::uid://cl1u65hcja6ob::::res://meteoroid-level/assets/space rocks.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn
+path.tscn::PackedScene::3658051682662829387::1745646882::0::1::::<><>::res://meteoroid-level/scripts/path.gd
+shuttle.tscn::PackedScene::8045799112014115850::1745646882::0::1::::<><>::res://meteoroid-level/scripts/shuttle.gdshader<>res://meteoroid-level/scripts/shuttle.gd<>uid://dwpve7tnyfwk2::::res://meteoroid-level/assets/psyche shuttle.png<>uid://dm8grudyegl4f::::res://meteoroid-level/assets/propulsion sound.wav
 spinning_shuttle.gd::GDScript::-1::1744853109::0::1::::<>Sprite2D<>::
-start_screen.tscn::PackedScene::3313906559616397305::1745636445::0::1::::<><>::res://meteoroid-level/scripts/start_screen.gd<>res://meteoroid-level/scripts/start_button.gd<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://db6fu5al4tyds::::res://meteoroid-level/assets/mouse-click.wav<>uid://b5atkhmwunvb1::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://pb0rpfwrqi44::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://h3r8rl5u2gxl::::res://meteoroid-level/assets/psyche shuttle.png<>res://meteoroid-level/scenes/spinning_shuttle.gd
-::res://meteoroid-level/scripts/::1744853109
-end_screen.gd::GDScript::-1::1744853109::0::1::::<>Control<>::
-input_container.gd::GDScript::-1::1744400909::0::1::::<>HBoxContainer<>::
-killzone.gd::GDScript::-1::1744400909::0::1::::<>Area2D<>::
-level_1.gd::GDScript::-1::1744400909::0::1::::<>Node2D<>::
-level_1_screen.gd::GDScript::-1::1744853109::0::1::::<>Control<>::
-level_1_start.gd::GDScript::-1::1744853109::0::1::::<>Button<>::
-level_2.gd::GDScript::-1::1744400909::0::1::::<>Node2D<>::
-level_2_screen.gd::GDScript::-1::1744853109::0::1::::<>Control<>::
-level_2_start.gd::GDScript::-1::1744853109::0::1::::<>Button<>::
-level_3.gd::GDScript::-1::1744400909::0::1::::<>Node2D<>::
-level_3_screen.gd::GDScript::-1::1744853109::0::1::::<>Control<>::
-level_3_start.gd::GDScript::-1::1744853109::0::1::::<>Button<>::
-moving_debris.gd::GDScript::-1::1744853109::0::1::::<>Node2D<>::
-next_level_button.gd::GDScript::-1::1744853109::0::1::::<>Button<>::
-path.gd::GDScript::-1::1744400909::0::1::::<>Line2D<>::
-shuttle.gd::GDScript::-1::1744400909::0::1::::<>CharacterBody2D<>::
-start_button.gd::GDScript::-1::1744853109::0::1::::<>Button<>::
-start_screen.gd::GDScript::-1::1744853109::0::1::::<>Control<>::
-start_screen.gdshader::Shader::-1::1744853109::0::1::::<><>::
+start_screen.tscn::PackedScene::3313906559616397305::1745646882::0::1::::<><>::res://meteoroid-level/scripts/start_screen.gd<>res://meteoroid-level/scripts/start_button.gd<>uid://c30hm5ax5i0ye::::res://consoleBackgroundLarge.png<>uid://5408vyt7fsei::::res://meteoroid-level/assets/mouse-click.wav<>uid://cjtkujfqgepu8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://brpjam10hnd66::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://byg2y0frq8ik4::::res://fonts/dogicapixelbold.ttf<>uid://c8dadasnqr4e4::::res://meteoroid-level/assets/buttons.png<>uid://dwpve7tnyfwk2::::res://meteoroid-level/assets/psyche shuttle.png<>res://meteoroid-level/scripts/spinning_shuttle.gd<>uid://v2re0p6veoo3::::res://audio/dialogue.mp3
+::res://meteoroid-level/scripts/::1745646882
+end_screen.gd::GDScript::-1::1745646882::0::1::::<>Control<>::
+input_container.gd::GDScript::-1::1745646882::0::1::::<>HBoxContainer<>::
+killzone.gd::GDScript::-1::1745646882::0::1::::<>Area2D<>::
+level_1.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
+level_1_screen.gd::GDScript::-1::1745646882::0::1::::<>Control<>::
+level_1_start.gd::GDScript::-1::1745646882::0::1::::<>Button<>::
+level_2.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
+level_2_screen.gd::GDScript::-1::1745646882::0::1::::<>Control<>::
+level_2_start.gd::GDScript::-1::1745646882::0::1::::<>Button<>::
+level_3.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
+level_3_screen.gd::GDScript::-1::1745646882::0::1::::<>Control<>::
+level_3_start.gd::GDScript::-1::1745646882::0::1::::<>Button<>::
+moving_debris.gd::GDScript::-1::1745646882::0::1::::<>Node2D<>::
+next_level_button.gd::GDScript::-1::1745646882::0::1::::<>Button<>::
+path.gd::GDScript::-1::1745646882::0::1::::<>Line2D<>::
+shuttle.gd::GDScript::-1::1745646882::0::1::::<>CharacterBody2D<>::
+shuttle.gdshader::Shader::-1::1745646882::0::1::::<><>::
+spinning_shuttle.gd::GDScript::-1::1745646882::0::1::::<>Sprite2D<>::
+start_button.gd::GDScript::-1::1745646882::0::1::::<>Button<>::
+start_screen.gd::GDScript::-1::1745646882::0::1::::<>Control<>::
+start_screen.gdshader::Shader::-1::1745646882::0::1::::<><>::
 ::res://psychescan/::1745636185
 ::res://psychescan/addons/::1745632025
 CRTVisual.gdshader::Shader::-1::1744400208::0::1::::<><>::
@@ -376,11 +382,11 @@ background.tscn::PackedScene::7619888676006441872::1745636893::0::1::::<><>::uid
 computer_ui_global.tscn::PackedScene::6548701820445567290::1745634145::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3
 tutorialBackground.tscn::PackedScene::7010179177494620253::1745634434::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/Tutorial_To_Next_Level.gd<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://by3gha64uoyhi::::res://psychescan/assets/textures/squareReticle.png<>uid://bbq1nmd6hlrr1::::res://psychescan/assets/audio/correct.wav<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png
 vic_background.tscn::PackedScene::1137736370402036168::1745634434::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/To_Next_Level.gd<>uid://dq62abyfwocnx::::res://psychescan/texts/victory_text.tscn<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png
-::res://psychescan/levels/::1745636893
+::res://psychescan/levels/::1745637011
 level2.tscn::PackedScene::8170210285516169031::1745122121::0::1::::<><>::uid://c0u77fgeccqyi::::res://psychescan/sprites/asteroid2.tscn<>res://psychescan/addons/CRTVisual.gdshader<>uid://b5x1ucl4jwbq4::::res://psychescan/backgrounds/background2.tscn
 level3.tscn::PackedScene::2560300434343043779::1745310729::0::1::::<><>::uid://d2k4nx07esqql::::res://psychescan/sprites/asteroid3.tscn<>res://psychescan/addons/CRTVisual.gdshader<>uid://cosc37m3bowe8::::res://psychescan/backgrounds/background3.tscn
 level.tscn::PackedScene::5180286663584502367::1745122121::0::1::::<><>::uid://dgtepn6enoocu::::res://psychescan/backgrounds/background.tscn<>uid://fdj4n1xw0w83::::res://psychescan/sprites/asteroid1.tscn<>res://psychescan/addons/CRTVisual.gdshader
-main_level.tscn::PackedScene::1238848156924404652::1745636893::0::1::::<><>::uid://dn7vq2upimlf3::::res://psychescan/levels/tutorialLevel.tscn
+main_level.tscn::PackedScene::1238848156924404652::1745637011::0::1::::<><>::uid://dn7vq2upimlf3::::res://psychescan/levels/tutorialLevel.tscn
 tutorialLevel.tscn::PackedScene::8139082185773459890::1745633230::0::1::::<><>::uid://fdj4n1xw0w83::::res://psychescan/sprites/asteroid1.tscn<>res://psychescan/addons/CRTVisual.gdshader<>uid://c641vkv3xk5kr::::res://psychescan/backgrounds/tutorialBackground.tscn
 victory_scene.tscn::PackedScene::7193989705513981898::1745636893::0::1::::<><>::res://psychescan/addons/StarScroll.gdshader<>res://psychescan/addons/CRTVisual.gdshader<>uid://dqnw2vpndho8c::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://qhel7w7se32c::::res://psychescan/backgrounds/vic_background.tscn
 ::res://psychescan/scripts/::1745636884
