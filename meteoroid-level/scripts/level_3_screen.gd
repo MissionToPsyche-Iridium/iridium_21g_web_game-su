@@ -3,13 +3,18 @@ extends Control
 var text = [
 	"Loading Course Simulation...
 
+
 	Settings: 
+	
 	Non-moving debris
+	
 	Moving debris
+	
 	Limited to 20 maneuvers"
 ]
 @onready var message: Label = $Message
 @onready var start_button: Button = $Message/StartButton
+@onready var typing_sound: AudioStreamPlayer2D = $TypingSound
 
 const base_speed := 50
 var started := true
@@ -30,8 +35,8 @@ func _process(delta: float) -> void:
 				count += base_speed*delta
 			else:
 				message.set_visible_characters(message.get_visible_characters()+1)
-				#if (message.get_visible_characters() % 2 == 0):
-					#$Audio/sfx_dialogue.play()
+				if (message.get_visible_characters() % 2 == 0):
+					typing_sound.play()
 				count -= 1
 		else:
 			if text.is_empty() && !finished:

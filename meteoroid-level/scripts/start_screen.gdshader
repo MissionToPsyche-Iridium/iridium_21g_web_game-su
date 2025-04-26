@@ -1,3 +1,4 @@
+// shader to have the background scroll horizontally
 shader_type canvas_item;
 
 void vertex() {

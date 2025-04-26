@@ -30,7 +30,9 @@ func _ready() -> void:
 	animated_sprite_2d.play(inputs[random_frame_num])
 	
 	var shuttle_node = get_tree().current_scene.get_node("Shuttle") # Meteoroids connect to the shuttle to move when shuttle moves
-	shuttle_node.connect("meteoroid_movement", move) # signal
+	if shuttle_node:
+		shuttle_node.connect("meteoroid_movement", move) # signal
+	else: return
 
 func _process(delta: float) -> void:
 	if random_rotation_num == 1:

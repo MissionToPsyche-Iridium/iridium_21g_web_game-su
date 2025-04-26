@@ -5,6 +5,7 @@ extends Button
 @onready var timer: Timer = $"../Timer"
 
 func _on_pressed() -> void:
+	clicksound.volume_db = 0
 	clicksound.play()
 	timer.start()
 	

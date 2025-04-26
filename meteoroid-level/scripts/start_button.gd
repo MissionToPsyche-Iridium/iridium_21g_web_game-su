@@ -7,6 +7,7 @@ extends Button
 
 
 func _on_pressed() -> void:
+	clicksound.volume_db = 0
 	clicksound.play()
 	timer.start()
 

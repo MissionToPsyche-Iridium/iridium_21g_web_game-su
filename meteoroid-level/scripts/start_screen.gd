@@ -6,15 +6,19 @@ var text = [
 	
 	
 	This software will allow you 
-	to test spacecraft maneuvers
-	to avoid obstacles on the 
-	course to the asteroid."
+	
+	to plan out the shuttle's course
+	
+	to avoid obstacles on its 
+	
+	way to the asteroid."
 	
 ]
 @onready var message: Label = $Message
 @onready var start_button: Button = $Message/StartButton
+@onready var typing_sound: AudioStreamPlayer2D = $TypingSound
 
-const base_speed := 50
+const base_speed := 40
 var started := true
 var finished := false
 var count := 0.0
@@ -33,8 +37,8 @@ func _process(delta: float) -> void:
 				count += base_speed*delta
 			else:
 				message.set_visible_characters(message.get_visible_characters()+1)
-				#if (message.get_visible_characters() % 2 == 0):
-					#$Audio/sfx_dialogue.play()
+				if (message.get_visible_characters() % 2 == 0):
+					typing_sound.play()
 				count -= 1
 		else:
 			if text.is_empty() && !finished:
