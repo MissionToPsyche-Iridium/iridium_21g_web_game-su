@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://psychescan/addons/StarScroll.gdshader" id="1_mnvu7"]
 [ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="2_30gpm"]
-[ext_resource type="Texture2D" uid="uid://bvc0xsfc5xp4f" path="res://psychescan/assets/meteoroid-level-border-background.png" id="2_c55o4"]
+[ext_resource type="Texture2D" uid="uid://dqnw2vpndho8c" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="2_c55o4"]
 [ext_resource type="PackedScene" uid="uid://qhel7w7se32c" path="res://psychescan/backgrounds/vic_background.tscn" id="2_igxqu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8emcb"]

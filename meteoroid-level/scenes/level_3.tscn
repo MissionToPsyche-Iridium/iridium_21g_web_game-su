@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_3.gd" id="1_sjbbj"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_g3yd7"]
-[ext_resource type="Texture2D" uid="uid://5b1o7n36wq45" path="res://meteoroid-level/assets/meteoroid-level-border-background.png" id="6_on056"]
+[ext_resource type="Texture2D" uid="uid://pb0rpfwrqi44" path="res://meteoroid-level/assets/meteoroid-level-border-background.png" id="6_on056"]
 [ext_resource type="PackedScene" uid="uid://cuojpnqpbf5v4" path="res://meteoroid-level/scenes/moving_debris.tscn" id="7_6q36i"]
 [ext_resource type="PackedScene" uid="uid://v3uha6yq4pj7" path="res://meteoroid-level/scenes/non_moving_debris.tscn" id="8_8knv3"]
 [ext_resource type="PackedScene" uid="uid://dms0njr5j00xv" path="res://meteoroid-level/scenes/input_container.tscn" id="8_g2xs7"]
-[ext_resource type="Texture2D" uid="uid://dqt8037biaadp" path="res://meteoroid-level/assets/meteoroid-level-background.png" id="8_oj34l"]
+[ext_resource type="Texture2D" uid="uid://jvsg2ium2w2g" path="res://meteoroid-level/assets/meteoroid-level-background.png" id="8_oj34l"]
 [ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://meteoroid-level/scenes/path.tscn" id="9_xg24a"]
 [ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="11_wph22"]
 [ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="12_fb8d6"]
-[ext_resource type="Texture2D" uid="uid://c4n507vefiuwn" path="res://consoleBackgroundLarge.png" id="13_t7t6d"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="13_t7t6d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6cvpg"]
 texture = ExtResource("6_on056")

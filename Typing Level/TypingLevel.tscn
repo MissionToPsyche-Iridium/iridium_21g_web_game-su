@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Typing Level/typing_level.gd" id="1_yaj5j"]
 [ext_resource type="PackedScene" uid="uid://bfb4cc1is55wv" path="res://Typing Level/TypingBlock.tscn" id="2_wc733"]
-[ext_resource type="Texture2D" uid="uid://dllaiteuoljol" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
-[ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="3_rhs66"]
-[ext_resource type="Texture2D" uid="uid://clufwj1x38o5p" path="res://psychescan/assets/psyche1.png" id="3_sbcle"]
-[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="5_onspf"]
-[ext_resource type="Texture2D" uid="uid://bcike3hlobc0y" path="res://psychescan/assets/green light.png" id="6_hde7p"]
-[ext_resource type="AudioStream" uid="uid://cly07w2aa5yrj" path="res://psychescan/assets/correct.wav" id="7_snvv2"]
+[ext_resource type="Texture2D" uid="uid://h3r8rl5u2gxl" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="3_rhs66"]
+[ext_resource type="Texture2D" uid="uid://d162g7ouh2vbs" path="res://psychescan/assets/textures/psyche1.png" id="3_sbcle"]
+[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_onspf"]
+[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/textures/green light.png" id="6_hde7p"]
+[ext_resource type="AudioStream" uid="uid://bbq1nmd6hlrr1" path="res://psychescan/assets/audio/correct.wav" id="7_snvv2"]
 
 [sub_resource type="Animation" id="Animation_6pbho"]
 length = 0.001

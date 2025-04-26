@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_1_start.gd" id="1_6hiu1"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_1_screen.gd" id="1_umrlm"]
-[ext_resource type="FontFile" uid="uid://ca46xqutaucrs" path="res://meteoroid-level/assets/dogicapixel.ttf" id="2_57elp"]
-[ext_resource type="Texture2D" uid="uid://c4n507vefiuwn" path="res://consoleBackgroundLarge.png" id="2_aeet2"]
-[ext_resource type="AudioStream" uid="uid://bge3kfdxuw75b" path="res://meteoroid-level/assets/mouse-click.wav" id="3_eqwd3"]
+[ext_resource type="FontFile" uid="uid://b5atkhmwunvb1" path="res://meteoroid-level/assets/dogicapixel.ttf" id="2_57elp"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="2_aeet2"]
+[ext_resource type="AudioStream" uid="uid://db6fu5al4tyds" path="res://meteoroid-level/assets/mouse-click.wav" id="3_eqwd3"]
 
 [node name="Level 1 Screen" type="Control"]
 layout_mode = 3
