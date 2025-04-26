@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmvpevcgrtlss"]
+[gd_scene load_steps=9 format=3 uid="uid://dmvpevcgrtlss"]
 
+[ext_resource type="Shader" path="res://meteoroid-level/scripts/shuttle.gdshader" id="1_04it3"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/shuttle.gd" id="1_r5ds6"]
-[ext_resource type="Texture2D" uid="uid://dmitpk0danggl" path="res://meteoroid-level/assets/psyche shuttle.png" id="2_283mx"]
-[ext_resource type="AudioStream" uid="uid://dbfhtcgf0r7s2" path="res://meteoroid-level/assets/propulsion sound.wav" id="3_qpmuf"]
+[ext_resource type="Texture2D" uid="uid://dwpve7tnyfwk2" path="res://meteoroid-level/assets/psyche shuttle.png" id="2_283mx"]
+[ext_resource type="AudioStream" uid="uid://dm8grudyegl4f" path="res://meteoroid-level/assets/propulsion sound.wav" id="3_qpmuf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_07hft"]
+shader = ExtResource("1_04it3")
+shader_parameter/border_threshold = Vector2(0.01, 0.01)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qpnbo"]
 atlas = ExtResource("2_283mx")
@@ -29,6 +34,7 @@ collision_layer = 2
 script = ExtResource("1_r5ds6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_07hft")
 position = Vector2(4, 2)
 scale = Vector2(0.075, 0.075)
 sprite_frames = SubResource("SpriteFrames_kixk8")

@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=4 uid="uid://btjcs37klw37w"]
+[gd_scene load_steps=15 format=4 uid="uid://btjcs37klw37w"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_2.gd" id="1_oy24c"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_eccv8"]
-[ext_resource type="Texture2D" uid="uid://jvsg2ium2w2g" path="res://meteoroid-level/assets/meteoroid-level-background.png" id="6_0cn5o"]
+[ext_resource type="Texture2D" uid="uid://dlfbu8xyaqbj0" path="res://meteoroid-level/assets/meteoroid-level-background.png" id="6_0cn5o"]
+[ext_resource type="FontFile" uid="uid://dam0mjk2qoxfh" path="res://fonts/dogicapixel.ttf" id="6_a3cv1"]
 [ext_resource type="PackedScene" uid="uid://dms0njr5j00xv" path="res://meteoroid-level/scenes/input_container.tscn" id="7_uqcct"]
-[ext_resource type="Texture2D" uid="uid://pb0rpfwrqi44" path="res://meteoroid-level/assets/meteoroid-level-border-background.png" id="8_h1tlw"]
+[ext_resource type="Texture2D" uid="uid://brpjam10hnd66" path="res://meteoroid-level/assets/meteoroid-level-border-background.png" id="8_h1tlw"]
 [ext_resource type="PackedScene" uid="uid://bsd8tu0gnjycp" path="res://meteoroid-level/scenes/path.tscn" id="8_xg25m"]
 [ext_resource type="PackedScene" uid="uid://cuojpnqpbf5v4" path="res://meteoroid-level/scenes/moving_debris.tscn" id="9_pgvm1"]
 [ext_resource type="AudioStream" uid="uid://dcqewqv0fchne" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="10_p085w"]
 [ext_resource type="AudioStream" uid="uid://fabnvf6irph0" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="11_3hp1t"]
-[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="12_4jqiy"]
+[ext_resource type="Texture2D" uid="uid://c30hm5ax5i0ye" path="res://consoleBackgroundLarge.png" id="12_4jqiy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_87qbt"]
 texture = ExtResource("6_0cn5o")
@@ -49,22 +50,45 @@ tile_set = SubResource("TileSet_o16sr")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -63.0
-offset_bottom = 0.0
+offset_left = 418.0
+offset_top = -416.0
+offset_right = 610.0
+offset_bottom = -353.0
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="ControlsMessage" type="Label" parent="."]
 top_level = true
 z_index = 1
-offset_left = 1449.0
-offset_top = -650.0
-offset_right = 2053.0
-offset_bottom = -289.0
-theme_override_font_sizes/font_size = 44
-text = "Arrows for direction
-Backspace/ESC to undo
+offset_left = 1440.0
+offset_top = -691.0
+offset_right = 2158.0
+offset_bottom = -352.0
+theme_override_fonts/font = ExtResource("6_a3cv1")
+theme_override_font_sizes/font_size = 40
+text = "Arrows for 
+
+direction,
+
+Backspace/ESC
+
+to undo,
+
 Enter to confirm"
+autowrap_mode = 2
+
+[node name="InstructionsMessage" type="Label" parent="."]
+top_level = true
+z_index = 1
+offset_left = 1445.0
+offset_top = -238.0
+offset_right = 1969.0
+offset_bottom = 173.0
+theme_override_constants/line_spacing = 30
+theme_override_fonts/font = ExtResource("6_a3cv1")
+theme_override_font_sizes/font_size = 42
+text = "Plan out the 
+course to avoid the obstacles! Reach the glowing tile to proceed."
 autowrap_mode = 2
 
 [node name="Debris" type="Node" parent="."]
@@ -129,6 +153,7 @@ stream = ExtResource("10_p085w")
 
 [node name="WinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_3hp1t")
+volume_db = -10.0
 
 [node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
 z_index = 1
