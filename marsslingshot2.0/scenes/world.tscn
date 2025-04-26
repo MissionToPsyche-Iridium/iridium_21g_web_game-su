@@ -1,13 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://blb8npkytvcgv"]
+[gd_scene load_steps=11 format=3 uid="uid://blb8npkytvcgv"]
 
-[ext_resource type="Script" path="res://slingshot/world.gd" id="1_qnauu"]
-[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/game_area.tscn" id="2_482iq"]
-[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/mars.tscn" id="3_1ewpu"]
-[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/timer.tscn" id="4_g5xfb"]
-[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/space_ship.tscn" id="5_nkrjh"]
-[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://slingshot/checkpoint.tscn" id="6_cr8g0"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/label.tscn" id="7_ntjii"]
-[ext_resource type="Script" path="res://marsslingshot2.0/script/color_rect.gd" id="8_o5qwo"]
+[ext_resource type="Script" path="res://slingshot/script/world.gd" id="1_qnauu"]
+[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/scenes/game_area.tscn" id="2_482iq"]
+[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/scenes/mars.tscn" id="3_1ewpu"]
+[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/scenes/timer.tscn" id="4_g5xfb"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/scenes/space_ship.tscn" id="5_nkrjh"]
+[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://slingshot/scenes/checkpoint.tscn" id="6_cr8g0"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://slingshot/scenes/label.tscn" id="7_ntjii"]
+[ext_resource type="Script" path="res://slingshot/script/color_rect.gd" id="8_o5qwo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oiufe"]
+radius = 582.278
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x0l4m"]
+radius = 42.0119
 
 [node name="World" type="Node2D"]
 physics_interpolation_mode = 2
@@ -23,10 +29,21 @@ position = Vector2(536, 370)
 [node name="Area2D" parent="mars" index="1"]
 gravity_point_unit_distance = 15.0
 
+[node name="CollisionShape2D" parent="mars/Area2D" index="0"]
+shape = SubResource("CircleShape2D_oiufe")
+
+[node name="CollisionShape2D" parent="mars/Area2D2" index="0"]
+shape = SubResource("CircleShape2D_x0l4m")
+
 [node name="Timer" parent="." instance=ExtResource("4_g5xfb")]
+one_shot = true
+autostart = true
 
 [node name="space_ship" parent="." instance=ExtResource("5_nkrjh")]
 position = Vector2(95, 501)
+
+[node name="Timer" parent="space_ship" index="3"]
+one_shot = false
 
 [node name="checkpoint" parent="." instance=ExtResource("6_cr8g0")]
 position = Vector2(1037, 96)
@@ -36,6 +53,7 @@ offset_left = 112.0
 offset_top = 583.0
 offset_right = 152.0
 offset_bottom = 606.0
+script = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 4.0

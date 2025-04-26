@@ -11,11 +11,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	set_label()
 	set_size_colorrect()
-\
+
 
 
 func _on_game_area_body_exited(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://slingshot/off_course.tscn")
+	get_tree().change_scene_to_file("res://slingshot/scenes/off_course.tscn")
 	
 
 func set_label() -> void:
@@ -23,7 +23,7 @@ func set_label() -> void:
 	$Label.text = str(number).pad_decimals(2)
 
 func set_size_colorrect() :
-	$ColorRect.size.x = $space_ship.get_time_left() * 300
+	$ColorRect.size.x = $space_ship/Timer.get_time_left() * 300
 
 
 func _on_timer_timeout() -> void:

@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body != $CollisionShape2D:
-		get_tree().change_scene_to_file("res://slingshot/mars_crash.tscn")
+		get_tree().change_scene_to_file("res://slingshot/scenes/mars_crash.tscn")

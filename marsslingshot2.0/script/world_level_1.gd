@@ -20,8 +20,14 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	get_tree().reload_current_scene()
 
 func set_size_colorrect() :
-	$ColorRect.size.x = $space_ship.get_time_left() * 300
+	$ColorRect.size.x = $space_ship/Timer.get_time_left() * 300
 
 
 func _on_timer_timeout() -> void:
 	$ColorRect.visible = false
+
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://slingshot/scenes/TransitionScreen.tscn") # Replace with function body.
