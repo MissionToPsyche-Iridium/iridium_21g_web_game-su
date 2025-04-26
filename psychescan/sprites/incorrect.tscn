@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://rkniskrqmb35"]
 
-[ext_resource type="Texture2D" uid="uid://dqhgegtd125g8" path="res://psychescan/assets/red light.png" id="1_g0rok"]
-[ext_resource type="Texture2D" uid="uid://dpy5d8x15pph8" path="res://psychescan/assets/Red CRT.jpg" id="2_v304u"]
+[ext_resource type="Texture2D" uid="uid://bq2k5mmvina1k" path="res://psychescan/assets/red light.png" id="1_g0rok"]
+[ext_resource type="Texture2D" uid="uid://lhmalakro5dn" path="res://psychescan/assets/Red CRT.jpg" id="2_v304u"]
 
 [node name="Incorrect" type="StaticBody2D"]
 

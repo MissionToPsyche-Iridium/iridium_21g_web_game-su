@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://c641vkv3xk5kr"]
 
-[ext_resource type="Texture2D" uid="uid://gnepl3snpu07" path="res://psychescan/assets/consoleBackgroundLarge.png" id="1_8lion"]
+[ext_resource type="Texture2D" uid="uid://btttkf6vg0r3e" path="res://psychescan/assets/consoleBackgroundLarge.png" id="1_8lion"]
 [ext_resource type="Script" path="res://psychescan/scripts/Tutorial_To_Next_Level.gd" id="2_fy18e"]
 [ext_resource type="PackedScene" uid="uid://db3wqf71m7ltl" path="res://psychescan/texts/tutorialText.tscn" id="2_hkxe4"]
-[ext_resource type="Texture2D" uid="uid://letgubvalxhy" path="res://psychescan/assets/squareReticle.png" id="3_fba8r"]
-[ext_resource type="AudioStream" uid="uid://cly07w2aa5yrj" path="res://psychescan/assets/correct.wav" id="5_15ndt"]
-[ext_resource type="AudioStream" uid="uid://dopndlk12huy8" path="res://psychescan/assets/CRTHum.mp3" id="6_4qhsd"]
-[ext_resource type="Texture2D" uid="uid://bcike3hlobc0y" path="res://psychescan/assets/green light.png" id="7_6vvia"]
+[ext_resource type="Texture2D" uid="uid://by3gha64uoyhi" path="res://psychescan/assets/squareReticle.png" id="3_fba8r"]
+[ext_resource type="AudioStream" uid="uid://bbq1nmd6hlrr1" path="res://psychescan/assets/correct.wav" id="5_15ndt"]
+[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/CRTHum.mp3" id="6_4qhsd"]
+[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/green light.png" id="7_6vvia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc7cd"]
 size = Vector2(80, 80)
@@ -44,6 +44,25 @@ offset_left = 1184.0
 offset_top = 150.0
 offset_right = 1440.0
 offset_bottom = 572.0
+text = "You've reached
+the Psyche 
+asteroid! 
+Objectives will 
+be displayed 
+here.
+Use the arrow keys/WASD
+to move the camera.
+
+
+
+
+
+
+Press Enter/Spacebar 
+to scan the asteroid.
+(Hints: look for the sparkle.
+The beeping will speed up when you are close!
+(Press Enter/Space to continue)"
 visible_characters = 0
 visible_ratio = 0.0
 

@@ -1,10 +1,6 @@
-res://start-menu/start_menu.tscn
+res://psychescan/sprites/asteroid3.tscn
 res://psychescan/scripts/sparkle.gd
-res://scavenger-hunt/scenes/room1.tscn
-res://scavenger-hunt/scenes/world.tscn
-res://Globals/globals.gd
-res://Globals/hints/escape_room_hints.tscn
-res://Globals/hints/mars_hints.tscn
-res://Globals/hints/scan_hints.tscn
-res://marsslingshot2.0/world.tscn
-res://slingshot/world.tscn
+res://psychescan/sprites/asteroid1.tscn
+res://psychescan/sprites/asteroid2.tscn
+res://psychescan/levels/tutorialLevel.tscn
+res://psychescan/sprites/incorrect.tscn
