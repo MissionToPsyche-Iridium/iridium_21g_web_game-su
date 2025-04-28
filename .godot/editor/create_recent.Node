@@ -1,3 +1,4 @@
-Label
+StaticBody2D
+Node2D
+Sprite2D
 Camera2D
-AnimationPlayer

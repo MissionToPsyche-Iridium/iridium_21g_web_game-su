@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://nmp7i8bxi64h"]
+[gd_scene load_steps=13 format=3 uid="uid://nmp7i8bxi64h"]
 
+[ext_resource type="Script" path="res://meteoroid-level/scripts/end_screen.gd" id="1_mq2rv"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/next_level_button.gd" id="1_wada7"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="2_77jtx"]
+[ext_resource type="Texture2D" uid="uid://uqfl2mcd7c70" path="res://meteoroid-level/assets/psyche view from above.png" id="2_eepr4"]
+[ext_resource type="FontFile" uid="uid://cjtkujfqgepu8" path="res://meteoroid-level/assets/dogicapixel.ttf" id="2_j61un"]
+[ext_resource type="AudioStream" uid="uid://5408vyt7fsei" path="res://meteoroid-level/assets/mouse-click.wav" id="3_nn714"]
+[ext_resource type="FontFile" uid="uid://ccsxclysp6ao5" path="res://fonts/dogicapixelbold.ttf" id="3_ydirp"]
+[ext_resource type="Texture2D" uid="uid://c8dadasnqr4e4" path="res://meteoroid-level/assets/buttons.png" id="4_owios"]
+[ext_resource type="AudioStream" uid="uid://bu37hmpwdvu4n" path="res://audio/dialogue.mp3" id="7_4bykc"]
+[ext_resource type="Texture2D" uid="uid://yl8i2qgmqnlg" path="res://meteoroid-level/assets/psyche view of earth.png" id="10_1xuvi"]
+[ext_resource type="Texture2D" uid="uid://tpf3e6lh0m8b" path="res://meteoroid-level/assets/perspective view of psyche spacecraft.png" id="11_o8ogj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74oaw"]
+content_margin_left = 100.0
+content_margin_top = 100.0
+content_margin_right = 100.0
+content_margin_bottom = 100.0
+texture = ExtResource("4_owios")
+expand_margin_left = 400.0
+expand_margin_top = 150.0
+expand_margin_right = 400.0
+expand_margin_bottom = 75.0
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -11,19 +32,35 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mq2rv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1167.0
+offset_top = -688.0
+offset_right = 493.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eepr4")
 
 [node name="Message" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -792.0
-offset_top = -244.0
-offset_right = 769.0
-offset_bottom = -177.0
+offset_left = -1122.0
+offset_top = -506.5
+offset_right = 439.0
+offset_bottom = -229.5
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_j61un")
 theme_override_font_sizes/font_size = 48
-text = "The Psyche spacecraft travels through space using solar-electric propulsion. Changes in movements are slow. When obstacles like space debris are detected, scientists must calculate course corrections to avoid the obstacles in the best way to save fuel."
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="NextLevelButton" type="Button" parent="."]
@@ -31,13 +68,52 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -152.0
-offset_top = 148.0
-offset_right = 137.0
-offset_bottom = 244.0
+offset_left = -595.0
+offset_top = 209.5
+offset_right = -43.0
+offset_bottom = 305.5
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_ydirp")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_74oaw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_74oaw")
 text = "END SIMULATION"
 script = ExtResource("1_wada7")
 
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(97, 46.5)
+texture = ExtResource("2_77jtx")
+
+[node name="Clicksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nn714")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="TypingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_4bykc")
+
+[node name="PsycheViewOfEarth" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(865, -472)
+scale = Vector2(1.03766, 0.764583)
+texture = ExtResource("10_1xuvi")
+
+[node name="PerspectiveViewOfPsycheSpacecraft" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(866.5, -8.00002)
+scale = Vector2(1.02923, 0.764584)
+texture = ExtResource("11_o8ogj")
+
 [connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="NextLevelButton" method="_on_timer_timeout"]
