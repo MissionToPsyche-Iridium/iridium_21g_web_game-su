@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dms0njr5j00xv"]
+
+[ext_resource type="Script" path="res://meteoroid-level/scripts/input_container.gd" id="1_431mj"]
+
+[node name="InputContainer" type="HBoxContainer"]
+offset_top = 2.0
+offset_right = 192.0
+offset_bottom = 66.0
+theme_override_constants/separation = 0
+script = ExtResource("1_431mj")
