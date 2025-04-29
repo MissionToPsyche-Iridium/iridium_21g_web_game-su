@@ -38,25 +38,21 @@ func _on_area2d_body_entered(body):
 	if body is CharacterBody2D: 
 		player_node = body
 		is_overlap = true
-		print("Player entered area")
 
 func _on_area2d_body_exited(body):
 	if body == player_node:
 		player_node = null
 		is_overlap = false
-		print("Player exited area")
 
 # These area flags detect proximity of the player to the target area, which is used to change the beep rate of the proximity sensor
 func _on_area2d_area_entered(area: Area2D) -> void: 
 	is_prox_overlap = true
 	prox_node = area
-	print("Player in proximity")
 
 func _on_area2d_area_exited(area: Area2D) -> void:
 	if area == prox_node:
 		is_prox_overlap = false
 		prox_node = null
-		print("Player out of proximity")
 
 # This function handles the beeping sound of the proximity sensor
 # It plays a sound at a set interval, which is changed based on the proximity of the player to the target area
@@ -79,7 +75,6 @@ func _process(delta: float) -> void:
 
 	# This section handles scanning behavior		
 	if is_overlap and Input.is_action_just_pressed("ui_accept"): # If the player is aligned with the target area and presses enter
-		print("Input accepted")
 		is_beeping = false
 		var ani = player_node.get_node("AnimatedSprite2D")
 		ani.queue_free() # Removes sparkle effect from already-scanned box
@@ -92,22 +87,15 @@ func _process(delta: float) -> void:
 		show_incorrect_indicator()
 		incorrectSound.play()
 		await incorrectSound.finished
-		print("target misaligned")
 
 
 
 func change_scene():
 	var tree = get_tree()
-	print("Transition from: " + get_tree().current_scene.name)
 	if new_scene_path.length() == 0:
-		print("Error: no scene path specified")
 		return
 		
 	var result = tree.change_scene_to_file(new_scene_path)
-	if result == OK:
-		print("Transition success")
-	else:
-		print("Transition failure") 
 
 
 # Displays an indicator for 2 seconds for a correct or incorrect scan
@@ -115,7 +103,6 @@ func show_correct_indicator():
 	correctNode.visible = true
 	await(get_tree().create_timer(2.0).timeout)  # Wait for 2 seconds
 	correctNode.visible = false
-	print("Hiding Correct indicator")
 	if is_scene_change_pending:
 		change_scene() # Scene is changed here because scene would change too fast to display the indicator if used in _process.
 
@@ -123,4 +110,3 @@ func show_incorrect_indicator():
 	incorrectNode.visible = true
 	await(get_tree().create_timer(1.25).timeout)
 	incorrectNode.visible = false
-	print("Hiding Incorrect indicator")
