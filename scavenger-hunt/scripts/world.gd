@@ -411,4 +411,4 @@ func end_zoom():
 	fade(current_room,false)
 	await get_tree().create_timer(1.0).timeout
 	fade(current_room,true)
-	get_tree().change_scene_to_file("res://scavenger-hunt/scenes/launch.tscn")
+	get_tree().change_scene_to_file("res://launch/scenes/launch.tscn")
