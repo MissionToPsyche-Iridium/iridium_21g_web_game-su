@@ -342,7 +342,7 @@ size = Vector2(38.6666, 20)
 size = Vector2(42, 85.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fy4bj"]
-size = Vector2(132, 32.1667)
+size = Vector2(132, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4rap"]
 size = Vector2(30, 19.3333)
@@ -476,7 +476,7 @@ collision_mask = 2
 texture = ExtResource("16_1wcqs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desk2"]
-position = Vector2(0, 3.08334)
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_fy4bj")
 
 [node name="Papers1" type="StaticBody2D" parent="."]
@@ -505,7 +505,7 @@ position = Vector2(0, -0.416656)
 shape = SubResource("RectangleShape2D_jeks0")
 
 [node name="Scientist" type="StaticBody2D" parent="."]
-position = Vector2(1658.67, 465)
+position = Vector2(1655.67, 465)
 collision_layer = 5
 metadata/_edit_group_ = true
 

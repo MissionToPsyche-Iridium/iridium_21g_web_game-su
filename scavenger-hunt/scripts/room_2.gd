@@ -103,6 +103,17 @@ func _ready() -> void:
 	$Scientist/Sprite2D.play("default")
 	$GuyArea/Guy.play("default")
 	
+	player.movable = false
+	
+	Globals.hint_open.connect(_on_hint_open)
+	Globals.hint_close.connect(_on_hint_close)
+
+func _on_hint_open():
+	interactable = false
+	player.movable = false
+	
+func _on_hint_close():
+	interactable = true
 	player.movable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -126,6 +137,8 @@ func _process(delta: float) -> void:
 
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
+		Globals.get_node("EscapeRoomHints").hide()
+		Globals.get_node("Hint").hide()
 		if popup_node == question_popup: 
 			question.show()
 			validation.hide()
@@ -136,6 +149,7 @@ func handle_popup(popup_node: Node) -> void:
 		$Player/PressE.hide()
 		popup_open.emit()
 	elif Input.is_action_just_pressed("ui_cancel"):
+		Globals.get_node("Hint").show()
 		popup_node.hide()
 		if isOpen:
 			$Audio/sfx_close.play()

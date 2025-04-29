@@ -23,17 +23,7 @@ var arrow_length = 13
 
 var open := false
 
-func _ready() -> void:
-	Globals.hint_open.connect(_on_hint_open)
-	Globals.hint_close.connect(_on_hint_close)
-
-func _on_hint_open():
-	open = true
-	movable = false
-
-func _on_hint_close():
-	open = false
-	movable = true
+var popup_open := false
 
 func _physics_process(delta):
 	move_player()
@@ -123,24 +113,30 @@ func move_player():
 
 func _on_room_1_popup_close() -> void:
 	movable = true
+	popup_open = false
 
 func _on_room_1_popup_open() -> void:
 	movable = false
 	moving = false
+	popup_open = true
 
 func _on_room_2_popup_close() -> void:
 	movable = true
+	popup_open = false
 
 func _on_room_2_popup_open() -> void:
 	moving = false
 	movable = false
+	popup_open = true
 
 func _on_room_3_popup_close() -> void:
 	movable = true
+	popup_open = false
 
 func _on_room_3_popup_open() -> void:
 	moving = false
 	movable = false
+	popup_open = true
 
 func load_sfx(sfx_to_load):
 	if $Audio/sfx_player.stream != sfx_to_load:

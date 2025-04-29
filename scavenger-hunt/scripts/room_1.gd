@@ -30,9 +30,9 @@ signal win
 @onready var kids = $Player/Camera2D/KidPopUp
 @onready var kids_msg = $Player/Camera2D/KidPopUp/Container/Message
 
-var isOpen
+var isOpen := false
 
-var interactable = false
+var interactable := false
 
 var rng = RandomNumberGenerator.new()
 
@@ -84,11 +84,22 @@ func _ready() -> void:
 	$Kids/Girl.play("default")
 	$Lady/AnimatedSprite2D.play("default")
 	
-	player.movable = true
+	player.movable = false
+
+	Globals.hint_open.connect(_on_hint_open)
+	Globals.hint_close.connect(_on_hint_close)
+
+func _on_hint_open():
+	interactable = false
+	player.movable = false
 	
+func _on_hint_close():
+	interactable = true
+	player.movable = true
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (interactable == true):
+	if interactable:
 		var collidingNode = $Player/RayCast2D.get_collider()
 		if collidingNode == question_area:
 			handle_popup(question_popup)
@@ -107,6 +118,8 @@ func _process(delta: float) -> void:
 
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
+		Globals.get_node("EscapeRoomHints").hide()
+		Globals.get_node("Hint").hide()
 		match popup_node:
 			question_popup: 
 				question.show()
@@ -124,6 +137,7 @@ func handle_popup(popup_node: Node) -> void:
 		$Player/PressE.hide()
 		popup_open.emit()
 	elif Input.is_action_just_pressed("ui_cancel"):
+		Globals.get_node("Hint").show()
 		popup_node.hide()
 		if isOpen:
 			$Audio/sfx_close.play()

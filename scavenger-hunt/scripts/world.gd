@@ -91,12 +91,15 @@ func _reset_room(room_num):
 	rooms[room_num].hide()
 	covers[room_num].hide()
 	wide_cameras[room_num].enabled = false
+	enter_players[room_num].movable = false
 	
 	if room_num < 3:
 		playing_cameras[room_num].enabled = false
 		active_players[room_num].hide()
 		active_players[room_num].movable = false
 		_reset_player(room_num,active_players[room_num])
+		
+		leave_players[room_num].movable = false
 		
 		enter_solid_doors[room_num].hide()
 		enter_solid_doors[room_num].get_node("CollisionShape2D").disabled = true
@@ -139,7 +142,6 @@ func _physics_process(delta: float) -> void:
 func _process_enter(room_num):
 	var pathfollower = rooms[room_num].get_node("EnterRoom" + str(room_num+1) + "/PathFollow2D")
 	if is_followingpath:
-		isMoving.emit()
 		match room_num:
 			0:
 				if pathfollower.progress_ratio < 0.5233:
@@ -228,7 +230,6 @@ func enter_end(room_num):
 func _process_leave(room_num):
 	var pathfollower = rooms[room_num].get_node("LeaveRoom" + str(room_num+1) + "/PathFollow2D")
 	if is_followingpath:
-		isMoving.emit()
 		match room_num:
 			0: 
 				if pathfollower.progress_ratio < 0.3929:
@@ -323,6 +324,7 @@ func enter_room(room_num):
 	
 	room_states["enter"] = true
 	is_followingpath = true
+	isMoving.emit()
 	current_room = room_num
 
 func fade(room_num, uncover):
@@ -358,10 +360,11 @@ func play_room(room_num):
 	await get_tree().create_timer(1.0).timeout
 	active_players[room_num].movable = true
 	covers[room_num].hide()
-	if room_num == 0:
-		Globals.get_node("Hint").show()
+	Globals.get_node("Hint").show()
 	
 func _on_win():
+	Globals.get_node("Hint").hide()
+	Globals.get_node("EscapeRoomHints").hide()
 	covers[current_room].color = Color(0,0,0,0)
 	covers[current_room].show()
 	fade(current_room,false)
@@ -396,7 +399,7 @@ func start_leave():
 	$Audio/sfx_doors.play()
 	room_states["leave"] = true
 	is_followingpath = true
-	leave_players[current_room].moving = true
+	isMoving.emit()
 
 func start_zoom():
 	room_states["zoom"] = true

@@ -4,6 +4,17 @@ signal option1
 signal option2
 signal option3
 
+var open := false
+
+func _process(delta: float) -> void:
+	check()
+
+func check():
+	if visible:
+		open = true
+	else:
+		open = false
+
 func _on_option_1_pressed() -> void:
 	option1.emit()
 

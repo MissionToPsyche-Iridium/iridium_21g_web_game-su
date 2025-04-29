@@ -48,7 +48,18 @@ func _ready() -> void:
 	cabinet_msg.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
 
 	$SecurityGuard/Sprite2D.play("default")
+	
+	player.movable = false
+	
+	Globals.hint_open.connect(_on_hint_open)
+	Globals.hint_close.connect(_on_hint_close)
 
+func _on_hint_open():
+	interactable = false
+	player.movable = false
+	
+func _on_hint_close():
+	interactable = true
 	player.movable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,6 +75,8 @@ func _process(delta: float) -> void:
 
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
+		Globals.get_node("EscapeRoomHints").hide()
+		Globals.get_node("Hint").hide()
 		match popup_node:
 			question_popup: 
 				question.show()
@@ -75,6 +88,7 @@ func handle_popup(popup_node: Node) -> void:
 		$Player/PressE.hide()
 		popup_open.emit()
 	elif Input.is_action_just_pressed("ui_cancel"):
+		Globals.get_node("Hint").show()
 		popup_node.hide()
 		if isOpen:
 			$Audio/sfx_close.play()

@@ -585,7 +585,7 @@ sprite_frames = SubResource("SpriteFrames_knhi5")
 animation = &"open"
 
 [node name="Room1Camera" type="Camera2D" parent="Room1"]
-position = Vector2(530, 576)
+position = Vector2(513.834, 576)
 anchor_mode = 0
 zoom = Vector2(0.58, 0.58)
 
