@@ -6,3 +6,4 @@ res://meteoroid-level/scenes/level_2.tscn
 res://meteoroid-level/scenes/level_3_screen.tscn
 res://meteoroid-level/scenes/level_3.tscn
 res://meteoroid-level/scenes/end_screen.tscn
+res://meteoroid-level/scripts/num_moves.gd
