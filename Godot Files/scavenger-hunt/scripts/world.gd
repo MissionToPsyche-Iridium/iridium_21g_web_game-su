@@ -252,6 +252,7 @@ func _process_leave(room_num):
 			2:
 				var pathfollower2 = rooms[room_num].get_node("MoveSecurity/PathFollow2D")
 				if partA:
+					leave_sprites[room_num].play("idle_up")
 					rooms[room_num].get_node("SecurityGuard").hide()
 					rooms[room_num].get_node("SecurityGuard/CollisionShape2D").disabled = true
 					rooms[room_num].get_node("MoveSecurity").show()
@@ -411,4 +412,5 @@ func end_zoom():
 	fade(current_room,false)
 	await get_tree().create_timer(1.0).timeout
 	fade(current_room,true)
+	Globals.get_node("Hint").show()
 	get_tree().change_scene_to_file("res://launch/scenes/launch.tscn")
