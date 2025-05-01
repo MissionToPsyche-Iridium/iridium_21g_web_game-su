@@ -24,7 +24,7 @@ var correct
 var rng = RandomNumberGenerator.new()
 var questions_dict = {
 	0: ["Which of the following is an instrument on the spacecraft?", 
-		"A defibrillater", 
+		"A defibrillator", 
 		"An anemometer", 
 		"A magnetometer"],
 	1: ["Psyche is...", 
