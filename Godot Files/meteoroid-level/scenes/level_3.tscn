@@ -123,12 +123,6 @@ position = Vector2(843, -560)
 [node name="Meteoroid7" parent="Debris" instance=ExtResource("7_6q36i")]
 position = Vector2(584, -560)
 
-[node name="Meteoroid8" parent="Debris" instance=ExtResource("7_6q36i")]
-position = Vector2(200, 208)
-
-[node name="Meteoroid9" parent="Debris" instance=ExtResource("7_6q36i")]
-position = Vector2(328, -176)
-
 [node name="Meteoroid10" parent="Debris" instance=ExtResource("7_6q36i")]
 position = Vector2(200, -48)
 
@@ -144,17 +138,11 @@ position = Vector2(1096, -48)
 [node name="Meteoroid17" parent="Debris" instance=ExtResource("7_6q36i")]
 position = Vector2(968, -176)
 
-[node name="Meteoroid18" parent="Debris" instance=ExtResource("7_6q36i")]
-position = Vector2(712, 80)
-
 [node name="Meteoroid19" parent="Debris" instance=ExtResource("7_6q36i")]
-position = Vector2(456, 80)
+position = Vector2(709, 66)
 
 [node name="Meteoroid20" parent="Debris" instance=ExtResource("7_6q36i")]
 position = Vector2(200, 336)
-
-[node name="Meteoroid21" parent="Debris" instance=ExtResource("7_6q36i")]
-position = Vector2(1104, 336)
 
 [node name="Non-moving Debris" parent="Debris" instance=ExtResource("8_8knv3")]
 position = Vector2(517, -380)
