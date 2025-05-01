@@ -19,3 +19,4 @@ res://psychescan/levels/level3.tscn
 res://sign-off/scenes/sign-off.tscn
 res://credits/scenes/credits.tscn
 res://credits/scenes/leave.tscn
+res://Globals/hints/ScanHints.tscn

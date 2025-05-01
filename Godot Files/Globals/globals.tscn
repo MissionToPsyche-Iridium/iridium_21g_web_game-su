@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://drin5td47d3wd"]
+[gd_scene load_steps=21 format=3 uid="uid://drin5td47d3wd"]
 
 [ext_resource type="Script" path="res://Globals/globals.gd" id="1_pgthe"]
 [ext_resource type="FontFile" uid="uid://dcl8xnrcpum3w" path="res://fonts/dogicapixel.ttf" id="2_iijrl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hof03kvnlrvg" path="res://Globals/hints/mars_hints.tscn" id="7_ubqha"]
 [ext_resource type="PackedScene" uid="uid://dw8yhp5ip2df3" path="res://Globals/hints/escape_room_hints.tscn" id="8_02mfg"]
 [ext_resource type="PackedScene" uid="uid://d3g4gpf7yqtic" path="res://Globals/hints/meteoroid_hints.tscn" id="9_fudqv"]
+[ext_resource type="PackedScene" uid="uid://3lql68n6555f" path="res://Globals/hints/ScanHints.tscn" id="10_oljb7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twjhg"]
 content_margin_left = 2.0
@@ -92,6 +93,9 @@ visible = false
 visible = false
 
 [node name="MeteoroidHints" parent="." instance=ExtResource("9_fudqv")]
+visible = false
+
+[node name="ScanHints" parent="." instance=ExtResource("10_oljb7")]
 visible = false
 
 [connection signal="toggled" from="Mute" to="." method="_on_mute_toggled"]

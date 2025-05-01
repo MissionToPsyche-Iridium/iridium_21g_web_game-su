@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://3lql68n6555f"]
 
-[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="1_mvfhk"]
+[ext_resource type="FontFile" uid="uid://dcl8xnrcpum3w" path="res://fonts/dogicapixel.ttf" id="1_mvfhk"]
 
 [node name="MarsHints" type="CanvasLayer"]
 
