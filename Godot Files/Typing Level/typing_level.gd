@@ -105,7 +105,7 @@ func stateTwo(delta):
 		
 	
 func changeScene():
-	get_tree().change_scene_to_file("res://credits/credits.tscn")
+	get_tree().change_scene_to_file("res://credits/leave.tscn")
 #adds a block to the blocks list
 func addBlock():
 	if textBlocks.size() == 0:
