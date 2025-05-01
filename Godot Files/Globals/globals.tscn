@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://drin5td47d3wd"]
+[gd_scene load_steps=23 format=3 uid="uid://drin5td47d3wd"]
 
 [ext_resource type="Script" path="res://Globals/globals.gd" id="1_pgthe"]
 [ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="2_iijrl"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://Globals/hints/meteoroid_hints.tscn" id="9_fudqv"]
 [ext_resource type="PackedScene" path="res://Globals/hints/scan_hints.tscn" id="10_opac7"]
 [ext_resource type="PackedScene" uid="uid://bsfjo6itoivhc" path="res://Globals/hints/launch_hints.tscn" id="11_uagh7"]
+[ext_resource type="PackedScene" uid="uid://nf2qhh40pq8x" path="res://Globals/hints/typing_hints.tscn" id="12_so2hn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twjhg"]
 content_margin_left = 2.0
@@ -100,6 +101,9 @@ visible = false
 visible = false
 
 [node name="LaunchHints" parent="." instance=ExtResource("11_uagh7")]
+visible = false
+
+[node name="TypingHints" parent="." instance=ExtResource("12_so2hn")]
 visible = false
 
 [connection signal="toggled" from="Mute" to="." method="_on_mute_toggled"]

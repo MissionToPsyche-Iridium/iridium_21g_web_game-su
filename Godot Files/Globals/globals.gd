@@ -15,27 +15,36 @@ extends Node
 signal hint_open
 signal hint_close
 
+var previous_scene_path := ""
+
 func _process(delta: float) -> void:
 	if get_tree().current_scene == null:
 		return
 
 	var scene_path = get_tree().current_scene.scene_file_path
-	var folder_name = scene_path.get_base_dir().replace("res://", "").split("/")[0]
+	
+	if scene_path != previous_scene_path:
+		previous_scene_path = scene_path
 
-	minigame_level = folder_name
-	match minigame_level:
-		"scavenger-hunt": 
-			minigame_index = 0
-		"launch": 
-			minigame_index = 1
-		"meteoroid-level": 
-			minigame_index = 2
-		"marsslingshot2.0": 
-			minigame_index = 3
-		"psychescan": 
-			minigame_index = 4
-		"Typing Level": 
-			minigame_index = 5
+		var folder_name = scene_path.get_base_dir().replace("res://", "").split("/")[0]
+		minigame_level = folder_name
+		match minigame_level:
+			"scavenger-hunt": 
+				minigame_index = 0
+			"launch": 
+				minigame_index = 1
+			"meteoroid-level": 
+				minigame_index = 2
+			"marsslingshot2.0": 
+				minigame_index = 3
+			"psychescan": 
+				minigame_index = 4
+			"Typing Level": 
+				minigame_index = 5
+		
+		for hint in minigame_hints:
+			if hint:
+				hint.visible = false
 	
 	if minigame_index:
 		if !minigame_hints[minigame_index]:

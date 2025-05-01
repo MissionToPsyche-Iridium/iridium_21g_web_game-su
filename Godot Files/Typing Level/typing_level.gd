@@ -22,11 +22,12 @@ const lineSpeed = 100
 
 
 var rightTextBlocks = [
-	"The Psyche satellite will send out words. Hit [Enter] to continue",
+	"Hit [Enter] or [Space] to continue through the dialogue.",
+	"The Psyche satellite will send out words.",
 	"To complete this section, type the words to analyze what they are.",
 	"The satellite will continue to send out information until all information has been received.",
 	"Tip: Some information are multiple words and require you to hit space between words.",
-	"Tip: if the words are moving too slow for you, you can hold the left arrow key to speed them up."
+	"Tip: If the words are moving too slow for you, you can hold the right arrow key to speed them up."
 ]
 
 
@@ -142,9 +143,9 @@ func _unhandled_input(event):
 		if textBox:
 			return
 		
-		if event.is_action_pressed("speed_up") and !event.is_echo():
+		if event.is_action_pressed("ui_right") and !event.is_echo():
 			speedup = true
-		elif event.is_action_released("speed_up") and !event.is_echo():
+		elif event.is_action_released("ui_right") and !event.is_echo():
 			speedup = false
 		elif event is InputEventKey and not event.is_pressed():
 			for i in blocks:
