@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://btjcs37klw37w"]
+[gd_scene load_steps=16 format=4 uid="uid://btjcs37klw37w"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_2.gd" id="1_oy24c"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_eccv8"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cuojpnqpbf5v4" path="res://meteoroid-level/scenes/moving_debris.tscn" id="9_pgvm1"]
 [ext_resource type="AudioStream" uid="uid://vpcpryt2w237" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav" id="10_p085w"]
 [ext_resource type="AudioStream" uid="uid://dwpjb3ecvcyvi" path="res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav" id="11_3hp1t"]
+[ext_resource type="FontFile" uid="uid://cb83sko7purs8" path="res://meteoroid-level/assets/dogicapixel.ttf" id="11_cn8nm"]
+[ext_resource type="Script" path="res://meteoroid-level/scripts/num_moves.gd" id="12_2rsmt"]
 [ext_resource type="Texture2D" uid="uid://c6yulvmw7nl5" path="res://Globals/consoleBackgroundLarge.png" id="12_4jqiy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_87qbt"]
@@ -148,6 +150,15 @@ texture = ExtResource("12_4jqiy")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 position = Vector2(816, -38)
+
+[node name="NumMoves" type="Label" parent="."]
+offset_left = -209.0
+offset_top = -592.0
+offset_right = 159.0
+offset_bottom = -555.0
+theme_override_fonts/font = ExtResource("11_cn8nm")
+theme_override_font_sizes/font_size = 42
+script = ExtResource("12_2rsmt")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

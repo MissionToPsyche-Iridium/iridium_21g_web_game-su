@@ -1,6 +1,5 @@
 res://meteoroid-level/scenes/start_screen.tscn
-res://psychescan/tests/ScanLevelTest.gd
-res://meteoroid-level/scripts/shuttle.gd
+res://meteoroid-level/scripts/num_moves.gd
 res://meteoroid-level/scenes/level_1_screen.tscn
 res://meteoroid-level/scenes/level_1.tscn
 res://meteoroid-level/scenes/level_2.tscn
@@ -10,6 +9,4 @@ res://meteoroid-level/scenes/level_3_screen.tscn
 res://meteoroid-level/scenes/non_moving_debris.tscn
 res://meteoroid-level/scenes/moving_debris.tscn
 res://meteoroid-level/scenes/end_screen.tscn
-res://psychescan/levels/main_level.tscn
-res://Globals/hints/ScanHints.tscn
-res://Globals/hints/escape_room_hints.tscn
+res://meteoroid-level/scripts/shuttle.gd

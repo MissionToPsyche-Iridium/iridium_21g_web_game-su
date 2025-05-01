@@ -67,7 +67,7 @@ func move():
 			rotateShuttle(dir, last_dir)
 		await tween.finished
 		last_dir = dir
-	input_array.clear()
+	#input_array.clear()
 	movement_sound.stop()
 	win_condition() # check to see if shuttle is at target tile
 	
