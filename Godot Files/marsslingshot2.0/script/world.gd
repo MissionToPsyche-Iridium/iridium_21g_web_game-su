@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 
 
 func _on_game_area_body_exited(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://slingshot/scenes/off_course.tscn")
+	get_tree().change_scene_to_file("res://marsslingshot2.0/scenes/off_course.tscn")
 	
 
 func set_label() -> void:
