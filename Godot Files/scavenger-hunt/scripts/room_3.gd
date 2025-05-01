@@ -45,7 +45,7 @@ func _ready() -> void:
 	else:
 		correct = 1
 
-	cabinet_msg.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetismal. Planetismals crash into each other and create planets."
+	cabinet_msg.text = "It's a cabinet full of documents about the Psyche mission. One document says that Psyche may be the core of a planetesimal. Planetesimals crash into each other and create planets."
 
 	$SecurityGuard/Sprite2D.play("default")
 	
