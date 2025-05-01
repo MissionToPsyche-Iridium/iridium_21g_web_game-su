@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://v3uha6yq4pj7"]
 
-[ext_resource type="Texture2D" uid="uid://cl1u65hcja6ob" path="res://meteoroid-level/assets/space rocks.png" id="1_6id5q"]
+[ext_resource type="Texture2D" uid="uid://dndclb4bpkw1t" path="res://meteoroid-level/assets/space rocks.png" id="1_6id5q"]
 [ext_resource type="PackedScene" uid="uid://ckqhj1j1mjc3v" path="res://meteoroid-level/scenes/killzone.tscn" id="2_3puy5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj8pg"]

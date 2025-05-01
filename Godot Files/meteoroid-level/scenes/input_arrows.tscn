@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbdmjnaubg7rx"]
 
-[ext_resource type="Texture2D" uid="uid://kasif2ih61nh" path="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png" id="1_6poy5"]
+[ext_resource type="Texture2D" uid="uid://c3iai72t2ogdk" path="res://meteoroid-level/assets/Free_Rythm_Arrow_Pack/Arrows_blackwhite/2021-05-08-213802-Zeichnung 10.png.png" id="1_6poy5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_humfp"]
 atlas = ExtResource("1_6poy5")

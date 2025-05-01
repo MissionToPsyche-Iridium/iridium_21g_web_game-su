@@ -2,8 +2,8 @@
 
 [ext_resource type="Shader" path="res://meteoroid-level/scripts/shuttle.gdshader" id="1_04it3"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/shuttle.gd" id="1_r5ds6"]
-[ext_resource type="Texture2D" uid="uid://dwpve7tnyfwk2" path="res://meteoroid-level/assets/psyche shuttle.png" id="2_283mx"]
-[ext_resource type="AudioStream" uid="uid://dm8grudyegl4f" path="res://meteoroid-level/assets/propulsion sound.wav" id="3_qpmuf"]
+[ext_resource type="Texture2D" uid="uid://cauitf2on2quq" path="res://meteoroid-level/assets/psyche shuttle.png" id="2_283mx"]
+[ext_resource type="AudioStream" uid="uid://cb0l0qkguxtlp" path="res://meteoroid-level/assets/propulsion sound.wav" id="3_qpmuf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_07hft"]
 shader = ExtResource("1_04it3")
