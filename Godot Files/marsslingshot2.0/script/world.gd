@@ -12,12 +12,6 @@ func _process(delta: float) -> void:
 	set_label()
 	set_size_colorrect()
 
-
-
-func _on_game_area_body_exited(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://marsslingshot2.0/scenes/off_course.tscn")
-	
-
 func set_label() -> void:
 	number = sqrt($space_ship.velocity.x*$space_ship.velocity.x + $space_ship.velocity.y * $space_ship.velocity.y)
 	$Label.text = str(number).pad_decimals(2)
@@ -28,3 +22,7 @@ func set_size_colorrect() :
 
 func _on_timer_timeout() -> void:
 	$ColorRect.visible = false # Replace with function body.
+
+
+func _on_game_area_body_exited(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://marsslingshot2.0/scenes/off_course.tscn")

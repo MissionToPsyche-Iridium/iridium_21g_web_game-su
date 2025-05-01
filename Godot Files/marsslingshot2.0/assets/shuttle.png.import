@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0xelc40qcru0"
-path="res://.godot/imported/shuttle.png-fedc209cdeafb4f29466232b5c1ae32c.ctex"
+uid="uid://bw37l15shxbrk"
+path="res://.godot/imported/shuttle.png-bdf1b6b1dc5982bf07afcaffce48ee26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://marsslingshotFinal/assets/shuttle.png"
-dest_files=["res://.godot/imported/shuttle.png-fedc209cdeafb4f29466232b5c1ae32c.ctex"]
+source_file="res://marsslingshot2.0/assets/shuttle.png"
+dest_files=["res://.godot/imported/shuttle.png-bdf1b6b1dc5982bf07afcaffce48ee26.ctex"]
 
 [params]
 

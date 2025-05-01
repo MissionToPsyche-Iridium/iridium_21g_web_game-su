@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmjiwnfxo5x06"
-path="res://.godot/imported/R.png-ea1698b7acd03d3f59382fd142c5decd.ctex"
+uid="uid://dsx2pr6ebamps"
+path="res://.godot/imported/R.png-13e724cf93b1b916a893809a14d552bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://marsslingshotFinal/assets/R.png"
-dest_files=["res://.godot/imported/R.png-ea1698b7acd03d3f59382fd142c5decd.ctex"]
+source_file="res://marsslingshot2.0/assets/R.png"
+dest_files=["res://.godot/imported/R.png-13e724cf93b1b916a893809a14d552bd.ctex"]
 
 [params]
 

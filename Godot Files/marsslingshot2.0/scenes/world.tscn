@@ -1,101 +1,125 @@
-[gd_scene load_steps=15 format=3 uid="uid://blb8npkytvcgv"]
+[gd_scene load_steps=18 format=3 uid="uid://blb8npkytvcgv"]
 
-[ext_resource type="Script" path="res://marsslingshotFinal/script/world.gd" id="1_flmuy"]
-[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://marsslingshotFinal/scenes/game_area.tscn" id="2_482iq"]
-[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://marsslingshotFinal/scenes/mars.tscn" id="3_1ewpu"]
-[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://marsslingshotFinal/scenes/timer.tscn" id="4_g5xfb"]
-[ext_resource type="Script" path="res://marsslingshotFinal/script/mars.gd" id="4_jq7av"]
-[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshotFinal/scenes/space_ship.tscn" id="5_nkrjh"]
-[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://marsslingshotFinal/scenes/checkpoint.tscn" id="6_cr8g0"]
-[ext_resource type="Script" path="res://marsslingshotFinal/script/space_ship.gd" id="6_h8tfy"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshotFinal/scenes/label.tscn" id="7_ntjii"]
-[ext_resource type="Texture2D" uid="uid://cpgexyk2keb8t" path="res://Globals/consoleBackgroundLarge.png" id="9_76fml"]
-[ext_resource type="Script" path="res://marsslingshotFinal/script/checkpoint.gd" id="9_mmmi0"]
-[ext_resource type="Texture2D" uid="uid://bixkb7tjt0keu" path="res://marsslingshotFinal/assets/starry.png" id="10_1db8u"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/world.gd" id="1_iadi5"]
+[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/game_area.tscn" id="2_482iq"]
+[ext_resource type="Shader" path="res://psychescan/addons/StarScroll.gdshader" id="2_nlrqi"]
+[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/mars.tscn" id="3_1ewpu"]
+[ext_resource type="Texture2D" uid="uid://xwvmfcb6esd7" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_qxexq"]
+[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/timer.tscn" id="4_g5xfb"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/space_ship.tscn" id="5_nkrjh"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/timer.gd" id="6_1rnnf"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/scenes/label.tscn" id="7_ntjii"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/color_rect.gd" id="8_o5qwo"]
+[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="9_b3xa4"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/checkpoint2.gd" id="11_fyebo"]
+[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="12_7tjrx"]
+[ext_resource type="Texture2D" uid="uid://cqh47bcrnvrs2" path="res://psychescan/assets/textures/psyche1.png" id="14_vggf4"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_oiufe"]
-radius = 582.278
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbaaa"]
+shader = ExtResource("2_nlrqi")
+shader_parameter/Direction = Vector2(1, 0)
+shader_parameter/Speed = 0.15
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x0l4m"]
-radius = 42.0119
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7s5v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f51xa"]
+shader = ExtResource("12_7tjrx")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 0.581
+shader_parameter/distort_intensity = 0.0
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = false
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="World" type="Node2D"]
 physics_interpolation_mode = 2
-position = Vector2(181, 289)
-script = ExtResource("1_flmuy")
+script = ExtResource("1_iadi5")
+
+[node name="StarBackground" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hbaaa")
+position = Vector2(461, 535.2)
+scale = Vector2(4.74709, 6.67232)
+texture = ExtResource("3_qxexq")
+region_enabled = true
+region_rect = Rect2(0, 0, 688.5, 365.25)
 
 [node name="gameArea" parent="." instance=ExtResource("2_482iq")]
-position = Vector2(580, 321)
-gravity_space_override = 0
+scale = Vector2(1, 1.2)
+collision_layer = 2
+collision_mask = 2
 
 [node name="mars" parent="." instance=ExtResource("3_1ewpu")]
-z_index = 1
-position = Vector2(536, 370)
-script = ExtResource("4_jq7av")
-
-[node name="Area2D" parent="mars" index="1"]
-gravity_point_unit_distance = 15.0
-
-[node name="CollisionShape2D" parent="mars/Area2D" index="0"]
-shape = SubResource("CircleShape2D_oiufe")
-
-[node name="CollisionShape2D" parent="mars/Area2D2" index="0"]
-shape = SubResource("CircleShape2D_x0l4m")
 
 [node name="Timer" parent="." instance=ExtResource("4_g5xfb")]
 one_shot = true
 autostart = true
-script = null
+script = ExtResource("6_1rnnf")
 
 [node name="space_ship" parent="." instance=ExtResource("5_nkrjh")]
-z_index = 1
-position = Vector2(95, 501)
-script = ExtResource("6_h8tfy")
-
-[node name="Timer" parent="space_ship" index="3"]
-one_shot = false
-script = null
-
-[node name="checkpoint" parent="." instance=ExtResource("6_cr8g0")]
-z_index = 1
-position = Vector2(1037, 96)
-script = ExtResource("9_mmmi0")
-
-[node name="Label" parent="." instance=ExtResource("7_ntjii")]
-offset_left = 112.0
-offset_top = 583.0
-offset_right = 152.0
-offset_bottom = 606.0
-script = null
-metadata/_edit_use_anchors_ = true
+position = Vector2(-485, 235)
+collision_layer = 119
+collision_mask = 119
 
 [node name="ColorRect" type="ColorRect" parent="."]
-z_index = 1
-offset_left = 4.0
-offset_top = 617.0
-offset_right = 504.0
-offset_bottom = 641.0
-metadata/_edit_use_anchors_ = true
+offset_left = -435.0
+offset_top = 365.0
+offset_right = 65.0
+offset_bottom = 389.0
+script = ExtResource("8_o5qwo")
 
-[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(893, 387)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("9_76fml")
+[node name="Label" parent="." instance=ExtResource("7_ntjii")]
+offset_left = -434.0
+offset_top = 340.0
+offset_right = -394.0
+offset_bottom = 363.0
+script = null
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(780, 249)
-zoom = Vector2(1.3, 1.3)
+[node name="checkpoint" type="StaticBody2D" parent="."]
+position = Vector2(400, -300)
+script = ExtResource("11_fyebo")
+
+[node name="Area2D" type="Area2D" parent="checkpoint"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint/Area2D"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_v7s5v")
+
+[node name="Sprite2D" type="Sprite2D" parent="checkpoint"]
+scale = Vector2(0.0577342, 0.0577342)
+texture = ExtResource("14_vggf4")
+
+[node name="CRTShader" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_f51xa")
+position = Vector2(-1027, -675)
+scale = Vector2(2.84442, 2.27598)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(682, 294)
-texture = ExtResource("10_1db8u")
+position = Vector2(300, 70)
+scale = Vector2(0.658288, 0.658288)
+texture = ExtResource("9_b3xa4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(267, 33)
+zoom = Vector2(1.5, 1.5)
 
 [connection signal="body_exited" from="gameArea" to="." method="_on_game_area_body_exited"]
-[connection signal="body_entered" from="mars/Area2D" to="Timer" method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="space_ship/Timer" to="." method="_on_timer_timeout"]
-[connection signal="child_entered_tree" from="checkpoint" to="." method="_on_checkpoint_child_entered_tree"]
-
-[editable path="gameArea"]
-[editable path="mars"]
-[editable path="space_ship"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="checkpoint/Area2D" to="checkpoint" method="_on_area_2d_body_entered"]

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bve4yk8hiqti2"
+uid="uid://db42ytvnxphre"
 valid=false
 
 [deps]
 
-source_file="res://marsslingshotFinal/assets/spaceship.png"
+source_file="res://marsslingshot2.0/assets/spaceship.png"
 
 [params]
 
