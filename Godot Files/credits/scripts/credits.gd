@@ -47,8 +47,8 @@ var credits = [
 		"Grace Lane",
 		"Kevin Bui",
 		"Hanjin Jacobs",
-		"Colin Curry",
 		"Lyle Vitales",
+		"Colin Curry",
 	],[
 		"Artists",
 		"Adapted by Grace Lane from LimeZu (https://limezu.itch.io/)",
