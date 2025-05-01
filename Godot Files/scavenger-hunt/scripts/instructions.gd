@@ -2,7 +2,7 @@ extends Control
 
 var text = [
 		"Hello!",
-		"My name is Kuiper (pronouced like KY-per) and I need your help!",
+		"My name is Kuiper (pronounced like KY-per) and I need your help!",
 		"I am a part of the NASA-ASU Team.",
 		"For the first time ever, we are exploring a world made not of rock or ice, but of metal.",
 		"Most asteroids are made of a combination of rock and ice except this one.",
