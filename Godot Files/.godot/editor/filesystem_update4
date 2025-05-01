@@ -10,3 +10,12 @@ res://meteoroid-level/scenes/non_moving_debris.tscn
 res://meteoroid-level/scenes/moving_debris.tscn
 res://meteoroid-level/scenes/end_screen.tscn
 res://meteoroid-level/scripts/shuttle.gd
+res://Globals/hints/meteoroid_hints.tscn
+res://Globals/globals.tscn
+res://Globals/hints/escape_room_hints.tscn
+res://Globals/globals.gd
+res://psychescan/levels/victory_scene.tscn
+res://psychescan/levels/level3.tscn
+res://sign-off/scenes/sign-off.tscn
+res://credits/scenes/credits.tscn
+res://credits/scenes/leave.tscn

@@ -51,7 +51,7 @@ func process_input(input_text):
 		get_tree().change_scene_to_file("res://scavenger-hunt/scenes/world.tscn")
 	if input_text == ("2"):
 		Audio.play_music_minigame(-15)
-		get_tree().change_scene_to_file("res://meteoroid-level/scenes/level_1_screen.tscn")
+		get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
 	if input_text == ("3"):
 		Audio.play_music_minigame(-15)
 		get_tree().change_scene_to_file("res://marsslingshot2.0/slingshot/world.tscn")
