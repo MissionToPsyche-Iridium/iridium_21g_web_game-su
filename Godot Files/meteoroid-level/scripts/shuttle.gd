@@ -19,8 +19,7 @@ var inputs = {"ui_right": Vector2.RIGHT, # directional inputs using arrow keys
 "ui_up": Vector2.UP,
 "ui_down": Vector2.DOWN}
 
-# shuttle script holds input container and path nodes in the current level
-@onready var input_container: HBoxContainer = $"../CanvasLayer/InputContainer"
+# shuttle script holds path to nodes in the current level
 @onready var path: Line2D = $"../Path"
 @onready var movement_sound: AudioStreamPlayer2D = $MovementSound
 
@@ -91,11 +90,9 @@ func add_input(dir: String) -> void:
 	if input_array.size() < MAX_MOVES: # number of inputs limited per level
 		if(path.trace(dir)): # if the path can be drawn
 			input_array.append(dir)
-			input_container.create_arrow(dir)
 
 func remove_input() -> void: # removes the most recent input from the movement array, the arrow array, and the path
 	input_array.pop_back()
-	input_container.remove_arrow()
 	path.remove_last_point()
 
 func win_condition() -> void:
