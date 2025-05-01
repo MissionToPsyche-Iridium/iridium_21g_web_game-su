@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://nmp7i8bxi64h"]
+[gd_scene load_steps=15 format=3 uid="uid://nmp7i8bxi64h"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/end_screen.gd" id="1_mq2rv"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/next_level_button.gd" id="1_wada7"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dx3ljwac6e6kw" path="res://audio/dialogue.mp3" id="7_4bykc"]
 [ext_resource type="Texture2D" uid="uid://bpatnccgyoai7" path="res://meteoroid-level/assets/psyche view of earth.png" id="10_1xuvi"]
 [ext_resource type="Texture2D" uid="uid://xvwsivo10lrk" path="res://meteoroid-level/assets/perspective view of psyche spacecraft.png" id="11_o8ogj"]
+[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="12_b3vl5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74oaw"]
 content_margin_left = 100.0
@@ -22,6 +23,30 @@ expand_margin_left = 400.0
 expand_margin_top = 150.0
 expand_margin_right = 400.0
 expand_margin_bottom = 75.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i4cjo"]
+shader = ExtResource("12_b3vl5")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 0.581
+shader_parameter/distort_intensity = 0.0
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = false
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -114,6 +139,13 @@ z_index = 2
 position = Vector2(866.5, -8.00002)
 scale = Vector2(1.02923, 0.764584)
 texture = ExtResource("11_o8ogj")
+
+[node name="CRTShader" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_i4cjo")
+position = Vector2(-1753.33, -997.336)
+scale = Vector2(3.84383, 3.22281)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423, 149.415, 275.925)
 
 [connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="NextLevelButton" method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cpb4weio1jo3a"]
+[gd_scene load_steps=19 format=4 uid="uid://cpb4weio1jo3a"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_3.gd" id="1_sjbbj"]
 [ext_resource type="PackedScene" uid="uid://dmvpevcgrtlss" path="res://meteoroid-level/scenes/shuttle.tscn" id="2_g3yd7"]
@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://cb83sko7purs8" path="res://meteoroid-level/assets/dogicapixel.ttf" id="12_ka47n"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/num_moves.gd" id="13_66gnw"]
 [ext_resource type="Texture2D" uid="uid://c6yulvmw7nl5" path="res://Globals/consoleBackgroundLarge.png" id="13_t7t6d"]
+[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="14_p7ltc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6cvpg"]
 texture = ExtResource("6_on056")
@@ -30,6 +31,30 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_6cvpg")
 sources/5 = SubResource("TileSetAtlasSource_t5w5h")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pyjl0"]
+shader = ExtResource("14_p7ltc")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 0.581
+shader_parameter/distort_intensity = 0.0
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = false
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_sjbbj")
@@ -203,6 +228,13 @@ theme_override_font_sizes/font_size = 42
 horizontal_alignment = 1
 autowrap_mode = 2
 script = ExtResource("13_66gnw")
+
+[node name="CRTShader" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_pyjl0")
+position = Vector2(-854, -1005)
+scale = Vector2(3.84383, 3.22281)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423, 149.415, 275.925)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

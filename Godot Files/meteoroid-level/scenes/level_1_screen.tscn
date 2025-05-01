@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://5n2mwakon7kw"]
+[gd_scene load_steps=16 format=3 uid="uid://5n2mwakon7kw"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_1_start.gd" id="1_6hiu1"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_1_screen.gd" id="1_umrlm"]
@@ -11,6 +11,7 @@
 [ext_resource type="Shader" path="res://meteoroid-level/scripts/start_screen.gdshader" id="9_t2lls"]
 [ext_resource type="Texture2D" uid="uid://c7axgunm3r5sn" path="res://meteoroid-level/assets/meteoroid-level-border-background.png" id="10_h62vn"]
 [ext_resource type="PackedScene" uid="uid://v3uha6yq4pj7" path="res://meteoroid-level/scenes/non_moving_debris.tscn" id="11_xy8ly"]
+[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="12_7nr0i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ngqr"]
 shader = ExtResource("9_t2lls")
@@ -25,6 +26,30 @@ expand_margin_left = 300.0
 expand_margin_top = 200.0
 expand_margin_right = 300.0
 expand_margin_bottom = 125.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rajdy"]
+shader = ExtResource("12_7nr0i")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 0.581
+shader_parameter/distort_intensity = 0.0
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = false
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="Level 1 Screen" type="Control"]
 layout_mode = 3
@@ -128,6 +153,13 @@ offset_bottom = 875.0
 theme_override_fonts/font = ExtResource("2_57elp")
 theme_override_font_sizes/font_size = 42
 text = "Avoid This!"
+
+[node name="CRTShader" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_rajdy")
+position = Vector2(-372, -137)
+scale = Vector2(3.84383, 3.22281)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423, 149.415, 275.925)
 
 [connection signal="pressed" from="Message/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]

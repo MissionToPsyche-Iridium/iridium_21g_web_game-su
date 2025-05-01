@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bsr82lokxlfhg"]
+[gd_scene load_steps=17 format=3 uid="uid://bsr82lokxlfhg"]
 
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_3_screen.gd" id="1_4sdw6"]
 [ext_resource type="Script" path="res://meteoroid-level/scripts/level_3_start.gd" id="1_dui04"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dx3ljwac6e6kw" path="res://audio/dialogue.mp3" id="7_ts7ra"]
 [ext_resource type="PackedScene" uid="uid://v3uha6yq4pj7" path="res://meteoroid-level/scenes/non_moving_debris.tscn" id="11_25k4y"]
 [ext_resource type="PackedScene" uid="uid://cuojpnqpbf5v4" path="res://meteoroid-level/scenes/moving_debris.tscn" id="12_cfgm4"]
+[ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="13_by0dd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p5fa6"]
 shader = ExtResource("2_h283e")
@@ -26,6 +27,30 @@ expand_margin_left = 300.0
 expand_margin_top = 200.0
 expand_margin_right = 300.0
 expand_margin_bottom = 125.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d34ys"]
+shader = ExtResource("13_by0dd")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 5.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 0.581
+shader_parameter/distort_intensity = 0.0
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/pixelate = false
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="Level 3 Screen" type="Control"]
 layout_mode = 3
@@ -150,6 +175,13 @@ position = Vector2(2451, 285)
 [node name="Moving Debris" parent="DebrisObjects" instance=ExtResource("12_cfgm4")]
 z_index = 1
 position = Vector2(2075, 293)
+
+[node name="CRTShader" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_d34ys")
+position = Vector2(-364, -129)
+scale = Vector2(3.84383, 3.22281)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587, 145, 587, 437, 577, 461, 563, 475, 186, 475, 167, 454, 153, 423, 149.415, 275.925)
 
 [connection signal="pressed" from="Message/StartButton" to="Message/StartButton" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="Message/StartButton" method="_on_timer_timeout"]
