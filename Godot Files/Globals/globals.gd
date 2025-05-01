@@ -9,6 +9,7 @@ extends Node
 	$MeteoroidHints,
 	$MarsHints,
 	$ScanHints,
+	$TypingHints,
 ]
 
 signal hint_open
@@ -33,6 +34,14 @@ func _process(delta: float) -> void:
 			minigame_index = 3
 		"psychescan": 
 			minigame_index = 4
+		"Typing Level": 
+			minigame_index = 5
+	
+	if minigame_index:
+		if !minigame_hints[minigame_index]:
+			$Hint.hide()
+		elif minigame_hints[minigame_index]:
+			$Hint.show()
 
 var input_buffer = ""
 
@@ -54,13 +63,13 @@ func process_input(input_text):
 		get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
 	if input_text == ("3"):
 		Audio.play_music_minigame(-15)
-		get_tree().change_scene_to_file("res://marsslingshot2.0/slingshot/world.tscn")
+		get_tree().change_scene_to_file("res://marsslingshot2.0/scenes/world.tscn")
 	if input_text == ("4"):
 		Audio.play_music_minigame(-15)
 		get_tree().change_scene_to_file("res://psychescan/levels/main_level.tscn")
 	if input_text == ("5"):
 		Audio.play_music_minigame(-15)
-		get_tree().change_scene_to_file("res://Finished Screen/Scene.tscn")
+		get_tree().change_scene_to_file("res://Typing Level/TypingLevel.tscn")
 	
 
 func _on_mute_toggled(toggled_on: bool) -> void:
@@ -70,9 +79,10 @@ func _on_mute_toggled(toggled_on: bool) -> void:
 
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
-	minigame_hints[minigame_index].visible = toggled_on
-	$Hint.focus_mode = false
-	if toggled_on:
-		hint_open.emit()
-	else:
-		hint_close.emit()
+	if minigame_hints[minigame_index]:
+		minigame_hints[minigame_index].visible = toggled_on
+		$Hint.focus_mode = false
+		if toggled_on:
+			hint_open.emit()
+		else:
+			hint_close.emit()
