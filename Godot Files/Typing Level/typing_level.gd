@@ -67,7 +67,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#print(state)
 	if not psychePlaying:
 		psychePlayer.play("PsycheSpin")
 		psychePlaying = true
@@ -143,9 +142,9 @@ func _unhandled_input(event):
 		if textBox:
 			return
 		
-		if event.is_action_pressed("ui_right") and !event.is_echo():
+		if event.is_action_pressed("ui_accept") and !event.is_echo():
 			speedup = true
-		elif event.is_action_released("ui_right") and !event.is_echo():
+		elif event.is_action_released("ui_accept") and !event.is_echo():
 			speedup = false
 		elif event is InputEventKey and not event.is_pressed():
 			for i in blocks:
