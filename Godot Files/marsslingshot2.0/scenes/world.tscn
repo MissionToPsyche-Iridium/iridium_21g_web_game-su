@@ -1,15 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://blb8npkytvcgv"]
+[gd_scene load_steps=15 format=3 uid="uid://blb8npkytvcgv"]
 
-[ext_resource type="Script" path="res://marsslingshot2.0/script/world.gd" id="1_h2t2x"]
-[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://marsslingshot2.0/scenes/game_area.tscn" id="2_482iq"]
-[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://marsslingshot2.0/scenes/mars.tscn" id="3_1ewpu"]
-[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://marsslingshot2.0/scenes/timer.tscn" id="4_g5xfb"]
-[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshot2.0/scenes/space_ship.tscn" id="5_nkrjh"]
-[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://marsslingshot2.0/scenes/checkpoint.tscn" id="6_cr8g0"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/scenes/label.tscn" id="7_ntjii"]
-[ext_resource type="Script" path="res://marsslingshot2.0/script/color_rect.gd" id="8_o5qwo"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/world.gd" id="1_flmuy"]
+[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://marsslingshotFinal/scenes/game_area.tscn" id="2_482iq"]
+[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://marsslingshotFinal/scenes/mars.tscn" id="3_1ewpu"]
+[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://marsslingshotFinal/scenes/timer.tscn" id="4_g5xfb"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/mars.gd" id="4_jq7av"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshotFinal/scenes/space_ship.tscn" id="5_nkrjh"]
+[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://marsslingshotFinal/scenes/checkpoint.tscn" id="6_cr8g0"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/space_ship.gd" id="6_h8tfy"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshotFinal/scenes/label.tscn" id="7_ntjii"]
 [ext_resource type="Texture2D" uid="uid://cpgexyk2keb8t" path="res://Globals/consoleBackgroundLarge.png" id="9_76fml"]
-[ext_resource type="Texture2D" uid="uid://bixkb7tjt0keu" path="res://marsslingshot2.0/assets/starry.png" id="10_1db8u"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/checkpoint.gd" id="9_mmmi0"]
+[ext_resource type="Texture2D" uid="uid://bixkb7tjt0keu" path="res://marsslingshotFinal/assets/starry.png" id="10_1db8u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oiufe"]
 radius = 582.278
@@ -20,7 +22,7 @@ radius = 42.0119
 [node name="World" type="Node2D"]
 physics_interpolation_mode = 2
 position = Vector2(181, 289)
-script = ExtResource("1_h2t2x")
+script = ExtResource("1_flmuy")
 
 [node name="gameArea" parent="." instance=ExtResource("2_482iq")]
 position = Vector2(580, 321)
@@ -29,6 +31,7 @@ gravity_space_override = 0
 [node name="mars" parent="." instance=ExtResource("3_1ewpu")]
 z_index = 1
 position = Vector2(536, 370)
+script = ExtResource("4_jq7av")
 
 [node name="Area2D" parent="mars" index="1"]
 gravity_point_unit_distance = 15.0
@@ -42,17 +45,21 @@ shape = SubResource("CircleShape2D_x0l4m")
 [node name="Timer" parent="." instance=ExtResource("4_g5xfb")]
 one_shot = true
 autostart = true
+script = null
 
 [node name="space_ship" parent="." instance=ExtResource("5_nkrjh")]
 z_index = 1
 position = Vector2(95, 501)
+script = ExtResource("6_h8tfy")
 
 [node name="Timer" parent="space_ship" index="3"]
 one_shot = false
+script = null
 
 [node name="checkpoint" parent="." instance=ExtResource("6_cr8g0")]
 z_index = 1
 position = Vector2(1037, 96)
+script = ExtResource("9_mmmi0")
 
 [node name="Label" parent="." instance=ExtResource("7_ntjii")]
 offset_left = 112.0
@@ -68,7 +75,6 @@ offset_left = 4.0
 offset_top = 617.0
 offset_right = 504.0
 offset_bottom = 641.0
-script = ExtResource("8_o5qwo")
 metadata/_edit_use_anchors_ = true
 
 [node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
@@ -79,7 +85,7 @@ texture = ExtResource("9_76fml")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(780, 249)
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(1.3, 1.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(682, 294)

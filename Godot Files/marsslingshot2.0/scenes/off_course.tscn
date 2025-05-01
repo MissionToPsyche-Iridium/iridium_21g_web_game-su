@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bventlyk5208i"]
 
-[ext_resource type="Script" path="res://marsslingshot2.0/script/off_course.gd" id="1_8se4v"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/off_course.gd" id="1_oqxw5"]
 [ext_resource type="Texture2D" uid="uid://cpgexyk2keb8t" path="res://Globals/consoleBackgroundLarge.png" id="2_0nbho"]
 
 [node name="OffCourse" type="Node2D"]
-script = ExtResource("1_8se4v")
+script = ExtResource("1_oqxw5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 529.0
@@ -26,6 +26,6 @@ texture = ExtResource("2_0nbho")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(958, 540)
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(1.3, 1.3)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

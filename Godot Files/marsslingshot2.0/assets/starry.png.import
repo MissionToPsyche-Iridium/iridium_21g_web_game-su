@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bixkb7tjt0keu"
-path="res://.godot/imported/starry.png-7c841a770ec4cabaabb8ca8c7f915d58.ctex"
+path="res://.godot/imported/starry.png-810d2f156fb7d283dc527bd61a65ff92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://marsslingshot2.0/assets/starry.png"
-dest_files=["res://.godot/imported/starry.png-7c841a770ec4cabaabb8ca8c7f915d58.ctex"]
+source_file="res://marsslingshotFinal/assets/starry.png"
+dest_files=["res://.godot/imported/starry.png-810d2f156fb7d283dc527bd61a65ff92.ctex"]
 
 [params]
 

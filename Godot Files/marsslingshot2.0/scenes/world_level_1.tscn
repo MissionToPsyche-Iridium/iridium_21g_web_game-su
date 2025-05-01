@@ -1,14 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1fg6c0a58tq7"]
+[gd_scene load_steps=11 format=3 uid="uid://c1fg6c0a58tq7"]
 
-[ext_resource type="Script" path="res://marsslingshot2.0/script/world_level_1.gd" id="1_reier"]
-[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshot2.0/scenes/space_ship.tscn" id="2_w6gui"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/scenes/label.tscn" id="3_dw70b"]
-[ext_resource type="Script" path="res://marsslingshot2.0/script/color_rect.gd" id="4_31rtf"]
-[ext_resource type="Script" path="res://marsslingshot2.0/script/label_2.gd" id="5_gxfap"]
-[ext_resource type="Script" path="res://marsslingshot2.0/script/checkpoint.gd" id="6_7f8ea"]
-[ext_resource type="Texture2D" uid="uid://bmjiwnfxo5x06" path="res://marsslingshot2.0/assets/R.png" id="7_aog1p"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/world_level_1.gd" id="1_sydkq"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/space_ship.gd" id="2_uytkx"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshotFinal/scenes/space_ship.tscn" id="2_w6gui"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshotFinal/scenes/label.tscn" id="3_dw70b"]
+[ext_resource type="Script" path="res://marsslingshotFinal/script/checkpoint.gd" id="5_bno53"]
+[ext_resource type="Texture2D" uid="uid://bmjiwnfxo5x06" path="res://marsslingshotFinal/assets/R.png" id="7_aog1p"]
 [ext_resource type="Texture2D" uid="uid://cpgexyk2keb8t" path="res://Globals/consoleBackgroundLarge.png" id="8_h3edx"]
-[ext_resource type="Texture2D" uid="uid://bixkb7tjt0keu" path="res://marsslingshot2.0/assets/starry.png" id="9_g5gsy"]
+[ext_resource type="Texture2D" uid="uid://bixkb7tjt0keu" path="res://marsslingshotFinal/assets/starry.png" id="9_g5gsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd74w"]
 size = Vector2(1152, 645)
@@ -18,17 +17,19 @@ radius = 21.095
 
 [node name="WorldLevel1" type="Node2D"]
 position = Vector2(153, 240)
-script = ExtResource("1_reier")
+script = ExtResource("1_sydkq")
 
 [node name="space_ship" parent="." instance=ExtResource("2_w6gui")]
 z_index = 1
 position = Vector2(176, 575.5)
+script = ExtResource("2_uytkx")
 
 [node name="Sprite2D" parent="space_ship" index="1"]
 scale = Vector2(0.03, 0.023)
 
 [node name="Timer" parent="space_ship" index="3"]
 one_shot = false
+script = null
 
 [node name="Label" parent="." instance=ExtResource("3_dw70b")]
 offset_left = 154.0
@@ -45,23 +46,21 @@ position = Vector2(617, 349)
 shape = SubResource("RectangleShape2D_cd74w")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-z_index = 1
+z_index = 2
 offset_left = -2.0
 offset_top = 624.0
 offset_right = 25.0
 offset_bottom = 648.0
-script = ExtResource("4_31rtf")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
-script = ExtResource("5_gxfap")
 metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 z_index = 1
-script = ExtResource("6_7f8ea")
+script = ExtResource("5_bno53")
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 
@@ -82,7 +81,7 @@ texture = ExtResource("8_h3edx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(852, 330.5)
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(1.3, 1.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(678, 343)
