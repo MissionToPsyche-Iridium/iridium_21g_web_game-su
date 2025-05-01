@@ -1,7 +1,6 @@
-# Code for target area visual indicator
+# Code for target area visual indicator (sparkle effect)
 extends AnimatedSprite2D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var timer = get_node("Timer")
 	timer.start()

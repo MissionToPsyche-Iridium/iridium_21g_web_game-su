@@ -33,7 +33,7 @@ func _ready():
 	label = get_parent().get_node("Label")
 	beep_loop()
 
-# Signals for collision detection required for switching scenes at the proper events
+# Signals for collision detection (if reticle is aligned properly)
 func _on_area2d_body_entered(body):
 	if body is CharacterBody2D:
 		player_node = body
@@ -47,6 +47,7 @@ func _on_area2d_body_exited(body):
 		is_overlap = false
 		overlapping_box = null
 
+# Signals for proximity detection
 func _on_area2d_area_entered(area: Area2D) -> void:
 	is_prox_overlap = true
 	prox_node = area
@@ -56,6 +57,7 @@ func _on_area2d_area_exited(area: Area2D) -> void:
 		is_prox_overlap = false
 		prox_node = null
 
+# Proximity sensor beep sound
 func beep_loop() -> void:
 	while is_beeping:
 		var delay = far_beep_delay
@@ -78,8 +80,8 @@ func _process(delta: float) -> void:
 			valid_scan_count += 1
 			is_overlap = false
 			is_prox_overlap = false
-			var ani = player_node.get_node("AnimatedSprite2D") #idk this is not working
-			ani.queue_free()
+			var ani = player_node.get_node("AnimatedSprite2D")
+			ani.queue_free() # Remove sparkle effect
 			prox_node.get_parent().remove_child(prox_node) # Removes prox hitbox to stop beeping
 			show_correct_only()
 			correctSound.play()
@@ -102,7 +104,6 @@ func _process(delta: float) -> void:
 
 func change_scene():
 	var tree = get_tree()
-
 	if new_scene_path.length() == 0:
 		return
 		
@@ -114,7 +115,8 @@ func find_collision_box(player: CharacterBody2D) -> CollisionShape2D:
 		if child is CollisionShape2D and not has_been_scanned(child):
 			return child
 	return null		
-		
+
+# Check if player has already scanned the box
 func has_been_scanned(box: CollisionShape2D) -> bool:
 	return box in scanned_boxes
 

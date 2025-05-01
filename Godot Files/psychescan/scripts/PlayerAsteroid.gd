@@ -1,4 +1,5 @@
 # Asteroid movement script
+# Movement is inverted to mimic the effect of player controlling a camera/sensor
 
 extends CharacterBody2D
 

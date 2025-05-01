@@ -33,7 +33,7 @@ func _ready():
 	label = get_parent().get_node("Label")
 	beep_loop()
 
-# Signals for collision detection
+# Signals for collision detection (if reticle is aligned properly)
 func _on_area2d_body_entered(body):
 	if body is CharacterBody2D: 
 		player_node = body
@@ -89,7 +89,7 @@ func _process(delta: float) -> void:
 		await incorrectSound.finished
 
 
-
+# Method to move to next level
 func change_scene():
 	var tree = get_tree()
 	if new_scene_path.length() == 0:
