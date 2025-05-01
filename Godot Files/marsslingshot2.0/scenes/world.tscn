@@ -1,13 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://blb8npkytvcgv"]
+[gd_scene load_steps=13 format=3 uid="uid://blb8npkytvcgv"]
 
-[ext_resource type="Script" path="res://slingshot/world.gd" id="1_qnauu"]
-[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://slingshot/game_area.tscn" id="2_482iq"]
-[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://slingshot/mars.tscn" id="3_1ewpu"]
-[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://slingshot/timer.tscn" id="4_g5xfb"]
-[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://slingshot/space_ship.tscn" id="5_nkrjh"]
-[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://slingshot/checkpoint.tscn" id="6_cr8g0"]
-[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/label.tscn" id="7_ntjii"]
+[ext_resource type="Script" path="res://marsslingshot2.0/script/world.gd" id="1_h2t2x"]
+[ext_resource type="PackedScene" uid="uid://bq03wvh64xhe2" path="res://marsslingshot2.0/scenes/game_area.tscn" id="2_482iq"]
+[ext_resource type="PackedScene" uid="uid://bgxqsrrr3uyoh" path="res://marsslingshot2.0/scenes/mars.tscn" id="3_1ewpu"]
+[ext_resource type="PackedScene" uid="uid://cyjtqrvccw1f8" path="res://marsslingshot2.0/scenes/timer.tscn" id="4_g5xfb"]
+[ext_resource type="PackedScene" uid="uid://crxhvmr5p37e5" path="res://marsslingshot2.0/scenes/space_ship.tscn" id="5_nkrjh"]
+[ext_resource type="PackedScene" uid="uid://cbahqnt0etewm" path="res://marsslingshot2.0/scenes/checkpoint.tscn" id="6_cr8g0"]
+[ext_resource type="PackedScene" uid="uid://ch63oavybuyab" path="res://marsslingshot2.0/scenes/label.tscn" id="7_ntjii"]
 [ext_resource type="Script" path="res://marsslingshot2.0/script/color_rect.gd" id="8_o5qwo"]
+[ext_resource type="Texture2D" uid="uid://cpgexyk2keb8t" path="res://Globals/consoleBackgroundLarge.png" id="9_76fml"]
+[ext_resource type="Texture2D" uid="uid://bixkb7tjt0keu" path="res://marsslingshot2.0/assets/starry.png" id="10_1db8u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oiufe"]
 radius = 582.278
@@ -17,13 +19,15 @@ radius = 42.0119
 
 [node name="World" type="Node2D"]
 physics_interpolation_mode = 2
-script = ExtResource("1_qnauu")
+position = Vector2(181, 289)
+script = ExtResource("1_h2t2x")
 
 [node name="gameArea" parent="." instance=ExtResource("2_482iq")]
 position = Vector2(580, 321)
 gravity_space_override = 0
 
 [node name="mars" parent="." instance=ExtResource("3_1ewpu")]
+z_index = 1
 position = Vector2(536, 370)
 
 [node name="Area2D" parent="mars" index="1"]
@@ -40,12 +44,14 @@ one_shot = true
 autostart = true
 
 [node name="space_ship" parent="." instance=ExtResource("5_nkrjh")]
+z_index = 1
 position = Vector2(95, 501)
 
 [node name="Timer" parent="space_ship" index="3"]
 one_shot = false
 
 [node name="checkpoint" parent="." instance=ExtResource("6_cr8g0")]
+z_index = 1
 position = Vector2(1037, 96)
 
 [node name="Label" parent="." instance=ExtResource("7_ntjii")]
@@ -54,13 +60,30 @@ offset_top = 583.0
 offset_right = 152.0
 offset_bottom = 606.0
 script = null
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
 offset_left = 4.0
 offset_top = 617.0
 offset_right = 504.0
 offset_bottom = 641.0
 script = ExtResource("8_o5qwo")
+metadata/_edit_use_anchors_ = true
+
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(893, 387)
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("9_76fml")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(780, 249)
+zoom = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(682, 294)
+texture = ExtResource("10_1db8u")
 
 [connection signal="body_exited" from="gameArea" to="." method="_on_game_area_body_exited"]
 [connection signal="body_entered" from="mars/Area2D" to="Timer" method="_on_area_2d_body_entered"]
