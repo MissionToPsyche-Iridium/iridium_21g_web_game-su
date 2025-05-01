@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bi87b1jlyy8cf"]
 
-[ext_resource type="FontFile" uid="uid://dad653sjnvr6f" path="res://fonts/dogicapixel.ttf" id="1_pkvto"]
+[ext_resource type="FontFile" uid="uid://dkfxjce33i1c" path="res://fonts/dogicapixel.ttf" id="1_pkvto"]
 
 [node name="Label" type="Label"]
 anchors_preset = -1
@@ -8,12 +8,11 @@ anchor_right = 0.133
 anchor_bottom = 0.198
 offset_right = 32.64
 offset_bottom = 123.16
+theme_override_constants/line_spacing = 6
 theme_override_fonts/font = ExtResource("1_pkvto")
 text = "Objective: 
 Scan the correct
-part of the asteroid.
-
-
+part of the asteroid
 
 
 
@@ -33,5 +32,5 @@ designed to capture
 the topography of the
 asteroid.
 It uses filters to
-distinguish these traits."
+distinguish these traits"
 autowrap_mode = 3

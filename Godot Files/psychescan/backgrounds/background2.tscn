@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://b5x1ucl4jwbq4"]
 
-[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="1_8sy1d"]
+[ext_resource type="Texture2D" uid="uid://d3i5uhv7cwp4o" path="res://Globals/consoleBackgroundLarge.png" id="1_8sy1d"]
 [ext_resource type="PackedScene" uid="uid://rkniskrqmb35" path="res://psychescan/sprites/incorrect.tscn" id="3_6ebor"]
 [ext_resource type="Script" path="res://psychescan/scripts/SceneTransition2.gd" id="4_w6upg"]
 [ext_resource type="PackedScene" uid="uid://cvoudoufq5ms2" path="res://psychescan/texts/scannertext2.tscn" id="5_64cel"]
-[ext_resource type="AudioStream" uid="uid://cp5mo6quaa8a3" path="res://psychescan/assets/audio/proxSound.wav" id="5_fc77x"]
-[ext_resource type="Texture2D" uid="uid://by3gha64uoyhi" path="res://psychescan/assets/textures/squareReticle.png" id="5_y61kw"]
-[ext_resource type="AudioStream" uid="uid://bbq1nmd6hlrr1" path="res://psychescan/assets/audio/correct.wav" id="7_fu06o"]
-[ext_resource type="AudioStream" uid="uid://dathja5b2a5xa" path="res://audio/incorrect.wav" id="8_jwdpb"]
-[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/audio/CRTHum.mp3" id="9_7mccw"]
-[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/textures/green light.png" id="9_w0lls"]
+[ext_resource type="AudioStream" uid="uid://buwrmofej0dv5" path="res://psychescan/assets/audio/proxSound.wav" id="5_fc77x"]
+[ext_resource type="Texture2D" uid="uid://c2vquuvgf0nmi" path="res://psychescan/assets/textures/squareReticle.png" id="5_y61kw"]
+[ext_resource type="AudioStream" uid="uid://bxxmw3llwoi57" path="res://psychescan/assets/audio/correct.wav" id="7_fu06o"]
+[ext_resource type="AudioStream" uid="uid://dhvsylxdlxxh" path="res://audio/incorrect.wav" id="8_jwdpb"]
+[ext_resource type="AudioStream" uid="uid://jv6cejdoyqie" path="res://psychescan/assets/audio/CRTHum.mp3" id="9_7mccw"]
+[ext_resource type="Texture2D" uid="uid://bduslsougetkd" path="res://psychescan/assets/textures/green light.png" id="9_w0lls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sj41b"]
 size = Vector2(80, 80)
@@ -50,10 +50,29 @@ stream = ExtResource("5_fc77x")
 volume_db = -15.0
 
 [node name="Label" parent="." instance=ExtResource("5_64cel")]
-offset_left = 1184.0
+offset_left = 1181.0
 offset_top = 150.0
-offset_right = 1472.0
+offset_right = 1475.0
 offset_bottom = 419.0
+text = "Objective:
+Scan the asteroid in
+2 places
+
+
+
+
+
+
+
+
+
+
+Current Instrument: 
+X-Band Radio
+The X-Band Radio system
+measures Psyche's
+gravitational field.
+This, alongside the Multispectral Imager, helps scientists learn about Psyche's interior"
 visible_characters = 0
 visible_ratio = 0.0
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://qhel7w7se32c"]
 
-[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="2_eanpc"]
+[ext_resource type="Texture2D" uid="uid://d3i5uhv7cwp4o" path="res://Globals/consoleBackgroundLarge.png" id="2_eanpc"]
 [ext_resource type="Script" path="res://psychescan/scripts/To_Next_Level.gd" id="4_y01lp"]
 [ext_resource type="PackedScene" uid="uid://dq62abyfwocnx" path="res://psychescan/texts/victory_text.tscn" id="5_lyrys"]
-[ext_resource type="AudioStream" uid="uid://dochntbp3o3hf" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_v4dcy"]
-[ext_resource type="Texture2D" uid="uid://ccgvu351bejdo" path="res://psychescan/assets/textures/green light.png" id="6_urxrn"]
+[ext_resource type="AudioStream" uid="uid://jv6cejdoyqie" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_v4dcy"]
+[ext_resource type="Texture2D" uid="uid://bduslsougetkd" path="res://psychescan/assets/textures/green light.png" id="6_urxrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc7cd"]
 size = Vector2(32, 32)
@@ -34,6 +34,23 @@ offset_left = 1184.0
 offset_top = 150.0
 offset_right = 1471.0
 offset_bottom = 419.0
+text = "Psyche
+fully scanned!
+
+
+
+
+
+
+
+
+
+
+
+Data acquired:
+-Asteroid topography
+-Gravitational field data
+-Elemental composition"
 visible_characters = 0
 visible_ratio = 0.0
 
