@@ -24,11 +24,13 @@ grow_vertical = 2
 theme_override_constants/line_spacing = 32
 theme_override_fonts/font = ExtResource("1_w2akq")
 theme_override_font_sizes/font_size = 64
-text = "Use A or Left Arrow Key to turn the spacecraft left
+text = "Use [A] or Left Arrow Key to turn the spacecraft left
 
-Use D or Right Arrow Key to turn the spacecraft right
+Use [D] or Right Arrow Key to turn the spacecraft right
 
-Use W or Up Arrow Key to accelerate (speed up)"
+Use [W] or Up Arrow Key to accelerate (speed up)
+
+The spacecraft only moves forward"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
