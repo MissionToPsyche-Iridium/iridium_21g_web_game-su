@@ -1,3 +1,5 @@
+# script for start screen dialogue
+
 extends Control
 
 var text = [
@@ -26,10 +28,11 @@ var covered = true
 var start = false
 
 func _ready() -> void:
-	start_button.hide()
+	start_button.hide() # hides button till done
 	await get_tree().create_timer(1.0).timeout
 	start = true
 
+# function to type out message to player
 func _process(delta: float) -> void:
 	if (start):
 		if(message.get_visible_ratio() != 1.0):
@@ -60,6 +63,7 @@ func changeText():
 	else: 
 		finished = true
 
+# can skip dialogue with spacebar
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept"):
 		covered = true
@@ -74,7 +78,3 @@ func _unhandled_input(event):
 				changeText()
 			else:
 				message.set_visible_ratio(1.0)
-
-#func _on_ready_pressed() -> void:
-	#await get_tree().create_timer(0.2).timeout
-	#get_tree().change_scene_to_file("res://scavenger-hunt/world.tscn")

@@ -67,7 +67,6 @@ func move():
 			rotateShuttle(dir, last_dir)
 		await tween.finished
 		last_dir = dir
-	#input_array.clear()
 	movement_sound.stop()
 	win_condition() # check to see if shuttle is at target tile
 	
@@ -102,6 +101,8 @@ func win_condition() -> void:
 	else:
 		current_level.lose_screen() # reset level
 
+
+# SETTING LEVEL LIMITS AND GOAL TILES, CALLED BY LEVEL NODES
 
 func level_1_changes() -> void:
 	MAX_MOVES = 10

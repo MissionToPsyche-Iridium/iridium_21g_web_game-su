@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746078016
+::res://::1746150725
 ::res://addons/::1746059279
 ::res://addons/gut/::1746059343
 autofree.gd::GDScript::-1::1746059279::0::1::::<>RefCounted<>::
@@ -139,8 +139,8 @@ unmute.png::CompressedTexture2D::8086499753969736322::1746059279::1746059343::1:
 ::res://credits/scenes/::1746069584
 credits.tscn::PackedScene::3526691904300370162::1746069577::0::1::::<><>::res://credits/scripts/credits.gd<>uid://ccsxclysp6ao5::::res://fonts/dogicapixelbold.ttf
 leave.tscn::PackedScene::483881436728993153::1746069584::0::1::::<><>::res://credits/scripts/leave.gd<>uid://17wx3jdqs3le::::res://scavenger-hunt/scenes/room1.tscn<>uid://ja5og8u6khm4::::res://scavenger-hunt/assets/doors/glass/two-0.png<>uid://btsbm4tgkq3d3::::res://scavenger-hunt/assets/doors/glass/two-1.png<>uid://bqw4tl5r0dmty::::res://scavenger-hunt/assets/doors/glass/two-3.png<>uid://ciwfs2g02077f::::res://scavenger-hunt/scenes/room4.tscn<>uid://dv6f4xk0mhl6w::::res://scavenger-hunt/assets/doors/glass/two-4.png<>uid://d1bu06s83i25f::::res://audio/audio.tscn<>uid://difuv1chgps3k::::res://scavenger-hunt/assets/doors/glass/two-5.png<>uid://cs1xe0wi6wst2::::res://scavenger-hunt/assets/doors/wood/door-5.png<>uid://brlxbsovtqpeg::::res://scavenger-hunt/assets/doors/wood/door-4.png<>uid://c8rara0m14prn::::res://scavenger-hunt/assets/doors/wood/door-3.png<>uid://bl137g4ij8x1g::::res://scavenger-hunt/assets/doors/wood/door-2.png<>uid://cdbh06tixl85t::::res://scavenger-hunt/assets/doors/wood/door-1.png<>uid://byo5jn1nt53yv::::res://scavenger-hunt/scenes/player.tscn<>uid://bqspm0vurfwop::::res://scavenger-hunt/assets/room4/chair.png<>uid://b35nwgw3rd8pi::::res://scavenger-hunt/assets/doors/armor/armor-1.png<>uid://cn6fej53ol1o2::::res://scavenger-hunt/assets/doors/armor/armor-2.png<>uid://d3km1m1sod26d::::res://scavenger-hunt/assets/doors/armor/armor-3.png<>uid://dmbdfbgx3fm2o::::res://scavenger-hunt/assets/doors/armor/armor-4.png<>uid://bw3iubb5t0ajj::::res://scavenger-hunt/assets/doors/armor/armor-5.png<>uid://cc4s1gbnd208s::::res://scavenger-hunt/assets/doors/armor/armor-6.png<>uid://b18d830urpadj::::res://scavenger-hunt/scenes/room3.tscn<>uid://cmvmiwx70f2yw::::res://sign-off/scenes/sign-off.tscn<>uid://bqimdocoobe63::::res://credits/scenes/credits.tscn
-::res://credits/scripts/::1746059279
-credits.gd::GDScript::-1::1746059279::0::1::::<>CanvasLayer<>::
+::res://credits/scripts/::1746150714
+credits.gd::GDScript::-1::1746150714::0::1::::<>CanvasLayer<>::
 leave.gd::GDScript::-1::1746059279::0::1::::<>Node2D<>::
 ::res://fonts/::1746059342
 AnandaBlackPersonalUseRegular-rg9Rx.ttf::FontFile::5044258001388894423::1746059279::1746059342::1::::<><>::
@@ -149,22 +149,23 @@ dogicapixelbold.ttf::FontFile::6554781141709710270::1746059279::1746059342::1:::
 Marker Felt Thin.ttf::FontFile::4534772062443916310::1746059279::1746059342::1::::<><>::
 Nature Beauty Personal Use.ttf::FontFile::2019087630909996064::1746059279::1746059342::1::::<><>::
 Noteworthy-Lt.ttf::FontFile::2371394945550286525::1746059279::1746059342::1::::<><>::
-::res://Globals/::1746076199
+::res://Globals/::1746150714
 consoleBackgroundLarge.png::CompressedTexture2D::205866932130052840::1746059279::1746059344::1::::<><>::
 CRTVisual.gdshader::Shader::-1::1746059279::0::1::::<><>::
 crt_shader_global.tscn::PackedScene::8539510791702228165::1746059279::0::1::::<><>::res://Globals/CRTVisual.gdshader
 default_bus_layout.tres::AudioBusLayout::7320663136132722382::1746059279::0::1::::<><>::
-globals.gd::GDScript::-1::1746075366::0::1::::<>Node<>::
-globals.tscn::PackedScene::8369831313620049879::1746076199::0::1::::<><>::res://Globals/globals.gd<>uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf<>uid://bvy4vv25jutvv::::res://audio/unmute.png<>uid://cpf6qb5o0cd8v::::res://audio/mute.png<>uid://c3i8i0vdoflyq::::res://Globals/hint - Copy.png<>uid://dy5v8o3ryhyq0::::res://Globals/hint.png<>uid://hof03kvnlrvg::::res://Globals/hints/mars_hints.tscn<>uid://dw8yhp5ip2df3::::res://Globals/hints/escape_room_hints.tscn<>res://Globals/hints/meteoroid_hints.tscn<>res://Globals/hints/scan_hints.tscn<>uid://bsfjo6itoivhc::::res://Globals/hints/launch_hints.tscn
+globals.gd::GDScript::-1::1746150714::0::1::::<>Node<>::
+globals.tscn::PackedScene::8369831313620049879::1746150714::0::1::::<><>::res://Globals/globals.gd<>uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf<>uid://bvy4vv25jutvv::::res://audio/unmute.png<>uid://cpf6qb5o0cd8v::::res://audio/mute.png<>uid://c3i8i0vdoflyq::::res://Globals/hint - Copy.png<>uid://dy5v8o3ryhyq0::::res://Globals/hint.png<>uid://hof03kvnlrvg::::res://Globals/hints/mars_hints.tscn<>uid://dw8yhp5ip2df3::::res://Globals/hints/escape_room_hints.tscn<>res://Globals/hints/meteoroid_hints.tscn<>res://Globals/hints/scan_hints.tscn<>uid://bsfjo6itoivhc::::res://Globals/hints/launch_hints.tscn<>uid://nf2qhh40pq8x::::res://Globals/hints/typing_hints.tscn
 hint - Copy.png::CompressedTexture2D::2198946626833142442::1746059279::1746059343::1::::<><>::
 hint.png::CompressedTexture2D::6535636167656893125::1746059279::1746059343::1::::<><>::
 icon.png::CompressedTexture2D::4054441330787778920::1746059279::1746059344::1::::<><>::
-::res://Globals/hints/::1746076094
+::res://Globals/hints/::1746150714
 escape_room_hints.tscn::PackedScene::8773011619962695578::1746069612::0::1::::<><>::uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf
 launch_hints.tscn::PackedScene::3660714853462160068::1746075366::0::1::::<><>::uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf
 mars_hints.tscn::PackedScene::520572910908335452::1746059279::0::1::::<><>::uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf
 meteoroid_hints.tscn::PackedScene::9138708244083156382::1746076094::0::1::::<><>::uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf
 scan_hints.tscn::PackedScene::7946786226730521763::1746070610::0::1::::<><>::uid://dkfxjce33i1c::::res://fonts/dogicapixel.ttf
+typing_hints.tscn::PackedScene::924445167400619553::1746150714::0::1::::<><>::uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf
 ::res://launch/::1746059280
 ::res://launch/assets/::1746059280
 launch.ogv::VideoStreamTheora::-1::1746059280::0::1::::<><>::
@@ -173,43 +174,28 @@ prelaunch.ogv::VideoStreamTheora::-1::1746059280::0::1::::<><>::
 launch.tscn::PackedScene::1775822634824600802::1746060795::0::1::::<><>::res://launch/scripts/launch.gd<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf
 ::res://launch/scripts/::1746059280
 launch.gd::GDScript::-1::1746059280::0::1::::<>Control<>::
-::res://marsslingshot2.0/::1746059280
-::res://marsslingshot2.0/assets/::1746076216
-checkpoint.png::CompressedTexture2D::410925862029955524::1746059280::1746076216::1::::<><>::
-R.png::CompressedTexture2D::3247791922136571069::1746059280::1746076216::1::::<><>::
-shuttle.png::CompressedTexture2D::8961726493080901621::1746059280::1746076216::1::::<><>::
-spaceship.png::CompressedTexture2D::3870448139493402135::1746059280::1746076216::0::::<><>::
-starry.png::CompressedTexture2D::2996022787396096540::1746075366::1746076216::1::::<><>::
-::res://marsslingshot2.0/scenes/::1746076199
-checkpoint.tscn::PackedScene::4843484515972896960::1746075366::0::1::::<><>::res://marsslingshot2.0/script/checkpoint.gd<>uid://88c4an0fn3b4::::res://psychescan/assets/textures/psyche1.png
-game_area.tscn::PackedScene::3562792104268630375::1746059280::0::1::::<><>::
-label.tscn::PackedScene::5329884093673904465::1746076095::0::1::::<><>::res://marsslingshot2.0/script/label.gd
-mars.tscn::PackedScene::2856038970008483203::1746075366::0::1::::<><>::res://marsslingshot2.0/script/mars.gd<>uid://bmjiwnfxo5x06::::res://marsslingshot2.0/assets/R.png
-MarsCrashText.tscn::PackedScene::575699899623474317::1746059280::0::1::::<><>::res://marsslingshot2.0/script/timer.gd
-mars_crash.tscn::PackedScene::8422870439507633415::1746075366::0::1::::<><>::res://marsslingshot2.0/script/mars_crash.gd<>uid://cpgexyk2keb8t::::res://Globals/consoleBackgroundLarge.png
-off_course.tscn::PackedScene::3869467777425870406::1746075366::0::1::::<><>::res://marsslingshot2.0/script/off_course.gd<>uid://cpgexyk2keb8t::::res://Globals/consoleBackgroundLarge.png
-satillite.tscn::PackedScene::6286140872190967418::1746059280::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg
-space_ship.tscn::PackedScene::6013995576123617782::1746075366::0::1::::<><>::res://marsslingshot2.0/script/space_ship.gd<>uid://dkyeghlt67tw5::::res://meteoroid-level/assets/psyche shuttle.png<>res://marsslingshot2.0/script/timer.gd
-timer.tscn::PackedScene::6477136135482842115::1746059280::0::1::::<><>::res://marsslingshot2.0/script/timer.gd
-TransitionScreen.tscn::PackedScene::3892874636436711862::1746075366::0::1::::<><>::res://marsslingshot2.0/script/transition_screen.gd<>uid://cpgexyk2keb8t::::res://Globals/consoleBackgroundLarge.png
-world.tscn::PackedScene::3162590021962538817::1746075366::0::1::::<><>::res://marsslingshot2.0/script/world.gd<>uid://bq03wvh64xhe2::::res://marsslingshot2.0/scenes/game_area.tscn<>uid://bgxqsrrr3uyoh::::res://marsslingshot2.0/scenes/mars.tscn<>uid://cyjtqrvccw1f8::::res://marsslingshot2.0/scenes/timer.tscn<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://cbahqnt0etewm::::res://marsslingshot2.0/scenes/checkpoint.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/scenes/label.tscn<>res://marsslingshot2.0/script/color_rect.gd<>uid://cpgexyk2keb8t::::res://Globals/consoleBackgroundLarge.png<>uid://bixkb7tjt0keu::::res://marsslingshot2.0/assets/starry.png
-world_level_1.tscn::PackedScene::6608492996021213876::1746076199::0::1::::<><>::res://marsslingshot2.0/script/world_level_1.gd<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/scenes/label.tscn<>res://marsslingshot2.0/script/color_rect.gd<>res://marsslingshot2.0/script/label_2.gd<>res://marsslingshot2.0/script/checkpoint.gd<>uid://bmjiwnfxo5x06::::res://marsslingshot2.0/assets/R.png<>uid://cpgexyk2keb8t::::res://Globals/consoleBackgroundLarge.png<>uid://bixkb7tjt0keu::::res://marsslingshot2.0/assets/starry.png
-::res://marsslingshot2.0/script/::1746075366
-boosterbar.gd::GDScript::-1::1746059280::0::1::::<>ColorRect<>::
-checkpoint.gd::GDScript::-1::1746075366::0::1::::<>StaticBody2D<>::
-color_rect.gd::GDScript::-1::1746059280::0::1::::<>ColorRect<>::
-label.gd::GDScript::-1::1746059280::0::1::::<>Label<>::
-label_2.gd::GDScript::-1::1746059280::0::1::::<>Label<>::
-mars.gd::GDScript::-1::1746059280::0::1::::<>StaticBody2D<>::
-mars_crash.gd::GDScript::-1::1746059280::0::1::::<>Node2D<>::
-mars_crash_text.gd::GDScript::-1::1746059280::0::1::::<>RichTextLabel<>::
-off_course.gd::GDScript::-1::1746075366::0::1::::<>Node2D<>::
-space_ship.gd::GDScript::-1::1746059280::0::1::::<>CharacterBody2D<>::
-static_body_2d.gd::GDScript::-1::1746059280::0::1::::<>StaticBody2D<>::
-timer.gd::GDScript::-1::1746059280::0::1::::<>Timer<>::
-transition_screen.gd::GDScript::-1::1746075366::0::1::::<>Node2D<>::
-world.gd::GDScript::-1::1746075366::0::1::::<>Node2D<>::
-world_level_1.gd::GDScript::-1::1746075366::0::1::::<>Node2D<>::
+::res://marsslingshot2.0/::1746150715
+::res://marsslingshot2.0/assets/::1746150715
+checkpoint.png::CompressedTexture2D::7286288881880723764::1746059280::1746150727::1::::<><>::
+icon.svg::CompressedTexture2D::8558036074491233119::1746150714::1746150727::1::::<><>::
+meteoroid-level-border-background.png::CompressedTexture2D::2680086569568505296::1746150714::1746150727::1::::<><>::
+psyche1.png::CompressedTexture2D::4665047315941110234::1746150715::1746150727::1::::<><>::
+psyche shuttle.png::CompressedTexture2D::9146611260649484385::1746150715::1746150727::1::::<><>::
+R.png::CompressedTexture2D::8471809011589510672::1746059280::1746150727::1::::<><>::
+shuttle.png::CompressedTexture2D::3990341821124301880::1746059280::1746150727::1::::<><>::
+::res://marsslingshot2.0/scenes/::1746150715
+checkpoint.tscn::PackedScene::4843484515972896960::1746150715::0::1::::<><>::res://marsslingshot2.0/scripts/checkpoint.gd<>uid://4jml2dm12txg::::res://marsslingshot2.0/assets/psyche1.png
+game_area.tscn::PackedScene::5362066425549685716::1746150715::0::1::::<><>::
+mars.tscn::PackedScene::2856038970008483203::1746150715::0::1::::<><>::res://marsslingshot2.0/scripts/mars.gd<>uid://dsx2pr6ebamps::::res://marsslingshot2.0/assets/R.png
+space_ship.tscn::PackedScene::6013995576123617782::1746150715::0::1::::<><>::res://marsslingshot2.0/scripts/space_ship.gd<>uid://bw37l15shxbrk::::res://marsslingshot2.0/assets/shuttle.png<>res://marsslingshot2.0/scripts/timer.gd
+timer.tscn::PackedScene::6477136135482842115::1746150715::0::1::::<><>::res://marsslingshot2.0/scripts/timer.gd
+world.tscn::PackedScene::3162590021962538817::1746150715::0::1::::<><>::res://marsslingshot2.0/scripts/world.gd<>uid://dtwuq3lpsye6x::::res://Globals/crt_shader_global.tscn<>uid://5b1o7n36wq45::::res://marsslingshot2.0/assets/meteoroid-level-border-background.png<>uid://cyjtqrvccw1f8::::res://marsslingshot2.0/scenes/timer.tscn<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://cbahqnt0etewm::::res://marsslingshot2.0/scenes/checkpoint.tscn<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf<>uid://bgxqsrrr3uyoh::::res://marsslingshot2.0/scenes/mars.tscn
+::res://marsslingshot2.0/scripts/::1746150715
+checkpoint.gd::GDScript::-1::1746150715::0::1::::<>Area2D<>::
+mars.gd::GDScript::-1::1746150715::0::1::::<>Node2D<>::
+space_ship.gd::GDScript::-1::1746150715::0::1::::<>CharacterBody2D<>::
+timer.gd::GDScript::-1::1746150715::0::1::::<>Timer<>::
+world.gd::GDScript::-1::1746150715::0::1::::<>Node2D<>::
 ::res://meteoroid-level/::1746059280
 ::res://meteoroid-level/assets/::1746062165
 buttons.png::CompressedTexture2D::680136760069931963::1746059280::1746059343::1::::<><>::
@@ -241,22 +227,22 @@ Playful_Hit.wav::AudioStreamWAV::1505080534476192516::1746059280::1746059344::1:
 Playful_LevelUp.wav::AudioStreamWAV::8734931993107778002::1746059280::1746059344::1::::<><>::
 Playful_MajorPickup.wav::AudioStreamWAV::2911219231249241319::1746059280::1746059344::1::::<><>::
 Playful_Pickup.wav::AudioStreamWAV::5104591053705115515::1746059280::1746059344::1::::<><>::
-::res://meteoroid-level/scenes/::1746076390
-end_screen.tscn::PackedScene::938195871881461229::1746076390::0::1::::<><>::res://meteoroid-level/scripts/end_screen.gd<>res://meteoroid-level/scripts/next_level_button.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://d1w7exp7auu54::::res://meteoroid-level/assets/psyche view from above.png<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>uid://bpatnccgyoai7::::res://meteoroid-level/assets/psyche view of earth.png<>uid://xvwsivo10lrk::::res://meteoroid-level/assets/perspective view of psyche spacecraft.png<>res://psychescan/addons/CRTVisual.gdshader
+::res://meteoroid-level/scenes/::1746078215
+end_screen.tscn::PackedScene::938195871881461229::1746078215::0::1::::<><>::res://meteoroid-level/scripts/end_screen.gd<>res://meteoroid-level/scripts/next_level_button.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://d1w7exp7auu54::::res://meteoroid-level/assets/psyche view from above.png<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>uid://bpatnccgyoai7::::res://meteoroid-level/assets/psyche view of earth.png<>uid://xvwsivo10lrk::::res://meteoroid-level/assets/perspective view of psyche spacecraft.png<>res://psychescan/addons/CRTVisual.gdshader
 killzone.tscn::PackedScene::5508202319634049245::1746060457::0::1::::<><>::res://meteoroid-level/scripts/killzone.gd
-level_1.tscn::PackedScene::8183333518045023678::1746076390::0::1::::<><>::res://meteoroid-level/scripts/level_1.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cl5u0rtjqn40a::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://vpcpryt2w237::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://dwpjb3ecvcyvi::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>res://meteoroid-level/scripts/num_moves.gd<>res://psychescan/addons/CRTVisual.gdshader
-level_1_screen.tscn::PackedScene::2134164164262616306::1746076390::0::1::::<><>::res://meteoroid-level/scripts/level_1_start.gd<>res://meteoroid-level/scripts/level_1_screen.gd<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>res://psychescan/addons/CRTVisual.gdshader
-level_2.tscn::PackedScene::3738743211435572838::1746076390::0::1::::<><>::res://meteoroid-level/scripts/level_2.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cl5u0rtjqn40a::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://vpcpryt2w237::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://dwpjb3ecvcyvi::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/num_moves.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/addons/CRTVisual.gdshader
-level_2_screen.tscn::PackedScene::3109361780925147148::1746076390::0::1::::<><>::res://meteoroid-level/scripts/level_2_screen.gd<>res://meteoroid-level/scripts/level_2_start.gd<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>res://psychescan/addons/CRTVisual.gdshader
-level_3.tscn::PackedScene::5829538703089930264::1746076390::0::1::::<><>::res://meteoroid-level/scripts/level_3.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://cl5u0rtjqn40a::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://vpcpryt2w237::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://dwpjb3ecvcyvi::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/num_moves.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/addons/CRTVisual.gdshader
-level_3_screen.tscn::PackedScene::3686966768063067408::1746076390::0::1::::<><>::res://meteoroid-level/scripts/level_3_screen.gd<>res://meteoroid-level/scripts/level_3_start.gd<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>res://psychescan/addons/CRTVisual.gdshader
+level_1.tscn::PackedScene::8183333518045023678::1746078215::0::1::::<><>::res://meteoroid-level/scripts/level_1.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cl5u0rtjqn40a::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://vpcpryt2w237::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://dwpjb3ecvcyvi::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>res://meteoroid-level/scripts/num_moves.gd<>res://psychescan/addons/CRTVisual.gdshader
+level_1_screen.tscn::PackedScene::2134164164262616306::1746078215::0::1::::<><>::res://meteoroid-level/scripts/level_1_start.gd<>res://meteoroid-level/scripts/level_1_screen.gd<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>res://psychescan/addons/CRTVisual.gdshader
+level_2.tscn::PackedScene::3738743211435572838::1746078215::0::1::::<><>::res://meteoroid-level/scripts/level_2.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://cl5u0rtjqn40a::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://vpcpryt2w237::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://dwpjb3ecvcyvi::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/num_moves.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/addons/CRTVisual.gdshader
+level_2_screen.tscn::PackedScene::3109361780925147148::1746078215::0::1::::<><>::res://meteoroid-level/scripts/level_2_screen.gd<>res://meteoroid-level/scripts/level_2_start.gd<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>res://psychescan/addons/CRTVisual.gdshader
+level_3.tscn::PackedScene::5829538703089930264::1746078215::0::1::::<><>::res://meteoroid-level/scripts/level_3.gd<>uid://dmvpevcgrtlss::::res://meteoroid-level/scenes/shuttle.tscn<>uid://dcl8xnrcpum3w::::res://fonts/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://cl5u0rtjqn40a::::res://meteoroid-level/assets/meteoroid-level-background.png<>uid://bsd8tu0gnjycp::::res://meteoroid-level/scenes/path.tscn<>uid://vpcpryt2w237::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_Hit.wav<>uid://dwpjb3ecvcyvi::::res://meteoroid-level/assets/Playful 8-bit Sounds & Music/Playful 8-bit Sounds & Music/SFX/Playful_LevelUp.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/num_moves.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/addons/CRTVisual.gdshader
+level_3_screen.tscn::PackedScene::3686966768063067408::1746078215::0::1::::<><>::res://meteoroid-level/scripts/level_3_screen.gd<>res://meteoroid-level/scripts/level_3_start.gd<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>uid://v3uha6yq4pj7::::res://meteoroid-level/scenes/non_moving_debris.tscn<>uid://cuojpnqpbf5v4::::res://meteoroid-level/scenes/moving_debris.tscn<>res://psychescan/addons/CRTVisual.gdshader
 moving_debris.tscn::PackedScene::6206093476750680439::1746067708::0::1::::<><>::res://meteoroid-level/scripts/moving_debris.gd<>uid://cf1yljtwswqdc::::res://meteoroid-level/assets/rocket engine nozzle.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn<>uid://jmh32f3h5uh0::::res://meteoroid-level/assets/solarpanel.png<>uid://c1c4m3y2uqbm0::::res://meteoroid-level/assets/fuel tank.png<>uid://db2lreqcjdhrr::::res://meteoroid-level/assets/satellitedish.png<>uid://nfne68moid53::::res://meteoroid-level/assets/wires.png
 non_moving_debris.tscn::PackedScene::1532995182926943286::1746067708::0::1::::<><>::uid://dndclb4bpkw1t::::res://meteoroid-level/assets/space rocks.png<>uid://ckqhj1j1mjc3v::::res://meteoroid-level/scenes/killzone.tscn
 path.tscn::PackedScene::3658051682662829387::1746060457::0::1::::<><>::res://meteoroid-level/scripts/path.gd
 shuttle.tscn::PackedScene::8045799112014115850::1746060457::0::1::::<><>::res://meteoroid-level/scripts/shuttle.gdshader<>res://meteoroid-level/scripts/shuttle.gd<>uid://cauitf2on2quq::::res://meteoroid-level/assets/psyche shuttle.png<>uid://cb0l0qkguxtlp::::res://meteoroid-level/assets/propulsion sound.wav
 spinning_shuttle.gd::GDScript::-1::1746059280::0::1::::<>Sprite2D<>::
-start_screen.tscn::PackedScene::3313906559616397305::1746076390::0::1::::<><>::res://meteoroid-level/scripts/start_screen.gd<>res://meteoroid-level/scripts/start_button.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://cauitf2on2quq::::res://meteoroid-level/assets/psyche shuttle.png<>res://meteoroid-level/scripts/spinning_shuttle.gd<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>res://psychescan/addons/CRTVisual.gdshader
-::res://meteoroid-level/scripts/::1746065720
+start_screen.tscn::PackedScene::3313906559616397305::1746078214::0::1::::<><>::res://meteoroid-level/scripts/start_screen.gd<>res://meteoroid-level/scripts/start_button.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://cauitf2on2quq::::res://meteoroid-level/assets/psyche shuttle.png<>res://meteoroid-level/scripts/spinning_shuttle.gd<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>res://psychescan/addons/CRTVisual.gdshader
+::res://meteoroid-level/scripts/::1746150708
 end_screen.gd::GDScript::-1::1746059280::0::1::::<>Control<>::
 killzone.gd::GDScript::-1::1746059280::0::1::::<>Area2D<>::
 level_1.gd::GDScript::-1::1746059280::0::1::::<>Node2D<>::
@@ -270,15 +256,15 @@ level_3_screen.gd::GDScript::-1::1746059280::0::1::::<>Control<>::
 level_3_start.gd::GDScript::-1::1746059280::0::1::::<>Button<>::
 moving_debris.gd::GDScript::-1::1746059280::0::1::::<>Node2D<>::
 next_level_button.gd::GDScript::-1::1746060359::0::1::::<>Button<>::
-num_moves.gd::GDScript::-1::1746065603::0::1::::<>Label<>::
+num_moves.gd::GDScript::-1::1746078214::0::1::::<>Label<>::
 path.gd::GDScript::-1::1746059280::0::1::::<>Line2D<>::
 shuttle.gd::GDScript::-1::1746065720::0::1::::<>CharacterBody2D<>::
-shuttle.gdshader::Shader::-1::1746059280::0::1::::<><>::
+shuttle.gdshader::Shader::-1::1746150708::0::1::::<><>::
 spinning_shuttle.gd::GDScript::-1::1746059280::0::1::::<>Sprite2D<>::
 start_button.gd::GDScript::-1::1746059280::0::1::::<>Button<>::
 start_screen.gd::GDScript::-1::1746059280::0::1::::<>Control<>::
-start_screen.gdshader::Shader::-1::1746059280::0::1::::<><>::
-::res://psychescan/::1746059281
+start_screen.gdshader::Shader::-1::1746150708::0::1::::<><>::
+::res://psychescan/::1746150715
 ::res://psychescan/addons/::1746059280
 CRTVisual.gdshader::Shader::-1::1746059280::0::1::::<><>::
 StarScroll.gdshader::Shader::-1::1746059280::0::1::::<><>::
@@ -297,27 +283,27 @@ Red CRT.jpg::CompressedTexture2D::1146453676350324250::1746059280::1746059344::1
 red light.png::CompressedTexture2D::4918829516930375664::1746059281::1746059344::1::::<><>::
 sparkle_spritesheet.png::CompressedTexture2D::5579549104704982018::1746059281::1746059344::1::::<><>::
 squareReticle.png::CompressedTexture2D::1222435288469675544::1746059281::1746059344::1::::<><>::
-::res://psychescan/backgrounds/::1746059281
-background2.tscn::PackedScene::4541181162237543009::1746059281::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>res://psychescan/scripts/SceneTransition2.gd<>uid://cvoudoufq5ms2::::res://psychescan/texts/scannertext2.tscn<>uid://cp5mo6quaa8a3::::res://psychescan/assets/audio/proxSound.wav<>uid://by3gha64uoyhi::::res://psychescan/assets/textures/squareReticle.png<>uid://bbq1nmd6hlrr1::::res://psychescan/assets/audio/correct.wav<>uid://dathja5b2a5xa::::res://audio/incorrect.wav<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png
-background3.tscn::PackedScene::5792817114665563137::1746059281::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/SceneTransition3.gd<>uid://icn4cxvh50yi::::res://psychescan/texts/scannertext3.tscn<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>uid://cp5mo6quaa8a3::::res://psychescan/assets/audio/proxSound.wav<>uid://by3gha64uoyhi::::res://psychescan/assets/textures/squareReticle.png<>uid://bbq1nmd6hlrr1::::res://psychescan/assets/audio/correct.wav<>uid://dathja5b2a5xa::::res://audio/incorrect.wav<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3
-background.tscn::PackedScene::7619888676006441872::1746059281::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/SceneTransition1.gd<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>uid://bi87b1jlyy8cf::::res://psychescan/texts/scannertext1.tscn<>uid://cp5mo6quaa8a3::::res://psychescan/assets/audio/proxSound.wav<>uid://by3gha64uoyhi::::res://psychescan/assets/textures/squareReticle.png<>uid://bbq1nmd6hlrr1::::res://psychescan/assets/audio/correct.wav<>uid://dathja5b2a5xa::::res://audio/incorrect.wav<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png
+::res://psychescan/backgrounds/::1746150715
+background2.tscn::PackedScene::4541181162237543009::1746150715::0::1::::<><>::uid://d3i5uhv7cwp4o::::res://Globals/consoleBackgroundLarge.png<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>res://psychescan/scripts/SceneTransition2.gd<>uid://cvoudoufq5ms2::::res://psychescan/texts/scannertext2.tscn<>uid://buwrmofej0dv5::::res://psychescan/assets/audio/proxSound.wav<>uid://c2vquuvgf0nmi::::res://psychescan/assets/textures/squareReticle.png<>uid://bxxmw3llwoi57::::res://psychescan/assets/audio/correct.wav<>uid://dhvsylxdlxxh::::res://audio/incorrect.wav<>uid://jv6cejdoyqie::::res://psychescan/assets/audio/CRTHum.mp3<>uid://bduslsougetkd::::res://psychescan/assets/textures/green light.png
+background3.tscn::PackedScene::5792817114665563137::1746150715::0::1::::<><>::uid://d3i5uhv7cwp4o::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/SceneTransition3.gd<>uid://icn4cxvh50yi::::res://psychescan/texts/scannertext3.tscn<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>uid://buwrmofej0dv5::::res://psychescan/assets/audio/proxSound.wav<>uid://c2vquuvgf0nmi::::res://psychescan/assets/textures/squareReticle.png<>uid://bxxmw3llwoi57::::res://psychescan/assets/audio/correct.wav<>uid://dhvsylxdlxxh::::res://audio/incorrect.wav<>uid://bduslsougetkd::::res://psychescan/assets/textures/green light.png<>uid://jv6cejdoyqie::::res://psychescan/assets/audio/CRTHum.mp3
+background.tscn::PackedScene::7619888676006441872::1746150715::0::1::::<><>::uid://d3i5uhv7cwp4o::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/SceneTransition1.gd<>uid://rkniskrqmb35::::res://psychescan/sprites/incorrect.tscn<>uid://bi87b1jlyy8cf::::res://psychescan/texts/scannertext1.tscn<>uid://buwrmofej0dv5::::res://psychescan/assets/audio/proxSound.wav<>uid://c2vquuvgf0nmi::::res://psychescan/assets/textures/squareReticle.png<>uid://bxxmw3llwoi57::::res://psychescan/assets/audio/correct.wav<>uid://dhvsylxdlxxh::::res://audio/incorrect.wav<>uid://jv6cejdoyqie::::res://psychescan/assets/audio/CRTHum.mp3<>uid://bduslsougetkd::::res://psychescan/assets/textures/green light.png
 computer_ui_global.tscn::PackedScene::6548701820445567290::1746059281::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3
-tutorialBackground.tscn::PackedScene::7010179177494620253::1746059281::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/Tutorial_To_Next_Level.gd<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://by3gha64uoyhi::::res://psychescan/assets/textures/squareReticle.png<>uid://bbq1nmd6hlrr1::::res://psychescan/assets/audio/correct.wav<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png
-vic_background.tscn::PackedScene::1137736370402036168::1746059281::0::1::::<><>::uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/To_Next_Level.gd<>uid://dq62abyfwocnx::::res://psychescan/texts/victory_text.tscn<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png
-::res://psychescan/levels/::1746069615
+tutorialBackground.tscn::PackedScene::7010179177494620253::1746150715::0::1::::<><>::uid://d3i5uhv7cwp4o::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/Tutorial_To_Next_Level.gd<>uid://db3wqf71m7ltl::::res://psychescan/texts/tutorialText.tscn<>uid://c2vquuvgf0nmi::::res://psychescan/assets/textures/squareReticle.png<>uid://bxxmw3llwoi57::::res://psychescan/assets/audio/correct.wav<>uid://jv6cejdoyqie::::res://psychescan/assets/audio/CRTHum.mp3<>uid://bduslsougetkd::::res://psychescan/assets/textures/green light.png
+vic_background.tscn::PackedScene::1137736370402036168::1746150715::0::1::::<><>::uid://d3i5uhv7cwp4o::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/scripts/To_Next_Level.gd<>uid://dq62abyfwocnx::::res://psychescan/texts/victory_text.tscn<>uid://jv6cejdoyqie::::res://psychescan/assets/audio/CRTHum.mp3<>uid://bduslsougetkd::::res://psychescan/assets/textures/green light.png
+::res://psychescan/levels/::1746150715
 level2.tscn::PackedScene::8170210285516169031::1746059281::0::1::::<><>::uid://c0u77fgeccqyi::::res://psychescan/sprites/asteroid2.tscn<>res://psychescan/addons/CRTVisual.gdshader<>uid://b5x1ucl4jwbq4::::res://psychescan/backgrounds/background2.tscn
 level3.tscn::PackedScene::2560300434343043779::1746069149::0::1::::<><>::uid://d2k4nx07esqql::::res://psychescan/sprites/asteroid3.tscn<>res://psychescan/addons/CRTVisual.gdshader<>uid://cosc37m3bowe8::::res://psychescan/backgrounds/background3.tscn
 level.tscn::PackedScene::5180286663584502367::1746059281::0::1::::<><>::uid://dgtepn6enoocu::::res://psychescan/backgrounds/background.tscn<>uid://fdj4n1xw0w83::::res://psychescan/sprites/asteroid1.tscn<>res://psychescan/addons/CRTVisual.gdshader
 main_level.tscn::PackedScene::1238848156924404652::1746061860::0::1::::<><>::uid://dn7vq2upimlf3::::res://psychescan/levels/tutorialLevel.tscn
 tutorialLevel.tscn::PackedScene::8139082185773459890::1746059281::0::1::::<><>::uid://fdj4n1xw0w83::::res://psychescan/sprites/asteroid1.tscn<>res://psychescan/addons/CRTVisual.gdshader<>uid://c641vkv3xk5kr::::res://psychescan/backgrounds/tutorialBackground.tscn
-victory_scene.tscn::PackedScene::7193989705513981898::1746069615::0::1::::<><>::res://psychescan/addons/StarScroll.gdshader<>res://psychescan/addons/CRTVisual.gdshader<>uid://dqnw2vpndho8c::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://qhel7w7se32c::::res://psychescan/backgrounds/vic_background.tscn
-::res://psychescan/scripts/::1746059281
-PlayerAsteroid.gd::GDScript::-1::1746059281::0::1::::<>CharacterBody2D<>::
-SceneTransition1.gd::GDScript::-1::1746059281::0::1::::<>Area2D<>::
-SceneTransition2.gd::GDScript::-1::1746059281::0::1::::<>Area2D<>::
-SceneTransition3.gd::GDScript::-1::1746059281::0::1::::<>Area2D<>::
-sparkle.gd::GDScript::-1::1746059281::0::1::::<>AnimatedSprite2D<>::
-To_Next_Level.gd::GDScript::-1::1746059281::0::1::::<>Area2D<>::
+victory_scene.tscn::PackedScene::7193989705513981898::1746150715::0::1::::<><>::res://psychescan/addons/StarScroll.gdshader<>res://psychescan/addons/CRTVisual.gdshader<>uid://ccwew2bdn7jnn::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://qhel7w7se32c::::res://psychescan/backgrounds/vic_background.tscn
+::res://psychescan/scripts/::1746150715
+PlayerAsteroid.gd::GDScript::-1::1746150715::0::1::::<>CharacterBody2D<>::
+SceneTransition1.gd::GDScript::-1::1746150715::0::1::::<>Area2D<>::
+SceneTransition2.gd::GDScript::-1::1746150715::0::1::::<>Area2D<>::
+SceneTransition3.gd::GDScript::-1::1746150715::0::1::::<>Area2D<>::
+sparkle.gd::GDScript::-1::1746150715::0::1::::<>AnimatedSprite2D<>::
+To_Next_Level.gd::GDScript::-1::1746150715::0::1::::<>Area2D<>::
 Tutorial_To_Next_Level.gd::GDScript::-1::1746059281::0::1::::<>Area2D<>::
 ::res://psychescan/sprites/::1746059281
 asteroid1.tscn::PackedScene::357736316454371422::1746059281::0::1::::<><>::res://psychescan/scripts/PlayerAsteroid.gd<>uid://d162g7ouh2vbs::::res://psychescan/assets/textures/psyche1.png<>res://psychescan/addons/StarScroll.gdshader<>uid://dqnw2vpndho8c::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://dipu66gwaj7se::::res://psychescan/sprites/sparkle.tscn
@@ -327,12 +313,12 @@ incorrect.tscn::PackedScene::1214658688306955610::1746059281::0::1::::<><>::uid:
 sparkle.tscn::PackedScene::7753009804453491568::1746059281::0::1::::<><>::res://psychescan/scripts/sparkle.gd<>uid://u3yuxsotbo7c::::res://psychescan/assets/textures/sparkle_spritesheet.png
 ::res://psychescan/tests/::1746062054
 ScanLevelTest.gd::GDScript::-1::1746062054::0::1::::<>GutTest<>::
-::res://psychescan/texts/::1746059281
-scannertext1.tscn::PackedScene::3018002008286951213::1746059281::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
-scannertext2.tscn::PackedScene::6276928836051505471::1746059281::0::1::::<><>::uid://c87bkaopo4npy::::res://fonts/dogicapixel.ttf
-scannertext3.tscn::PackedScene::566480755083493596::1746059281::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
-tutorialText.tscn::PackedScene::7288618131623470013::1746059281::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
-victory_text.tscn::PackedScene::8347918708324154569::1746059281::0::1::::<><>::uid://dad653sjnvr6f::::res://fonts/dogicapixel.ttf
+::res://psychescan/texts/::1746150715
+scannertext1.tscn::PackedScene::3018002008286951213::1746150715::0::1::::<><>::uid://dkfxjce33i1c::::res://fonts/dogicapixel.ttf
+scannertext2.tscn::PackedScene::6276928836051505471::1746150715::0::1::::<><>::uid://dkfxjce33i1c::::res://fonts/dogicapixel.ttf
+scannertext3.tscn::PackedScene::566480755083493596::1746150715::0::1::::<><>::uid://dkfxjce33i1c::::res://fonts/dogicapixel.ttf
+tutorialText.tscn::PackedScene::7288618131623470013::1746150715::0::1::::<><>::uid://dkfxjce33i1c::::res://fonts/dogicapixel.ttf
+victory_text.tscn::PackedScene::8347918708324154569::1746150715::0::1::::<><>::uid://dkfxjce33i1c::::res://fonts/dogicapixel.ttf
 ::res://scavenger-hunt/::1746059281
 ::res://scavenger-hunt/assets/::1746059281
 ::res://scavenger-hunt/assets/borders/::1746059344
@@ -530,8 +516,14 @@ start_menu.tscn::PackedScene::8426239012206552529::1746060748::0::1::::<><>::res
 ::res://test/unit/::1746059281
 test_launch.gd::GDScript::-1::1746059281::0::1::::<>GutTest<>::
 test_meteoroid-level.gd::GDScript::-1::1746059281::0::1::::<>GutTest<>::
-::res://Typing Level/::1746069664
-TypingBlock.tscn::PackedScene::2741193789615727113::1746059279::0::1::::<><>::res://Typing Level/typing_block.gd
-TypingLevel.tscn::PackedScene::7499358258582339327::1746059279::0::1::::<><>::res://Typing Level/typing_level.gd<>uid://bfb4cc1is55wv::::res://Typing Level/TypingBlock.tscn<>uid://h3r8rl5u2gxl::::res://meteoroid-level/assets/psyche shuttle.png<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://d162g7ouh2vbs::::res://psychescan/assets/textures/psyche1.png<>uid://dochntbp3o3hf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://ccgvu351bejdo::::res://psychescan/assets/textures/green light.png<>uid://bbq1nmd6hlrr1::::res://psychescan/assets/audio/correct.wav
+::res://Typing Level/::1746150714
+TypingBlock.tscn::PackedScene::2741193789615727113::1746150714::0::1::::<><>::
+TypingLevel.tscn::PackedScene::7499358258582339327::1746150714::0::1::::<><>::res://Typing Level/typing_level.gd<>uid://bfb4cc1is55wv::::res://Typing Level/TypingBlock.tscn<>uid://dwpve7tnyfwk2::::res://meteoroid-level/assets/psyche shuttle.png<>res://psychescan/addons/StarScroll.gdshader<>uid://dompdjh5py6mw::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://8eyusavy2j7w::::res://psychescan/assets/textures/psyche1.png<>res://psychescan/addons/CRTVisual.gdshader<>uid://boki2oix0hkcf::::res://psychescan/assets/audio/CRTHum.mp3<>uid://b8di5mkseayvx::::res://Typing Level/Assets/psyche-magnetometer-1536x1078.jpg<>uid://cl0iygu6u0i01::::res://psychescan/assets/textures/green light.png<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://c52pu2dgci4p3::::res://psychescan/assets/audio/correct.wav
 typing_block.gd::GDScript::-1::1746059279::0::1::::<>Node2D<>::
-typing_level.gd::GDScript::-1::1746069664::0::1::::<>Node2D<>::
+typing_level.gd::GDScript::-1::1746150714::0::1::::<>Node2D<>::
+::res://Typing Level/Assets/::1746150714
+psyche-dsoc-1536x1152.jpg::CompressedTexture2D::2554980574043413359::1746150714::1746150727::1::::<><>::
+psyche-gamma-ray-spectrometer-768x1387.jpg::CompressedTexture2D::525224388653743201::1746150714::1746150727::1::::<><>::
+psyche-magnetometer-1536x1078.jpg::CompressedTexture2D::5176095972661719721::1746150714::1746150727::1::::<><>::
+psyche-multispectral-imager-1536x1078.jpg::CompressedTexture2D::4267801929922012483::1746150714::1746150727::1::::<><>::
+psyche-radio-science.jpg::CompressedTexture2D::7078188859781633060::1746150714::1746150727::1::::<><>::

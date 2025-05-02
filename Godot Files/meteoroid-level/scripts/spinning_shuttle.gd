@@ -1,3 +1,5 @@
+# script to rotate shuttle in the start screen
+
 extends Sprite2D
 const ROTATION_SPEED = 0.5
 

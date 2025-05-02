@@ -1,3 +1,5 @@
+# script for level 1 starting screen's dialogue
+
 extends Control
 
 var text = [
@@ -22,10 +24,11 @@ var covered = true
 var start = false
 
 func _ready() -> void:
-	start_button.hide()
+	start_button.hide() # hide button till all text is visible
 	await get_tree().create_timer(1.0).timeout
 	start = true
 
+# function to read stream of text and type it out
 func _process(delta: float) -> void:
 	if (start):
 		if(message.get_visible_ratio() != 1.0):
@@ -70,7 +73,3 @@ func _unhandled_input(event):
 				changeText()
 			else:
 				message.set_visible_ratio(1.0)
-
-#func _on_ready_pressed() -> void:
-	#await get_tree().create_timer(0.2).timeout
-	#get_tree().change_scene_to_file("res://scavenger-hunt/world.tscn")

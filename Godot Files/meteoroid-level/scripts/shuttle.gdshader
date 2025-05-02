@@ -24,7 +24,7 @@ void fragment() {
 	vec4 color = texture(TEXTURE, UV);
 	
 	if(is_on_border(TEXTURE, UV)){
-		COLOR = vec4(1.0, 1.0, 0, 1);
+		COLOR = vec4(1.0, 1.0, 0, 1); // set color
 	} else {
 		COLOR = color;
 	}
