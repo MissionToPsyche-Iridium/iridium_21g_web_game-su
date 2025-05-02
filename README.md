@@ -1,6 +1,6 @@
 # Super Psyched
 
-This work was created in partial fulfillment of Seattle University Capstone Course “CPSC 4870″. 
+This work was created in partial fulfillment of Seattle University Capstone. 
 The work is a result of the Psyche Student Collaborations component of NASA’s Psyche Mission 
 (https://psyche.asu.edu). “Psyche: A Journey to a Metal World” [Contract number NNM16AA09C] is 
 part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks 
