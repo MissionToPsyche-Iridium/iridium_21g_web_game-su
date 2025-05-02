@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://0khslqnv23uc"]
+[gd_scene load_steps=11 format=3 uid="uid://0khslqnv23uc"]
 
 [ext_resource type="Script" path="res://launch/scripts/launch.gd" id="1_va7d6"]
 [ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="2_ovh8h"]
 [ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="3_0stjb"]
+[ext_resource type="PackedScene" uid="uid://dtwuq3lpsye6x" path="res://Globals/crt_shader_global.tscn" id="4_btfnl"]
 
 [sub_resource type="Animation" id="Animation_8phch"]
 resource_name = "flash_wrong"
@@ -154,6 +155,10 @@ offset_top = 232.0
 offset_right = 1893.0
 offset_bottom = 1446.0
 color = Color(1, 0, 0, 0)
+
+[node name="CRTShader" parent="." instance=ExtResource("4_btfnl")]
+position = Vector2(-438.776, -136.833)
+scale = Vector2(4.02517, 3.35544)
 
 [connection signal="dialogue_end" from="." to="." method="_on_dialogue_end"]
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
