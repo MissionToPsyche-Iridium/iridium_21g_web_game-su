@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://dsby6p2tu5igv"]
 
 [ext_resource type="Script" path="res://start-menu/start_menu.gd" id="1_wan2u"]
-[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="2_1nwy0"]
+[ext_resource type="FontFile" uid="uid://3rl5gdbcwc4i" path="res://fonts/dogicapixel.ttf" id="2_1nwy0"]
 [ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start-menu/normal.tres" id="3_gymqj"]
-[ext_resource type="Texture2D" uid="uid://b6yr5rpc3ae3f" path="res://Globals/icon.png" id="4_s3a8p"]
+[ext_resource type="Texture2D" uid="uid://cuj0t5g6h5rxr" path="res://Globals/icon.png" id="4_s3a8p"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="5_44oyq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi4qy"]
