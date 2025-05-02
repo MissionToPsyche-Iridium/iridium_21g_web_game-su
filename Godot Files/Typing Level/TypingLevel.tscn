@@ -1,22 +1,27 @@
-[gd_scene load_steps=24 format=3 uid="uid://de30lnc5vve28"]
+[gd_scene load_steps=25 format=3 uid="uid://de30lnc5vve28"]
 
 [ext_resource type="Script" path="res://Typing Level/typing_level.gd" id="1_yaj5j"]
 [ext_resource type="PackedScene" uid="uid://bfb4cc1is55wv" path="res://Typing Level/TypingBlock.tscn" id="2_wc733"]
 [ext_resource type="Texture2D" uid="uid://dwpve7tnyfwk2" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
 [ext_resource type="Shader" path="res://psychescan/addons/StarScroll.gdshader" id="3_ccgx7"]
-[ext_resource type="Texture2D" uid="uid://dompdjh5py6mw" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_rhs66"]
-[ext_resource type="Texture2D" uid="uid://8eyusavy2j7w" path="res://psychescan/assets/textures/psyche1.png" id="3_sbcle"]
+[ext_resource type="Texture2D" uid="uid://xwvmfcb6esd7" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_rhs66"]
+[ext_resource type="Texture2D" uid="uid://cqh47bcrnvrs2" path="res://psychescan/assets/textures/psyche1.png" id="3_sbcle"]
 [ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="5_6taii"]
-[ext_resource type="AudioStream" uid="uid://boki2oix0hkcf" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_onspf"]
-[ext_resource type="Texture2D" uid="uid://b8di5mkseayvx" path="res://Typing Level/Assets/psyche-magnetometer-1536x1078.jpg" id="6_21f1y"]
-[ext_resource type="Texture2D" uid="uid://cl0iygu6u0i01" path="res://psychescan/assets/textures/green light.png" id="6_hde7p"]
+[ext_resource type="AudioStream" uid="uid://c2m0dk3mbdd62" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_onspf"]
+[ext_resource type="Texture2D" uid="uid://d12h0tt5aq6og" path="res://Typing Level/Assets/psyche-magnetometer-1536x1078.jpg" id="6_21f1y"]
+[ext_resource type="Texture2D" uid="uid://d3c5wj0rdbign" path="res://psychescan/assets/textures/green light.png" id="6_hde7p"]
 [ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="7_r7tal"]
-[ext_resource type="AudioStream" uid="uid://c52pu2dgci4p3" path="res://psychescan/assets/audio/correct.wav" id="7_snvv2"]
+[ext_resource type="AudioStream" uid="uid://bqb7nlcwab6t5" path="res://psychescan/assets/audio/correct.wav" id="7_snvv2"]
+[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="13_al5tl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_clt4h"]
 shader = ExtResource("3_ccgx7")
 shader_parameter/Direction = Vector2(1, 0)
 shader_parameter/Speed = 0.15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnbga"]
+atlas = ExtResource("6_21f1y")
+region = Rect2(600, 300, 200, 300)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pixf3"]
 shader = ExtResource("5_6taii")
@@ -41,10 +46,6 @@ shader_parameter/warp_amount = 0.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jnbga"]
-atlas = ExtResource("6_21f1y")
-region = Rect2(600, 300, 200, 300)
 
 [sub_resource type="Animation" id="Animation_6pbho"]
 length = 0.001
@@ -75,7 +76,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Psyche1:position")
+tracks/2/path = NodePath("../Node2D3/Psyche1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -87,7 +88,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Psyche1:rotation")
+tracks/3/path = NodePath("../Node2D3/Psyche1:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -171,7 +172,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Psyche1:position")
+tracks/2/path = NodePath("../Node2D3/Psyche1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -195,7 +196,7 @@ length = 60.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Psyche1:rotation")
+tracks/0/path = NodePath("../Node2D3/Psyche1:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -210,7 +211,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Psyche1:rotation")
+tracks/0/path = NodePath("../Node2D3/Psyche1:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -234,9 +235,9 @@ text = ExtResource("2_wc733")
 offset = Vector2(850, 550)
 zoom = Vector2(1.7, 1.7)
 
-[node name="Node2D2" type="Node2D" parent="."]
+[node name="Node2D3" type="Node2D" parent="."]
 
-[node name="StarBackground" type="Sprite2D" parent="Node2D2"]
+[node name="StarBackground" type="Sprite2D" parent="Node2D3"]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_clt4h")
 position = Vector2(461, 446)
@@ -245,19 +246,88 @@ texture = ExtResource("3_rhs66")
 region_enabled = true
 region_rect = Rect2(0, 0, 688.5, 365.25)
 
-[node name="Psyche1" type="Sprite2D" parent="Node2D2"]
+[node name="Psyche1" type="Sprite2D" parent="Node2D3"]
 position = Vector2(646, 455)
 scale = Vector2(0.633745, 0.603112)
 texture = ExtResource("3_sbcle")
 
-[node name="Node2D" type="Node2D" parent="Node2D2"]
+[node name="Node2D" type="Node2D" parent="Node2D3"]
 position = Vector2(1097, 385)
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 124.0
+offset_top = 116.0
+offset_right = 1089.0
+offset_bottom = 821.0
+
+[node name="Outline" type="Polygon2D" parent="Control"]
+position = Vector2(61, 75)
+scale = Vector2(1.425, 0.998)
+color = Color(0.687215, 0.687215, 0.687215, 1)
+polygon = PackedVector2Array(-1.43565, 0, -1.43565, 520.547, 610.154, 520.547, 610.154, 0)
+
+[node name="black background" type="Polygon2D" parent="Control/Outline"]
+position = Vector2(7.01753, 10.0201)
+scale = Vector2(0.977607, 0.962453)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1.43565, 0, -1.43565, 520.547, 610.154, 520.547, 610.154, 0)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -266.5
+offset_right = -44.0
+offset_bottom = 232.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_al5tl")
+theme_override_font_sizes/font_size = 25
+text = "Nothing to see here"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -127.0
+offset_top = 107.0
+offset_right = -64.0
+offset_bottom = 180.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 100
+
+[node name="Label2" type="Label" parent="Control/Button"]
+layout_mode = 0
+offset_top = -35.0
+offset_right = 62.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "X"
+
+[node name="Node2D2" type="Node2D" parent="."]
 
 [node name="PsycheShuttle" type="Sprite2D" parent="Node2D2"]
 position = Vector2(644, 468)
 rotation = 7.33038
 scale = Vector2(0.300781, 0.300781)
 texture = ExtResource("3_1ma2t")
+
+[node name="MagnetometerImage" type="Sprite2D" parent="Node2D2"]
+visible = false
+position = Vector2(1319, 508)
+scale = Vector2(0.606039, 0.606039)
+texture = SubResource("AtlasTexture_jnbga")
 
 [node name="CRTShader" type="Polygon2D" parent="Node2D2"]
 material = SubResource("ShaderMaterial_pixf3")
@@ -272,18 +342,14 @@ texture = ExtResource("7_r7tal")
 texture_scale = Vector2(2.67, 3.7)
 polygon = PackedVector2Array(0, 0, 0, 0, 1120, 0, 1120, 512, 0, 512)
 
-[node name="MagnetometerImage" type="Sprite2D" parent="Node2D2"]
-visible = false
-position = Vector2(1319, 508)
-scale = Vector2(0.606039, 0.606039)
-texture = SubResource("AtlasTexture_jnbga")
-
 [node name="Label" type="Label" parent="Node2D2"]
 offset_left = 1171.0
 offset_top = 138.0
 offset_right = 1460.0
 offset_bottom = 346.0
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("13_al5tl")
+theme_override_font_sizes/font_size = 20
 text = "The Psyche sattellite will send out words. To complete this section, type the words to analyze what they are."
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -322,60 +388,6 @@ libraries = {
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1098, 384)
 
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 124.0
-offset_top = 116.0
-offset_right = 1089.0
-offset_bottom = 821.0
-
-[node name="black background" type="Polygon2D" parent="Control"]
-position = Vector2(71, 85)
-scale = Vector2(1.39309, 0.960528)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, -1.43565, 519.506, 301.488, 517.424, 610.154, 520.547, 608, 252.794, 608, 0)
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 99.0
-offset_top = -242.5
-offset_right = -79.0
-offset_bottom = 189.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "Nothing to see here"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Button" type="Button" parent="Control"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -112.0
-offset_top = 112.0
-offset_right = -49.0
-offset_bottom = 185.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 100
-
-[node name="Label2" type="Label" parent="Control/Button"]
-layout_mode = 0
-offset_top = -35.0
-offset_right = 62.0
-offset_bottom = 102.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 100
-text = "X"
-
 [node name="SignoffControl" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -385,6 +397,6 @@ offset_top = 278.0
 offset_right = 1980.0
 offset_bottom = 702.0
 
+[connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]
 [connection signal="animation_finished" from="Node2D2/satellitePlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Node2D2/psychePlayer" to="." method="_on_psyche_player_animation_finished"]
-[connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]

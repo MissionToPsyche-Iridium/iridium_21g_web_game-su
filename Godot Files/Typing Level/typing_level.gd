@@ -24,10 +24,11 @@ const lineSpeed = 100
 var rightTextBlocks = [
 	"Hit [Enter] or [Space] to continue through the dialogue.",
 	"The Psyche satellite will send out words.",
+	"These words act as the information sent back from psyche to be analyzed.",
 	"To complete this section, type the words to analyze what they are.",
 	"The satellite will continue to send out information until all information has been received.",
 	"Tip: Some information are multiple words and require you to hit space between words.",
-	"Tip: If the words are moving too slow for you, you can hold the right arrow key to speed them up."
+	"Tip: if the words are moving too slow for you, you can hold the Enter key to speed them up."
 ]
 
 
@@ -117,7 +118,7 @@ func addBlock():
 		return
 	var popValues = textBlocks.pop_front()
 	var newText = text.instantiate(0)
-	$Node2D2/Node2D.add_child(newText)
+	$Node2D3/Node2D.add_child(newText)
 	#newText.setPos(startPos)
 	newText.setText(popValues[0])
 	newText.setInformation(popValues)
