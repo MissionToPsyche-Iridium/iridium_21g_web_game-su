@@ -371,10 +371,6 @@ libraries = {
 
 [node name="Audio" parent="." instance=ExtResource("6_qmsg2")]
 
-[node name="LargeCamera" type="Camera2D" parent="."]
-position = Vector2(13400, 1620)
-zoom = Vector2(0.83, 0.83)
-
 [node name="ZoomOut" type="Path2D" parent="."]
 position = Vector2(9018, 871)
 curve = SubResource("Curve2D_dhplc")

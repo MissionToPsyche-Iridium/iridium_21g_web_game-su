@@ -1,30 +1,35 @@
 extends CanvasLayer
 
+# Signal emitted when credits are finished
 signal done
+
+# Flags to track state
 var from_start_menu := false
+var going := true          # Determines if credits should be scrolling
+var wait_time = 1.0        # Time to wait before fading out at the end
 
-var going := true
-var wait_time = 1.0
+# Timings and scroll speed values
+const section_time := 0.0           # Time delay between credit sections
+const line_time := 0.0              # Time delay between individual lines
+const base_speed := 150             # Base scroll speed of text
 
-const section_time := 0.0
-const line_time := 0.0
-const base_speed := 150
-const speed_up_multiplier := 10.0
+# Appearance
+var title_color = Color.html("#f9a000")  # Color for section titles
 
-var title_color = Color.html("#f9a000")
-
+# Current scroll speed
 var scroll_speed := base_speed
-var speed_up = false
 
+# Label node used as the template for each credit line
 @onready var line := $CreditsContainer/Label
-var started := false
 
-var section
-var section_next := true
-var section_timer := 0.0
-var line_timer := 0.0
-var curr_line := 0
-var lines := []
+# Flags and variables for section tracking
+var started := false
+var section                        # Current section of text
+var section_next := true           # Whether to load a new section
+var section_timer := 0.0           # Time accumulator between sections
+var line_timer := 0.0              # Time accumulator between lines
+var curr_line := 0                 # Index of current line within the section
+var lines := []                    # Active on-screen lines
 
 var credits = [
 	[
@@ -69,15 +74,15 @@ var credits = [
 	],[
 		"Beta Testers",
 		"Mason Welch",
-		"Oliver - Kobe - Ryder - Jaxson",
-		"Abram - Harper - Hunter - Oliver",
-		"Hazel - Ben - Brendan - Emma - Ari",
-		"Clyde - Halle - Harper - Yeji - Hazel",
+		"Oliver - Kobe - Ryder - Jaxson - Abram",
+		"Harper - Hunter - Oliver - Hazel",
+		"Ben - Brendan - Emma - Ari - Clyde",
+		"Halle - Harper - Yeji - Hazel",
 		"Michael - Hannah - Yian - Whitney",
 		"Makenna - Saylor - Fiona - Elliot",
 		"Wyatt - Charlie - Lucas - Anton - Leila",
 		"Luca - Taylor - Mia - Elliot - Ben",
-		"Christopher - Abigail - Kailine",
+		"Christopher - Abigail - Kailine - Christian",
 		"Christian B.",
 		"Eduardo C-J",
 		"Christopher K.",
@@ -94,58 +99,43 @@ var credits = [
 	],
 ]
 
-func _ready() -> void:
-	Globals.get_node("Hint").hide()
-
 func _process(delta):
-	if going:
-		var scroll_speed = base_speed * delta
+	if going:                                               # To ensure this runs only when it is supposed to
+		var scroll_speed = base_speed * delta               # Speed at which the credits scroll
 		
 		if section_next:
-			section_timer += delta * speed_up_multiplier if speed_up else delta
-			if section_timer >= section_time:
+			section_timer += delta
+			if section_timer >= section_time:               # If there is a delay between sections
 				section_timer -= section_time
 				
-				if credits.size() > 0:
+				if credits.size() > 0:                      # If there are still credits to be read out
 					started = true
 					section = credits.pop_front()
 					curr_line = 0
 					add_line()
 		
-		else:
-			line_timer += delta * speed_up_multiplier if speed_up else delta
-			if line_timer >= line_time:
+		else:                                               # Within the sections
+			line_timer += delta
+			if line_timer >= line_time:                     # If there is a delay between lines
 				line_timer -= line_time
 				add_line()
 		
-		if speed_up:
-			scroll_speed *= speed_up_multiplier
-		
-		if lines.size() > 0:
-			for l in lines:
-				l.global_position.y -= scroll_speed
-				if l.global_position.y < -l.get_line_height():
+		if lines.size() > 0:                                    # If there are still more lines
+			for l in lines:                                     # For each line
+				l.global_position.y -= scroll_speed             # Change the position of the line 
+				if l.global_position.y < -l.get_line_height():  # Once it moves off the screen, remove it from the lines and free it
 					lines.erase(l)
 					l.queue_free()
-		elif started:
+		elif started:                                           # If no more lines, but have already started, then finish
 			finish()
 
-
-func finish():
-	going = false
-	started = false
-	thank_you()
-
-func thank_you():
-	$AnimationPlayer.play("fade_in")
-	await get_tree().create_timer(wait_time).timeout
-	done.emit()
-
+# Add new line
 func add_line():
 	var new_line = line.duplicate()
 	new_line.text = section.pop_front()
 	
-	if curr_line == 0:
+	 # If it's first line, the color is special to indicate it's the title of the section
+	if curr_line == 0:                                                 
 		new_line.set("theme_override_colors/font_color", title_color)
 
 	$CreditsContainer.add_child(new_line)
@@ -163,12 +153,22 @@ func add_line():
 		y_offset = get_viewport().get_visible_rect().size.y
 
 	var screen_center_x = get_viewport().get_visible_rect().size.x / 2
-	new_line.global_position = Vector2(screen_center_x - new_line.size.x / 2, y_offset)
+	new_line.global_position = Vector2(screen_center_x - new_line.size.x / 2, y_offset)    # Center it on the screen
 
 	lines.append(new_line)
 
-	if section.size() > 0:
+	if section.size() > 0:       # If the section still has content, don't move to the next section
 		curr_line += 1
 		section_next = false
 	else:
 		section_next = true
+
+func finish():
+	going = false          # Ensures code in _process does not run anymore
+	started = false
+	thank_you()
+
+func thank_you():
+	$AnimationPlayer.play("fade_in")                    # Fade in the personal thank you message
+	await get_tree().create_timer(wait_time).timeout
+	done.emit()                                         # Emit the done signal
