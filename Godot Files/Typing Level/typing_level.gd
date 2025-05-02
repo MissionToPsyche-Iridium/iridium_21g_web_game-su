@@ -28,7 +28,7 @@ var rightTextBlocks = [
 	"To complete this section, type the words to analyze what they are.",
 	"The satellite will continue to send out information until all information has been received.",
 	"Tip: Some information are multiple words and require you to hit space between words.",
-	"Tip: if the words are moving too slow for you, you can hold the Enter key to speed them up."
+	"Tip: If the words are moving too slow for you, you can hold Enter or Space to speed them up."
 ]
 
 
