@@ -1,45 +1,41 @@
 extends CharacterBody2D
 
-const WALK_FORCE = 3000
-const WALK_MAX_SPEED = 1000
-const STOP_FORCE = 2600
+const WALK_FORCE = 3000               # Acceleration force for movement input
+const WALK_MAX_SPEED = 1000           # Maximum movement speed in any direction
+const STOP_FORCE = 2600               # Deceleration force when input stops
 
-var direction
-var curr_direction
-var curr_walkx
-var curr_walky
-var movable = false
-var moving = false
+var direction                         # Stores current direction ("up", "down", etc.)
+var movable = false                   # Whether player is movable
+var moving = false                    # Whether player is currently moving (mostly for cutscenes)
 
-@export var sfx_footsteps : AudioStream
-var footstep_frames : Array = [1,4]
+@export var sfx_footsteps : AudioStream       # Footstep sound effect
+var footstep_frames : Array = [1, 4]          # Frames where footstep sounds play
 
-@onready var arrow = $RayCast2D
+@onready var arrow = $RayCast2D               # Used to detect interactable objects in front of the player
 
-signal interact
-signal no_interact
+signal interact                               # Emitted if RayCast2D hits something
+signal no_interact                            # Emitted if RayCast2D hits nothing
 
-var arrow_length = 13
+var arrow_length = 13                         # Length of RayCast2D vector
 
-var open := false
-
-var popup_open := false
+var popup_open := false                        # True if a popup is active
 
 func _physics_process(delta):
 	move_player()
 
 func move_player():
-	if movable:                                                                 # If player is movable
+	# Only allow movement if not blocked by popup
+	if movable:                                                                
 		# Horizontal movement                                   
 		var walk_x = WALK_FORCE * (-1 if Input.is_action_pressed("ui_left") else 1 if Input.is_action_pressed("ui_right") else 0)
-					 # Get the player's input: left is negative (-1200)
-		if walk_x < 0:                                  # If left was pressed
-			direction = "left"                                                  # Set direction to "left"
-			arrow.target_position = Vector2(-arrow_length, 0)                        # Set direction of RayCast2D to face left
-		if walk_x > 0:                                 # If right was pressed
-			direction = "right"                                                 # Set direciton to "right"
-			arrow.target_position = Vector2(arrow_length, 0)                         # Set direction of RayCast2D to face right 
-		if abs(walk_x) < WALK_FORCE * 0.2:                                      # Slow down the player if they're not trying to move.
+		if walk_x < 0:                                             # If left was pressed
+			direction = "left"                                     # Set direction to "left"
+			arrow.target_position = Vector2(-arrow_length, 0)      # Set direction of RayCast2D to face left
+		if walk_x > 0:                                             # If right was pressed
+			direction = "right"                                    # Set direciton to "right"
+			arrow.target_position = Vector2(arrow_length, 0)       # Set direction of RayCast2D to face right 
+		if abs(walk_x) < WALK_FORCE * 0.2:                         # Slow down the player if they're not trying to move.
+			# Set idle animation depending on direction
 			if direction == "left":                                             
 				$PlayerSprite.play("idle_left")
 			if direction == "right":
@@ -47,11 +43,13 @@ func move_player():
 			# The velocity, slowed down a bit, and then reassigned.
 			velocity.x = move_toward(velocity.x, 0, STOP_FORCE)
 		else:
+			# Apply horizontal acceleration
 			velocity.x += walk_x
+		
 		# Clamp to the maximum horizontal movement speed.
 		velocity.x = clamp(velocity.x, -WALK_MAX_SPEED, WALK_MAX_SPEED)
 
-		# Vertical movement code. First, get the player's input.
+		# Vertical movement code, same as above
 		var walk_y = WALK_FORCE * (-1 if Input.is_action_pressed("ui_up") else 1 if Input.is_action_pressed("ui_down") else 0)
 		if walk_y < 0:
 			direction = "up"
@@ -77,6 +75,7 @@ func move_player():
 		# Move based on the velocity.
 		move_and_slide()
 		
+		# Check if player can interact with something
 		if (arrow.is_colliding()):
 			interact.emit()
 		else:
@@ -84,7 +83,6 @@ func move_player():
 			
 		# Ensure correct animation is playing 
 		if velocity.length() > 0:  # If moving
-			#moving = true
 			if direction == "up" and $PlayerSprite.animation != "walk_up":
 				$PlayerSprite.play("walk_up")
 			elif direction == "down" and $PlayerSprite.animation != "walk_down":
@@ -94,7 +92,6 @@ func move_player():
 			elif direction == "right" and $PlayerSprite.animation != "walk_right":
 				$PlayerSprite.play("walk_right")
 		else:  # If stopped, play idle animation
-			#moving = false
 			if direction == "up" and $PlayerSprite.animation != "idle_up":
 				$PlayerSprite.play("idle_up")
 			elif direction == "down" and $PlayerSprite.animation != "idle_down":
@@ -103,14 +100,8 @@ func move_player():
 				$PlayerSprite.play("idle_left")
 			elif direction == "right" and $PlayerSprite.animation != "idle_right":
 				$PlayerSprite.play("idle_right")
-		
-		if direction != curr_direction:
-			curr_direction = direction
-		
-		if walk_x != curr_walkx or walk_y != curr_walky:
-			curr_walkx = walk_x
-			curr_walky = walk_y
 
+# Room popup handling
 func _on_room_1_popup_close() -> void:
 	movable = true
 	popup_open = false
@@ -138,11 +129,13 @@ func _on_room_3_popup_open() -> void:
 	movable = false
 	popup_open = true
 
+# Sound effect handling
 func load_sfx(sfx_to_load):
 	if $Audio/sfx_player.stream != sfx_to_load:
 		$Audio/sfx_player.stop()
 		$Audio/sfx_player.stream = sfx_to_load
 
+# Footstep sound handling
 func _on_player_sprite_frame_changed() -> void:
 	if "idle" in $PlayerSprite.animation:  # Skip if idle
 		return
@@ -154,6 +147,6 @@ func _on_player_sprite_frame_changed() -> void:
 		if !$Audio/sfx_player.playing:  # Prevent overlapping sounds
 			$Audio/sfx_player.play()
 
-
+# Used for audio/sfx logic during cutscenes
 func _on_world_is_moving() -> void:
 	moving = true

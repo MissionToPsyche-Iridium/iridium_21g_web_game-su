@@ -7,14 +7,12 @@ signal option3
 var open := false
 
 func _process(delta: float) -> void:
-	check()
-
-func check():
-	if visible:
+	if visible:         # If the question popup is visible, set open to true
 		open = true
 	else:
 		open = false
 
+# Option selection handling
 func _on_option_1_pressed() -> void:
 	option1.emit()
 

@@ -1,17 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://ntavt4fbhu11"]
+[gd_scene load_steps=15 format=3 uid="uid://ntavt4fbhu11"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/scripts/instructions.gd" id="1_1keii"]
 [ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="1_76ro8"]
 [ext_resource type="Texture2D" uid="uid://btph37eelsbfk" path="res://scavenger-hunt/assets/player/player-1.png" id="2_x1h4f"]
-[ext_resource type="StyleBox" uid="uid://jp4ii3x2ixmo" path="res://start-menu/normal.tres" id="4_um3cu"]
 [ext_resource type="Texture2D" uid="uid://bky5eqgfsc58u" path="res://scavenger-hunt/assets/instructions/psyche1.png" id="6_7pp68"]
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="10_jcapo"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssyvb"]
-bg_color = Color(0.185383, 0.185383, 0.185383, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gio2"]
-bg_color = Color(0.423651, 0.423651, 0.423651, 1)
 
 [sub_resource type="Animation" id="Animation_5ju3q"]
 resource_name = "cover"
@@ -169,20 +162,6 @@ position = Vector2(213, 285)
 scale = Vector2(12.875, 12.875)
 texture = ExtResource("2_x1h4f")
 
-[node name="Ready" type="Button" parent="."]
-layout_mode = 0
-offset_left = 545.0
-offset_top = 271.0
-offset_right = 631.0
-offset_bottom = 311.0
-theme_override_fonts/font = ExtResource("1_76ro8")
-theme_override_styles/focus = ExtResource("4_um3cu")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ssyvb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7gio2")
-theme_override_styles/normal = ExtResource("4_um3cu")
-text = "READY!"
-metadata/_edit_use_anchors_ = true
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(464, 292)
 zoom = Vector2(3, 3)
@@ -263,5 +242,3 @@ libraries = {
 }
 
 [node name="Audio" parent="." instance=ExtResource("10_jcapo")]
-
-[connection signal="pressed" from="Ready" to="." method="_on_ready_pressed"]

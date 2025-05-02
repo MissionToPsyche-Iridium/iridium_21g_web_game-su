@@ -1,9 +1,11 @@
 extends Node2D
 
+# Signals used to communicate popup and win events
 signal popup_open
 signal popup_close
 signal win
 
+# References to nodes in the scene, most to handle changing popup messages
 @onready var player = $Player
 @onready var question_area= $QuestionArea
 @onready var question_popup = $Player/Camera2D/QuestionPopUp
@@ -30,14 +32,15 @@ signal win
 @onready var kids = $Player/Camera2D/KidPopUp
 @onready var kids_msg = $Player/Camera2D/KidPopUp/Container/Message
 
-var isOpen := false
+# For tracking number of chair popups open
+@onready var num_opened := 0
 
-var interactable := false
+var isOpen := false                    # Whether a popup is open
+var interactable := false              # Whether item is interactable (receiving from player)
+var rng = RandomNumberGenerator.new()  # For choosing random question
+var correct                            # Correct answer index for question
 
-var rng = RandomNumberGenerator.new()
-
-var correct
-
+# Different question choices
 var questions_dict = {
 	0: ["When did the Psyche spacecraft launch?", 
 		"Friday, October 13, 2023", 
@@ -53,16 +56,18 @@ var questions_dict = {
 		"SpaceX Toucan Light"],
 }
 
-@onready var num_opened := 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Select a random question
 	var question_number = rng.randi_range(0,2)
+	
+	# Set the question and answers in UI
 	question_label.text = questions_dict[question_number][0]
 	question.get_node("Options/Option1").text = questions_dict[question_number][1]
 	question.get_node("Options/Option2").text = questions_dict[question_number][2]
 	question.get_node("Options/Option3").text = questions_dict[question_number][3]
 	
+	# Set the notebook page message
 	if question_number == 0:
 		correct = 1
 		page_text.text = "It's someone's work journal...\n\nOctober 12, 2023\n\nToday I learned that Psyche takes off tomorrow... My boss wasn't very happy... Oops!"
@@ -73,32 +78,39 @@ func _ready() -> void:
 		correct = 2
 		page_text.text = "It's someone's work journal...\n\nOctober 13, 2023\n\nI've been calling the rocket Toucan Light since the beginning. My friend told me he thought I was joking this whole time. I didn't realize how wrong I was until today... Oops!"
 
+	# Set popup messages
 	picture_msg.text = "It's a picture of the preliminary design of the instruments and spacecraft. The description says it will reach Psyche in August 2029."
 	chair_msg.text = "It's just a chair..."
 	coffee_table_msg.text = "It's a collection of articles about Psyche. Hmm there's something underneath them... Oh! It's a sticky note that says\n16-19-25-3-8-5\nHmmm... I wonder what that means."
 	lady_msg.text = "\"It's bring your kids to work day today, but they won't stop playing. I don't blame them, though.\""
 	kids_msg.text = "\"We're not allowed to talk to strangers.\""
 	
+	# Play NPC animations
 	$Receptionist/ReceptionistSprite.play("default")
 	$Kids/Boy.play("default")
 	$Kids/Girl.play("default")
 	$Lady/AnimatedSprite2D.play("default")
 	
+	# Ensure player is immovable to start
 	player.movable = false
 
+	# Connect signals from Global for when the hint is open or closed
 	Globals.hint_open.connect(_on_hint_open)
 	Globals.hint_close.connect(_on_hint_close)
 
+# Make sure player is immovable and not interactable when hint is open
 func _on_hint_open():
 	interactable = false
 	player.movable = false
-	
+
+# Make sure player is able to move and interact when hint is closed 
 func _on_hint_close():
 	interactable = true
 	player.movable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# If an item is interactable, handle appropriately
 	if interactable:
 		var collidingNode = $Player/RayCast2D.get_collider()
 		if collidingNode == question_area:
@@ -116,36 +128,37 @@ func _process(delta: float) -> void:
 		elif collidingNode == kids_area:
 			handle_popup(kids)
 
+# Open or close popup accordingly
 func handle_popup(popup_node: Node) -> void:
 	if Input.is_action_just_pressed("interact"):
-		Globals.get_node("EscapeRoomHints").hide()
+		Globals.get_node("EscapeRoomHints").hide()    # Hide the hint button and hint to ensure no conflicts
 		Globals.get_node("Hint").hide()
-		match popup_node:
-			question_popup: 
+		match popup_node:                             
+			question_popup:                           # If question, show the question and hide the validation to ensure validation isn't shown when first opened
 				question.show()
 				validation.hide()
-			chair:
+			chair:                                    # If chair, show the message depending on how many times player has opened
 				num_opened += 1
 				if num_opened % 2 == 0:
 					chair_msg.text = "This is... just a chair"
 				else:
 					chair_msg.text = "It's just a chair..."
 		popup_node.show()
-		if !isOpen:
+		if !isOpen:                                   # If not open, play the open sound
 			$Audio/sfx_open.play()
 		isOpen = true
 		$Player/PressE.hide()
-		popup_open.emit()
-	elif Input.is_action_just_pressed("ui_cancel"):
-		Globals.get_node("Hint").show()
-		popup_node.hide()
-		if isOpen:
+		popup_open.emit()                             # Emit signal
+	elif Input.is_action_just_pressed("ui_cancel"):  
+		Globals.get_node("Hint").show()               # Show hint button
+		popup_node.hide()                             # Hide popup
+		if isOpen:                                    # If is open, play close sound
 			$Audio/sfx_close.play()
 		isOpen = false
 		$Player/PressE.show()
-		popup_close.emit()
+		popup_close.emit()                             # Emit signal
 
-
+# If the correct answer is selected
 func correct_answer() -> void:
 	_on_player_no_interact()
 	$Audio/sfx_correct.play()
@@ -155,7 +168,8 @@ func correct_answer() -> void:
 	interactable = false
 	await get_tree().create_timer(2.0).timeout
 	win.emit()
-	
+
+# If wrong answer is selected
 func wrong_answer() -> void:
 	$Audio/sfx_close.stop()
 	$Audio/sfx_close.play()
@@ -163,6 +177,7 @@ func wrong_answer() -> void:
 	question.hide()
 	validation.show()
 
+# Make sure each option is declared as correct or incorrect depending on the question
 func _on_question_option_1() -> void:
 	if (correct == 1):
 		correct_answer()
@@ -181,6 +196,7 @@ func _on_question_option_3() -> void:
 	else:
 		wrong_answer()
 
+# Receiving signals for when an interactable object is/isn't under the player's raycast
 func _on_player_interact() -> void:
 	interactable = true
 	if ($Player/RayCast2D.is_colliding()):
