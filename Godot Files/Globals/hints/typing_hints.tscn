@@ -28,7 +28,7 @@ text = "One-by-one, type out each word that appears on screen.
 
 If you get a letter wrong, all the words will appear red. Just keep trying.
 
-If the words are scrolling too slowly, hold down the right arrow key or [A] to speed them up."
+If the words are scrolling too slowly, hold down the Enter to speed them up."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
