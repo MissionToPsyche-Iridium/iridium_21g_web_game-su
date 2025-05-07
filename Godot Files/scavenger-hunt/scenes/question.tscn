@@ -1,63 +1,28 @@
-[gd_scene load_steps=15 format=3 uid="uid://wnattyfpcri1"]
+[gd_scene load_steps=9 format=3 uid="uid://wnattyfpcri1"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/scripts/question.gd" id="1_5401r"]
 [ext_resource type="Texture2D" uid="uid://c5ls6saonevjj" path="res://scavenger-hunt/assets/pop_up/pop_up.png" id="1_cosv8"]
 [ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="3_r7wbi"]
 [ext_resource type="StyleBox" uid="uid://bx43r5y5r8lr5" path="res://scavenger-hunt/assets/pop_up/question-hover.tres" id="5_8q6e3"]
+[ext_resource type="StyleBox" uid="uid://c3u5ye06msjog" path="res://scavenger-hunt/assets/pop_up/normal.tres" id="5_sm3y0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fivdh"]
 content_margin_left = 1.0
 content_margin_top = 1.0
 content_margin_right = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mt7n"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga8it"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_islpc"]
 content_margin_left = 1.0
-content_margin_top = 1.0
+content_margin_top = 2.0
 content_margin_right = 1.0
+content_margin_bottom = 2.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghk72"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u1hd"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gllus"]
 content_margin_left = 1.0
-content_margin_top = 1.0
+content_margin_top = 2.0
 content_margin_right = 1.0
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63312"]
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ieyqv"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w4wg"]
-content_margin_left = 1.0
-content_margin_top = 1.0
-content_margin_right = 1.0
+content_margin_bottom = 2.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="QuestionPopUp" type="Control"]
@@ -106,7 +71,7 @@ autowrap_mode = 3
 
 [node name="Options" type="VBoxContainer" parent="QuestionContainer"]
 layout_mode = 2
-theme_override_constants/separation = 5
+theme_override_constants/separation = 1
 
 [node name="Option1" type="Button" parent="QuestionContainer/Options"]
 layout_mode = 2
@@ -118,9 +83,9 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r7wbi")
 theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxFlat_6mt7n")
+theme_override_styles/focus = ExtResource("5_8q6e3")
 theme_override_styles/hover = ExtResource("5_8q6e3")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ga8it")
+theme_override_styles/pressed = ExtResource("5_8q6e3")
 theme_override_styles/normal = SubResource("StyleBoxFlat_islpc")
 text = "The spacecraft will not collect data"
 alignment = 0
@@ -136,9 +101,9 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r7wbi")
 theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxFlat_ghk72")
+theme_override_styles/focus = ExtResource("5_8q6e3")
 theme_override_styles/hover = ExtResource("5_8q6e3")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7u1hd")
+theme_override_styles/pressed = ExtResource("5_8q6e3")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gllus")
 text = "Possibly part of a planetesimal core"
 alignment = 0
@@ -154,10 +119,10 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_r7wbi")
 theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxFlat_63312")
+theme_override_styles/focus = ExtResource("5_8q6e3")
 theme_override_styles/hover = ExtResource("5_8q6e3")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ieyqv")
-theme_override_styles/normal = SubResource("StyleBoxFlat_0w4wg")
+theme_override_styles/pressed = ExtResource("5_8q6e3")
+theme_override_styles/normal = ExtResource("5_sm3y0")
 text = "The spacecraft will not orbit Psyche"
 alignment = 0
 autowrap_mode = 3
@@ -183,6 +148,9 @@ text = "Temporary Temporary Temporary Temporary Temporary Temporary"
 vertical_alignment = 1
 autowrap_mode = 3
 
+[connection signal="option1" from="." to="." method="_on_option_1"]
+[connection signal="option2" from="." to="." method="_on_option_2"]
+[connection signal="option3" from="." to="." method="_on_option_3"]
 [connection signal="pressed" from="QuestionContainer/Options/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="QuestionContainer/Options/Option2" to="." method="_on_option_2_pressed"]
 [connection signal="pressed" from="QuestionContainer/Options/Option3" to="." method="_on_option_3_pressed"]

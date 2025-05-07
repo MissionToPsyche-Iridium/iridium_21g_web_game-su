@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://17wx3jdqs3le"]
+[gd_scene load_steps=85 format=4 uid="uid://17wx3jdqs3le"]
 
 [ext_resource type="Texture2D" uid="uid://nsllocn4wyu3" path="res://scavenger-hunt/assets/floors/floor-1.png" id="1_a5wg4"]
 [ext_resource type="Script" path="res://scavenger-hunt/scripts/room_1.gd" id="1_j7enj"]
@@ -247,7 +247,6 @@ size = Vector2(14, 8.99996)
 size = Vector2(12, 8.88887)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nyjjo"]
-load_path = "res://.godot/imported/door-2.png-e774a56a04fb41636429b65e3611d30e.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lddvi"]
 animations = [{
@@ -424,23 +423,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o6jf"]
 size = Vector2(33, 32.1667)
-
-[sub_resource type="GDScript" id="GDScript_tl5x6"]
-script/source = "extends Control
-
-signal option1
-signal option2
-signal option3
-
-func _on_option_1_pressed() -> void:
-	option1.emit()
-
-func _on_option_2_pressed() -> void:
-	option2.emit()
-
-func _on_option_3_pressed() -> void:
-	option3.emit()
-"
 
 [sub_resource type="GDScript" id="GDScript_kr2ug"]
 script/source = "extends Control
@@ -813,36 +795,6 @@ text = "Press [ESC] to close"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuestionPopUp" parent="Player/Camera2D" instance=ExtResource("18_mxad4")]
-visible = false
-z_index = 1
-offset_left = -116.806
-offset_top = -48.1944
-offset_right = 131.194
-offset_bottom = 48.8056
-script = SubResource("GDScript_tl5x6")
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/QuestionPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -61.575
-offset_top = 34.3331
-offset_right = 59.425
-offset_bottom = 48.3331
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="PicturePopUp" parent="Player/Camera2D" instance=ExtResource("20_yqpkd")]
 visible = false
 offset_left = -115.139
@@ -987,6 +939,34 @@ text = "Press [ESC] to close"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="QuestionPopUp" parent="Player/Camera2D" instance=ExtResource("18_mxad4")]
+visible = false
+offset_left = -117.111
+offset_top = -53.2222
+offset_right = 130.889
+offset_bottom = 43.7778
+
+[node name="CloseInstructions" type="Label" parent="Player/Camera2D/QuestionPopUp"]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.3745
+offset_top = 34.9335
+offset_right = 60.6255
+offset_bottom = 48.9335
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_fi0nm")
+theme_override_font_sizes/font_size = 8
+text = "Press [ESC] to close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Plant" type="Sprite2D" parent="."]
 position = Vector2(1218, 829.5)
 texture = ExtResource("34_wlbom")
@@ -1051,6 +1031,7 @@ position = Vector2(655.501, 793.5)
 texture = ExtResource("36_quxqk")
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_1_popup_close"]
+[connection signal="popup_close" from="." to="Player/Camera2D/QuestionPopUp" method="_on_room_1_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_1_popup_open"]
 [connection signal="interact" from="Player" to="." method="_on_player_interact"]
 [connection signal="no_interact" from="Player" to="." method="_on_player_no_interact"]
