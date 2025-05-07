@@ -386,24 +386,25 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SignPopUp" type="Sprite2D" parent="Player/Camera2D"]
-visible = false
 position = Vector2(0, 22.5552)
 scale = Vector2(0.174697, 0.174697)
 texture = ExtResource("14_hmt7t")
 
 [node name="Label" type="Label" parent="Player/Camera2D/SignPopUp"]
-offset_left = -272.0
-offset_top = 76.23
-offset_right = 272.0
-offset_bottom = 156.23
+offset_left = -271.0
+offset_top = 67.908
+offset_right = 273.0
+offset_bottom = 157.908
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 8
 theme_override_fonts/font = ExtResource("14_r8fbb")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_xpfr4")
-text = "TASK 1: Plot course through meteoroids
+text = "TASK 1: Launch the Faclon Heavy Rocket
 
-TASK 2: Mars gravity assist to slingshot toward the asteroid"
+TASK 2: Plot course through meteoroids
+
+TASK 3: Complete a Mars gravity assist to save fuel"
 autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="Player/Camera2D/SignPopUp"]
@@ -417,9 +418,9 @@ theme_override_fonts/font = ExtResource("14_r8fbb")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_txiwj")
 text = "
-TASK 3: Scan the asteroid using a magnetometer and other instruments
+TASK 4: Scan the asteroid using a magnetometer and other instruments
 
-TASK 4: Sign documents to close out the mission"
+TASK 5: Send data about the mission back to Earth"
 autowrap_mode = 3
 
 [node name="Label3" type="Label" parent="Player/Camera2D/SignPopUp"]
