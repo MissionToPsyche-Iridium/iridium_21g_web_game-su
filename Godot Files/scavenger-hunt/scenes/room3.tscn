@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://b18d830urpadj"]
+[gd_scene load_steps=39 format=4 uid="uid://b18d830urpadj"]
 
 [ext_resource type="Script" path="res://scavenger-hunt/scripts/room_3.gd" id="1_bybdk"]
 [ext_resource type="Texture2D" uid="uid://cutdpscok5prj" path="res://scavenger-hunt/assets/floors/floor-2.png" id="3_vka00"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d1bu06s83i25f" path="res://audio/audio.tscn" id="14_gxsgg"]
 [ext_resource type="Texture2D" uid="uid://dfqd0bcfju7ct" path="res://scavenger-hunt/assets/room3/sign-large.png" id="14_hmt7t"]
 [ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="14_r8fbb"]
+[ext_resource type="PackedScene" uid="uid://cl26hakhbrscd" path="res://scavenger-hunt/scenes/close_instructions.tscn" id="17_21sil"]
 [ext_resource type="PackedScene" uid="uid://du433bvkd0n40" path="res://scavenger-hunt/scenes/description.tscn" id="17_f67ey"]
 [ext_resource type="Texture2D" uid="uid://w73a82lpu6q3" path="res://scavenger-hunt/assets/room3/plant.png" id="18_rjfh2"]
 
@@ -335,27 +336,6 @@ offset_right = 154.389
 offset_bottom = 69.9167
 scale = Vector2(0.75, 0.75)
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/QuestionPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5832
-offset_right = 60.5833
-offset_bottom = 48.5832
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("14_r8fbb")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="CabinetDescription" parent="Player/Camera2D" instance=ExtResource("17_f67ey")]
 visible = false
 offset_left = -93.6111
@@ -363,27 +343,6 @@ offset_top = -27.0834
 offset_right = 154.389
 offset_bottom = 69.9166
 scale = Vector2(0.75, 0.75)
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/CabinetDescription"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("14_r8fbb")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="SignPopUp" type="Sprite2D" parent="Player/Camera2D"]
 position = Vector2(0, 22.5552)
@@ -429,6 +388,18 @@ offset_top = -191.0
 offset_right = -272.0
 offset_bottom = -155.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5f6nh")
+
+[node name="CloseInstructions" parent="Player/Camera2D/SignPopUp" instance=ExtResource("17_21sil")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -402.445
+offset_top = -122.595
+offset_right = -402.445
+offset_bottom = -122.595
+scale = Vector2(2, 2)
 
 [node name="Cabinet" type="StaticBody2D" parent="."]
 position = Vector2(2254, 746)

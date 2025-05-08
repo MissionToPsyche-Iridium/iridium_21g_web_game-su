@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://17wx3jdqs3le"]
+[gd_scene load_steps=86 format=4 uid="uid://17wx3jdqs3le"]
 
 [ext_resource type="Texture2D" uid="uid://nsllocn4wyu3" path="res://scavenger-hunt/assets/floors/floor-1.png" id="1_a5wg4"]
 [ext_resource type="Script" path="res://scavenger-hunt/scripts/room_1.gd" id="1_j7enj"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://dt8mgqifq8mej" path="res://scavenger-hunt/assets/room1/lady (2).png" id="38_l6jx3"]
 [ext_resource type="Texture2D" uid="uid://c1v4h1wmjuxke" path="res://scavenger-hunt/assets/room1/kid (2).PNG" id="38_nwpja"]
 [ext_resource type="Texture2D" uid="uid://ct5klnpd8h2d5" path="res://scavenger-hunt/assets/room1/kid (3).PNG" id="39_asxmb"]
+[ext_resource type="PackedScene" uid="uid://cl26hakhbrscd" path="res://scavenger-hunt/scenes/close_instructions.tscn" id="40_m0oki"]
 [ext_resource type="Texture2D" uid="uid://qnh41322vu81" path="res://scavenger-hunt/assets/room1/kid (4).PNG" id="40_ugkyy"]
 [ext_resource type="Texture2D" uid="uid://c22pwunofo0xl" path="res://scavenger-hunt/assets/room1/kid (5).PNG" id="41_3qqpd"]
 [ext_resource type="Texture2D" uid="uid://bkc2shyrf28ow" path="res://scavenger-hunt/assets/room1/kid (6).PNG" id="42_cb0dw"]
@@ -743,7 +744,6 @@ position = Vector2(3.57628e-07, 0)
 limit_bottom = 6444
 
 [node name="PageSprite" type="TextureRect" parent="Player/Camera2D"]
-visible = false
 z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -774,26 +774,17 @@ theme_override_font_sizes/font_size = 8
 text = "Temporary"
 autowrap_mode = 3
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/PageSprite"]
-z_index = 10
+[node name="CloseInstructions" parent="Player/Camera2D/PageSprite" instance=ExtResource("40_m0oki")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 44.5833
-offset_right = 60.5833
-offset_bottom = 58.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 1.88846
+offset_top = 47.2222
+offset_right = 1.88846
+offset_bottom = 47.2222
 
 [node name="PicturePopUp" parent="Player/Camera2D" instance=ExtResource("20_yqpkd")]
 visible = false
@@ -803,27 +794,6 @@ offset_right = 132.861
 offset_bottom = 49.7778
 script = SubResource("GDScript_kr2ug")
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/PicturePopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.3746
-offset_top = 34.9334
-offset_right = 60.6254
-offset_bottom = 48.9334
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ChairPopUp" parent="Player/Camera2D" instance=ExtResource("20_yqpkd")]
 visible = false
 offset_left = -115.972
@@ -831,27 +801,6 @@ offset_top = -50.6944
 offset_right = 132.028
 offset_bottom = 46.3056
 script = SubResource("GDScript_kr2ug")
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/ChairPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.3745
-offset_top = 34.9335
-offset_right = 60.6255
-offset_bottom = 48.9335
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="CoffeeTablePopUp" parent="Player/Camera2D" instance=ExtResource("20_yqpkd")]
 visible = false
@@ -861,27 +810,6 @@ offset_right = 127.167
 offset_bottom = 48.8056
 script = SubResource("GDScript_kr2ug")
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/CoffeeTablePopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.3745
-offset_top = 34.9335
-offset_right = 60.6255
-offset_bottom = 48.9335
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="LadyDescription" parent="Player/Camera2D" instance=ExtResource("20_yqpkd")]
 visible = false
 offset_left = -120.778
@@ -890,27 +818,6 @@ offset_right = 127.222
 offset_bottom = 44.3333
 script = SubResource("GDScript_kr2ug")
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/LadyDescription"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.3745
-offset_top = 34.9335
-offset_right = 60.6255
-offset_bottom = 48.9335
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="KidPopUp" parent="Player/Camera2D" instance=ExtResource("20_yqpkd")]
 visible = false
 offset_left = -116.778
@@ -918,54 +825,13 @@ offset_top = -54.6667
 offset_right = 131.222
 offset_bottom = 42.3333
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/KidPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.3745
-offset_top = 34.9335
-offset_right = 60.6255
-offset_bottom = 48.9335
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="QuestionPopUp" parent="Player/Camera2D" instance=ExtResource("18_mxad4")]
 visible = false
+z_index = 1
 offset_left = -117.111
 offset_top = -53.2222
 offset_right = 130.889
 offset_bottom = 43.7778
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/QuestionPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.3745
-offset_top = 34.9335
-offset_right = 60.6255
-offset_bottom = 48.9335
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_fi0nm")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Plant" type="Sprite2D" parent="."]
 position = Vector2(1218, 829.5)

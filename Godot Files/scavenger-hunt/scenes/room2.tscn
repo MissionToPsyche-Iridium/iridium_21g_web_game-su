@@ -583,54 +583,12 @@ text = "psyche.asu.edu"
 underline = 1
 uri = "https://psyche.asu.edu/"
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/ComputerDescription"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Papers2Description" parent="Player/Camera2D" instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = -120.8
 offset_top = -45.2
 offset_right = 127.2
 offset_bottom = 51.8
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/Papers2Description"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Papers1Description" parent="Player/Camera2D" instance=ExtResource("22_vo7p4")]
 visible = false
@@ -639,54 +597,12 @@ offset_top = -45.2
 offset_right = 127.2
 offset_bottom = 51.8
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/Papers1Description"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -59.4167
-offset_top = 34.5833
-offset_right = 61.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ShelvesDescription" parent="Player/Camera2D" instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = -122.267
 offset_top = -46.0
 offset_right = 125.733
 offset_bottom = 51.0
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/ShelvesDescription"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="QuestionPopUp" parent="Player/Camera2D" instance=ExtResource("21_p8dfn")]
 visible = false
@@ -696,27 +612,6 @@ offset_top = -44.4
 offset_right = 128.4
 offset_bottom = 52.6
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/QuestionPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="WifiPopUp" parent="Player/Camera2D" instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = -124.889
@@ -724,54 +619,12 @@ offset_top = -48.3336
 offset_right = 123.111
 offset_bottom = 48.6664
 
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/WifiPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="GuyPopUp" parent="Player/Camera2D" instance=ExtResource("22_vo7p4")]
 visible = false
 offset_left = -127.111
 offset_top = -44.7782
 offset_right = 120.889
 offset_bottom = 52.2218
-
-[node name="CloseInstructions" type="Label" parent="Player/Camera2D/GuyPopUp"]
-z_index = 10
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.4167
-offset_top = 34.5833
-offset_right = 60.5833
-offset_bottom = 48.5833
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_dslfn")
-theme_override_font_sizes/font_size = 8
-text = "Press [ESC] to close"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Top-half1" type="Sprite2D" parent="."]
 position = Vector2(1659, 394.5)
@@ -798,6 +651,7 @@ shape = SubResource("RectangleShape2D_lnrio")
 [node name="Audio" parent="." instance=ExtResource("18_umnqf")]
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_2_popup_close"]
+[connection signal="popup_close" from="." to="Player/Camera2D/QuestionPopUp" method="_on_room_2_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_2_popup_open"]
 [connection signal="interact" from="Player" to="." method="_on_player_interact"]
 [connection signal="no_interact" from="Player" to="." method="_on_player_no_interact"]
