@@ -76,12 +76,17 @@ func clear_highlight_due_to_mouse():
 func _on_room_1_popup_close() -> void:
 	reset_highlight()
 
+func _on_room_2_popup_close() -> void:
+	reset_highlight()
 
-func _on_option_1() -> void:
+func _on_room_3_popup_close() -> void:
+	reset_highlight()
+
+func _on_option_1_pressed() -> void:
 	option1.emit()
 
-func _on_option_2() -> void:
+func _on_option_2_pressed() -> void:
 	option2.emit()
 
-func _on_option_3() -> void:
+func _on_option_3_pressed() -> void:
 	option3.emit()

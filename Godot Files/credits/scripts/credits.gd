@@ -6,12 +6,12 @@ signal done
 # Flags to track state
 var from_start_menu := false
 var going := true          # Determines if credits should be scrolling
-var wait_time = 1.0        # Time to wait before fading out at the end
+var wait_time = 1.1        # Time to wait before fading out at the end
 
 # Timings and scroll speed values
 const section_time := 0.0           # Time delay between credit sections
 const line_time := 0.0              # Time delay between individual lines
-const base_speed := 150             # Base scroll speed of text
+const base_speed := 170             # Base scroll speed of text
 
 # Appearance
 var title_color = Color.html("#f9a000")  # Color for section titles
@@ -95,7 +95,7 @@ var credits = [
 	],[
 		"Special Thanks To",
 		"Dr. Nate Kremer-Herman, PhD",
-		"Dr. Cassie Bowman, Ed.D",
+		"Dr. Cassie Bowman, EdD",
 	],
 ]
 
@@ -170,5 +170,7 @@ func finish():
 
 func thank_you():
 	$AnimationPlayer.play("fade_in")                    # Fade in the personal thank you message
+	await get_tree().create_timer(3*wait_time).timeout
+	$AnimationPlayer.play("fade_out")                    # Fade out the personal thank you message
 	await get_tree().create_timer(wait_time).timeout
 	done.emit()                                         # Emit the done signal

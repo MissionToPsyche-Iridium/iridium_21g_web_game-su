@@ -5,58 +5,30 @@ signal begin
 
 @onready var animation = $AnimationPlayer
 @onready var zooming_camera = $ZoomOut/PathFollow2D/ZoomingCamera
-@onready var rooms = [
-	$Room1, $Room2, $Room3, $Room4
-]
-@onready var covers = [
-	$Room1Cover, $Room2Cover, $Room3Cover, $Room4Cover
-]
-@onready var active_players = [
-	$Room1/Player,
-	$Room3/Player,
-]
-@onready var playing_cameras = [
-	$Room1/Player/Camera2D,
-	$Room3/Player/Camera2D,
-]
+@onready var rooms = [$Room1, $Room2, $Room3, $Room4]
+@onready var covers = [$Room1Cover, $Room2Cover, $Room3Cover, $Room4Cover]
+@onready var active_players = [$Room1/Player, $Room3/Player]
+@onready var playing_cameras = [$Room1/Player/Camera2D, $Room3/Player/Camera2D]
 @onready var wide_camera = $Room1/Room1Camera
-@onready var ani_doors = [
-	$Room1/EnterRoom1Door,
-	$Room1/LeaveRoom1Door,
-	$Room4/LeaveRoom4Door,
-]
-@onready var solid_doors = [
-	$Room1/EnterDoor,
-	$Room1/LeaveDoor,
-	$Room3/EnterDoor,
-	$Room3/LeaveDoor,
-]
+@onready var ani_doors = [$Room1/EnterRoom1Door, $Room1/LeaveRoom1Door, $Room4/LeaveRoom4Door]
+@onready var solid_doors = [$Room1/EnterDoor, $Room1/LeaveDoor, $Room3/EnterDoor, $Room3/LeaveDoor]
 @onready var leave4_sprite = $Room4/LeaveRoom4/PathFollow2D/Player/PlayerSprite
 @onready var leave4_path = $Room4/LeaveRoom4/PathFollow2D
 @onready var enter_sprite = $Room1/EnterRoom1/PathFollow2D/Player/PlayerSprite
 @onready var leave1_sprite = $Room1/LeaveRoom1/PathFollow2D/Player/PlayerSprite
-@onready var people = [
-	$Room1/Kids,
-	$Room1/Lady
-]
+@onready var people = [$Room1/Kids, $Room1/Lady]
+@onready var large_camera = $LargeCamera
 
 var current_room := 0
 var is_followingpath := false
-var room_states = {
-	"enter": false,
-	"leave": false,
-	"zoom": false
-}
-
-@onready var large_camera = $LargeCamera
+var room_states = {"enter": false, "leave": false, "zoom": false}
 
 var sign_off_end := false
 var credits_done := false
+var final_transition_started := false
 
-var wait_time = 2.0
-
+var wait_time = 2.1
 var volume_change = 5
-
 var volume = -20
 
 func _ready() -> void:
@@ -64,11 +36,9 @@ func _ready() -> void:
 	Audio.play_music_start(volume)
 	covers[3].color = Color(0,0,0,1)
 	covers[3].show()
-	
 	$SignOff/Camera2D.enabled = false
-	large_camera.enabled = false
 	wide_camera.enabled = false
-	
+
 	for camera in playing_cameras:
 		camera.enabled = false
 	for player in active_players:
@@ -79,13 +49,16 @@ func _ready() -> void:
 		person.hide()
 	for door in ani_doors:
 		door.play("open")
+	
+	leave4_sprite.play("idle_up")
+	leave1_sprite.play("idle_up")
+
 	$Room3/SecurityGuard.hide()
 	leave1_sprite.hide()
 	
 	await get_tree().create_timer(wait_time).timeout
 	animation.play("room4_cover_fade")
 	await get_tree().create_timer(wait_time).timeout
-	
 	zoom_out()
 
 func _physics_process(delta: float) -> void:
@@ -114,7 +87,7 @@ func _process_leave(room_num):
 		match room_num:
 			3:
 				var pathfollower2 = $Room4/MoveChair/PathFollow2D
-				if pathfollower.progress_ratio == 0 && pathfollower2.progress_ratio == 0:
+				if pathfollower.progress_ratio == 0 and pathfollower2.progress_ratio == 0:
 					leave4_sprite.play("idle_up")
 				elif pathfollower.progress_ratio < 0.0595:
 					pathfollower2.progress_ratio += 0.05
@@ -129,12 +102,11 @@ func _process_leave(room_num):
 			0:
 				if pathfollower.progress_ratio < 0.119:
 					leave1_sprite.play("walk_left")
-				elif pathfollower.progress_ratio > 0.119 && pathfollower.progress_ratio < 1:
+				elif pathfollower.progress_ratio > 0.119 and pathfollower.progress_ratio < 1:
 					leave1_sprite.play("walk_down")
 				else:
 					leave_end()
 				pathfollower.progress_ratio += 0.005
-				
 
 func _process_enter(room_num): 
 	var pathfollower = rooms[room_num].get_node("EnterRoom" + str(room_num+1) + "/PathFollow2D")
@@ -173,14 +145,8 @@ func leave_end():
 	covers[current_room].show()
 	animation.play("room" + str(current_room+1) + "_cover")
 	await get_tree().create_timer(wait_time).timeout
-	if current_room == 0: 
-		Audio.volume_db -= volume_change
-		if sign_off_end && credits_done:
-			Audio.volume_db -= volume_change
-			$Credits/AnimationPlayer.play("cover")
-			await get_tree().create_timer(wait_time).timeout
-			Audio.volume_db -= volume_change
-			get_tree().change_scene_to_file("res://start-menu/start_menu.tscn")
+	if current_room == 0:
+		check_end_conditions()
 	elif current_room == 3:
 		enter_room(0)
 
@@ -213,6 +179,7 @@ func sign_off():
 	$SignOff/Camera2D.enabled = true
 	begin.emit()
 
+# Called by signal
 func _on_sign_off_sign_off_done() -> void:
 	sign_off_end = true
 	await get_tree().create_timer(wait_time).timeout
@@ -221,6 +188,20 @@ func _on_sign_off_sign_off_done() -> void:
 	animation.play("room" + str(current_room+1) + "_cover_fade")
 	await get_tree().create_timer(wait_time).timeout
 	start_leave()
+	check_end_conditions()
 
+# Called by signal
 func _on_credits_done() -> void:
 	credits_done = true
+	check_end_conditions()
+
+func check_end_conditions():
+	if sign_off_end and credits_done and not final_transition_started:
+		final_transition_started = true
+		do_final_transition()
+
+func do_final_transition():
+	Audio.volume_db -= volume_change
+	await get_tree().create_timer(wait_time).timeout
+	Audio.volume_db -= volume_change
+	get_tree().change_scene_to_file("res://start-menu/start_menu.tscn")

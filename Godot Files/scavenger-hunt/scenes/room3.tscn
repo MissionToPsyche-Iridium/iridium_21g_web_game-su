@@ -464,6 +464,7 @@ position = Vector2(241.001, 25.4167)
 shape = SubResource("RectangleShape2D_f2m3t")
 
 [connection signal="popup_close" from="." to="Player" method="_on_room_3_popup_close"]
+[connection signal="popup_close" from="." to="Player/Camera2D/QuestionPopUp" method="_on_room_3_popup_close"]
 [connection signal="popup_open" from="." to="Player" method="_on_room_3_popup_open"]
 [connection signal="interact" from="Player" to="." method="_on_player_interact"]
 [connection signal="no_interact" from="Player" to="." method="_on_player_no_interact"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://g5npr154t7rx"]
+[gd_scene load_steps=45 format=3 uid="uid://g5npr154t7rx"]
 
 [ext_resource type="Script" path="res://credits/scripts/leave.gd" id="1_beens"]
 [ext_resource type="PackedScene" uid="uid://17wx3jdqs3le" path="res://scavenger-hunt/scenes/room1.tscn" id="2_qjlhv"]
@@ -162,6 +162,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_8boom"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wwibw"]
+resource_name = "cover"
+
 [sub_resource type="Animation" id="Animation_hgyf6"]
 resource_name = "room1_cover"
 tracks/0/type = "value"
@@ -236,6 +242,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j0nex"]
 _data = {
+"RESET": SubResource("Animation_8boom"),
+"cover": SubResource("Animation_wwibw"),
 "room1_cover": SubResource("Animation_hgyf6"),
 "room1_cover_fade": SubResource("Animation_unc06"),
 "room2_cover": SubResource("Animation_ug8fn"),
