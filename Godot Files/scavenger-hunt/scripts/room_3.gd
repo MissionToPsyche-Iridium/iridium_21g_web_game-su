@@ -18,6 +18,12 @@ signal win
 @onready var cabinet_msg = $Player/Camera2D/CabinetDescription/Container/Message
 @onready var sign_popup = $Player/Camera2D/SignPopUp
 
+@onready var popups = [
+	question_popup,
+	cabinet_popup,
+	sign_popup
+]
+
 var interactable = false
 var isOpen = false
 var correct
@@ -33,7 +39,11 @@ var questions_dict = {
 		"not going to collect data"],
 }
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:	
+func _ready() -> void:
+	# Hide popups
+	for popup in popups:
+		popup.hide()
+	
 	var question_number = rng.randi_range(0,1)
 	question_label.text = questions_dict[question_number][0]
 	question.get_node("Options/Option1").text = questions_dict[question_number][1]

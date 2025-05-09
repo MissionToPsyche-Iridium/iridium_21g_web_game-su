@@ -32,6 +32,16 @@ signal win
 @onready var kids = $Player/Camera2D/KidPopUp
 @onready var kids_msg = $Player/Camera2D/KidPopUp/Container/Message
 
+@onready var popups = [
+	page,
+	picture,
+	chair,
+	coffee_table,
+	lady,
+	kids,
+	question_popup
+]
+
 # For tracking number of chair popups open
 @onready var num_opened := 0
 
@@ -58,6 +68,10 @@ var questions_dict = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Hide all popups
+	for popup in popups:
+		popup.hide()
+	
 	# Select a random question
 	var question_number = rng.randi_range(0,2)
 	

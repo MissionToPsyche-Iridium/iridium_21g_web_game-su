@@ -27,6 +27,16 @@ signal win
 @onready var guy = $Player/Camera2D/GuyPopUp
 @onready var guy_msg = $Player/Camera2D/GuyPopUp/Container/Message
 
+@onready var popups = [
+	computer,
+	papers2,
+	papers1,
+	shelves,
+	question_popup,
+	wifi,
+	guy
+]
+
 var interactable = false
 var isOpen = false
 var rng = RandomNumberGenerator.new()
@@ -59,6 +69,11 @@ var questions_dict = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Hide popups
+	for popup in popups:
+		popup.hide()
+	
+	# Date calculation and logic
 	var start_utc = start_unix_time
 	var current_utc = current_unix_time
 	if current_datetime.dst == false:                                           # If not daylight savings
