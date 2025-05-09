@@ -10,12 +10,12 @@ var text = [
 		"Most asteroids are made of a combination of rock and ice except this one.",
 		"This metal-rich asteroid is named Psyche (pronounced like SY-kee).",
 		"I need your help to get me to the control room to launch the spacecraft!",
-		"I'll need your help on the computer carrying out parts of the mission!",
+		"Then I'll need your help on the computer carrying out parts of the mission!",
 		"Let's go!"
 		]
 
 @onready var label := $Story/Label   # Label node where dialogue is shown
-const base_speed := 20               # How fast the characters appear on screen (higher = faster)
+const base_speed := 40               # How fast the characters appear on screen (higher = faster)
 var started := true                  # Whether we’ve started showing the first dialogue line
 var finished := false                # Whether all dialogue is finished 
 var count := 0.0                     # Used to control time between character reveals
