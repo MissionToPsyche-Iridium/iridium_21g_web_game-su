@@ -744,6 +744,7 @@ position = Vector2(3.57628e-07, 0)
 limit_bottom = 6444
 
 [node name="PageSprite" type="TextureRect" parent="Player/Camera2D"]
+visible = false
 z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
