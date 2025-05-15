@@ -39,7 +39,6 @@ func _ready() -> void:
 	Globals.hint_open.connect(_on_hint_open)
 	Globals.hint_close.connect(_on_hint_close)
 	top_start = true
-	$space_ship.movement_allowed = false
 
 func _on_hint_open():
 	open = true
