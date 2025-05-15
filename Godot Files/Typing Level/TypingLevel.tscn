@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" path="res://Typing Level/typing_level.gd" id="1_yaj5j"]
 [ext_resource type="PackedScene" uid="uid://bfb4cc1is55wv" path="res://Typing Level/TypingBlock.tscn" id="2_wc733"]
-[ext_resource type="Texture2D" uid="uid://dwpve7tnyfwk2" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
+[ext_resource type="Texture2D" uid="uid://cwas0ww3ct4fo" path="res://meteoroid-level/assets/psyche shuttle.png" id="3_1ma2t"]
 [ext_resource type="Shader" path="res://psychescan/addons/StarScroll.gdshader" id="3_ccgx7"]
-[ext_resource type="Texture2D" uid="uid://xwvmfcb6esd7" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_rhs66"]
-[ext_resource type="Texture2D" uid="uid://cqh47bcrnvrs2" path="res://psychescan/assets/textures/psyche1.png" id="3_sbcle"]
+[ext_resource type="Texture2D" uid="uid://b235l0bgqigf3" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_rhs66"]
+[ext_resource type="Texture2D" uid="uid://b3oix7yosa1gp" path="res://psychescan/assets/textures/psyche1.png" id="3_sbcle"]
 [ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="5_6taii"]
-[ext_resource type="AudioStream" uid="uid://c2m0dk3mbdd62" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_onspf"]
-[ext_resource type="Texture2D" uid="uid://d12h0tt5aq6og" path="res://Typing Level/Assets/psyche-magnetometer-1536x1078.jpg" id="6_21f1y"]
-[ext_resource type="Texture2D" uid="uid://d3c5wj0rdbign" path="res://psychescan/assets/textures/green light.png" id="6_hde7p"]
-[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="7_r7tal"]
-[ext_resource type="AudioStream" uid="uid://bqb7nlcwab6t5" path="res://psychescan/assets/audio/correct.wav" id="7_snvv2"]
-[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="13_al5tl"]
+[ext_resource type="AudioStream" uid="uid://cciky4pmskqit" path="res://psychescan/assets/audio/CRTHum.mp3" id="5_onspf"]
+[ext_resource type="Texture2D" uid="uid://dmybj5apim6t2" path="res://Typing Level/Assets/psyche-magnetometer-1536x1078.jpg" id="6_21f1y"]
+[ext_resource type="Texture2D" uid="uid://ij706p30csnm" path="res://psychescan/assets/textures/green light.png" id="6_hde7p"]
+[ext_resource type="Texture2D" uid="uid://d3u0t7mhh8kfl" path="res://Globals/consoleBackgroundLarge.png" id="7_r7tal"]
+[ext_resource type="AudioStream" uid="uid://dv1ncsbrduoxn" path="res://psychescan/assets/audio/correct.wav" id="7_snvv2"]
+[ext_resource type="FontFile" uid="uid://ccxyuwpsc1qh4" path="res://fonts/dogicapixel.ttf" id="13_al5tl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_clt4h"]
 shader = ExtResource("3_ccgx7")
@@ -232,8 +232,8 @@ script = ExtResource("1_yaj5j")
 text = ExtResource("2_wc733")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(850, 550)
-zoom = Vector2(1.7, 1.7)
+offset = Vector2(867, 540)
+zoom = Vector2(1.61, 1.61)
 
 [node name="Node2D3" type="Node2D" parent="."]
 
