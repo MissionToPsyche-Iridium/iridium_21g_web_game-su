@@ -5,10 +5,10 @@ extends Control
 var text = [
 		"Hello!",
 		"My name is Kuiper (pronounced like KY-per) and I need your help!",
-		"I am a part of the NASA-ASU Team.",
+		"I am a part of the Psyche (pronounced like SY-kee) Team.",
 		"For the first time ever, we are exploring a world made not of rock or ice, but of metal.",
 		"Most asteroids are made of a combination of rock and ice except this one.",
-		"This metal-rich asteroid is named Psyche (pronounced like SY-kee).",
+		"This metal-rich asteroid is named Psyche.",
 		"I need your help to get me to the control room to launch the spacecraft!",
 		"Then I'll need your help on the computer carrying out parts of the mission!",
 		"Let's go!"
