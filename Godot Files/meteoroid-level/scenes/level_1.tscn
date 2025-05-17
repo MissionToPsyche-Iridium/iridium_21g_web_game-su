@@ -74,9 +74,9 @@ tile_set = SubResource("TileSet_u3n5j")
 top_level = true
 z_index = 1
 offset_left = 1253.0
-offset_top = -691.0
+offset_top = -650.0
 offset_right = 1971.0
-offset_bottom = -358.0
+offset_bottom = -311.0
 theme_override_fonts/font = ExtResource("6_o2chr")
 theme_override_font_sizes/font_size = 40
 text = "Arrows for 
@@ -94,9 +94,9 @@ autowrap_mode = 2
 top_level = true
 z_index = 1
 offset_left = 1269.0
-offset_top = -234.0
+offset_top = -205.0
 offset_right = 1793.0
-offset_bottom = 177.0
+offset_bottom = 206.0
 theme_override_constants/line_spacing = 30
 theme_override_fonts/font = ExtResource("6_o2chr")
 theme_override_font_sizes/font_size = 42
@@ -159,7 +159,7 @@ volume_db = -10.0
 
 [node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(736, 11)
+position = Vector2(736, 35)
 texture = ExtResource("12_8mj8v")
 
 [node name="Camera2D2" type="Camera2D" parent="."]

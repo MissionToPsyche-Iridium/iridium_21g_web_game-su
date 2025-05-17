@@ -215,7 +215,7 @@ position = Vector2(1008, 43)
 texture = ExtResource("13_t7t6d")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(911, -4)
+position = Vector2(911, -28)
 
 [node name="NumMoves" type="Label" parent="."]
 offset_left = -213.0
