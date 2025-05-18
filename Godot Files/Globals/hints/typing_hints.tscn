@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://nf2qhh40pq8x"]
 
-[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="1_fosg3"]
+[ext_resource type="FontFile" uid="uid://ccxyuwpsc1qh4" path="res://fonts/dogicapixel.ttf" id="1_fosg3"]
 
 [node name="TypingHints" type="CanvasLayer"]
 
@@ -28,7 +28,7 @@ text = "One-by-one, type out each word that appears on screen
 
 If you get a letter wrong, all the words will appear red. Just keep trying
 
-If the words are scrolling too slowly, hold down [Enter] or[ Space] to speed them up"
+If the words are scrolling too slowly, hold down the Left arrow key to speed them up"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

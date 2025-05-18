@@ -28,7 +28,7 @@ var rightTextBlocks = [
 	"To complete this section, type the words to analyze what they are.",
 	"The satellite will continue to send out information until all information has been received.",
 	"Tip: Some information are multiple words and require you to hit space between words.",
-	"Tip: If the words are moving too slow for you, you can hold Enter or Space to speed them up."
+	"Tip: If the words are moving too slow for you, you can hold the Left arrow key to speed them up."
 ]
 
 
@@ -143,9 +143,9 @@ func _unhandled_input(event):
 		if textBox:
 			return
 		
-		if event.is_action_pressed("ui_accept") and !event.is_echo():
+		if Input.is_key_pressed(KEY_LEFT) and !event.is_echo():
 			speedup = true
-		elif event.is_action_released("ui_accept") and !event.is_echo():
+		elif not Input.is_key_pressed(KEY_LEFT) and !event.is_echo():
 			speedup = false
 		elif event is InputEventKey and not event.is_pressed():
 			for i in blocks:

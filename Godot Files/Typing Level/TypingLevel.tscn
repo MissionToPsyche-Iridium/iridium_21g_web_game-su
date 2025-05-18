@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://de30lnc5vve28"]
+[gd_scene load_steps=29 format=3 uid="uid://de30lnc5vve28"]
 
 [ext_resource type="Script" path="res://Typing Level/typing_level.gd" id="1_yaj5j"]
 [ext_resource type="PackedScene" uid="uid://bfb4cc1is55wv" path="res://Typing Level/TypingBlock.tscn" id="2_wc733"]
@@ -12,16 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://ij706p30csnm" path="res://psychescan/assets/textures/green light.png" id="6_hde7p"]
 [ext_resource type="Texture2D" uid="uid://d3u0t7mhh8kfl" path="res://Globals/consoleBackgroundLarge.png" id="7_r7tal"]
 [ext_resource type="AudioStream" uid="uid://dv1ncsbrduoxn" path="res://psychescan/assets/audio/correct.wav" id="7_snvv2"]
+[ext_resource type="Texture2D" uid="uid://bxa8kftj6yh8a" path="res://Typing Level/Assets/psyche-dsoc-1536x1152.jpg" id="10_hur34"]
+[ext_resource type="Texture2D" uid="uid://cfbevvae1woyq" path="res://Typing Level/Assets/psyche-gamma-ray-spectrometer-768x1387.jpg" id="12_ekypa"]
 [ext_resource type="FontFile" uid="uid://ccxyuwpsc1qh4" path="res://fonts/dogicapixel.ttf" id="13_al5tl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_clt4h"]
 shader = ExtResource("3_ccgx7")
 shader_parameter/Direction = Vector2(1, 0)
 shader_parameter/Speed = 0.15
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jnbga"]
-atlas = ExtResource("6_21f1y")
-region = Rect2(600, 300, 200, 300)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pixf3"]
 shader = ExtResource("5_6taii")
@@ -46,6 +44,18 @@ shader_parameter/warp_amount = 0.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2c7d"]
+atlas = ExtResource("10_hur34")
+region = Rect2(0, 97.9497, 1378.48, 701.867)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnbga"]
+atlas = ExtResource("6_21f1y")
+region = Rect2(600, 300, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krat0"]
+atlas = ExtResource("12_ekypa")
+region = Rect2(34.0498, 940.3, 684.86, 406.56)
 
 [sub_resource type="Animation" id="Animation_6pbho"]
 length = 0.001
@@ -323,12 +333,6 @@ rotation = 7.33038
 scale = Vector2(0.300781, 0.300781)
 texture = ExtResource("3_1ma2t")
 
-[node name="MagnetometerImage" type="Sprite2D" parent="Node2D2"]
-visible = false
-position = Vector2(1319, 508)
-scale = Vector2(0.606039, 0.606039)
-texture = SubResource("AtlasTexture_jnbga")
-
 [node name="CRTShader" type="Polygon2D" parent="Node2D2"]
 material = SubResource("ShaderMaterial_pixf3")
 position = Vector2(-419, -186)
@@ -341,6 +345,24 @@ scale = Vector2(1.55089, 2.10742)
 texture = ExtResource("7_r7tal")
 texture_scale = Vector2(2.67, 3.7)
 polygon = PackedVector2Array(0, 0, 0, 0, 1120, 0, 1120, 512, 0, 512)
+
+[node name="Psyche-dsoc-1536x1152" type="Sprite2D" parent="Node2D2"]
+visible = false
+position = Vector2(1319, 508)
+scale = Vector2(0.203758, 0.203758)
+texture = SubResource("AtlasTexture_p2c7d")
+
+[node name="MagnetometerImage" type="Sprite2D" parent="Node2D2"]
+visible = false
+position = Vector2(1319, 508)
+scale = Vector2(0.606039, 0.606039)
+texture = SubResource("AtlasTexture_jnbga")
+
+[node name="Psyche-gamma-ray-spectrometer-768x1387" type="Sprite2D" parent="Node2D2"]
+visible = false
+position = Vector2(1317, 517)
+scale = Vector2(0.408867, 0.408867)
+texture = SubResource("AtlasTexture_krat0")
 
 [node name="Label" type="Label" parent="Node2D2"]
 offset_left = 1171.0

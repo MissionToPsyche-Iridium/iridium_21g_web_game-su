@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfb4cc1is55wv"]
 
-[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="1_if37c"]
+[ext_resource type="FontFile" uid="uid://ccxyuwpsc1qh4" path="res://fonts/dogicapixel.ttf" id="1_if37c"]
 
 [sub_resource type="GDScript" id="GDScript_jgl8i"]
 script/source = "extends Node2D
