@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://crxhvmr5p37e5"]
 
-[ext_resource type="Script" path="res://marsslingshot2.0/script/space_ship.gd" id="1_omm6k"]
-[ext_resource type="Texture2D" uid="uid://dwpve7tnyfwk2" path="res://meteoroid-level/assets/psyche shuttle.png" id="2_pqwby"]
-[ext_resource type="Script" path="res://marsslingshot2.0/script/timer.gd" id="3_qk4u3"]
+[ext_resource type="Script" path="res://marsslingshot2.0/scripts/space_ship.gd" id="1_omm6k"]
+[ext_resource type="Texture2D" uid="uid://bg5k1w8nb2v8y" path="res://meteoroid-level/assets/psyche shuttle.png" id="2_pqwby"]
+[ext_resource type="Script" path="res://marsslingshot2.0/scripts/timer.gd" id="3_qk4u3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1qdcw"]
 radius = 19.0263
