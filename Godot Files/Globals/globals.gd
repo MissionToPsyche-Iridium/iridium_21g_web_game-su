@@ -86,16 +86,22 @@ func process_input(input_text):
 		get_tree().change_scene_to_file("res://scavenger-hunt/scenes/world.tscn")
 	if input_text == ("2"):
 		Audio.play_music_minigame(-15)
-		get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
+		get_tree().change_scene_to_file("res://launch/scenes/launch.tscn")
 	if input_text == ("3"):
 		Audio.play_music_minigame(-15)
-		get_tree().change_scene_to_file("res://marsslingshot2.0/scenes/world.tscn")
+		get_tree().change_scene_to_file("res://meteoroid-level/scenes/start_screen.tscn")
 	if input_text == ("4"):
 		Audio.play_music_minigame(-15)
-		get_tree().change_scene_to_file("res://psychescan/levels/main_level.tscn")
+		get_tree().change_scene_to_file("res://marsslingshot2.0/scenes/world.tscn")
 	if input_text == ("5"):
 		Audio.play_music_minigame(-15)
+		get_tree().change_scene_to_file("res://psychescan/levels/main_level.tscn")
+	if input_text == ("6"):
+		Audio.play_music_minigame(-15)
 		get_tree().change_scene_to_file("res://Typing Level/TypingLevel.tscn")
+	if input_text == ("7"):
+		Audio.play_music_rooms(-15)
+		get_tree().change_scene_to_file("res://credits/scenes/leave.tscn")
 
 # Handle mute toggle and disable focus for better UX
 func _on_mute_toggled(toggled_on: bool) -> void:

@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dy5v8o3ryhyq0" path="res://Globals/hint.png" id="6_p5kis"]
 [ext_resource type="PackedScene" uid="uid://hof03kvnlrvg" path="res://Globals/hints/mars_hints.tscn" id="7_ubqha"]
 [ext_resource type="PackedScene" uid="uid://dw8yhp5ip2df3" path="res://Globals/hints/escape_room_hints.tscn" id="8_02mfg"]
-[ext_resource type="PackedScene" path="res://Globals/hints/meteoroid_hints.tscn" id="9_fudqv"]
-[ext_resource type="PackedScene" path="res://Globals/hints/scan_hints.tscn" id="10_opac7"]
+[ext_resource type="PackedScene" uid="uid://ct31xpc2kdfld" path="res://Globals/hints/meteoroid_hints.tscn" id="9_fudqv"]
+[ext_resource type="PackedScene" uid="uid://btjrcwxm0c6pn" path="res://Globals/hints/scan_hints.tscn" id="10_opac7"]
 [ext_resource type="PackedScene" uid="uid://bsfjo6itoivhc" path="res://Globals/hints/launch_hints.tscn" id="11_uagh7"]
 [ext_resource type="PackedScene" uid="uid://nf2qhh40pq8x" path="res://Globals/hints/typing_hints.tscn" id="12_so2hn"]
 
