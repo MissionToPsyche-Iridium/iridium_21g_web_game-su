@@ -147,7 +147,7 @@ func _unhandled_input(event):
 			speedup = true
 		elif not Input.is_key_pressed(KEY_LEFT) and !event.is_echo():
 			speedup = false
-		elif event is InputEventKey and not event.is_pressed():
+		if event is InputEventKey and not event.is_pressed():
 			for i in blocks:
 				i.typeChecking(event)
 				if i.checkDone():

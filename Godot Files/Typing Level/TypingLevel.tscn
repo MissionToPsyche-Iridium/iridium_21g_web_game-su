@@ -241,10 +241,6 @@ _data = {
 script = ExtResource("1_yaj5j")
 text = ExtResource("2_wc733")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(867, 540)
-zoom = Vector2(1.61, 1.61)
-
 [node name="Node2D3" type="Node2D" parent="."]
 
 [node name="StarBackground" type="Sprite2D" parent="Node2D3"]
@@ -343,7 +339,7 @@ polygon = PackedVector2Array(150, 135, 159, 112, 183, 98, 546, 98, 570, 114, 587
 [node name="main" type="Polygon2D" parent="Node2D2"]
 scale = Vector2(1.55089, 2.10742)
 texture = ExtResource("7_r7tal")
-texture_scale = Vector2(2.67, 3.7)
+texture_scale = Vector2(2.67, 3.634)
 polygon = PackedVector2Array(0, 0, 0, 0, 1120, 0, 1120, 512, 0, 512)
 
 [node name="Psyche-dsoc-1536x1152" type="Sprite2D" parent="Node2D2"]
@@ -418,6 +414,10 @@ offset_left = 1157.0
 offset_top = 278.0
 offset_right = 1980.0
 offset_bottom = 702.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.721, 1.721)
 
 [connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]
 [connection signal="animation_finished" from="Node2D2/satellitePlayer" to="." method="_on_animation_player_animation_finished"]
