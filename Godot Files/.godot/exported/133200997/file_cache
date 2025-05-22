@@ -41,7 +41,7 @@ res://marsslingshot2.0/scenes/satillite.tscn::e7651c46da10912910dd8d369af44e72::
 res://marsslingshot2.0/scenes/space_ship.tscn::dd74b8d8ef0be8fd7ba962d76d96eec7::1747849064::res://.godot/exported/133200997/export-f1357f06ddf38d28fd873e5be2d6d21c-space_ship.scn
 res://marsslingshot2.0/scenes/timer.tscn::8993129632df29e762140268231eb651::1747848999::res://.godot/exported/133200997/export-d8941efdb374e2f4130e9658d64a022b-timer.scn
 res://marsslingshot2.0/scenes/TransitionScreen.tscn::4dd217943a2cf74c774529de93c3d0da::1747634881::res://.godot/exported/133200997/export-d15736d81ec212a5eb4dde5768662ea8-TransitionScreen.scn
-res://marsslingshot2.0/scenes/world.tscn::a6783d9ad7f4f2976fb2c9ee23330acf::1747883508::res://.godot/exported/133200997/export-d4a121e38d0678cbb6f459a598d6b0f2-world.scn
+res://marsslingshot2.0/scenes/world.tscn::c5f72695ec0aa7d1903fb0ac32011cfd::1747887213::res://.godot/exported/133200997/export-d4a121e38d0678cbb6f459a598d6b0f2-world.scn
 res://marsslingshot2.0/scenes/world_level_1.tscn::b60a110c6ddc3d8efcadae2aff7ab003::1747886458::res://.godot/exported/133200997/export-fed111bec9ee4a7f5f0ae6470c3fdaa0-world_level_1.scn
 res://meteoroid-level/scenes/end_screen.tscn::eaf0d0673142e66af9f55a59af2d78df::1747634881::res://.godot/exported/133200997/export-550acaf77cbb69502055a86de649b26e-end_screen.scn
 res://meteoroid-level/scenes/killzone.tscn::9a0bad0a3b4a96547f2b1371bfc4a9c9::1745981401::res://.godot/exported/133200997/export-3718d84c0a5850cb11912b41a622f64a-killzone.scn
@@ -62,12 +62,12 @@ res://psychescan/backgrounds/background.tscn::251e4bd2d367c712ad626ed62e918445::
 res://psychescan/backgrounds/computer_ui_global.tscn::3969c88483f9d8244098680619302d44::1745981401::res://.godot/exported/133200997/export-4ab86153f040f29e84c3680c59b848f9-computer_ui_global.scn
 res://psychescan/backgrounds/tutorialBackground.tscn::7cb171a364701bf137c24eef803f16a2::1746079779::res://.godot/exported/133200997/export-96a88f0a6e7d4ae56643d9aee04d2238-tutorialBackground.scn
 res://psychescan/backgrounds/vic_background.tscn::63a5a2de5df5242bfb3b3fbca72c8432::1746078703::res://.godot/exported/133200997/export-aa3f9817d9f7ef4a37c98b9e3cc2686b-vic_background.scn
-res://psychescan/levels/level2.tscn::b4479599ca8b7abbbafe08d087e65742::1747882794::res://.godot/exported/133200997/export-005e240e06fb378df42489a4ea21aa06-level2.scn
-res://psychescan/levels/level3.tscn::74c841d8de7f61756e3b6e8cada34f0f::1747882794::res://.godot/exported/133200997/export-d3a903f351d12126244f2f87c1525c9c-level3.scn
-res://psychescan/levels/level.tscn::8c05686ed173e1bcb311fd0d87e1cf47::1747886458::res://.godot/exported/133200997/export-63237196e60322062d33fb1ecc8463c3-level.scn
-res://psychescan/levels/main_level.tscn::325fbd3b4b87e187b53aac463edf0262::1747886458::res://.godot/exported/133200997/export-68d74ffb1ce88aa89389388ac5f2ed3e-main_level.scn
-res://psychescan/levels/tutorialLevel.tscn::1b62f844e08964647bce7104b99f3582::1747886458::res://.godot/exported/133200997/export-ebe4a3002f18282c996f05db3a880fbf-tutorialLevel.scn
-res://psychescan/levels/victory_scene.tscn::d155716712cf9e6d6a5f230b203c9ca0::1747882794::res://.godot/exported/133200997/export-cebc651d6177e8ea7cda3d3c6bb0cb19-victory_scene.scn
+res://psychescan/levels/level2.tscn::e2c359802163eda617dc47b4b27f19cd::1747891241::res://.godot/exported/133200997/export-005e240e06fb378df42489a4ea21aa06-level2.scn
+res://psychescan/levels/level3.tscn::5edc7b8cccc1bc1181ce7b8603d048d6::1747891241::res://.godot/exported/133200997/export-d3a903f351d12126244f2f87c1525c9c-level3.scn
+res://psychescan/levels/level.tscn::e3cde617fe14dc1e0544c0891a67a6e9::1747891241::res://.godot/exported/133200997/export-63237196e60322062d33fb1ecc8463c3-level.scn
+res://psychescan/levels/main_level.tscn::325fbd3b4b87e187b53aac463edf0262::1747891241::res://.godot/exported/133200997/export-68d74ffb1ce88aa89389388ac5f2ed3e-main_level.scn
+res://psychescan/levels/tutorialLevel.tscn::4379f2a25e2befa7206c1e97d25ebeae::1747891241::res://.godot/exported/133200997/export-ebe4a3002f18282c996f05db3a880fbf-tutorialLevel.scn
+res://psychescan/levels/victory_scene.tscn::c3cd95b7646fef9265db78f8c6b84db9::1747891241::res://.godot/exported/133200997/export-cebc651d6177e8ea7cda3d3c6bb0cb19-victory_scene.scn
 res://psychescan/sprites/asteroid1.tscn::1d7a2ee42d98fa2e432c2e2e36aa2cae::1745981401::res://.godot/exported/133200997/export-a3b5c2e9b9514f2d9c49b56f856e6dc2-asteroid1.scn
 res://psychescan/sprites/asteroid2.tscn::4a7cf37abe49facca19d9277910ec796::1745981401::res://.godot/exported/133200997/export-4c8e298f0dc6d0f68e728634e720c876-asteroid2.scn
 res://psychescan/sprites/asteroid3.tscn::222662eebdb795c6782854a601624407::1745981401::res://.godot/exported/133200997/export-631addbf5c3768a67de01e6e58cbedee-asteroid3.scn
