@@ -17,7 +17,7 @@ func set_label() -> void:
 	$Label.text = str(number).pad_decimals(2)
 
 func set_size_colorrect() :
-	$ColorRect.size.x = $space_ship/Timer.get_time_left() * 300
+	$ColorRect.size.x = $space_ship/Timer.get_time_left() * 500
 
 
 func _on_timer_timeout() -> void:

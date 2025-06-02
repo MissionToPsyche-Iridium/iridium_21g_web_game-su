@@ -1,29 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://bventlyk5208i"]
+[gd_scene load_steps=4 format=3 uid="uid://bventlyk5208i"]
 
-[ext_resource type="Script" path="res://marsslingshot2.0/script/off_course.gd" id="1_8se4v"]
-[ext_resource type="Texture2D" uid="uid://bli4mr52eoyb4" path="res://Globals/consoleBackgroundLarge.png" id="2_wyq3l"]
+[ext_resource type="Script" path="res://marsslingshot2.0/scripts/off_course.gd" id="1_8se4v"]
+[ext_resource type="Texture2D" uid="uid://raj0xmjuvqh1" path="res://Globals/consoleBackgroundLarge.png" id="2_wyq3l"]
+[ext_resource type="PackedScene" uid="uid://dtwuq3lpsye6x" path="res://Globals/crt_shader_global.tscn" id="3_iwsul"]
 
 [node name="OffCourse" type="Node2D"]
 script = ExtResource("1_8se4v")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 455.0
-offset_top = 263.0
-offset_right = 725.0
-offset_bottom = 377.0
+offset_left = 669.0
+offset_top = 791.0
+offset_right = 1175.0
+offset_bottom = 998.0
+scale = Vector2(2, 2)
 text = "You missed the target and ran off course. Try Again."
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(892, 398)
-scale = Vector2(0.658288, 0.658288)
+[node name="ConsoleBackgroundLarge" type="Sprite2D" parent="."]
+z_index = 100
+position = Vector2(1495.5, 943.5)
 texture = ExtResource("2_wyq3l")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(859, 361)
-zoom = Vector2(1.5, 1.5)
+[node name="CRTShader2" parent="." instance=ExtResource("3_iwsul")]
+position = Vector2(-438.776, -136.833)
+scale = Vector2(4.02517, 3.35544)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

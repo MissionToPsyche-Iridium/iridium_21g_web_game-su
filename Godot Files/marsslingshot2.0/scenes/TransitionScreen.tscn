@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bvp0cuo80ar3k"]
 
-[ext_resource type="Script" path="res://marsslingshot2.0/script/transition_screen.gd" id="1_bie52"]
-[ext_resource type="Texture2D" uid="uid://bhs0ax7ixtnju" path="res://Globals/consoleBackgroundLarge.png" id="2_hi5q0"]
+[ext_resource type="Script" path="res://marsslingshot2.0/scripts/transition_screen.gd" id="1_bie52"]
+[ext_resource type="Texture2D" uid="uid://raj0xmjuvqh1" path="res://Globals/consoleBackgroundLarge.png" id="2_hi5q0"]
 [ext_resource type="Shader" path="res://psychescan/addons/StarScroll.gdshader" id="2_rammy"]
-[ext_resource type="Texture2D" uid="uid://c7ysp5rat4d3f" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_pn7y3"]
+[ext_resource type="Texture2D" uid="uid://ch226tem7aeol" path="res://psychescan/assets/textures/meteoroid-level-border-background.png" id="3_pn7y3"]
 [ext_resource type="Shader" path="res://psychescan/addons/CRTVisual.gdshader" id="4_irxh0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qcwx8"]
