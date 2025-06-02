@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://nmp7i8bxi64h" path="res://meteoroid-level/scenes/end_screen.tscn" id="4_3qvik"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_5io1a")
 
 [node name="EndScreen" parent="." instance=ExtResource("4_3qvik")]
+script = ExtResource("1_5io1a")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
