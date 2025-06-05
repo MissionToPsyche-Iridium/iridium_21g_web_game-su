@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1748846630
-export_presets.cfg::TextFile::-1::1747891324::0::1::::<><>::
+::res://::1749100204
+export_presets.cfg::TextFile::-1::1748846851::0::1::::<><>::
 ::res://addons/::1748374023
 ::res://addons/gut/::1747857721
 autofree.gd::GDScript::-1::1745981401::0::1::::<>RefCounted<>::
@@ -150,7 +150,7 @@ dogicapixelbold.ttf::FontFile::7187582689479712071::1745981401::1747857720::1:::
 Marker Felt Thin.ttf::FontFile::4224926987990529593::1745981401::1747857720::1::::<><>::
 Nature Beauty Personal Use.ttf::FontFile::6972382354235049820::1745981401::1747857720::1::::<><>::
 Noteworthy-Lt.ttf::FontFile::3004705110614760646::1745981401::1747857720::1::::<><>::
-::res://Globals/::1748374023
+::res://Globals/::1749099569
 consoleBackgroundLarge.png::CompressedTexture2D::9142922322199612980::1745981401::1747857722::1::::<><>::
 CRTVisual.gdshader::Shader::-1::1745981401::0::1::::<><>::
 crt_shader_global.tscn::PackedScene::8539510791702228165::1745981401::0::1::::<><>::res://Globals/CRTVisual.gdshader
@@ -175,7 +175,7 @@ prelaunch.ogv::VideoStreamTheora::-1::1745981401::0::1::::<><>::
 launch.tscn::PackedScene::1775822634824600802::1746215301::0::1::::<><>::res://launch/scripts/launch.gd<>uid://bli4mr52eoyb4::::res://Globals/consoleBackgroundLarge.png<>uid://j00rrwigmjoe::::res://fonts/dogicapixel.ttf<>uid://dtwuq3lpsye6x::::res://Globals/crt_shader_global.tscn
 ::res://launch/scripts/::1745981401
 launch.gd::GDScript::-1::1745981401::0::1::::<>Control<>::
-::res://marsslingshot2.0/::1748374023
+::res://marsslingshot2.0/::1749099569
 ::res://marsslingshot2.0/assets/::1747857722
 checkpoint.png::CompressedTexture2D::7286288881880723764::1745981401::1747857721::1::::<><>::
 icon.svg::CompressedTexture2D::3726097812270032680::1746135277::1747857721::1::::<><>::
@@ -184,7 +184,7 @@ psyche1.png::CompressedTexture2D::375417489231032221::1746135277::1747857721::1:
 psyche shuttle.png::CompressedTexture2D::6280548678137805710::1746135277::1747857721::1::::<><>::
 R.png::CompressedTexture2D::8471809011589510672::1745981401::1747857722::1::::<><>::
 shuttle.png::CompressedTexture2D::3990341821124301880::1745981401::1747857721::1::::<><>::
-::res://marsslingshot2.0/scenes/::1748846361
+::res://marsslingshot2.0/scenes/::1749099845
 checkpoint.tscn::PackedScene::4843484515972896960::1748846150::0::1::::<><>::res://marsslingshot2.0/scripts/checkpoint.gd<>uid://ddk8ro58xrjev::::res://psychescan/assets/textures/psyche1.png
 end_Scene.tscn::PackedScene::1106049203804865723::1748846150::0::1::::<><>::res://marsslingshot2.0/scripts/end_scene.gd<>res://marsslingshot2.0/scripts/next_level_button.gd<>uid://nmp7i8bxi64h::::res://meteoroid-level/scenes/end_screen.tscn
 game_area.tscn::PackedScene::3562792104268630375::1748846150::0::1::::<><>::
@@ -196,10 +196,10 @@ off_course.tscn::PackedScene::3869467777425870406::1748846150::0::1::::<><>::res
 satillite.tscn::PackedScene::6286140872190967418::1747634881::0::1::::<><>::uid://dbyaj5nsegnkb::::res://slingshot/icon.svg
 space_ship.tscn::PackedScene::6013995576123617782::1748846150::0::1::::<><>::res://marsslingshot2.0/scripts/space_ship.gd<>uid://dvwjpn2167ds3::::res://meteoroid-level/assets/psyche shuttle.png<>res://marsslingshot2.0/scripts/timer.gd
 timer.tscn::PackedScene::6477136135482842115::1747848999::0::1::::<><>::res://marsslingshot2.0/scripts/timer.gd
-TransitionScreen.tscn::PackedScene::3892874636436711862::1748846150::0::1::::<><>::res://marsslingshot2.0/scripts/transition_screen.gd<>uid://raj0xmjuvqh1::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/addons/StarScroll.gdshader<>uid://ch226tem7aeol::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>res://psychescan/addons/CRTVisual.gdshader
-world.tscn::PackedScene::3162590021962538817::1748846361::0::1::::<><>::res://marsslingshot2.0/scripts/world.gd<>uid://bq03wvh64xhe2::::res://marsslingshot2.0/scenes/game_area.tscn<>res://psychescan/addons/StarScroll.gdshader<>uid://bgxqsrrr3uyoh::::res://marsslingshot2.0/scenes/mars.tscn<>uid://ch226tem7aeol::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/scenes/label.tscn<>uid://raj0xmjuvqh1::::res://Globals/consoleBackgroundLarge.png<>res://marsslingshot2.0/scripts/checkpoint2.gd<>uid://dtwuq3lpsye6x::::res://Globals/crt_shader_global.tscn<>uid://ddk8ro58xrjev::::res://psychescan/assets/textures/psyche1.png
-world_level_1.tscn::PackedScene::6608492996021213876::1748846150::0::1::::<><>::res://marsslingshot2.0/scripts/world_level_1.gd<>res://psychescan/addons/StarScroll.gdshader<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://ch226tem7aeol::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://ch63oavybuyab::::res://marsslingshot2.0/scenes/label.tscn<>res://marsslingshot2.0/scripts/label_2.gd<>res://marsslingshot2.0/scripts/checkpoint.gd<>uid://dsx2pr6ebamps::::res://marsslingshot2.0/assets/R.png<>uid://raj0xmjuvqh1::::res://Globals/consoleBackgroundLarge.png<>uid://dtwuq3lpsye6x::::res://Globals/crt_shader_global.tscn
-::res://marsslingshot2.0/scripts/::1748846150
+TransitionScreen.tscn::PackedScene::3892874636436711862::1749099845::0::1::::<><>::res://marsslingshot2.0/scripts/transition_screen.gd<>uid://bnnmccn7i2mws::::res://Globals/consoleBackgroundLarge.png<>res://psychescan/addons/StarScroll.gdshader<>uid://cbjyhs02yndsh::::res://psychescan/assets/textures/meteoroid-level-border-background.png
+world.tscn::PackedScene::3162590021962538817::1749099845::0::1::::<><>::res://marsslingshot2.0/scripts/world.gd<>uid://bq03wvh64xhe2::::res://marsslingshot2.0/scenes/game_area.tscn<>res://psychescan/addons/StarScroll.gdshader<>uid://bgxqsrrr3uyoh::::res://marsslingshot2.0/scenes/mars.tscn<>uid://cbjyhs02yndsh::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://ch63oavybuyab::::res://marsslingshot2.0/scenes/label.tscn<>uid://bnnmccn7i2mws::::res://Globals/consoleBackgroundLarge.png<>res://marsslingshot2.0/scripts/checkpoint2.gd<>uid://dtwuq3lpsye6x::::res://Globals/crt_shader_global.tscn<>uid://c1dgvh4ylws3d::::res://psychescan/assets/textures/psyche1.png
+world_level_1.tscn::PackedScene::6608492996021213876::1749099845::0::1::::<><>::res://marsslingshot2.0/scripts/world_level_1.gd<>res://psychescan/addons/StarScroll.gdshader<>uid://crxhvmr5p37e5::::res://marsslingshot2.0/scenes/space_ship.tscn<>uid://cbjyhs02yndsh::::res://psychescan/assets/textures/meteoroid-level-border-background.png<>uid://ch63oavybuyab::::res://marsslingshot2.0/scenes/label.tscn<>res://marsslingshot2.0/scripts/label_2.gd<>res://marsslingshot2.0/scripts/checkpoint.gd<>uid://dsx2pr6ebamps::::res://marsslingshot2.0/assets/R.png<>uid://bnnmccn7i2mws::::res://Globals/consoleBackgroundLarge.png<>uid://dtwuq3lpsye6x::::res://Globals/crt_shader_global.tscn
+::res://marsslingshot2.0/scripts/::1749100170
 boosterbar.gd::GDScript::-1::1747634881::0::1::::<>ColorRect<>::
 checkpoint2.gd::GDScript::-1::1747634881::0::1::::<>StaticBody2D<>::
 checkpoint.gd::GDScript::-1::1747634881::0::1::::<>StaticBody2D<>::
@@ -211,12 +211,12 @@ mars_crash.gd::GDScript::-1::1747634881::0::1::::<>Node2D<>::
 mars_crash_text.gd::GDScript::-1::1747634881::0::1::::<>RichTextLabel<>::
 next_level_button.gd::GDScript::-1::1748846150::0::1::::<>Button<>::
 off_course.gd::GDScript::-1::1747634881::0::1::::<>Node2D<>::
-space_ship.gd::GDScript::-1::1747634881::0::1::::<>CharacterBody2D<>::
+space_ship.gd::GDScript::-1::1749100170::0::1::::<>CharacterBody2D<>::
 static_body_2d.gd::GDScript::-1::1747634881::0::1::::<>StaticBody2D<>::
-timer.gd::GDScript::-1::1747634881::0::1::::<>Timer<>::
+timer.gd::GDScript::-1::1749100170::0::1::::<>Timer<>::
 transition_screen.gd::GDScript::-1::1747634881::0::1::::<>Node2D<>::
 world.gd::GDScript::-1::1748846150::0::1::::<>Node2D<>::
-world_level_1.gd::GDScript::-1::1747886415::0::1::::<>Node2D<>::
+world_level_1.gd::GDScript::-1::1749100170::0::1::::<>Node2D<>::
 ::res://meteoroid-level/::1748374023
 ::res://meteoroid-level/assets/::1747857722
 buttons.png::CompressedTexture2D::2439550707268923949::1745981401::1747857721::1::::<><>::
@@ -263,7 +263,7 @@ path.tscn::PackedScene::3658051682662829387::1745981401::0::1::::<><>::res://met
 shuttle.tscn::PackedScene::8045799112014115850::1746069221::0::1::::<><>::res://meteoroid-level/scripts/shuttle.gdshader<>res://meteoroid-level/scripts/shuttle.gd<>uid://cauitf2on2quq::::res://meteoroid-level/assets/psyche shuttle.png<>uid://cb0l0qkguxtlp::::res://meteoroid-level/assets/propulsion sound.wav
 spinning_shuttle.gd::GDScript::-1::1745981401::0::1::::<>Sprite2D<>::
 start_screen.tscn::PackedScene::3313906559616397305::1747634881::0::1::::<><>::res://meteoroid-level/scripts/start_screen.gd<>res://meteoroid-level/scripts/start_button.gd<>uid://c6yulvmw7nl5::::res://Globals/consoleBackgroundLarge.png<>uid://der8n8kbmycyq::::res://meteoroid-level/assets/mouse-click.wav<>uid://cb83sko7purs8::::res://meteoroid-level/assets/dogicapixel.ttf<>uid://c7axgunm3r5sn::::res://meteoroid-level/assets/meteoroid-level-border-background.png<>res://meteoroid-level/scripts/start_screen.gdshader<>uid://c0ngj1vjiotmk::::res://fonts/dogicapixelbold.ttf<>uid://jxp0usvnd0y6::::res://meteoroid-level/assets/buttons.png<>uid://cauitf2on2quq::::res://meteoroid-level/assets/psyche shuttle.png<>res://meteoroid-level/scripts/spinning_shuttle.gd<>uid://dx3ljwac6e6kw::::res://audio/dialogue.mp3<>res://psychescan/addons/CRTVisual.gdshader
-::res://meteoroid-level/scripts/::1746215301
+::res://meteoroid-level/scripts/::1749100170
 end_screen.gd::GDScript::-1::1746215301::0::1::::<>Control<>::
 killzone.gd::GDScript::-1::1745981401::0::1::::<>Area2D<>::
 level_1.gd::GDScript::-1::1745981401::0::1::::<>Node2D<>::
@@ -276,7 +276,7 @@ level_3.gd::GDScript::-1::1745981401::0::1::::<>Node2D<>::
 level_3_screen.gd::GDScript::-1::1746215301::0::1::::<>Control<>::
 level_3_start.gd::GDScript::-1::1745981401::0::1::::<>Button<>::
 moving_debris.gd::GDScript::-1::1746215301::0::1::::<>Node2D<>::
-next_level_button.gd::GDScript::-1::1746069221::0::1::::<>Button<>::
+next_level_button.gd::GDScript::-1::1749100170::0::1::::<>Button<>::
 num_moves.gd::GDScript::-1::1746078737::0::1::::<>Label<>::
 path.gd::GDScript::-1::1745981401::0::1::::<>Line2D<>::
 shuttle.gd::GDScript::-1::1746215301::0::1::::<>CharacterBody2D<>::
