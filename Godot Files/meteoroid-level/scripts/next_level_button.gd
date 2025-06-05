@@ -12,4 +12,4 @@ func _on_pressed() -> void:
 
 
 func _on_timer_timeout() -> void:
-	get_tree().call_deferred("change_scene_to_file", "res://marsslingshot2.0/scenes/world.tscn") # replace with next level
+	get_tree().call_deferred("change_scene_to_file", "res://marsslingshot2.0/scenes/world_level_1.tscn") # replace with next level
