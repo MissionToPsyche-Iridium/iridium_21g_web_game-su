@@ -2,6 +2,7 @@ extends Timer
 
 var count = 0
 var time = 0.0
+var goTime = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -14,8 +15,12 @@ func _process(delta: float) -> void:
 
 
 func use_boost():
-	if Input.is_action_just_pressed("ui_up"):
-		paused = false
-		print(time_left)
-	if Input.is_action_just_released("ui_up"):
-		paused = true
+		if Input.is_action_just_pressed("ui_up"):
+			paused = false
+			print(time_left)
+		if Input.is_action_just_released("ui_up"):
+			paused = true
+
+
+func _on_wait_1_second_timeout() -> void:
+	goTime = true

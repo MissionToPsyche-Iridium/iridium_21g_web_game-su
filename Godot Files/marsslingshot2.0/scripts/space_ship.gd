@@ -6,6 +6,7 @@ const max_speed = 5000
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 var gas = true
+var goTime = false
 
 
 func _physics_process(delta: float) -> void:
@@ -45,3 +46,7 @@ func _on_timer_timeout() -> void:
 func get_time_left() :
 	return $Timer.time_left
 	
+
+
+func _on_wait_1_second_timeout() -> void:
+	goTime = true
