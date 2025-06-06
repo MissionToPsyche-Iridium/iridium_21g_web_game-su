@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1bu06s83i25f"]
 
 [ext_resource type="Script" path="res://audio/audio.gd" id="1_01fjg"]
-[ext_resource type="AudioStream" uid="uid://dk06day7cv80q" path="res://audio/tone.wav" id="2_i5goc"]
-[ext_resource type="AudioStream" uid="uid://cuvjyvppqrn0q" path="res://audio/open.mp3" id="2_sw5km"]
-[ext_resource type="AudioStream" uid="uid://bu37hmpwdvu4n" path="res://audio/dialogue.mp3" id="3_yifkf"]
-[ext_resource type="AudioStream" uid="uid://cqwf18jcknar6" path="res://audio/doors.mp3" id="5_pj3rx"]
-[ext_resource type="AudioStream" uid="uid://2gtagbm7syv5" path="res://audio/steps.mp3" id="6_ek5jo"]
-[ext_resource type="AudioStream" uid="uid://c2v75qa38gtkx" path="res://audio/correct.mp3" id="7_md3rs"]
-[ext_resource type="AudioStream" uid="uid://dathja5b2a5xa" path="res://audio/incorrect.wav" id="8_752ja"]
+[ext_resource type="AudioStream" uid="uid://duohih532dlny" path="res://audio/tone.wav" id="2_i5goc"]
+[ext_resource type="AudioStream" uid="uid://blmyepgr5k2yb" path="res://audio/open.mp3" id="2_sw5km"]
+[ext_resource type="AudioStream" uid="uid://d3xu0ijw6u35w" path="res://audio/dialogue.mp3" id="3_yifkf"]
+[ext_resource type="AudioStream" uid="uid://b33yy6xr26p28" path="res://audio/doors.mp3" id="5_pj3rx"]
+[ext_resource type="AudioStream" uid="uid://bl3rwx5ywfw32" path="res://audio/steps.mp3" id="6_ek5jo"]
+[ext_resource type="AudioStream" uid="uid://du21bjoeivc5j" path="res://audio/correct.mp3" id="7_md3rs"]
+[ext_resource type="AudioStream" uid="uid://dhvsylxdlxxh" path="res://audio/incorrect.wav" id="8_752ja"]
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource("1_01fjg")

@@ -1,1 +1,8 @@
 res://Globals/globals.gd
+res://Globals/globals.tscn
+res://start-menu/start_menu.tscn
+res://psychescan/levels/main_level.tscn
+res://psychescan/levels/tutorialLevel.tscn
+res://audio/audio.tscn
+res://psychescan/backgrounds/background.tscn
+res://Globals/hints/scan_hints.tscn

@@ -16,18 +16,18 @@ res://addons/gut/gui/ShortcutButton.tscn::6ddf0e7890c3194bdac61bd5137d1319::1745
 res://addons/gut/GutScene.tscn::b1de5d0fa7715c721b0575aabddb1c00::1745981401::res://.godot/exported/133200997/export-2f0cb05a5e71328ea0af1eb4f93c4e22-GutScene.scn
 res://addons/gut/gut_loader_the_scene.tscn::568daffd38790702255b5a173ad4441f::1745981401::res://.godot/exported/133200997/export-34f11fc3cc3883e31a2efc4f77f66ef2-gut_loader_the_scene.scn
 res://addons/gut/UserFileViewer.tscn::5ef36894c3610b3cf8a6ef603616269f::1745981401::res://.godot/exported/133200997/export-009fff9a427a23713aab85c867002442-UserFileViewer.scn
-res://audio/audio.tscn::d033534be39074df876710519ca3c777::1747634881::res://.godot/exported/133200997/export-6977c0c5e86e25e4dc8cc783d051ca15-audio.scn
+res://audio/audio.tscn::544ab0159ce85b97a35beefb50a175e2::1749226352::res://.godot/exported/133200997/export-6977c0c5e86e25e4dc8cc783d051ca15-audio.scn
 res://credits/scenes/credits.tscn::a24aa8de5c6a36a5979f9dee7187b5f7::1747634881::res://.godot/exported/133200997/export-6182282de2b5190ab1f03b84be527c71-credits.scn
 res://credits/scenes/leave.tscn::60f91d6bc4040c9c7ae5b51749b33f69::1747634881::res://.godot/exported/133200997/export-8e0737b86cdd233591e45c9590b26d17-leave.scn
 res://Globals/hints/escape_room_hints.tscn::bd8496b365f191db27853d42f41f11ce::1745981401::res://.godot/exported/133200997/export-ddfa2a8541bc4da8a1445a1ff5557347-escape_room_hints.scn
 res://Globals/hints/launch_hints.tscn::2c31f1130c00e4df71460376e3b57029::1746075880::res://.godot/exported/133200997/export-a403441e9252210ea8e1526b0e33661d-launch_hints.scn
 res://Globals/hints/mars_hints.tscn::5fa376e19e1b2cc94b2807064d4f1225::1746215301::res://.godot/exported/133200997/export-380ff5ed97b36ab664a3e843ac58946d-mars_hints.scn
 res://Globals/hints/meteoroid_hints.tscn::cc10fd7c7032e61cc07f4dd9fde3b108::1746215301::res://.godot/exported/133200997/export-c885fa3b5ba8b0fbcba81cbcb75cfae7-meteoroid_hints.scn
-res://Globals/hints/scan_hints.tscn::e36850bb6d2bd7ba44f797d83d7eba7d::1746215301::res://.godot/exported/133200997/export-7ee6cbdd353b2cbb47d9fe27700188f3-scan_hints.scn
+res://Globals/hints/scan_hints.tscn::c4caef8d1a2860c46922014de4af4567::1749226352::res://.godot/exported/133200997/export-7ee6cbdd353b2cbb47d9fe27700188f3-scan_hints.scn
 res://Globals/hints/typing_hints.tscn::0bfe868b476db502f027e2fe82d3877b::1748846150::res://.godot/exported/133200997/export-efb0c5fcbb46af22efe22cf02ac98054-typing_hints.scn
 res://Globals/crt_shader_global.tscn::c9227e389e5e3873fc66f32b081c87b6::1745981401::res://.godot/exported/133200997/export-0a83bb9bdb53be4933d2d3cb2e61d0fc-crt_shader_global.scn
 res://Globals/default_bus_layout.tres::537cb4c39bb2aa19e9dce463153b53bd::1745981401::res://.godot/exported/133200997/export-0de916800ccb1dfe757f28ca4a168d16-default_bus_layout.res
-res://Globals/globals.tscn::62e597b1eec26250d4b7c7a60ca68328::1747849757::res://.godot/exported/133200997/export-b9c64aea25864fcf90e7ae444434639c-globals.scn
+res://Globals/globals.tscn::df9c874c1ad20da1fdb5cdee562a4c5d::1749226352::res://.godot/exported/133200997/export-b9c64aea25864fcf90e7ae444434639c-globals.scn
 res://launch/scenes/launch.tscn::4fabb41181b4ed59e7151734604647c8::1746215301::res://.godot/exported/133200997/export-0f853914c060cb44511bc0be3de91838-launch.scn
 res://marsslingshot2.0/scenes/checkpoint.tscn::3c73b1c78ab00cc486329ffbed471961::1748846150::res://.godot/exported/133200997/export-da44c394c22f92f16a51ee21aafaadba-checkpoint.scn
 res://marsslingshot2.0/scenes/end_Scene.tscn::dc6166c447b086e45ebca300e6cfa678::1748846150::res://.godot/exported/133200997/export-3d6de4b81d87c7c41593026b2f766f94-end_Scene.scn
@@ -58,15 +58,15 @@ res://meteoroid-level/scenes/shuttle.tscn::8ec7413a32d8467394d85088fc2ef670::174
 res://meteoroid-level/scenes/start_screen.tscn::6246c7abf25f3574bce78fdb1d7a11c7::1747634881::res://.godot/exported/133200997/export-a43033a08f6a02608925db105e9423ef-start_screen.scn
 res://psychescan/backgrounds/background2.tscn::d4ed024147d22791fa71b5368e32f59a::1746078703::res://.godot/exported/133200997/export-25391d2f11217100fc686324c06f99a7-background2.scn
 res://psychescan/backgrounds/background3.tscn::62b5e9cfff8d51bc5bd40790e0f4156c::1746078703::res://.godot/exported/133200997/export-e634645a794b34b02fec84359c0c42f1-background3.scn
-res://psychescan/backgrounds/background.tscn::251e4bd2d367c712ad626ed62e918445::1746078539::res://.godot/exported/133200997/export-d58512c8c2ab361e945d9ffe33474f75-background.scn
+res://psychescan/backgrounds/background.tscn::251e4bd2d367c712ad626ed62e918445::1749226352::res://.godot/exported/133200997/export-d58512c8c2ab361e945d9ffe33474f75-background.scn
 res://psychescan/backgrounds/computer_ui_global.tscn::3969c88483f9d8244098680619302d44::1745981401::res://.godot/exported/133200997/export-4ab86153f040f29e84c3680c59b848f9-computer_ui_global.scn
 res://psychescan/backgrounds/tutorialBackground.tscn::7cb171a364701bf137c24eef803f16a2::1746079779::res://.godot/exported/133200997/export-96a88f0a6e7d4ae56643d9aee04d2238-tutorialBackground.scn
 res://psychescan/backgrounds/vic_background.tscn::63a5a2de5df5242bfb3b3fbca72c8432::1746078703::res://.godot/exported/133200997/export-aa3f9817d9f7ef4a37c98b9e3cc2686b-vic_background.scn
 res://psychescan/levels/level2.tscn::e2c359802163eda617dc47b4b27f19cd::1747891241::res://.godot/exported/133200997/export-005e240e06fb378df42489a4ea21aa06-level2.scn
 res://psychescan/levels/level3.tscn::5edc7b8cccc1bc1181ce7b8603d048d6::1747891241::res://.godot/exported/133200997/export-d3a903f351d12126244f2f87c1525c9c-level3.scn
 res://psychescan/levels/level.tscn::e3cde617fe14dc1e0544c0891a67a6e9::1747891241::res://.godot/exported/133200997/export-63237196e60322062d33fb1ecc8463c3-level.scn
-res://psychescan/levels/main_level.tscn::325fbd3b4b87e187b53aac463edf0262::1748846223::res://.godot/exported/133200997/export-68d74ffb1ce88aa89389388ac5f2ed3e-main_level.scn
-res://psychescan/levels/tutorialLevel.tscn::4379f2a25e2befa7206c1e97d25ebeae::1748846223::res://.godot/exported/133200997/export-ebe4a3002f18282c996f05db3a880fbf-tutorialLevel.scn
+res://psychescan/levels/main_level.tscn::325fbd3b4b87e187b53aac463edf0262::1749226352::res://.godot/exported/133200997/export-68d74ffb1ce88aa89389388ac5f2ed3e-main_level.scn
+res://psychescan/levels/tutorialLevel.tscn::4379f2a25e2befa7206c1e97d25ebeae::1749226352::res://.godot/exported/133200997/export-ebe4a3002f18282c996f05db3a880fbf-tutorialLevel.scn
 res://psychescan/levels/victory_scene.tscn::c3cd95b7646fef9265db78f8c6b84db9::1747891241::res://.godot/exported/133200997/export-cebc651d6177e8ea7cda3d3c6bb0cb19-victory_scene.scn
 res://psychescan/sprites/asteroid1.tscn::1d7a2ee42d98fa2e432c2e2e36aa2cae::1745981401::res://.godot/exported/133200997/export-a3b5c2e9b9514f2d9c49b56f856e6dc2-asteroid1.scn
 res://psychescan/sprites/asteroid2.tscn::4a7cf37abe49facca19d9277910ec796::1745981401::res://.godot/exported/133200997/export-4c8e298f0dc6d0f68e728634e720c876-asteroid2.scn
@@ -92,6 +92,6 @@ res://scavenger-hunt/scenes/room4.tscn::de009772868cc496a8c61b2b4900079e::174598
 res://scavenger-hunt/scenes/world.tscn::dbc22819ffa9e0540256e9f9eeb5fa7c::1746069418::res://.godot/exported/133200997/export-6c3da5b6667ab1c385d90c939fae7ab5-world.scn
 res://sign-off/scenes/sign-off.tscn::54048b78425ed0a33ebc8cda9187f74e::1745981401::res://.godot/exported/133200997/export-eed13efffe7ecdb3fd5182e19ed17e62-sign-off.scn
 res://start-menu/normal.tres::8906602f163f60a0394184c552265b00::1745981401::res://.godot/exported/133200997/export-277b18bfd52e7d1a4cb60eeaa276f628-normal.res
-res://start-menu/start_menu.tscn::0f8ae3431c69ce677a02d3938105c4b8::1748846223::res://.godot/exported/133200997/export-835dedc2facbe6709477704737e53c1f-start_menu.scn
+res://start-menu/start_menu.tscn::0f8ae3431c69ce677a02d3938105c4b8::1749226352::res://.godot/exported/133200997/export-835dedc2facbe6709477704737e53c1f-start_menu.scn
 res://Typing Level/TypingBlock.tscn::212dcea5f92b03ab72fe8226841e3983::1747634881::res://.godot/exported/133200997/export-f2c178a6cb0726dadb131ceb32abf4af-TypingBlock.scn
 res://Typing Level/TypingLevel.tscn::b0e2a464a8a3dab33d1711d79cf3d191::1747856419::res://.godot/exported/133200997/export-1da7705c15e3e76573e570daf1a8a43c-TypingLevel.scn

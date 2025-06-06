@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btjrcwxm0c6pn"]
 
-[ext_resource type="FontFile" uid="uid://j00rrwigmjoe" path="res://fonts/dogicapixel.ttf" id="1_4j2y6"]
+[ext_resource type="FontFile" uid="uid://dkfxjce33i1c" path="res://fonts/dogicapixel.ttf" id="1_4j2y6"]
 
 [node name="ScanHints" type="CanvasLayer"]
 
